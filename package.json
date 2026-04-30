@@ -1,0 +1,35 @@
+{
+  "name": "masonnguyengeo",
+  "version": "1.0.0",
+  "description": "Mason Nguyen — GEO Strategist & Signal Architect",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "pm2:start": "pm2 start ecosystem.config.js --env production",
+    "pm2:stop": "pm2 stop masonnguyengeo",
+    "pm2:restart": "pm2 restart masonnguyengeo",
+    "pm2:logs": "pm2 logs masonnguyengeo"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "GEO",
+    "Generative Engine Optimization",
+    "Mason Nguyen",
+    "Signal Architecture"
+  ],
+  "author": "Mason Nguyen <mason@au-re.org>",
+  "license": "UNLICENSED"
+}
