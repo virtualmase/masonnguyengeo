@@ -1,0 +1,17 @@
+/* TEAM */
+Name: Mason Nguyen
+Role: Geospatial Analyst & GIS Consultant
+Contact: mason [at] masonnguyengeo.com
+Website: https://masonnguyengeo.com
+Location: California, USA
+
+/* GEO INFRASTRUCTURE */
+Operator: ARM Agency
+Website: https://arm-agency.com
+VaaS: https://autonomousresourcemanagement.com
+
+/* SITE */
+Last update: 2026-05-30
+Language: English
+Doctype: HTML5
+IDE: Cursor / VS Code

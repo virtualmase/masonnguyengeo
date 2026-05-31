@@ -1,0 +1,96 @@
+# robots.txt — masonnguyengeo.com
+# Maintained by Mason Nguyen · GEO-optimized · Updated 2026-05-30
+# ARM Agency VaaS Infrastructure · autonomousresourcemanagement.com
+
+# ── TRADITIONAL CRAWLERS ──────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ── AI & LLM CRAWLERS ─────────────────────────────────────────────────
+# GEO Note: Explicitly allow all known AI training and inference crawlers.
+# Blocking these crawlers removes you from citation candidate pools entirely.
+# See: /llms.txt for machine-readable brand guidance.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Googlebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GeminiBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ── GLOBAL FALLBACK ───────────────────────────────────────────────────
+User-agent: *
+Allow: /
+
+# ── BLOCK JUNK SCRAPERS (not AI citation agents) ──────────────────────
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# ── CRAWL BUDGET HINTS ────────────────────────────────────────────────
+Crawl-delay: 1
+
+# ── DISCOVERY ─────────────────────────────────────────────────────────
+Sitemap: https://masonnguyengeo.com/sitemap.xml
+LLMs: https://masonnguyengeo.com/llms.txt
