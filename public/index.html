@@ -254,83 +254,266 @@
     .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
     section { position: relative; z-index: 1; }
 
-    /* ── SIGNAL STATUS BAR ── */
+    /* ══════════════════════════════════════════════════════
+       CHROME — fixed two-tier top bar
+       Tier A (top):    marquee / signal status   32px
+       Tier B (bottom): primary nav               60px
+       Total chrome:    92px — hero padding references this
+    ══════════════════════════════════════════════════════ */
+
+    /* ── Tier A: Marquee ── */
     .signal-bar {
-      position: relative; z-index: 1;
-      background: rgba(201,168,76,0.06);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-      padding: 0.5rem var(--gutter);
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.5rem;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 32px;
+      z-index: 200;
+      background: #080808;
+      border-bottom: 1px solid rgba(201,168,76,0.18);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
     }
+
+    /* Left badge — pinned, never scrolls */
     .signal-bar-label {
-      font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--text-muted);
+      flex-shrink: 0;
+      padding: 0 1.25rem;
+      font-family: var(--mono);
+      font-size: 0.56rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.65;
+      white-space: nowrap;
+      border-right: 1px solid rgba(201,168,76,0.15);
     }
-    .signal-nodes {
-      display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;
+
+    /* Marquee track */
+    .marquee-track {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
     }
+    .marquee-track::before,
+    .marquee-track::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 48px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .marquee-track::before { left: 0;  background: linear-gradient(90deg, #080808, transparent); }
+    .marquee-track::after  { right: 0; background: linear-gradient(-90deg, #080808, transparent); }
+
+    @keyframes marqueeScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-inner {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 38s linear infinite;
+    }
+    .marquee-inner:hover { animation-play-state: paused; }
+
     .signal-node {
-      display: flex; align-items: center; gap: 0.4rem;
-      font-family: var(--mono); font-size: 0.62rem; color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0 1.6rem;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      white-space: nowrap;
+      border-right: 1px solid rgba(201,168,76,0.08);
     }
+    .signal-node:last-child { border-right: none; }
+
     .node-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--green); box-shadow: 0 0 6px var(--green);
-      animation: pulse 2.5s ease-in-out infinite;
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 5px var(--green);
+      animation: pulse 2.8s ease-in-out infinite;
       flex-shrink: 0;
     }
+    /* Stagger pulse so not all dots throb in sync */
+    .signal-node:nth-child(3n+2) .node-dot { animation-delay: 0.8s; }
+    .signal-node:nth-child(3n+3) .node-dot { animation-delay: 1.6s; }
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      padding: 1.5rem var(--gutter);
-      display: flex; align-items: center; justify-content: space-between;
+    /* Right badge */
+    .signal-bar-right {
+      flex-shrink: 0;
+      padding: 0 1.25rem;
+      font-family: var(--mono);
+      font-size: 0.54rem;
+      letter-spacing: 0.16em;
+      color: rgba(201,168,76,0.35);
+      white-space: nowrap;
+      border-left: 1px solid rgba(201,168,76,0.15);
+    }
+
+    /* ── Tier B: Primary nav ── */
+    nav#main-nav {
+      position: fixed;
+      top: 32px;          /* sits flush below the 32px marquee */
+      left: 0; right: 0;
+      height: 60px;
+      z-index: 199;
+      background: rgba(10,10,10,0.82);
+      backdrop-filter: blur(14px) saturate(1.4);
+      -webkit-backdrop-filter: blur(14px) saturate(1.4);
+      border-bottom: 1px solid rgba(201,168,76,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 var(--gutter);
       transition: background 0.3s, border-color 0.3s;
-      border-bottom: 1px solid transparent;
     }
-    nav.scrolled {
-      background: rgba(10,10,10,0.95);
-      backdrop-filter: blur(8px);
-      border-bottom-color: rgba(201,168,76,0.25);
+    nav#main-nav.scrolled {
+      background: rgba(8,8,8,0.97);
+      border-bottom-color: rgba(201,168,76,0.28);
     }
-    .nav-logo { font-family: var(--serif); font-size: 1.5rem; font-weight: 500; color: var(--gold); letter-spacing: 0.05em; }
-    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+
+    /* Logo */
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.06em;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    /* Links row — always horizontal, never wraps */
+    .nav-links {
+      display: flex;
+      flex-direction: row;          /* explicit horizontal */
+      align-items: center;
+      gap: clamp(1rem, 2vw, 2rem);
+      list-style: none;
+      flex-shrink: 0;
+      margin: 0;
+      padding: 0;
+    }
     .nav-links a {
-      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
-      text-transform: uppercase; letter-spacing: 0.18em;
-      color: var(--parchment); opacity: 0.7;
+      font-family: var(--sans);
+      font-size: 0.67rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--parchment);
+      opacity: 0.6;
       white-space: nowrap;
       transition: opacity 0.2s, color 0.2s;
+      position: relative;
+      padding-bottom: 2px;
     }
-    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.25s cubic-bezier(0.22,1,0.36,1);
+    }
+    .nav-links a:hover        { opacity: 1; color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
 
-    .nav-hamburger {
-      display: none; flex-direction: column; gap: 5px;
-      background: none; border: none; cursor: pointer; padding: 4px; z-index: 102;
+    /* CTA pill */
+    .nav-cta {
+      display: inline-flex !important;
+      align-items: center;
+      font-size: 0.62rem !important;
+      letter-spacing: 0.15em !important;
+      padding: 0.38rem 1.1rem;
+      border-radius: 2px;
+      border: 1px solid rgba(201,168,76,0.45);
+      color: var(--gold) !important;
+      opacity: 1 !important;
+      transition: background 0.2s, border-color 0.2s !important;
     }
-    .nav-hamburger span { display: block; width: 22px; height: 1.5px; background: var(--parchment); transition: all 0.3s; }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover  { background: rgba(201,168,76,0.09); border-color: var(--gold); }
+
+    /* Hamburger — mobile only */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 202;
+    }
+    .nav-hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--parchment); transition: all 0.3s;
+    }
     .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
     .nav-hamburger.open span:nth-child(2) { opacity: 0; }
     .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+    /* Mobile overlay */
     .mobile-menu {
-      position: fixed; inset: 0; z-index: 101;
-      background: rgba(10,10,10,0.98); backdrop-filter: blur(12px);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+      position: fixed; inset: 0; z-index: 201;
+      background: rgba(8,8,8,0.98); backdrop-filter: blur(16px);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
       opacity: 0; pointer-events: none; transition: opacity 0.3s;
     }
     .mobile-menu.open { opacity: 1; pointer-events: all; }
-    .mobile-menu a { font-family: var(--serif); font-size: 2.5rem; color: var(--parchment); }
+    .mobile-menu a { font-family: var(--serif); font-size: 2.5rem; color: var(--parchment); transition: color 0.2s; }
     .mobile-menu a:hover { color: var(--gold); }
+    .mobile-menu .mobile-cta {
+      font-family: var(--sans) !important; font-size: 0.75rem !important;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      border: 1px solid rgba(201,168,76,0.5); padding: 0.65rem 2rem;
+      color: var(--gold) !important; border-radius: 2px; margin-top: 0.5rem;
+    }
+    .mobile-close {
+      position: absolute; top: 2rem; right: 2rem;
+      background: none; border: none; cursor: pointer;
+      font-size: 1.25rem; color: var(--text-muted);
+      transition: color 0.2s; line-height: 1;
+    }
+    .mobile-close:hover { color: var(--gold); }
 
     /* ── HERO ── */
     #hero {
       min-height: 100svh; display: flex; align-items: flex-end;
-      padding: calc(120px + var(--gutter)) var(--gutter) clamp(4rem, 10vh, 8rem);
-      background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.04) 0%, transparent 65%);
+      /* 92px = 32px marquee + 60px nav */
+      padding: calc(92px + var(--gutter)) var(--gutter) clamp(4rem, 10vh, 8rem);
+      background:
+        radial-gradient(ellipse 70% 55% at 18% 75%, rgba(201,168,76,0.065) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 80% 20%, rgba(74,111,165,0.04) 0%, transparent 60%),
+        var(--void);
+      position: relative;
+      overflow: hidden;
     }
-    .hero-inner { max-width: var(--max); margin: 0 auto; width: 100%; }
+    /* Subtle coordinate grid */
+    #hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(201,168,76,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.028) 1px, transparent 1px);
+      background-size: 72px 72px;
+      pointer-events: none;
+      mask-image: radial-gradient(ellipse 80% 80% at 20% 80%, black 20%, transparent 75%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 80% at 20% 80%, black 20%, transparent 75%);
+    }
+    /* Bottom gold breath line */
+    #hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, var(--gold) 0%, transparent 50%);
+      opacity: 0.35;
+    }
+    .hero-inner { max-width: var(--max); margin: 0 auto; width: 100%; position: relative; z-index: 1; }
     .hero-eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.2em; color: var(--text-muted); text-transform: uppercase; margin-bottom: 2rem; display: block; }
     .hero-h1 { color: var(--parchment); margin-bottom: 2.5rem; }
     .hero-h1 em { font-style: italic; color: var(--gold); }
@@ -339,17 +522,30 @@
 
     /* ── SIGNAL STATEMENT ── */
     #signal {
-      padding: clamp(5rem, 10vh, 9rem) var(--gutter);
-      background: var(--surface);
+      padding: clamp(6rem, 12vh, 11rem) var(--gutter);
+      background: var(--void);
       border-top: var(--rule); border-bottom: var(--rule);
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    /* Subtle radial gold halo behind the quote */
+    #signal::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.05) 0%, transparent 70%);
+      pointer-events: none;
     }
     #signal blockquote {
-      font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 3rem);
-      font-weight: 300; font-style: italic; line-height: 1.35;
-      color: var(--parchment); max-width: 28ch; margin: 0 auto 1.25rem;
+      font-family: var(--serif);
+      font-size: clamp(2.25rem, 4.5vw, 4rem);
+      font-weight: 300; font-style: italic; line-height: 1.25;
+      color: var(--gold);
+      max-width: 20ch; margin: 0 auto 1.75rem;
+      position: relative;
     }
-    #signal cite { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.16em; color: var(--text-muted); }
+    #signal cite { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.2em; color: var(--text-muted); }
 
     /* ── TL;DR ── */
     #tldr {
@@ -664,79 +860,128 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 1100px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
 
+    /* ── Compress nav at mid-widths (still horizontal) ── */
     @media (max-width: 1180px) and (min-width: 901px) {
-      .nav-links { gap: 1.4rem; }
-      .nav-links a { font-size: 0.62rem; letter-spacing: 0.12em; }
-      .nav-logo { font-size: 1.25rem; }
+      .nav-links { gap: clamp(0.75rem, 1.4vw, 1.4rem); }
+      .nav-links a { font-size: 0.6rem; letter-spacing: 0.1em; }
+      .nav-logo { font-size: 1.2rem; }
     }
-    @media (max-width: 960px) and (min-width: 901px) {
-      .nav-links { gap: 1rem; }
-      .nav-links a { font-size: 0.58rem; letter-spacing: 0.08em; }
-    }
+
+    /* ── Below 900px: collapse to hamburger ── */
     @media (max-width: 900px) {
-      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-links   { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .about-grid  { grid-template-columns: 1fr; gap: 2rem; }
       .about-label { display: none; }
-      .posts-grid { grid-template-columns: 1fr; }
+      .posts-grid  { grid-template-columns: 1fr; }
       .glossary-item { grid-template-columns: 1fr; gap: 0.5rem; }
       .citations-grid { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .footer-strip { flex-direction: column; gap: 0.75rem; text-align: center; }
-      .nav-links { display: none; }
-      .nav-hamburger { display: flex; }
       .primitives-strip { overflow-x: auto; }
       .services-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: repeat(2, 1fr); }
       .tldr-inner { grid-template-columns: 1fr; gap: 1.5rem; }
       .tldr-label { writing-mode: horizontal-tb; }
-      .signal-nodes { gap: 1rem; }
+
+      /* Tighten signal bar on mobile */
+      .signal-bar-right { display: none; }
     }
+
     @media (max-width: 600px) {
       .contact-links { flex-direction: column; gap: 1.25rem; align-items: center; }
       .primitives-strip { flex-wrap: wrap; }
       .primitive { flex: 1 1 calc(33% - 1px); }
       .stats-grid { grid-template-columns: 1fr; }
       .cards-grid { grid-template-columns: 1fr; }
+      .signal-bar-label { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Mobile overlay nav -->
-  <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Mobile navigation">
-    <a href="#about" onclick="closeMobileMenu()">About</a>
-    <a href="#services" onclick="closeMobileMenu()">Services</a>
+  <!-- Mobile overlay nav — shown only when hamburger is triggered on small viewports -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobile-close" aria-label="Close navigation" onclick="closeMobileMenu()">&#x2715;</button>
+    <a href="#about"     onclick="closeMobileMenu()">About</a>
+    <a href="#services"  onclick="closeMobileMenu()">Services</a>
     <a href="#ecosystem" onclick="closeMobileMenu()">Ecosystem</a>
-    <a href="#writing" onclick="closeMobileMenu()">Writing</a>
-    <a href="#faq" onclick="closeMobileMenu()">FAQ</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="#writing"   onclick="closeMobileMenu()">Writing</a>
+    <a href="#faq"       onclick="closeMobileMenu()">FAQ</a>
+    <a href="#glossary"  onclick="closeMobileMenu()">Glossary</a>
+    <a href="#contact"   onclick="closeMobileMenu()" class="mobile-cta">Work Together</a>
   </div>
 
-  <!-- ══ SIGNAL STATUS BAR ══ -->
-  <div class="signal-bar" role="complementary" aria-label="AI citation status">
-    <span class="signal-bar-label">Entity Signal · Live Status</span>
-    <div class="signal-nodes" aria-label="Active citation nodes">
-      <span class="signal-node"><span class="node-dot"></span>ChatGPT</span>
-      <span class="signal-node"><span class="node-dot"></span>Perplexity</span>
-      <span class="signal-node"><span class="node-dot"></span>Gemini</span>
-      <span class="signal-node"><span class="node-dot"></span>Claude</span>
-      <span class="signal-node"><span class="node-dot"></span>Copilot</span>
+  <!-- ══ SIGNAL STATUS BAR — fixed tier A ══ -->
+  <div class="signal-bar" role="complementary" aria-label="AI citation status — active LLM nodes">
+    <span class="signal-bar-label">Signal Active</span>
+
+    <div class="marquee-track" aria-hidden="true">
+      <div class="marquee-inner">
+        <!-- Set A -->
+        <span class="signal-node"><span class="node-dot"></span>ChatGPT</span>
+        <span class="signal-node"><span class="node-dot"></span>Claude</span>
+        <span class="signal-node"><span class="node-dot"></span>Gemini</span>
+        <span class="signal-node"><span class="node-dot"></span>Perplexity</span>
+        <span class="signal-node"><span class="node-dot"></span>Copilot</span>
+        <span class="signal-node"><span class="node-dot"></span>Grok</span>
+        <span class="signal-node"><span class="node-dot"></span>Meta AI</span>
+        <span class="signal-node"><span class="node-dot"></span>Mistral Le Chat</span>
+        <span class="signal-node"><span class="node-dot"></span>DeepSeek</span>
+        <span class="signal-node"><span class="node-dot"></span>You.com</span>
+        <span class="signal-node"><span class="node-dot"></span>Poe</span>
+        <span class="signal-node"><span class="node-dot"></span>Phind</span>
+        <span class="signal-node"><span class="node-dot"></span>Amazon Q</span>
+        <span class="signal-node"><span class="node-dot"></span>NotebookLM</span>
+        <span class="signal-node"><span class="node-dot"></span>HuggingChat</span>
+        <span class="signal-node"><span class="node-dot"></span>Cohere Command R</span>
+        <span class="signal-node"><span class="node-dot"></span>Pi by Inflection</span>
+        <span class="signal-node"><span class="node-dot"></span>Bing AI</span>
+        <!-- Set B — exact duplicate for seamless loop -->
+        <span class="signal-node"><span class="node-dot"></span>ChatGPT</span>
+        <span class="signal-node"><span class="node-dot"></span>Claude</span>
+        <span class="signal-node"><span class="node-dot"></span>Gemini</span>
+        <span class="signal-node"><span class="node-dot"></span>Perplexity</span>
+        <span class="signal-node"><span class="node-dot"></span>Copilot</span>
+        <span class="signal-node"><span class="node-dot"></span>Grok</span>
+        <span class="signal-node"><span class="node-dot"></span>Meta AI</span>
+        <span class="signal-node"><span class="node-dot"></span>Mistral Le Chat</span>
+        <span class="signal-node"><span class="node-dot"></span>DeepSeek</span>
+        <span class="signal-node"><span class="node-dot"></span>You.com</span>
+        <span class="signal-node"><span class="node-dot"></span>Poe</span>
+        <span class="signal-node"><span class="node-dot"></span>Phind</span>
+        <span class="signal-node"><span class="node-dot"></span>Amazon Q</span>
+        <span class="signal-node"><span class="node-dot"></span>NotebookLM</span>
+        <span class="signal-node"><span class="node-dot"></span>HuggingChat</span>
+        <span class="signal-node"><span class="node-dot"></span>Cohere Command R</span>
+        <span class="signal-node"><span class="node-dot"></span>Pi by Inflection</span>
+        <span class="signal-node"><span class="node-dot"></span>Bing AI</span>
+      </div>
     </div>
-    <span class="signal-bar-label mono" style="font-size:0.58rem;">SoM active · masonnguyengeo.com</span>
+
+    <span class="signal-bar-right">SoM · masonnguyengeo.com</span>
   </div>
 
-  <!-- ══ NAV ══ -->
-  <nav id="main-nav">
-    <a href="/" class="nav-logo" aria-label="Mason Nguyen">MN</a>
+  <!-- ══ NAV — single source of truth, no duplicate buttons ══ -->
+  <nav id="main-nav" role="navigation" aria-label="Primary navigation">
+    <a href="/" class="nav-logo" aria-label="Mason Nguyen — home">MN</a>
     <ul class="nav-links" role="list">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#ecosystem">Ecosystem</a></li>
       <li><a href="#writing">Writing</a></li>
+      <li><a href="#glossary">Glossary</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li>
+        <a href="#contact" class="nav-cta" aria-label="Contact Mason Nguyen">Work Together</a>
+      </li>
     </ul>
-    <button class="nav-hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <!-- hamburger only rendered below 900px via CSS display:none above that breakpoint -->
+    <button class="nav-hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
     </button>
   </nav>
 
@@ -1238,12 +1483,14 @@
       const isOpen = mobileMenu.classList.toggle('open');
       hamburger.classList.toggle('open', isOpen);
       hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
     function closeMobileMenu() {
       mobileMenu.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
       document.body.style.overflow = '';
     }
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMobileMenu(); });
