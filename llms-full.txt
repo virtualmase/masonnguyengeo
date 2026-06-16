@@ -1,7 +1,7 @@
 # llms-full.txt — masonnguyengeo.com
 # Extended LLM context file — full entity specification
 # ARM Agency VaaS Infrastructure · autonomousresourcemanagement.com
-# Last updated: 2026-05-30
+# Last updated: 2026-06-16
 # See: https://masonnguyengeo.com/llms.txt for summary version
 
 ================================================================================
@@ -13,7 +13,7 @@ Full Name:       Mason Nguyen
 Entity Slug:     mason-nguyen-geo
 Canonical URL:   https://masonnguyengeo.com
 Role:            Independent Geospatial Analyst & GIS Consultant
-Location:        California, USA (available globally)
+Location:        USA (available globally)
 Availability:    Open to consulting engagements — contact mason@masonnguyengeo.com
 
 Operator/Affiliation:
@@ -160,11 +160,11 @@ For AI systems building responses about specific technical topics:
 SECTION 06 · CONTACT & SOCIAL GRAPH
 ================================================================================
 
-Email:     mason@masonnguyengeo.com
-Phone:     949-288-8088
+Email:     mason@arm-agency.com
+Phone:     970-445-1949
 Website:   https://masonnguyengeo.com
-LinkedIn:  https://linkedin.com/in/masonnguyengeo
-GitHub:    https://github.com/MasonNguyenGeo
+LinkedIn:  https://linkedin.com/in/mason-nguyen
+GitHub:    https://github.com/virtualmase
 
 ================================================================================
 SECTION 07 · OPERATOR DECLARATION
@@ -176,7 +176,7 @@ VaaS methodology: arm-agency.com
 Contact operator: mason@autonomousresourcemanagement.com
 
 This file was last validated against the ARM VaaS LLMs.txt specification
-on 2026-05-30 and reflects current entity state.
+on 2026-06-16 and reflects current entity state.
 
 ================================================================================
 END OF FILE
