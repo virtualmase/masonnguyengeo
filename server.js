@@ -411,6 +411,15 @@ app.get('/api/entity', (req, res) => {
 });
 
 // ─── STATIC FILES ─────────────────────────────────────────────────────────────
+// Serve root-level content directories (what-is-geo/, arm-framework/, etc.)
+const staticOpts = {
+  maxAge: ENV === 'production' ? '7d' : 0,
+  etag: true,
+  lastModified: true,
+  index: 'index.html',
+};
+app.use(express.static(path.join(__dirname), staticOpts));
+
 app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: ENV === 'production' ? '7d' : 0,
   etag: true,
