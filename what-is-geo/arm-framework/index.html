@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The ARM Framework — Authority, Relevance, Momentum | Mason Nguyen GEO</title>
+<meta name="description" content="The ARM Framework is Mason Nguyen's proprietary methodology for building brand presence in AI-generated answers. Three pillars: Authority, Relevance, Momentum.">
+<meta name="keywords" content="ARM framework, authority relevance momentum SEO, entity authority building strategy, topical authority SEO 2025, signal momentum content strategy, ARM SEO framework">
+<link rel="canonical" href="https://masonnguyengeo.com/arm-framework">
+
+<!-- Entity / GEO structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "The ARM Framework",
+  "headline": "Authority, Relevance, Momentum: The GEO Methodology Built for AI-Era Brand Presence",
+  "description": "A proprietary three-pillar methodology for achieving measurable presence in LLM-generated answers — not just search rankings.",
+  "author": {
+    "@type": "Person",
+    "name": "Mason Nguyen",
+    "url": "https://masonnguyengeo.com/about",
+    "sameAs": ["https://www.linkedin.com/in/masonnguyen", "https://twitter.com/masonnguyen"]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mason Nguyen GEO",
+    "url": "https://masonnguyengeo.com"
+  },
+  "mainEntityOfPage": "https://masonnguyengeo.com/arm-framework",
+  "datePublished": "2025-06-01",
+  "dateModified": "2025-06-01",
+  "about": {
+    "@type": "Thing",
+    "name": "Generative Engine Optimization",
+    "description": "The practice of optimizing brand content and entity signals to appear in AI-generated answers from systems like ChatGPT, Perplexity, and Google AI Overviews."
+  }
+}
+</script>
+
+<style>
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/* ── Design tokens ── */
+:root {
+  --ink:        #0D0D0D;
+  --ink-2:      #3A3A3A;
+  --ink-3:      #6B6B6B;
+  --paper:      #F7F5F0;
+  --paper-2:    #EDEAE3;
+  --white:      #FFFFFF;
+  --authority:  #1A3A6B;   /* deep navy */
+  --relevance:  #1B6B4A;   /* forest green */
+  --momentum:   #7B2D00;   /* ember */
+  --accent:     #C8522A;   /* warm orange — Mason's signal colour */
+  --border:     rgba(13,13,13,0.10);
+  --border-strong: rgba(13,13,13,0.22);
+
+  --f-display:  'Playfair Display', Georgia, serif;
+  --f-body:     'DM Sans', system-ui, sans-serif;
+  --f-mono:     'DM Mono', 'Courier New', monospace;
+
+  --max:        1100px;
+  --gap:        clamp(1.5rem, 4vw, 3rem);
+}
+
+/* ── Type import ── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Utility ── */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+/* ── Nav ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0.875rem 0;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--f-display);
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+.nav-links a:hover { color: var(--accent); }
+.nav-cta {
+  font-size: 13px; font-weight: 500;
+  padding: 0.5rem 1.125rem;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.nav-cta:hover { background: var(--accent); }
+
+/* ── Hero ── */
+.hero {
+  padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem);
+  border-bottom: 0.5px solid var(--border);
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+.eyebrow::before {
+  content: '';
+  display: block; width: 24px; height: 1px;
+  background: var(--accent);
+}
+.hero h1 {
+  font-family: var(--f-display);
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  max-width: 820px;
+  margin-bottom: 1.5rem;
+}
+.hero h1 em { font-style: italic; color: var(--ink-2); }
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--ink-2);
+  max-width: 600px;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+.hero-meta {
+  display: flex; flex-wrap: wrap; gap: 2rem;
+  font-size: 13px; color: var(--ink-3);
+}
+.hero-meta strong { color: var(--ink); font-weight: 500; }
+
+/* ── ARM triptych ── */
+.triptych {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border-strong);
+  margin: clamp(3rem, 7vw, 5rem) 0;
+  border: 1px solid var(--border-strong);
+}
+.arm-card {
+  background: var(--paper);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  position: relative;
+  overflow: hidden;
+}
+.arm-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+}
+.arm-a::after { background: var(--authority); }
+.arm-r::after { background: var(--relevance); }
+.arm-m::after { background: var(--momentum); }
+.arm-letter {
+  font-family: var(--f-display);
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  opacity: 0.08;
+  position: absolute;
+  top: 1rem; right: 1.25rem;
+}
+.arm-a .arm-letter { color: var(--authority); }
+.arm-r .arm-letter { color: var(--relevance); }
+.arm-m .arm-letter { color: var(--momentum); }
+.arm-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.arm-a .arm-label { color: var(--authority); }
+.arm-r .arm-label { color: var(--relevance); }
+.arm-m .arm-label { color: var(--momentum); }
+.arm-name {
+  font-family: var(--f-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.875rem;
+  color: var(--ink);
+}
+.arm-desc {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+
+/* ── Section generic ── */
+section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+section + section { border-top: 0.5px solid var(--border); }
+.section-label {
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-family: var(--f-display);
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+  max-width: 680px;
+}
+.section-body {
+  font-size: 15px;
+  color: var(--ink-2);
+  max-width: 660px;
+  line-height: 1.75;
+}
+.section-body p + p { margin-top: 1.125rem; }
+
+/* ── Two-col layout ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+.two-col.reverse { direction: rtl; }
+.two-col.reverse > * { direction: ltr; }
+
+/* ── Pillar deep dives ── */
+.pillar-block {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding-top: clamp(2.5rem, 5vw, 4rem);
+  border-top: 1px solid var(--border);
+}
+.pillar-block:first-child { border-top: none; margin-top: 0; padding-top: 0; }
+.pillar-number {
+  font-family: var(--f-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  opacity: 0.1;
+}
+.pillar-a .pillar-number { color: var(--authority); }
+.pillar-r .pillar-number { color: var(--relevance); }
+.pillar-m .pillar-number { color: var(--momentum); }
+.pillar-tag {
+  display: inline-block;
+  font-family: var(--f-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 2px;
+  margin-bottom: 0.875rem;
+  font-weight: 500;
+}
+.pillar-a .pillar-tag { background: rgba(26,58,107,0.08); color: var(--authority); }
+.pillar-r .pillar-tag { background: rgba(27,107,74,0.08); color: var(--relevance); }
+.pillar-m .pillar-tag { background: rgba(123,45,0,0.08); color: var(--momentum); }
+.pillar-h {
+  font-family: var(--f-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  color: var(--ink);
+}
+.pillar-body {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.75;
+  max-width: 600px;
+}
+.pillar-body p + p { margin-top: 1rem; }
+
+/* ── Signal list ── */
+.signal-list {
+  margin-top: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.signal-item {
+  display: flex; gap: 0.875rem; align-items: flex-start;
+  padding: 0.875rem 1rem;
+  background: var(--white);
+  border: 0.5px solid var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.signal-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  flex-shrink: 0; margin-top: 5px;
+}
+.authority-dot { background: var(--authority); }
+.relevance-dot { background: var(--relevance); }
+.momentum-dot  { background: var(--momentum); }
+.signal-item strong { color: var(--ink); }
+
+/* ── Process steps ── */
+.steps {
+  display: flex; flex-direction: column; gap: 0;
+  margin-top: 2rem;
+  border: 0.5px solid var(--border-strong);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  border-bottom: 0.5px solid var(--border);
+  background: var(--white);
+}
+.step:last-child { border-bottom: none; }
+.step-num {
+  display: flex; align-items: center; justify-content: center;
+  border-right: 0.5px solid var(--border);
+  font-family: var(--f-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-3);
+  padding: 1.25rem 0;
+}
+.step-content {
+  padding: 1.25rem 1.5rem;
+}
+.step-title {
+  font-size: 14px; font-weight: 600; color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+.step-body {
+  font-size: 13px; color: var(--ink-3); line-height: 1.6;
+}
+
+/* ── Quote block ── */
+.pullquote {
+  border-left: 3px solid var(--accent);
+  padding: 1.25rem 1.75rem;
+  margin: 2.5rem 0;
+  background: var(--white);
+}
+.pullquote p {
+  font-family: var(--f-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.pullquote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-size: 12px;
+  font-style: normal;
+  font-family: var(--f-mono);
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+/* ── Comparison table ── */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin-top: 1.5rem;
+}
+.compare-table th {
+  text-align: left;
+  padding: 0.625rem 1rem;
+  font-size: 11px;
+  font-family: var(--f-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--border-strong);
+  background: var(--paper-2);
+}
+.compare-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 0.5px solid var(--border);
+  color: var(--ink-2);
+  vertical-align: top;
+}
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table td:first-child { color: var(--ink); font-weight: 500; }
+.compare-table .geo-col { color: var(--accent); font-weight: 500; }
+
+/* ── FAQ ── */
+.faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.faq-item {
+  border: 0.5px solid var(--border);
+  border-bottom: none;
+  background: var(--white);
+}
+.faq-item:first-child { border-radius: 4px 4px 0 0; }
+.faq-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
+.faq-q {
+  padding: 1.125rem 1.25rem;
+  font-size: 14px; font-weight: 500; color: var(--ink);
+  cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem;
+}
+.faq-q::after {
+  content: '+';
+  font-size: 18px; font-weight: 300; flex-shrink: 0; color: var(--ink-3);
+  transition: transform .2s;
+}
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height .3s ease, padding .3s ease;
+  font-size: 14px; color: var(--ink-2); line-height: 1.7;
+  padding: 0 1.25rem;
+}
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding: 0 1.25rem 1.25rem;
+}
+
+/* ── CTA ── */
+.cta-block {
+  background: var(--ink);
+  color: var(--white);
+  padding: clamp(3rem, 7vw, 5rem) 0;
+}
+.cta-block .section-label { color: var(--accent); }
+.cta-block .section-title { color: var(--white); max-width: 600px; }
+.cta-block .section-body { color: rgba(255,255,255,0.65); }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+.btn-primary {
+  padding: 0.875rem 2rem;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 14px; font-weight: 500;
+  transition: opacity .15s;
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost {
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  border: 0.5px solid rgba(255,255,255,0.25);
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 14px; font-weight: 400;
+  transition: border-color .15s, color .15s;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+/* ── Footer ── */
+footer {
+  background: var(--paper-2);
+  border-top: 0.5px solid var(--border);
+  padding: 2.5rem 0;
+}
+.footer-inner {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: center; gap: 1.5rem;
+}
+.footer-copy { font-size: 13px; color: var(--ink-3); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  padding: 0.875rem 0;
+  font-size: 12px;
+  color: var(--ink-3);
+  border-bottom: 0.5px solid var(--border);
+  font-family: var(--f-mono);
+}
+.breadcrumb a { color: var(--ink-3); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+/* ── Reading progress ── */
+.progress-bar {
+  position: fixed; top: 0; left: 0;
+  height: 2px; background: var(--accent);
+  width: 0%; z-index: 200;
+  transition: width .1s linear;
+}
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .triptych { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .two-col.reverse { direction: ltr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<!-- Nav -->
+<nav aria-label="Site navigation">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Mason Nguyen<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/what-is-geo">What is GEO</a></li>
+      <li><a href="/arm-framework" aria-current="page">ARM Framework</a></li>
+      <li><a href="/ai-visibility-strategy">AI Visibility</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/contact" class="nav-cta">Work together</a>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    <a href="/what-is-geo">GEO</a><span>/</span>
+    ARM Framework
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Proprietary Methodology</div>
+    <h1>The ARM Framework:<br><em>Authority, Relevance, Momentum</em></h1>
+    <p class="hero-sub">
+      The three-pillar system for building brand presence inside AI-generated answers — not just search rankings.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Updated <strong>June 2025</strong></span>
+      <span>15 min read</span>
+      <span>URL: <strong>/arm-framework</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- ARM triptych -->
+<div class="container">
+  <div class="triptych" role="region" aria-label="ARM Framework pillars">
+    <div class="arm-card arm-a">
+      <div class="arm-letter" aria-hidden="true">A</div>
+      <div class="arm-label">Pillar one</div>
+      <div class="arm-name">Authority</div>
+      <p class="arm-desc">The depth of machine trust in your entity. Built through structured data, citation networks, and disambiguation signals that LLMs resolve before surfacing your name.</p>
+    </div>
+    <div class="arm-card arm-r">
+      <div class="arm-letter" aria-hidden="true">R</div>
+      <div class="arm-label">Pillar two</div>
+      <div class="arm-name">Relevance</div>
+      <p class="arm-desc">The precision of topical fit between your content and the intent behind an AI query. Not keyword matching — semantic alignment at the entity and concept level.</p>
+    </div>
+    <div class="arm-card arm-m">
+      <div class="arm-letter" aria-hidden="true">M</div>
+      <div class="arm-label">Pillar three</div>
+      <div class="arm-name">Momentum</div>
+      <p class="arm-desc">The velocity of fresh signals reaching training and retrieval pipelines. Publication cadence, syndication spread, and citation freshness compound into durable citation density.</p>
+    </div>
+  </div>
+</div>
+
+<!-- What it is -->
+<section id="overview">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-label">The methodology</div>
+        <h2 class="section-title">Why rankings alone no longer measure presence</h2>
+        <div class="section-body">
+          <p>A brand can hold the first organic position for a competitive keyword and be completely absent from the AI-generated summary above it. That gap is not a penalty. It is a measurement problem: the metric used to declare success — rank — no longer captures the surface where decisions are made.</p>
+          <p>The ARM Framework was built to close that gap. It gives brands a single coherent system for measuring and improving what actually drives citation frequency in large language model outputs: the strength of entity recognition, the precision of topical alignment, and the velocity of signal propagation into retrieval pipelines.</p>
+          <p>Each pillar maps to a distinct failure mode. Brands missing from AI answers are typically suffering from one of three conditions: low authority (the model cannot confidently resolve the entity), low relevance (the content does not map cleanly to query intent at the concept level), or low momentum (signal freshness has decayed below retrieval thresholds). ARM diagnoses which pillar is the primary constraint and builds from there.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pullquote">
+          <p>"Most GEO advice optimizes for a model that no longer exists. ARM was designed around how current retrieval pipelines actually resolve brand entities — not how SEO tools measure them."</p>
+          <cite>— Mason Nguyen, masonnguyengeo.com</cite>
+        </div>
+        <table class="compare-table" aria-label="Traditional SEO vs ARM Framework comparison">
+          <thead>
+            <tr>
+              <th>Dimension</th>
+              <th>Traditional SEO</th>
+              <th class="geo-col">ARM / GEO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Success metric</td><td>Rank position</td><td class="geo-col">Citation frequency</td></tr>
+            <tr><td>Content goal</td><td>Keyword density</td><td class="geo-col">Entity disambiguation</td></tr>
+            <tr><td>Link signals</td><td>Domain authority</td><td class="geo-col">Structured citation network</td></tr>
+            <tr><td>Freshness</td><td>Crawl frequency</td><td class="geo-col">Signal propagation velocity</td></tr>
+            <tr><td>Audience</td><td>Human + crawler</td><td class="geo-col">Human + LLM retrieval</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pillar 1: Authority -->
+<section id="authority">
+  <div class="container">
+    <div class="section-label" style="color: var(--authority)">Pillar one — Authority</div>
+    <div class="pillar-block pillar-a">
+      <div class="pillar-number" aria-hidden="true">A</div>
+      <div class="pillar-tag">Machine trust layer</div>
+      <h2 class="pillar-h">Authority: What the model believes about your entity before the query arrives</h2>
+      <div class="pillar-body">
+        <p>Authority in the ARM Framework is not domain authority in the traditional sense. It is the confidence score a language model assigns to your entity when resolving an ambiguous reference. When a user asks ChatGPT for "a GEO consultant," the model must resolve that category against a set of known entities. Brands with high ARM authority are resolved quickly and confidently. Brands with low authority are either absent or confused with adjacent entities.</p>
+        <p>Building authority requires three concurrent tracks. The first is entity registration: ensuring your brand, principals, and products have structured, machine-readable records across knowledge graphs (Wikidata, Google Knowledge Graph API), schema.org markup, and canonical entity anchors. The second is citation network depth — the number and quality of third-party sources that reference your entity in unambiguous, attributable ways. The third is disambiguation hygiene: removing conflicting or duplicate entity signals that cause retrieval systems to hedge or omit.</p>
+        <p>Authority is the slowest pillar to build and the longest to maintain. It compounds over time. A brand that establishes clean entity signals in 2025 holds a structural advantage that cannot be copied in a single content sprint.</p>
+      </div>
+      <div class="signal-list" role="list" aria-label="Authority signals">
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot authority-dot" aria-hidden="true"></div>
+          <div><strong>Wikidata entity record</strong> — structured, cited, linked to known identifiers across multiple language editions</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot authority-dot" aria-hidden="true"></div>
+          <div><strong>Schema.org Person / Organization markup</strong> — sameAs arrays pointing to LinkedIn, Crunchbase, official social profiles</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot authority-dot" aria-hidden="true"></div>
+          <div><strong>Third-party citation network</strong> — editorial mentions in topically relevant publications with consistent entity naming</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot authority-dot" aria-hidden="true"></div>
+          <div><strong>Disambiguation files</strong> — geo.txt / entity anchor pages that resolve ambiguous name collisions</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot authority-dot" aria-hidden="true"></div>
+          <div><strong>Canonical URL structure</strong> — persistent, consistent URLs that retrieval systems can reliably dereference over time</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pillar 2: Relevance -->
+<section id="relevance">
+  <div class="container">
+    <div class="section-label" style="color: var(--relevance)">Pillar two — Relevance</div>
+    <div class="pillar-block pillar-r">
+      <div class="pillar-number" aria-hidden="true">R</div>
+      <div class="pillar-tag">Semantic alignment layer</div>
+      <h2 class="pillar-h">Relevance: The precision of fit between your content and AI query intent</h2>
+      <div class="pillar-body">
+        <p>Relevance in the ARM context is semantic alignment, not keyword proximity. An LLM answering a question about generative engine optimization does not match keywords against a document. It resolves the query to a concept space and finds the sources whose coverage most completely and confidently inhabits that space. A page optimized for the keyword "GEO strategy" but structured as a listicle provides weak coverage of the underlying concept cluster. A page that maps the relationships between entities, processes, and outcomes in the GEO domain provides strong coverage — and earns citation.</p>
+        <p>Building relevance requires content to be organized at the concept level, not the page level. Topic clusters alone are insufficient; the relationships between concepts must be made explicit and machine-readable. FAQ schema, How-To schema, and definition blocks are not just SEO decoration — they are concept-level signals that retrieval systems use to map your content to query intent.</p>
+        <p>Relevance is also the pillar most sensitive to topical drift. A brand that earns strong relevance signals in one domain and then publishes generalist content risks diluting its concept footprint. Discipline about topical focus is a relevance strategy.</p>
+      </div>
+      <div class="signal-list" role="list" aria-label="Relevance signals">
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot relevance-dot" aria-hidden="true"></div>
+          <div><strong>Concept-level content architecture</strong> — pages that own a concept cluster, not just a keyword, with explicit relationship mapping</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot relevance-dot" aria-hidden="true"></div>
+          <div><strong>FAQ and definition schema</strong> — machine-readable Q&A blocks that LLMs can resolve directly against query intent</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot relevance-dot" aria-hidden="true"></div>
+          <div><strong>Topical fence discipline</strong> — deliberate restriction of content to a defined domain to maintain signal concentration</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot relevance-dot" aria-hidden="true"></div>
+          <div><strong>Semantic entity interlinking</strong> — explicit named-entity references within content that extend the brand's knowledge graph surface</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot relevance-dot" aria-hidden="true"></div>
+          <div><strong>Answer-layer formatting</strong> — direct, quotable prose in the first 100 words of each section, structured for LLM extraction</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pillar 3: Momentum -->
+<section id="momentum">
+  <div class="container">
+    <div class="section-label" style="color: var(--momentum)">Pillar three — Momentum</div>
+    <div class="pillar-block pillar-m">
+      <div class="pillar-number" aria-hidden="true">M</div>
+      <div class="pillar-tag">Signal velocity layer</div>
+      <h2 class="pillar-h">Momentum: The velocity of fresh signals entering retrieval pipelines</h2>
+      <div class="pillar-body">
+        <p>Momentum is the most misunderstood pillar. It is frequently conflated with content volume — the mistaken belief that publishing more is publishing better. Momentum is not about output quantity. It is about signal propagation velocity: the rate at which fresh, attributable signals about your entity and your topics reach the inputs that training and retrieval systems consume.</p>
+        <p>A single well-structured piece that earns three editorial citations in high-authority publications generates more momentum than twenty blog posts that circulate only within the brand's own channels. Momentum is the compounding product of publication quality, syndication reach, and citation attribution speed.</p>
+        <p>Momentum also decays. A brand that published strong GEO content in 2023 and went quiet in 2025 may find its citation frequency declining — not because the content degraded, but because newer, fresher signals from competitors have displaced it in retrieval rankings. Maintaining momentum requires a systematic publishing cadence calibrated to retrieval decay curves, not editorial convenience.</p>
+      </div>
+      <div class="signal-list" role="list" aria-label="Momentum signals">
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot momentum-dot" aria-hidden="true"></div>
+          <div><strong>Editorial syndication cadence</strong> — structured placement of attributed content in third-party publications on a defined schedule</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot momentum-dot" aria-hidden="true"></div>
+          <div><strong>Citation attribution speed</strong> — the time between publication and first third-party reference, which affects retrieval indexing priority</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot momentum-dot" aria-hidden="true"></div>
+          <div><strong>Canonical freshness signals</strong> — regular dateModified schema updates paired with substantive content revisions on high-authority pages</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot momentum-dot" aria-hidden="true"></div>
+          <div><strong>Social proof velocity</strong> — measurable engagement on content that corroborates authority signals already present in knowledge graphs</div>
+        </div>
+        <div class="signal-item" role="listitem">
+          <div class="signal-dot momentum-dot" aria-hidden="true"></div>
+          <div><strong>Training data eligibility</strong> — content published in formats and on domains that LLM data pipelines are known to prioritize during periodic updates</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation -->
+<section id="implementation">
+  <div class="container">
+    <div class="section-label">Implementation</div>
+    <h2 class="section-title">How an ARM engagement runs</h2>
+    <p class="section-body">Every engagement follows the same diagnostic-first sequence. No implementation begins before the audit reveals which pillar is the primary constraint.</p>
+    <div class="steps" role="list" aria-label="ARM implementation steps">
+      <div class="step" role="listitem">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <div class="step-title">Entity audit — map the current machine-readable footprint</div>
+          <div class="step-body">Structured review of existing schema markup, knowledge graph records, third-party citation network, and entity disambiguation status across major LLM retrieval sources.</div>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <div class="step-title">Pillar diagnosis — identify the primary constraint</div>
+          <div class="step-body">ARM scoring across all three pillars. A single score reveals which pillar is limiting citation performance and sets the intervention priority for the first 90 days.</div>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <div class="step-title">Authority foundation — register and disambiguate the entity</div>
+          <div class="step-body">Wikidata setup, schema.org implementation, sameAs array construction, disambiguation file creation, and canonical URL architecture. This runs in parallel with content work.</div>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <div class="step-title">Content architecture — build the concept-level topic map</div>
+          <div class="step-body">Pillar pages and cluster pages structured for LLM extraction. Every page follows the ARM content template: answer-layer lead, concept-level body, FAQ schema, entity interlinking.</div>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <div class="step-title">Momentum program — cadenced syndication and citation building</div>
+          <div class="step-body">Structured editorial placements in topically relevant publications. Citation targets identified by retrieval-source analysis, not domain authority metrics.</div>
+        </div>
+      </div>
+      <div class="step" role="listitem">
+        <div class="step-num">06</div>
+        <div class="step-content">
+          <div class="step-title">Measurement — track citation frequency, not rank position</div>
+          <div class="step-body">Monthly ARM scorecard across all three pillars. Citation frequency in LLM outputs measured by systematic prompt testing across ChatGPT, Perplexity, Claude, and Gemini.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">ARM Framework — frequently asked questions</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How is the ARM Framework different from traditional topical authority SEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Topical authority SEO optimizes for ranking signals — the combination of backlinks, content depth, and crawl signals that influence a search engine's ranking algorithm. ARM optimizes for citation signals — the combination of entity trust, semantic alignment, and signal freshness that influences whether an LLM includes your brand in a generated answer. The overlap is real (strong topical authority correlates with ARM relevance), but the levers are different. ARM adds the entity registration and disambiguation layer that SEO tools do not measure, and it replaces rank tracking with citation frequency measurement.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Does ARM work for small brands and solo founders, or only enterprise?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">ARM was designed with solo founders and small brands as the primary use case. Enterprise brands have existing authority footprints and large content teams — they do not need a framework to start from zero. Small brands do. The entity registration and disambiguation steps in ARM are particularly high-leverage for founders because a clean, unambiguous entity record in a small niche costs the same to build as it does for a large brand, but delivers proportionally greater citation lift because the competitive set is smaller.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How long before ARM implementation shows measurable citation results?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Authority signals take 60 to 90 days to propagate through the systems that matter — knowledge graphs update on weekly to monthly cycles, and LLM retrieval systems refresh at varying intervals. Relevance signals (content architecture and schema) can improve citation frequency faster, sometimes within 30 days, particularly in real-time retrieval systems like Perplexity. Momentum signals compound over 6 to 12 months. The ARM engagement is structured around a 90-day foundation phase and a 6-month compound phase, with citation frequency measured at both checkpoints.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Which AI systems does ARM optimize for?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">The ARM Framework is designed to improve citation frequency across all major LLM-powered answer surfaces: ChatGPT (both trained knowledge and web retrieval), Perplexity, Google AI Overviews, Claude, Gemini, and emerging AI search interfaces. The signals that ARM builds — entity clarity, semantic precision, and fresh third-party citations — are input signals across all of these systems. There is no single-system optimization; ARM builds durable presence rather than gaming any individual retrieval architecture.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What does an ARM audit cost and how do I start?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Engagements start with an ARM audit — a structured review of your entity footprint, content architecture, and signal propagation covering all three pillars. From there, scope and pricing depend on whether the primary constraint is authority (entity and schema work), relevance (content architecture), or momentum (editorial syndication). Reach out via the contact page to start with a diagnostic call.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="container">
+    <div class="section-label">Work together</div>
+    <h2 class="section-title">Apply the ARM Framework to your brand</h2>
+    <p class="section-body">Every engagement starts with a diagnostic. We identify which pillar is the primary constraint before any implementation begins. No guesswork, no generic content audits.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn-primary">Start with a diagnostic call</a>
+      <a href="/what-is-geo" class="btn-ghost">Read: What is GEO →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Mason Nguyen GEO · masonnguyengeo.com</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Reading progress
+window.addEventListener('scroll', () => {
+  const doc = document.documentElement;
+  const scroll = doc.scrollTop || document.body.scrollTop;
+  const height = doc.scrollHeight - doc.clientHeight;
+  document.getElementById('progress').style.width = (scroll / height * 100) + '%';
+});
+
+// FAQ toggle
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    el.setAttribute('aria-expanded','true');
+  }
+}
+
+// Keyboard FAQ
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); }
+  });
+});
+</script>
+</body>
+</html>
