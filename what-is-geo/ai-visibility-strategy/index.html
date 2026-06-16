@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Visibility Strategy for Brands — How LLMs Find and Cite You | Mason Nguyen GEO</title>
+<meta name="description" content="How AI visibility actually works: the machine-readable content signals, entity graph architecture, and structured data decisions that determine whether LLMs cite your brand.">
+<meta name="keywords" content="AI visibility for brands, machine-readable content strategy, how LLMs crawl and cite content, entity graph for SEO, structured data for AI answers">
+<link rel="canonical" href="https://masonnguyengeo.com/ai-visibility-strategy">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "AI Visibility Strategy for Brands",
+  "headline": "AI Visibility Strategy: How LLMs Decide Which Brands to Cite",
+  "description": "A practical guide to understanding and improving your brand's presence in AI-generated answers across ChatGPT, Perplexity, Google AI Overviews, and Claude.",
+  "author": {
+    "@type": "Person",
+    "name": "Mason Nguyen",
+    "url": "https://masonnguyengeo.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mason Nguyen GEO",
+    "url": "https://masonnguyengeo.com"
+  },
+  "mainEntityOfPage": "https://masonnguyengeo.com/ai-visibility-strategy",
+  "datePublished": "2025-06-01",
+  "dateModified": "2025-06-01",
+  "about": [
+    { "@type": "Thing", "name": "AI visibility" },
+    { "@type": "Thing", "name": "Machine-readable content" },
+    { "@type": "Thing", "name": "Generative Engine Optimization" }
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --ink:       #0D0D0D;
+  --ink-2:     #3A3A3A;
+  --ink-3:     #6B6B6B;
+  --paper:     #F7F5F0;
+  --paper-2:   #EDEAE3;
+  --white:     #FFFFFF;
+  --accent:    #C8522A;
+  --signal:    #1B4D6B;   /* deep teal-navy for "signal" theme */
+  --border:    rgba(13,13,13,0.10);
+  --border-s:  rgba(13,13,13,0.20);
+
+  --f-display: 'Playfair Display', Georgia, serif;
+  --f-body:    'DM Sans', system-ui, sans-serif;
+  --f-mono:    'DM Mono', 'Courier New', monospace;
+  --max:       1100px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+/* Progress */
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width .1s; }
+
+/* Nav */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0.875rem 0;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--f-display); font-size: 15px; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+.nav-links a:hover, .nav-links a[aria-current] { color: var(--accent); }
+.nav-cta { font-size: 13px; font-weight: 500; padding: 0.5rem 1.125rem; background: var(--ink); color: var(--white); border-radius: 3px; text-decoration: none; transition: background .15s; }
+.nav-cta:hover { background: var(--accent); }
+
+/* Breadcrumb */
+.breadcrumb { padding: 0.875rem 0; font-size: 12px; color: var(--ink-3); border-bottom: 0.5px solid var(--border); font-family: var(--f-mono); }
+.breadcrumb a { color: var(--ink-3); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+/* Eyebrow */
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+.eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+
+/* Hero — distinct from ARM: leads with a diagnostic question, not a framework name */
+.hero { padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem); border-bottom: 0.5px solid var(--border); }
+.hero h1 { font-family: var(--f-display); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); max-width: 860px; margin-bottom: 1.5rem; }
+.hero h1 em { font-style: italic; color: var(--ink-3); }
+.hero-sub { font-size: clamp(1rem, 2vw, 1.175rem); color: var(--ink-2); max-width: 620px; line-height: 1.65; margin-bottom: 2.5rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 2rem; font-size: 13px; color: var(--ink-3); }
+.hero-meta strong { color: var(--ink); font-weight: 500; }
+
+/* Visibility meter — signature element */
+.meter-section { padding: clamp(2.5rem, 5vw, 4rem) 0; border-bottom: 0.5px solid var(--border); }
+.meter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border-s); border: 1px solid var(--border-s); border-radius: 4px; overflow: hidden; margin-top: 1.5rem; }
+.meter-cell { background: var(--white); padding: 1.25rem 1.125rem; }
+.meter-platform { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.625rem; }
+.meter-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.875rem; }
+.meter-bar-wrap { height: 4px; background: var(--paper-2); border-radius: 2px; margin-bottom: 0.5rem; }
+.meter-bar { height: 4px; border-radius: 2px; background: var(--signal); transition: width 1s ease; }
+.meter-stat { font-size: 12px; color: var(--ink-3); }
+.meter-stat strong { color: var(--ink); }
+.meter-type { font-size: 11px; color: var(--ink-3); margin-top: 0.375rem; }
+
+/* Section */
+section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+section + section { border-top: 0.5px solid var(--border); }
+.section-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.section-title { font-family: var(--f-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 1.25rem; max-width: 700px; }
+.section-body { font-size: 15px; color: var(--ink-2); max-width: 660px; line-height: 1.75; }
+.section-body p + p { margin-top: 1.125rem; }
+
+/* Two-col */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+
+/* Signal cards — how LLMs consume content */
+.signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 2rem; }
+.signal-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.375rem 1.25rem; position: relative; }
+.signal-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 100%; background: var(--signal); border-radius: 4px 0 0 4px; }
+.sc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--signal); margin-bottom: 0.5rem; }
+.sc-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 0.625rem; }
+.sc-body { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+
+/* Entity graph visual */
+.entity-visual { background: var(--white); border: 0.5px solid var(--border-s); border-radius: 6px; padding: 2rem; margin-top: 1.5rem; position: relative; overflow: hidden; }
+.entity-center { text-align: center; margin-bottom: 1.5rem; }
+.entity-node { display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px; border-radius: 50%; background: var(--signal); color: var(--white); font-family: var(--f-mono); font-size: 11px; font-weight: 500; text-align: center; line-height: 1.3; letter-spacing: 0.04em; }
+.entity-spokes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.spoke { padding: 0.75rem 0.875rem; background: var(--paper-2); border-radius: 4px; font-size: 12px; color: var(--ink-2); line-height: 1.45; text-align: center; }
+.spoke strong { display: block; color: var(--ink); font-size: 11px; margin-bottom: 2px; font-family: var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase; }
+.entity-connector { display: flex; justify-content: center; margin: 0.75rem 0; }
+.connector-line { width: 1px; height: 24px; background: var(--border-s); }
+
+/* Code block */
+.code-block { background: #0D0D0D; border-radius: 4px; padding: 1.375rem 1.5rem; margin-top: 1.5rem; overflow-x: auto; }
+.code-block pre { font-family: var(--f-mono); font-size: 12.5px; color: #E8E4DC; line-height: 1.7; }
+.code-block .key { color: #9ECBFF; }
+.code-block .val { color: #85E89D; }
+.code-block .str { color: #F0A070; }
+.code-block .cmt { color: #6B7280; font-style: italic; }
+.code-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; margin-top: 1.5rem; }
+
+/* Checklist */
+.checklist { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.625rem; }
+.check-item { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.875rem 1rem; background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; font-size: 14px; color: var(--ink-2); }
+.check-box { width: 18px; height: 18px; border: 1.5px solid var(--border-s); border-radius: 3px; flex-shrink: 0; margin-top: 1px; display: flex; align-items: center; justify-content: center; }
+.check-box.done { background: var(--signal); border-color: var(--signal); }
+.check-box.done::after { content: '✓'; font-size: 10px; color: white; font-weight: 700; }
+.check-item strong { color: var(--ink); }
+
+/* Pull quote */
+.pullquote { border-left: 3px solid var(--accent); padding: 1.25rem 1.75rem; margin: 2.5rem 0; background: var(--white); }
+.pullquote p { font-family: var(--f-display); font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.5; color: var(--ink); }
+.pullquote cite { display: block; margin-top: 0.75rem; font-size: 12px; font-style: normal; font-family: var(--f-mono); letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; }
+
+/* FAQ */
+.faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.faq-item { border: 0.5px solid var(--border); border-bottom: none; background: var(--white); }
+.faq-item:first-child { border-radius: 4px 4px 0 0; }
+.faq-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
+.faq-q { padding: 1.125rem 1.25rem; font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-q::after { content: '+'; font-size: 18px; font-weight: 300; flex-shrink: 0; color: var(--ink-3); transition: transform .2s; }
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 14px; color: var(--ink-2); line-height: 1.7; padding: 0 1.25rem; }
+.faq-item.open .faq-a { max-height: 500px; padding: 0 1.25rem 1.25rem; }
+
+/* Platform comparison */
+.platform-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 1.5rem; }
+.platform-table th { text-align: left; padding: 0.625rem 1rem; font-size: 10px; font-family: var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--border-s); background: var(--paper-2); }
+.platform-table td { padding: 0.75rem 1rem; border-bottom: 0.5px solid var(--border); color: var(--ink-2); vertical-align: top; }
+.platform-table tr:last-child td { border-bottom: none; }
+.platform-table td:first-child { color: var(--ink); font-weight: 500; font-size: 13px; }
+.tag { display: inline-block; font-size: 10px; padding: 2px 7px; border-radius: 2px; font-family: var(--f-mono); letter-spacing: 0.06em; }
+.tag-real { background: #E6F1FB; color: #185FA5; }
+.tag-trained { background: #EAF3DE; color: #3B6D11; }
+.tag-hybrid { background: #EEEDFE; color: #534AB7; }
+
+/* CTA */
+.cta-block { background: var(--ink); color: var(--white); padding: clamp(3rem, 7vw, 5rem) 0; }
+.cta-block .section-label { color: var(--accent); }
+.cta-block .section-title { color: var(--white); max-width: 600px; }
+.cta-block .section-body { color: rgba(255,255,255,0.6); }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+.btn-primary { padding: 0.875rem 2rem; background: var(--accent); color: var(--white); border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity .15s; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost { padding: 0.875rem 2rem; background: transparent; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 3px; text-decoration: none; font-size: 14px; transition: border-color .15s, color .15s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+/* Footer */
+footer { background: var(--paper-2); border-top: 0.5px solid var(--border); padding: 2.5rem 0; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.footer-copy { font-size: 13px; color: var(--ink-3); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+/* Related articles */
+.related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.related-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.25rem; text-decoration: none; display: block; transition: border-color .15s; }
+.related-card:hover { border-color: var(--accent); }
+.rc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; }
+.rc-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 0.5rem; }
+.rc-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+
+@media (max-width: 760px) {
+  .meter-grid, .signal-grid, .entity-spokes, .two-col, .related-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav aria-label="Site navigation">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Mason Nguyen<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/what-is-geo">What is GEO</a></li>
+      <li><a href="/arm-framework">ARM Framework</a></li>
+      <li><a href="/ai-visibility-strategy" aria-current="page">AI Visibility</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/contact" class="nav-cta">Work together</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    <a href="/what-is-geo">GEO</a><span>/</span>
+    AI Visibility Strategy
+  </div>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Deep Guide</div>
+    <h1>AI Visibility Strategy:<br><em>How LLMs Decide Which Brands to Cite</em></h1>
+    <p class="hero-sub">
+      Your brand can rank #1 on Google and be invisible inside ChatGPT. This guide explains the machine-readable signals, entity graph architecture, and content decisions that actually determine AI citation frequency.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Updated <strong>June 2025</strong></span>
+      <span>18 min read</span>
+      <span>URL: <strong>/ai-visibility-strategy</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- AI platform visibility meter -->
+<div class="meter-section">
+  <div class="container">
+    <div class="section-label">AI surface landscape</div>
+    <h2 class="section-title" style="font-size: clamp(1.1rem, 2.5vw, 1.4rem); margin-bottom: 0.5rem;">Where AI-generated answers now appear — and how each surface retrieves content</h2>
+    <div class="meter-grid" role="list" aria-label="AI platform visibility comparison" id="meter-grid">
+      <div class="meter-cell" role="listitem">
+        <div class="meter-platform">Platform 01</div>
+        <div class="meter-name">ChatGPT</div>
+        <div class="meter-bar-wrap"><div class="meter-bar" data-width="82" style="width:0%"></div></div>
+        <div class="meter-stat"><strong>82%</strong> of commercial queries trigger AI summary</div>
+        <div class="meter-type">Trained knowledge + web retrieval (Browsing)</div>
+      </div>
+      <div class="meter-cell" role="listitem">
+        <div class="meter-platform">Platform 02</div>
+        <div class="meter-name">Perplexity</div>
+        <div class="meter-bar-wrap"><div class="meter-bar" data-width="96" style="width:0%"></div></div>
+        <div class="meter-stat"><strong>96%</strong> of queries return cited AI answer</div>
+        <div class="meter-type">Real-time web retrieval — citation is the product</div>
+      </div>
+      <div class="meter-cell" role="listitem">
+        <div class="meter-platform">Platform 03</div>
+        <div class="meter-name">Google AI Overviews</div>
+        <div class="meter-bar-wrap"><div class="meter-bar" data-width="68" style="width:0%"></div></div>
+        <div class="meter-stat"><strong>68%</strong> of informational queries show AI Overview</div>
+        <div class="meter-type">Hybrid: index knowledge + live retrieval</div>
+      </div>
+      <div class="meter-cell" role="listitem">
+        <div class="meter-platform">Platform 04</div>
+        <div class="meter-name">Claude / Gemini</div>
+        <div class="meter-bar-wrap"><div class="meter-bar" data-width="55" style="width:0%"></div></div>
+        <div class="meter-stat"><strong>55%+</strong> of professional queries cite external sources</div>
+        <div class="meter-type">Trained knowledge, growing retrieval integration</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Why ranking isn't visibility -->
+<section id="the-gap">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-label">The visibility gap</div>
+        <h2 class="section-title">Why a #1 ranking no longer means AI presence</h2>
+        <div class="section-body">
+          <p>Search engines and large language models consume the web differently. A search engine crawls pages and ranks them against a query using link graphs and content relevance. An LLM either retrieves content in real time using its own retrieval pipeline, or it draws on knowledge encoded during training — a process that happened months or years before the query arrived.</p>
+          <p>Both of these pathways are governed by signals that do not map cleanly to traditional ranking factors. A page can be optimized for Google's algorithm and still be invisible to Perplexity's retrieval system, absent from ChatGPT's training data, or attributed incorrectly when cited by Google AI Overviews. Each failure mode has a different cause, and each requires a different fix.</p>
+          <p>AI visibility strategy is the discipline of understanding these pathways and building content, structure, and entity signals that perform across all of them. It is not a subset of SEO. It is a parallel discipline with overlapping tools and distinct objectives.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pullquote">
+          <p>"LLMs don't read your page the way a human does. They resolve your entity against their knowledge graph, then decide whether your content deserves to be part of the answer. Structure and entity clarity are admission criteria."</p>
+          <cite>— Mason Nguyen</cite>
+        </div>
+        <table class="platform-table" aria-label="AI platform retrieval types">
+          <thead>
+            <tr><th>Platform</th><th>Retrieval type</th><th>Key signal</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Perplexity</td><td><span class="tag tag-real">Real-time</span></td><td>Fresh citations, structured pages</td></tr>
+            <tr><td>ChatGPT Browsing</td><td><span class="tag tag-hybrid">Hybrid</span></td><td>Entity trust + crawl freshness</td></tr>
+            <tr><td>Google AI Overviews</td><td><span class="tag tag-hybrid">Hybrid</span></td><td>Schema markup + E-E-A-T signals</td></tr>
+            <tr><td>ChatGPT (no browsing)</td><td><span class="tag tag-trained">Trained</span></td><td>Training data inclusion, entity records</td></tr>
+            <tr><td>Claude</td><td><span class="tag tag-trained">Trained</span></td><td>Citation network, entity clarity</td></tr>
+            <tr><td>Gemini</td><td><span class="tag tag-hybrid">Hybrid</span></td><td>Google index + Knowledge Graph</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How LLMs crawl and cite -->
+<section id="how-llms-work">
+  <div class="container">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">How LLMs crawl, process, and cite content</h2>
+    <p class="section-body">There are two distinct pipelines that determine whether an LLM cites your brand. Understanding which one is relevant to each platform is the first step in building a visibility strategy that works.</p>
+
+    <div class="signal-grid" role="list" aria-label="LLM content pathways">
+      <div class="signal-card" role="listitem">
+        <div class="sc-label">Pathway A</div>
+        <div class="sc-title">Training data inclusion</div>
+        <div class="sc-body">LLMs like GPT-4 and Claude encode knowledge during a training phase that precedes deployment by months. Content included in training corpora — primarily high-quality web pages, published articles, and structured data sources — gets embedded into the model's parametric memory. Brands present in training data have a baseline citation probability regardless of whether their current pages rank well. The key signals: content quality at publication time, domain authority at crawl time, and entity disambiguation clarity.</div>
+      </div>
+      <div class="signal-card" role="listitem">
+        <div class="sc-label">Pathway B</div>
+        <div class="sc-title">Real-time retrieval augmentation</div>
+        <div class="sc-body">Retrieval-augmented generation (RAG) systems — used by Perplexity, ChatGPT with Browsing, and Google AI Overviews — fetch content in real time before generating an answer. These systems have their own retrieval pipelines that prioritize content based on signals that differ from standard search ranking: structured data completeness, content freshness, entity resolution confidence, and citation density from recent sources. A brand can achieve strong retrieval visibility even without deep training data presence, provided its content meets RAG pipeline requirements.</div>
+      </div>
+      <div class="signal-card" role="listitem">
+        <div class="sc-label">Pathway C</div>
+        <div class="sc-title">Knowledge graph resolution</div>
+        <div class="sc-body">Before either pathway generates a citation, the LLM resolves the brand entity against its internal knowledge graph or an external one (Google Knowledge Graph, Wikidata). This resolution step determines whether the model can attribute a response to your entity at all — or whether it hedges, omits, or confuses your brand with a similar entity. Entity resolution is the admission gate. No amount of content optimization helps a brand that hasn't passed entity resolution.</div>
+      </div>
+      <div class="signal-card" role="listitem">
+        <div class="sc-label">Pathway D</div>
+        <div class="sc-title">Citation network triangulation</div>
+        <div class="sc-body">When an LLM encounters an entity it has low-confidence knowledge of, it triangulates: it looks for consistent, attributable references from third-party sources to either confirm or deny a claim. Brands that appear consistently across multiple independent, reputable sources score higher in this triangulation process. This is why traditional link building — when done for editorial credibility rather than link equity — still matters in the GEO context, though the mechanism is entirely different from SEO.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Entity graph -->
+<section id="entity-graph">
+  <div class="container">
+    <div class="section-label">Entity architecture</div>
+    <h2 class="section-title">Building a machine-readable entity graph</h2>
+    <div class="two-col">
+      <div>
+        <div class="section-body">
+          <p>An entity graph is the structured representation of your brand's relationships — to its principals, its topics, its outputs, and its presence across the web. LLMs use entity graphs, both their own internal ones and external knowledge graphs like Wikidata, to resolve ambiguous references and attribute responses to specific entities.</p>
+          <p>Building a strong entity graph means making these relationships explicit and machine-readable. The entity at the center — your brand or personal name — should be connected via structured data to a clearly defined set of topics it claims authority over, platforms where it has verified presence, people who are associated with it by name, and outputs (articles, frameworks, case studies) it has produced.</p>
+          <p>Each connection is a disambiguation signal. The richer and more consistent the graph, the more confidently an LLM can resolve your entity and attribute responses to it. Thin entity graphs — a website with no schema markup, no knowledge graph entry, and no external citations — produce low-confidence resolutions that result in hedged or absent citations.</p>
+        </div>
+      </div>
+      <div>
+        <div class="entity-visual" aria-label="Entity graph diagram for masonnguyengeo.com">
+          <div class="entity-center">
+            <div class="entity-node">Mason<br>Nguyen<br>GEO</div>
+          </div>
+          <div class="entity-connector"><div class="connector-line"></div></div>
+          <div class="entity-spokes">
+            <div class="spoke"><strong>Topics</strong>GEO · ARM Framework · AI Visibility · Entity SEO</div>
+            <div class="spoke"><strong>Platforms</strong>masonnguyengeo.com · LinkedIn · Wikidata · GitHub</div>
+            <div class="spoke"><strong>Outputs</strong>ARM Framework · GEO audits · Arctura case study</div>
+            <div class="spoke"><strong>Associations</strong>Arctura.ai · Kairos Insight · Meridian Capital</div>
+            <div class="spoke"><strong>Schema types</strong>Person · Article · HowTo · FAQPage</div>
+            <div class="spoke"><strong>External citations</strong>Editorial · Directories · Structured profiles</div>
+          </div>
+        </div>
+
+        <div class="code-label">Schema.org Person — entity anchor markup</div>
+        <div class="code-block" aria-label="Schema markup example">
+          <pre><span class="cmt">// Minimal ARM-compliant entity anchor</span>
+{
+  <span class="key">"@context"</span>: <span class="str">"https://schema.org"</span>,
+  <span class="key">"@type"</span>: <span class="str">"Person"</span>,
+  <span class="key">"name"</span>: <span class="str">"Mason Nguyen"</span>,
+  <span class="key">"url"</span>: <span class="str">"https://masonnguyengeo.com"</span>,
+  <span class="key">"jobTitle"</span>: <span class="str">"GEO Strategist"</span>,
+  <span class="key">"knowsAbout"</span>: [
+    <span class="str">"Generative Engine Optimization"</span>,
+    <span class="str">"AI Visibility Strategy"</span>,
+    <span class="str">"ARM Framework"</span>
+  ],
+  <span class="key">"sameAs"</span>: [
+    <span class="str">"https://www.wikidata.org/wiki/Q..."</span>,
+    <span class="str">"https://www.linkedin.com/in/..."</span>
+  ]
+}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Machine-readable content -->
+<section id="machine-readable">
+  <div class="container">
+    <div class="section-label">Content architecture</div>
+    <h2 class="section-title">What makes content machine-readable for LLM retrieval</h2>
+    <p class="section-body">Machine-readable content is not a technical specification. It is a writing and structure discipline. Content that LLMs retrieve and cite reliably shares five characteristics — and most brand content fails on at least three of them.</p>
+
+    <div class="checklist" role="list" aria-label="Machine-readable content checklist">
+      <div class="check-item" role="listitem">
+        <div class="check-box done" aria-hidden="true"></div>
+        <div><strong>Direct answer in the first sentence of each section.</strong> LLMs extract answers from the first 50–100 words of a block. Sections that bury the answer behind context, transitions, or hedge language score lower in extraction quality and are cited less frequently. Lead with the claim. Explain after.</div>
+      </div>
+      <div class="check-item" role="listitem">
+        <div class="check-box done" aria-hidden="true"></div>
+        <div><strong>Explicit named-entity references throughout.</strong> Content that names specific entities — people, organizations, frameworks, tools — is more precisely attributed by retrieval systems than content that uses pronouns and generic terms. Use full entity names on first reference in every section, not just once per page.</div>
+      </div>
+      <div class="check-item" role="listitem">
+        <div class="check-box done" aria-hidden="true"></div>
+        <div><strong>FAQPage schema with direct-answer formatting.</strong> FAQ schema is among the most LLM-legible structured data formats because it maps naturally to question-intent queries. Each FAQ answer should be complete in isolation — quotable without the surrounding page context. Aim for 40–80 words per answer.</div>
+      </div>
+      <div class="check-item" role="listitem">
+        <div class="check-box done" aria-hidden="true"></div>
+        <div><strong>Consistent entity naming across all pages.</strong> If your brand is referred to as "Mason Nguyen," "Mason Nguyen GEO," and "masonnguyengeo.com" interchangeably across your site and external sources, retrieval systems may treat these as separate entities. Standardize entity naming in schema markup, internal links, and author bylines.</div>
+      </div>
+      <div class="check-item" role="listitem">
+        <div class="check-box" aria-hidden="true"></div>
+        <div><strong>Concept-level definitions for proprietary terms.</strong> If your content introduces terminology that does not exist in the model's training data — a proprietary framework name, a coined concept, a product name — you must define it explicitly on the page and in schema. Undefined proprietary terms are skipped in extraction; defined ones are cited.</div>
+      </div>
+      <div class="check-item" role="listitem">
+        <div class="check-box" aria-hidden="true"></div>
+        <div><strong>Stable, semantic URLs with no parameter strings.</strong> Retrieval systems dereference URLs when deciding whether a source is reliable. Pages with stable, descriptive URLs — /ai-visibility-strategy rather than /page?id=42&ref=social — score higher in retrieval confidence and are cited more consistently across sessions.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Structured data for AI -->
+<section id="structured-data">
+  <div class="container">
+    <div class="section-label">Structured data</div>
+    <h2 class="section-title">The structured data stack for AI answer surfaces</h2>
+    <div class="two-col">
+      <div>
+        <div class="section-body">
+          <p>Structured data in the GEO context serves a different purpose than in traditional SEO. In SEO, schema markup primarily influences rich result display — star ratings, FAQ dropdowns, event cards. In GEO, schema markup primarily communicates entity relationships, content type, and authorship to retrieval systems that do not render HTML.</p>
+          <p>The ARM-compliant structured data stack covers four layers. The entity layer establishes who you are and disambiguates your identity. The content layer tags each piece of content with its type, topic, and authorship. The relationship layer explicitly connects your content to the entities it discusses. The freshness layer communicates publication and modification dates that retrieval systems use to assess signal recency.</p>
+          <p>Schema is not a magic lever — a technically correct schema implementation on thin or unoriginal content does not improve citation rates. It is an amplifier. Strong content with strong schema is cited. Weak content with strong schema is still ignored. The stack works when built on substantive, original, entity-rich content.</p>
+        </div>
+      </div>
+      <div>
+        <div class="code-label">ARM structured data stack — priority order</div>
+        <div class="code-block" aria-label="Structured data priority stack">
+          <pre><span class="cmt">// Layer 1: Entity anchor (every page)</span>
+<span class="key">Person</span> | <span class="key">Organization</span>
+  → name, url, sameAs[], knowsAbout[]
+
+<span class="cmt">// Layer 2: Content type</span>
+<span class="key">Article</span> | <span class="key">HowTo</span> | <span class="key">FAQPage</span>
+  → headline, author, datePublished
+  → dateModified, mainEntityOfPage
+
+<span class="cmt">// Layer 3: Relationship signals</span>
+<span class="key">about</span>: { @type: Thing, name: ... }
+<span class="key">mentions</span>: [{ @type: Thing, ... }]
+
+<span class="cmt">// Layer 4: Freshness</span>
+<span class="key">dateModified</span>: <span class="str">"2025-06-01"</span>
+  → Update on substantive revisions
+  → Not cosmetic edits</pre>
+        </div>
+        <div class="code-label">Wikidata entity record — minimum viable fields</div>
+        <div class="code-block" aria-label="Wikidata minimum fields">
+          <pre><span class="cmt">// Wikidata item structure</span>
+Label:        <span class="val">Mason Nguyen</span>
+Description:  <span class="str">"GEO strategist and founder of the
+               ARM Framework for AI visibility"</span>
+P31 (type):   <span class="val">human (Q5)</span>
+P106 (occ):   <span class="val">web developer, content strategist</span>
+P856 (url):   <span class="str">masonnguyengeo.com</span>
+P2002 (X):    <span class="str">@masonnguyen</span>
+sitelinks:    <span class="val">en.wikipedia (if eligible)</span></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">AI visibility — frequently asked questions</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What is AI visibility and how is it different from SEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">AI visibility is the frequency with which your brand is cited, recommended, or described in AI-generated answers across platforms like ChatGPT, Perplexity, Google AI Overviews, and Claude. SEO measures your position in a ranked list of links. AI visibility measures whether your entity appears in a generated text response at all — a fundamentally different outcome. The signals that drive AI visibility (entity clarity, structured data completeness, citation network depth) overlap partially with SEO signals but are not the same.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How do LLMs decide which brands to cite in their answers?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">LLMs use a combination of trained knowledge (what was in the data at training time), real-time retrieval (what their crawlers find at query time), and entity graph resolution (how confidently they can attribute a claim to a specific entity). Brands that perform well across all three pathways — present in training data, crawlable by retrieval systems, and disambiguated in knowledge graphs — achieve the highest and most consistent citation rates. Missing any one of these pathways limits overall AI visibility.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Does structured data actually improve AI citation rates?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Yes, but with an important qualifier: structured data amplifies strong content and does not rescue weak content. A page with substantive, original, entity-rich content and proper schema markup is cited more frequently and more accurately than the same content without schema. The schema communicates authorship, content type, and entity relationships that retrieval systems use to attribute and prioritize content. Schema alone — applied to thin or duplicate content — produces no measurable citation lift.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Which AI platform should I prioritize for visibility first?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Start with Perplexity. It uses real-time retrieval and cites sources visibly — which makes it both the most measurable and the fastest to respond to signal improvements. A well-structured page with fresh third-party citations can appear in Perplexity answers within weeks. ChatGPT with Browsing follows similar retrieval logic. Google AI Overviews responds to the same signals as Perplexity but also weighs existing Search authority. Trained-knowledge platforms (ChatGPT without browsing, Claude) respond to changes on a longer lag tied to training cycles.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How do I measure my brand's current AI visibility?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">The most reliable measurement method is systematic prompt testing: run a consistent set of category-defining queries across ChatGPT, Perplexity, Google AI Overviews, and Claude, and record whether and how your brand is cited. Track citation frequency (how often you appear), citation accuracy (whether the information is correct), and citation position (how prominently you feature in the answer). Run this test monthly. The ARM engagement scorecard formalizes this process with a standardized query set and scoring rubric.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related -->
+<section id="related">
+  <div class="container">
+    <div class="section-label">Continue reading</div>
+    <h2 class="section-title">Related guides in this series</h2>
+    <div class="related-grid">
+      <a href="/what-is-geo" class="related-card">
+        <div class="rc-label">Pillar guide</div>
+        <div class="rc-title">What is Generative Engine Optimization (GEO)?</div>
+        <div class="rc-desc">The foundational guide to GEO — what it is, how it differs from SEO, and why it matters for brand presence in the AI era.</div>
+      </a>
+      <a href="/arm-framework" class="related-card">
+        <div class="rc-label">Methodology</div>
+        <div class="rc-title">The ARM Framework — Authority, Relevance, Momentum</div>
+        <div class="rc-desc">The proprietary three-pillar system for measuring and improving citation frequency in AI-generated answers.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-block">
+  <div class="container">
+    <div class="section-label">Audit your AI visibility</div>
+    <h2 class="section-title">Find out where your brand stands across every AI surface</h2>
+    <p class="section-body">Every engagement begins with a structured audit across entity graph health, content machine-readability, and citation frequency on ChatGPT, Perplexity, Google AI Overviews, and Claude.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn-primary">Request a visibility audit</a>
+      <a href="/arm-framework" class="btn-ghost">Read the ARM Framework →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Mason Nguyen GEO · masonnguyengeo.com</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('progress').style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+
+// Animate meters on load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.meter-bar').forEach(bar => {
+      bar.style.width = bar.dataset.width + '%';
+    });
+  }, 300);
+});
+
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    el.setAttribute('aria-expanded','true');
+  }
+}
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); }
+  });
+});
+</script>
+</body>
+</html>
