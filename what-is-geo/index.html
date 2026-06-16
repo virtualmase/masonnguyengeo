@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is Generative Engine Optimization (GEO)? — Complete Guide | Mason Nguyen GEO</title>
+<meta name="description" content="Generative Engine Optimization (GEO) is the practice of structuring entity signals and content so AI models like ChatGPT, Perplexity, and Claude cite your brand accurately. The complete guide from Mason Nguyen.">
+<meta name="keywords" content="generative engine optimization, GEO strategy for brands, how to optimize for AI search, GEO vs SEO difference, AI answer engine optimization, optimize content for ChatGPT">
+<link rel="canonical" href="https://masonnguyengeo.com/what-is-geo">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "name": "What is Generative Engine Optimization (GEO)?",
+      "headline": "What is Generative Engine Optimization (GEO)? The Complete Guide for Brands",
+      "description": "Generative Engine Optimization (GEO) is the practice of structuring entity signals, schema architecture, and content so that AI language models can accurately identify, cite, and represent your brand in generated responses.",
+      "author": { "@type": "Person", "name": "Mason Nguyen", "url": "https://masonnguyengeo.com/about" },
+      "publisher": { "@type": "Organization", "name": "Mason Nguyen GEO", "url": "https://masonnguyengeo.com" },
+      "mainEntityOfPage": "https://masonnguyengeo.com/what-is-geo",
+      "datePublished": "2025-06-01",
+      "dateModified": "2025-06-01",
+      "about": [
+        { "@type": "Thing", "name": "Generative Engine Optimization" },
+        { "@type": "Thing", "name": "AI visibility" },
+        { "@type": "Thing", "name": "LLM citation strategy" }
+      ]
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://masonnguyengeo.com/what-is-geo#defined-term",
+      "name": "Generative Engine Optimization",
+      "alternateName": "GEO",
+      "description": "The practice of structuring entity signals, schema architecture, and content formatting so that AI language models — including ChatGPT, Perplexity, Google AI Overviews, and Claude — can accurately identify, cite, and represent a named entity in generated responses. GEO optimizes for LLM citation frequency rather than search engine rank position.",
+      "inDefinedTermSet": { "@type": "DefinedTermSet", "name": "GEO Lexicon", "url": "https://masonnguyengeo.com/glossary" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Generative Engine Optimization (GEO)?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Generative Engine Optimization (GEO) is the discipline of structuring entity signals, schema architecture, and content so that AI language models — including ChatGPT, Perplexity, Google AI Overviews, and Claude — can accurately identify, cite, and represent a brand in generated responses. GEO treats machine comprehension, not human engagement, as the primary design constraint. It is distinct from SEO in that the optimization target is LLM citation frequency rather than search engine rank position." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is GEO different from SEO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "SEO optimizes for search engine ranking algorithms — the combination of backlinks, crawlability, and content relevance that determines where a page appears in a ranked list of results. GEO optimizes for LLM citation pipelines — the combination of entity clarity, structured data completeness, and machine-readable content formatting that determines whether and how accurately an AI model represents a brand in a generated answer. The two disciplines share infrastructure (domain trust, topical authority, schema markup) but diverge in objective and measurement: SEO measures rank position, GEO measures citation frequency." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does GEO matter in 2025?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In 2025, AI-generated answers have replaced the traditional top of the search results page for the majority of informational and commercial queries. ChatGPT processes over 100 million daily queries; Perplexity serves cited AI answers for 96% of its queries; Google AI Overviews appear above the fold on 68% of informational searches. A brand that is absent from or misrepresented in these answers is effectively invisible to the decision-making moment — regardless of its search ranking. GEO addresses the specific gap between search rank presence and AI answer presence." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the main components of a GEO strategy?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A complete GEO strategy covers five disciplines: entity architecture (building machine-readable records that establish who your brand is and disambiguate it from similar entities), structured data implementation (Schema.org markup that communicates content type, authorship, and entity relationships), machine-readable content formatting (writing structure that LLM retrieval systems can extract and attribute accurately), citation network development (third-party references that triangulate and confirm your entity's claims), and signal freshness (systematic publication and update cadence that keeps your entity active in retrieval pipelines)." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to see GEO results?",
+          "acceptedAnswer": { "@type": "Answer", "text": "GEO timelines vary by platform and signal type. Real-time retrieval systems like Perplexity can reflect structured content improvements within two to four weeks. Google AI Overviews follow a hybrid model — they respond to schema and content updates within 30 to 60 days for pages that already rank. Trained-knowledge platforms like ChatGPT and Claude update on training cycle schedules that may lag by several months. Entity graph registration (Wikidata, Google Knowledge Panel) typically reflects changes within 60 to 90 days. A full GEO engagement is structured around a 90-day foundation phase and a 6-month compounding phase." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --ink:       #0D0D0D;
+  --ink-2:     #3A3A3A;
+  --ink-3:     #6B6B6B;
+  --paper:     #F7F5F0;
+  --paper-2:   #EDEAE3;
+  --white:     #FFFFFF;
+  --accent:    #C8522A;
+  --signal:    #1B4D6B;
+  --geo-green: #1B6B4A;
+  --border:    rgba(13,13,13,0.10);
+  --border-s:  rgba(13,13,13,0.20);
+  --f-display: 'Playfair Display', Georgia, serif;
+  --f-body:    'DM Sans', system-ui, sans-serif;
+  --f-mono:    'DM Mono', 'Courier New', monospace;
+  --max:       1100px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width .1s; }
+
+nav { position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); padding: 0.875rem 0; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--f-display); font-size: 15px; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+.nav-links a:hover, .nav-links a[aria-current] { color: var(--accent); }
+.nav-cta { font-size: 13px; font-weight: 500; padding: 0.5rem 1.125rem; background: var(--ink); color: var(--white); border-radius: 3px; text-decoration: none; transition: background .15s; }
+.nav-cta:hover { background: var(--accent); }
+
+.breadcrumb { padding: 0.875rem 0; font-size: 12px; color: var(--ink-3); border-bottom: 0.5px solid var(--border); font-family: var(--f-mono); }
+.breadcrumb a { color: var(--ink-3); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+.eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+
+.hero { padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem); border-bottom: 0.5px solid var(--border); }
+.hero h1 { font-family: var(--f-display); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); max-width: 860px; margin-bottom: 1.5rem; }
+.hero h1 em { font-style: italic; color: var(--ink-3); }
+.hero-sub { font-size: clamp(1rem, 2vw, 1.175rem); color: var(--ink-2); max-width: 620px; line-height: 1.65; margin-bottom: 2.5rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 2rem; font-size: 13px; color: var(--ink-3); }
+.hero-meta strong { color: var(--ink); font-weight: 500; }
+
+/* Signature: GEO definition block */
+.definition-block { background: var(--white); border: 0.5px solid var(--border-s); border-left: 3px solid var(--signal); border-radius: 4px; padding: 1.75rem 2rem; margin: 3rem 0 0; }
+.def-schema { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.625rem; }
+.def-schema::after { content: ''; flex: 1; height: 0.5px; background: var(--border-s); }
+.def-term { font-family: var(--f-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
+.def-abbr { font-family: var(--f-mono); font-size: 13px; color: var(--ink-3); margin-bottom: 1.25rem; }
+.def-body { font-size: 15px; color: var(--ink-2); line-height: 1.7; max-width: 680px; }
+.def-contrast { margin-top: 1.125rem; padding-top: 1.125rem; border-top: 0.5px solid var(--border); font-size: 14px; color: var(--ink-3); font-style: italic; }
+
+section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+section + section { border-top: 0.5px solid var(--border); }
+.section-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.section-title { font-family: var(--f-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 1.25rem; max-width: 700px; }
+.section-body { font-size: 15px; color: var(--ink-2); max-width: 660px; line-height: 1.75; }
+.section-body p + p { margin-top: 1.125rem; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+
+/* GEO vs SEO comparison */
+.vs-grid { display: grid; grid-template-columns: 1fr 56px 1fr; gap: 0; border: 0.5px solid var(--border-s); border-radius: 6px; overflow: hidden; margin-top: 1.5rem; }
+.vs-col { padding: clamp(1.25rem, 3vw, 2rem); }
+.vs-seo { background: var(--paper-2); }
+.vs-geo { background: #E8F4EF; }
+.vs-center { background: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.25rem; }
+.vs-arrow { color: rgba(255,255,255,0.4); font-size: 18px; }
+.vs-center-label { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); writing-mode: vertical-rl; }
+.vs-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.875rem; }
+.vs-seo .vs-label { color: var(--signal); }
+.vs-geo .vs-label { color: var(--geo-green); }
+.vs-items { display: flex; flex-direction: column; gap: 0.5rem; }
+.vs-item { font-size: 13px; color: var(--ink-2); padding: 0.5rem 0.75rem; border-radius: 3px; display: flex; align-items: flex-start; gap: 0.5rem; }
+.vs-seo .vs-item { background: rgba(27,77,107,0.06); }
+.vs-geo .vs-item { background: rgba(27,107,74,0.07); }
+.vs-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.vs-seo .vs-dot { background: var(--signal); }
+.vs-geo .vs-dot { background: var(--geo-green); }
+
+/* Five disciplines */
+.disciplines { display: flex; flex-direction: column; gap: 0; margin-top: 1.5rem; border: 0.5px solid var(--border-s); border-radius: 6px; overflow: hidden; }
+.discipline { display: grid; grid-template-columns: 56px 1fr; border-bottom: 0.5px solid var(--border); background: var(--white); transition: background .15s; }
+.discipline:last-child { border-bottom: none; }
+.discipline:hover { background: var(--paper); }
+.discipline-num { display: flex; align-items: center; justify-content: center; border-right: 0.5px solid var(--border); font-family: var(--f-mono); font-size: 13px; font-weight: 500; color: var(--ink-3); }
+.discipline-content { padding: 1.25rem 1.5rem; }
+.discipline-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.75rem; }
+.discipline-link { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; padding: 2px 7px; border: 0.5px solid rgba(200,82,42,0.3); border-radius: 2px; font-weight: 400; white-space: nowrap; }
+.discipline-link:hover { background: rgba(200,82,42,0.05); }
+.discipline-body { font-size: 13px; color: var(--ink-3); line-height: 1.6; }
+
+/* Platforms grid */
+.platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-s); border: 1px solid var(--border-s); border-radius: 4px; overflow: hidden; margin-top: 1.5rem; }
+.platform-cell { background: var(--white); padding: 1.25rem 1.125rem; }
+.plat-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; }
+.plat-type { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem; }
+.plat-bar-wrap { height: 4px; background: var(--paper-2); border-radius: 2px; margin-bottom: 0.5rem; }
+.plat-bar { height: 4px; border-radius: 2px; background: var(--signal); }
+.plat-desc { font-size: 12px; color: var(--ink-3); line-height: 1.5; }
+
+/* Who it's for */
+.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.audience-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.375rem 1.25rem; border-top: 2px solid var(--border-s); transition: border-top-color .2s; }
+.audience-card:hover { border-top-color: var(--accent); }
+.audience-type { font-family: var(--f-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); margin-bottom: 0.625rem; }
+.audience-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.65; margin-bottom: 1rem; }
+.audience-signal { font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
+
+/* Series nav */
+.series-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.series-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.25rem; text-decoration: none; display: block; transition: border-color .15s; }
+.series-card:hover { border-color: var(--accent); }
+.sc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; }
+.sc-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 0.5rem; }
+.sc-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+.sc-url { font-family: var(--f-mono); font-size: 11px; color: var(--accent); margin-top: 0.625rem; }
+
+.pullquote { border-left: 3px solid var(--accent); padding: 1.25rem 1.75rem; margin: 2.5rem 0; background: var(--white); }
+.pullquote p { font-family: var(--f-display); font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.5; color: var(--ink); }
+.pullquote cite { display: block; margin-top: 0.75rem; font-size: 12px; font-style: normal; font-family: var(--f-mono); letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; }
+
+.faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.faq-item { border: 0.5px solid var(--border); border-bottom: none; background: var(--white); }
+.faq-item:first-child { border-radius: 4px 4px 0 0; }
+.faq-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
+.faq-q { padding: 1.125rem 1.25rem; font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-q::after { content: '+'; font-size: 18px; font-weight: 300; flex-shrink: 0; color: var(--ink-3); transition: transform .2s; }
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 14px; color: var(--ink-2); line-height: 1.7; padding: 0 1.25rem; }
+.faq-item.open .faq-a { max-height: 500px; padding: 0 1.25rem 1.25rem; }
+
+.cta-block { background: var(--ink); color: var(--white); padding: clamp(3rem, 7vw, 5rem) 0; }
+.cta-block .section-label { color: var(--accent); }
+.cta-block .section-title { color: var(--white); max-width: 600px; }
+.cta-block .section-body { color: rgba(255,255,255,0.6); }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+.btn-primary { padding: 0.875rem 2rem; background: var(--accent); color: var(--white); border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity .15s; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost { padding: 0.875rem 2rem; background: transparent; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 3px; text-decoration: none; font-size: 14px; transition: border-color .15s, color .15s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+footer { background: var(--paper-2); border-top: 0.5px solid var(--border); padding: 2.5rem 0; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.footer-copy { font-size: 13px; color: var(--ink-3); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .vs-grid { grid-template-columns: 1fr; }
+  .vs-center { flex-direction: row; padding: 0.75rem; }
+  .vs-center-label { writing-mode: horizontal-tb; }
+  .platform-grid, .audience-grid, .series-grid, .two-col { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav aria-label="Site navigation">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Mason Nguyen<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/what-is-geo" aria-current="page">What is GEO</a></li>
+      <li><a href="/arm-framework">ARM Framework</a></li>
+      <li><a href="/ai-visibility-strategy">AI Visibility</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/contact" class="nav-cta">Work together</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    What is GEO
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Pillar Guide</div>
+    <h1>What is Generative Engine Optimization?<br><em>The Complete Guide for Brands</em></h1>
+    <p class="hero-sub">
+      GEO is the discipline of building the entity signals, structured data, and content architecture that determine whether AI models cite your brand accurately — and how prominently — in generated responses.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Updated <strong>June 2025</strong></span>
+      <span>22 min read</span>
+      <span>URL: <strong>/what-is-geo</strong></span>
+    </div>
+
+    <div class="definition-block" itemscope itemtype="https://schema.org/DefinedTerm">
+      <div class="def-schema">DefinedTerm · schema.org · masonnguyengeo.com/what-is-geo</div>
+      <div class="def-term" itemprop="name">Generative Engine Optimization</div>
+      <div class="def-abbr" itemprop="alternateName">GEO &nbsp;/ˈdʒiː.iː.oʊ/ &nbsp;·&nbsp; noun</div>
+      <div class="def-body" itemprop="description">
+        The practice of structuring entity signals, schema architecture, and content formatting so that AI language models — including ChatGPT, Perplexity, Google AI Overviews, and Claude — can accurately identify, cite, and represent a named entity in generated responses.
+      </div>
+      <div class="def-contrast">
+        Distinguished from search engine optimization (SEO), which targets crawler ranking algorithms. GEO treats LLM citation frequency as the primary optimization objective, not search rank position.
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Why it matters now -->
+<section id="why-now">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-label">The shift</div>
+        <h2 class="section-title">Search moved. Most brands didn't notice.</h2>
+        <div class="section-body">
+          <p>In 2025, AI-generated answers appear above the fold for the majority of informational and commercial queries. ChatGPT processes over 100 million daily queries. Perplexity returns cited AI answers for 96% of searches. Google AI Overviews replace the top of the traditional SERP on 68% of informational searches. For most commercial topics, the first answer a user sees is generated — not a ranked link.</p>
+          <p>This is not a future development. It is the current state of search. A brand that ranks first organically but is absent from the AI-generated summary above it is making a category error: it is optimizing for the mechanism that no longer mediates the first decision.</p>
+          <p>Generative Engine Optimization exists to close that gap. It builds the machine-readable signals that give AI systems enough confidence to represent your brand accurately — without the user needing to click through to verify anything. In a zero-click world, citation is the product.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pullquote">
+          <p>"A brand can rank #1 on Google and be invisible inside ChatGPT. GEO addresses the specific gap between search rank presence and AI answer presence."</p>
+          <cite>— Mason Nguyen</cite>
+        </div>
+        <div class="platform-grid" aria-label="AI platform landscape" role="list">
+          <div class="platform-cell" role="listitem">
+            <div class="plat-name">ChatGPT</div>
+            <div class="plat-type">Trained + retrieval</div>
+            <div class="plat-bar-wrap"><div class="plat-bar" style="width:82%"></div></div>
+            <div class="plat-desc">82% of commercial queries trigger AI summary; 100M+ daily queries</div>
+          </div>
+          <div class="platform-cell" role="listitem">
+            <div class="plat-name">Perplexity</div>
+            <div class="plat-type">Real-time retrieval</div>
+            <div class="plat-bar-wrap"><div class="plat-bar" style="width:96%"></div></div>
+            <div class="plat-desc">96% of queries return a cited AI answer; citation is the product</div>
+          </div>
+          <div class="platform-cell" role="listitem">
+            <div class="plat-name">Google AI Overviews</div>
+            <div class="plat-type">Hybrid retrieval</div>
+            <div class="plat-bar-wrap"><div class="plat-bar" style="width:68%"></div></div>
+            <div class="plat-desc">68% of informational searches show AI Overviews above organic results</div>
+          </div>
+          <div class="platform-cell" role="listitem">
+            <div class="plat-name">Claude</div>
+            <div class="plat-type">Trained knowledge</div>
+            <div class="plat-bar-wrap"><div class="plat-bar" style="width:55%"></div></div>
+            <div class="plat-desc">55%+ of professional queries cite entities; growing retrieval integration</div>
+          </div>
+          <div class="platform-cell" role="listitem">
+            <div class="plat-name">Gemini</div>
+            <div class="plat-type">Hybrid + Knowledge Graph</div>
+            <div class="plat-bar-wrap"><div class="plat-bar" style="width:72%"></div></div>
+            <div class="plat-desc">Deep Google index integration; weighted by Knowledge Graph registration</div>
+          </div>
+          <div class="platform-cell" role="listitem">
+            <div class="plat-name">AI Overviews (SGE)</div>
+            <div class="plat-type">Index + retrieval</div>
+            <div class="plat-bar-wrap"><div class="plat-bar" style="width:60%"></div></div>
+            <div class="plat-desc">Cites sources at the top of the SERP; source eligibility tied to rank + schema</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEO vs SEO -->
+<section id="geo-vs-seo">
+  <div class="container">
+    <div class="section-label">GEO vs SEO</div>
+    <h2 class="section-title">The same infrastructure. Different objectives.</h2>
+    <p class="section-body">GEO and SEO share an infrastructure layer — content quality, domain health, citation networks, and structured data all feed both disciplines. They diverge on their objective layers: what they optimize for, how they measure success, and which signals they treat as primary levers.</p>
+
+    <div class="vs-grid" aria-label="GEO vs SEO comparison">
+      <div class="vs-col vs-seo">
+        <div class="vs-label">Traditional SEO</div>
+        <div class="vs-items">
+          <div class="vs-item"><div class="vs-dot"></div>Objective: rank position in a results list</div>
+          <div class="vs-item"><div class="vs-dot"></div>Audience: search engine crawlers + human users</div>
+          <div class="vs-item"><div class="vs-dot"></div>Content goal: keyword intent satisfaction</div>
+          <div class="vs-item"><div class="vs-dot"></div>Link signal: domain authority / PageRank</div>
+          <div class="vs-item"><div class="vs-dot"></div>Success metric: clicks, rank, traffic volume</div>
+          <div class="vs-item"><div class="vs-dot"></div>Freshness: crawl frequency signals</div>
+          <div class="vs-item"><div class="vs-dot"></div>Entity handling: implicit, optional</div>
+        </div>
+      </div>
+      <div class="vs-center" aria-hidden="true">
+        <div class="vs-arrow">↔</div>
+        <div class="vs-center-label">Share infrastructure</div>
+      </div>
+      <div class="vs-col vs-geo">
+        <div class="vs-label">GEO</div>
+        <div class="vs-items">
+          <div class="vs-item"><div class="vs-dot"></div>Objective: citation in generated AI answers</div>
+          <div class="vs-item"><div class="vs-dot"></div>Audience: LLM retrieval pipelines + human users</div>
+          <div class="vs-item"><div class="vs-dot"></div>Content goal: entity disambiguation + extraction</div>
+          <div class="vs-item"><div class="vs-dot"></div>Link signal: structured citation network</div>
+          <div class="vs-item"><div class="vs-dot"></div>Success metric: citation frequency (Share of Model)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Freshness: signal propagation velocity</div>
+          <div class="vs-item"><div class="vs-dot"></div>Entity handling: explicit, foundational</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Five disciplines -->
+<section id="five-disciplines">
+  <div class="container">
+    <div class="section-label">The disciplines</div>
+    <h2 class="section-title">Five disciplines that define a complete GEO practice</h2>
+    <p class="section-body">Generative Engine Optimization is not a single tactic. It is a practice that spans five distinct disciplines, each addressing a different failure mode in how AI systems represent brands. Missing any one of them creates a gap that the others cannot compensate for.</p>
+
+    <div class="disciplines" role="list" aria-label="Five GEO disciplines">
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">01</div>
+        <div class="discipline-content">
+          <div class="discipline-title">
+            Entity Architecture
+            <a href="/ai-visibility-strategy#entity-graph" class="discipline-link">Deep guide →</a>
+          </div>
+          <div class="discipline-body">Building machine-readable records — Schema.org markup, Wikidata registration, sameAs arrays — that establish who your brand is and disambiguate it from similar or identically-named entities. This is the admission gate. No content optimization reaches an LLM that cannot resolve your entity with confidence.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">02</div>
+        <div class="discipline-content">
+          <div class="discipline-title">
+            Structured Data Implementation
+            <a href="/ai-visibility-strategy#structured-data" class="discipline-link">Deep guide →</a>
+          </div>
+          <div class="discipline-body">Deploying the full ARM-compliant schema stack: entity layer (Person / Organization), content layer (Article / FAQPage / HowTo), relationship layer (about, mentions), and freshness layer (dateModified). Schema communicates what your content is and who made it to systems that do not render HTML.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">03</div>
+        <div class="discipline-content">
+          <div class="discipline-title">
+            Machine-Readable Content
+            <a href="/ai-visibility-strategy#machine-readable" class="discipline-link">Deep guide →</a>
+          </div>
+          <div class="discipline-body">Structuring content so LLM retrievers can extract and attribute it accurately. Direct answers in the first sentence of each section, consistent full entity naming throughout, FAQ-formatted Q&A with standalone answers, stable semantic URLs. This is a writing discipline, not a technical one.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">04</div>
+        <div class="discipline-content">
+          <div class="discipline-title">
+            Citation Network Development
+            <a href="/arm-framework#authority" class="discipline-link">ARM: Authority →</a>
+          </div>
+          <div class="discipline-body">Building the third-party reference network that AI systems use to triangulate entity claims. When an LLM has low-confidence knowledge of an entity, it looks for consistent, attributable mentions from independent sources. Editorial citations — not paid links — are the signal that moves this needle. Quality and specificity of attribution matter more than volume.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">05</div>
+        <div class="discipline-content">
+          <div class="discipline-title">
+            Signal Freshness
+            <a href="/arm-framework#momentum" class="discipline-link">ARM: Momentum →</a>
+          </div>
+          <div class="discipline-body">Maintaining the publication and update cadence that keeps your entity active in retrieval pipelines. Retrieval systems decay: a brand that published strong GEO content in 2023 and went quiet in 2025 finds its citation frequency declining as fresher competitor signals displace it. Systematic freshness is a compounding advantage, not a one-time task.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who it's for -->
+<section id="who">
+  <div class="container">
+    <div class="section-label">Who needs GEO</div>
+    <h2 class="section-title">GEO is not for every brand. It is for brands whose audiences ask questions.</h2>
+    <p class="section-body">If your prospective customers use ChatGPT, Perplexity, or Google to research decisions — and they ask questions about your category, your competitors, or your methodology — then your brand has a GEO surface. The diagnostic question is not "do I need GEO?" It is "what are AI models saying about me right now, without my input?"</p>
+    <div class="audience-grid" role="list">
+      <div class="audience-card" role="listitem">
+        <div class="audience-type">Founders</div>
+        <div class="audience-desc">Building a new entity that AI models do not yet know exists. Every day without entity architecture is a day a competitor's signal compounds unopposed.</div>
+        <div class="audience-signal">Signal: no AI mentions, wrong category attribution</div>
+      </div>
+      <div class="audience-card" role="listitem">
+        <div class="audience-type">Operators</div>
+        <div class="audience-desc">Running live entities with strong search rankings but inconsistent or absent AI citations. The traditional SEO foundation is there; it needs GEO translation.</div>
+        <div class="audience-signal">Signal: SEO traffic strong, AI citations weak or wrong</div>
+      </div>
+      <div class="audience-card" role="listitem">
+        <div class="audience-type">Category builders</div>
+        <div class="audience-desc">Creating terminology, frameworks, or concepts that do not yet exist in AI training data. The entity that defines the vocabulary owns the category in generated answers.</div>
+        <div class="audience-signal">Signal: proprietary terms returned undefined by models</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How to start -->
+<section id="how-to-start">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-label">Getting started</div>
+        <h2 class="section-title">The GEO starting point is always the same: audit what the machines currently believe</h2>
+        <div class="section-body">
+          <p>Every GEO engagement begins with a probe audit — running a consistent set of queries across ChatGPT, Perplexity, Claude, and Gemini to establish the baseline: does your entity appear? Is the information accurate? Is it current? Are competitors cited in your place? This baseline determines which discipline is the primary constraint.</p>
+          <p>From there, the ARM Framework — built on three compounding pillars of Authority, Relevance, and Momentum — provides the systematic build sequence that closes the citation gap. No implementation begins before the audit establishes which pillar needs priority attention.</p>
+          <p>The signal stack is always the same: entity architecture first, schema second, content third, citation fourth, freshness ongoing. Each layer enables the next. Deploying content into an unregistered entity is writing into a void. Deploying schema on thin content amplifies nothing.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pullquote">
+          <p>"The audit is not a formality. It is the only way to know which failure mode is actually limiting your citation frequency — and the answer is rarely what the client expects."</p>
+          <cite>— Mason Nguyen</cite>
+        </div>
+        <div style="margin-top:1.5rem;">
+          <div class="section-label">Continue in the GEO series</div>
+          <div class="series-grid" role="list">
+            <a href="/arm-framework" class="series-card" role="listitem">
+              <div class="sc-label">Methodology</div>
+              <div class="sc-title">The ARM Framework: Authority, Relevance, Momentum</div>
+              <div class="sc-desc">The three-pillar system for measuring and building LLM citation frequency.</div>
+              <div class="sc-url">/arm-framework</div>
+            </a>
+            <a href="/ai-visibility-strategy" class="series-card" role="listitem">
+              <div class="sc-label">Deep guide</div>
+              <div class="sc-title">AI Visibility Strategy: How LLMs Decide Which Brands to Cite</div>
+              <div class="sc-desc">Entity graph architecture, pathways, machine-readable content, and schema stack.</div>
+              <div class="sc-url">/ai-visibility-strategy</div>
+            </a>
+            <a href="/seo-for-ai-brands" class="series-card" role="listitem">
+              <div class="sc-label">Bridge guide</div>
+              <div class="sc-title">SEO for AI-First Brands: Running Both Disciplines in Parallel</div>
+              <div class="sc-desc">Which SEO signals transfer to GEO — and which ones don't.</div>
+              <div class="sc-url">/seo-for-ai-brands</div>
+            </a>
+            <a href="/geo-reputation-repair" class="series-card" role="listitem">
+              <div class="sc-label">Case study</div>
+              <div class="sc-title">GEO Reputation Repair: What To Do When AI Gets Your Brand Wrong</div>
+              <div class="sc-desc">The four failure modes and a structured repair protocol for each.</div>
+              <div class="sc-url">/geo-reputation-repair</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">Generative Engine Optimization — frequently asked questions</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What is Generative Engine Optimization (GEO)?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Generative Engine Optimization (GEO) is the discipline of structuring entity signals, schema architecture, and content so that AI language models — including ChatGPT, Perplexity, Google AI Overviews, and Claude — can accurately identify, cite, and represent a brand in generated responses. GEO treats machine comprehension, not human engagement, as the primary design constraint. It is distinct from SEO in that the optimization target is LLM citation frequency rather than search engine rank position.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How is GEO different from SEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">SEO optimizes for search engine ranking algorithms — the combination of backlinks, crawlability, and content relevance that determines where a page appears in a ranked list of results. GEO optimizes for LLM citation pipelines — the combination of entity clarity, structured data completeness, and machine-readable content formatting that determines whether and how accurately an AI model represents a brand in a generated answer. The two disciplines share infrastructure (domain trust, topical authority, schema markup) but diverge in objective and measurement: SEO measures rank position, GEO measures citation frequency.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Why does GEO matter in 2025?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">In 2025, AI-generated answers have replaced the traditional top of the search results page for the majority of informational and commercial queries. ChatGPT processes over 100 million daily queries; Perplexity serves cited AI answers for 96% of its queries; Google AI Overviews appear above the fold on 68% of informational searches. A brand that is absent from or misrepresented in these answers is effectively invisible to the decision-making moment — regardless of its search ranking. GEO addresses the specific gap between search rank presence and AI answer presence.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What are the main components of a GEO strategy?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">A complete GEO strategy covers five disciplines: entity architecture (building machine-readable records that establish who your brand is and disambiguate it from similar entities), structured data implementation (Schema.org markup that communicates content type, authorship, and entity relationships), machine-readable content formatting (writing structure that LLM retrieval systems can extract and attribute accurately), citation network development (third-party references that triangulate and confirm your entity's claims), and signal freshness (systematic publication and update cadence that keeps your entity active in retrieval pipelines).</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How long does it take to see GEO results?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">GEO timelines vary by platform and signal type. Real-time retrieval systems like Perplexity can reflect structured content improvements within two to four weeks. Google AI Overviews follow a hybrid model — they respond to schema and content updates within 30 to 60 days for pages that already rank. Trained-knowledge platforms like ChatGPT and Claude update on training cycle schedules that may lag by several months. Entity graph registration (Wikidata, Google Knowledge Panel) typically reflects changes within 60 to 90 days. A full GEO engagement is structured around a 90-day foundation phase and a 6-month compounding phase.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What is Share of Model (SoM) and how does it relate to GEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Share of Model (SoM) is the percentage of AI-generated responses on a defined topic or query set in which a given entity is accurately represented. It is the primary GEO success metric — the equivalent of share of voice in media, but measured against model output rather than publication volume. A brand with high SoM is cited frequently and accurately across ChatGPT, Perplexity, Claude, and Gemini for its target queries. GEO strategy is designed to systematically increase SoM by addressing each of the five citation disciplines.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-block">
+  <div class="container">
+    <div class="section-label">Find out where you stand</div>
+    <h2 class="section-title">Get a GEO audit across every AI surface your audience uses</h2>
+    <p class="section-body">Every engagement begins with a structured probe audit — what AI models currently say about your brand, which citation pathways are broken, and the prioritized signal stack that will close the gap.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn-primary">Request a GEO audit</a>
+      <a href="/arm-framework" class="btn-ghost">Read the ARM Framework →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Mason Nguyen GEO · masonnguyengeo.com</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('progress').style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) { item.classList.add('open'); el.setAttribute('aria-expanded','true'); }
+}
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); }
+  });
+});
+</script>
+</body>
+</html>
