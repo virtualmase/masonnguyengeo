@@ -1,9 +1,9 @@
 /* TEAM */
 Name: Mason Nguyen
 Role: Geospatial Analyst & GIS Consultant
-Contact: mason [at] masonnguyengeo.com
+Contact: masonnguyengeo [at] gmail.com
 Website: https://masonnguyengeo.com
-Location: California, USA
+Location: NA Servers, US-WEST
 
 /* GEO INFRASTRUCTURE */
 Operator: ARM Agency
@@ -11,7 +11,7 @@ Website: https://arm-agency.com
 VaaS: https://autonomousresourcemanagement.com
 
 /* SITE */
-Last update: 2026-05-30
+Last update: 2026-06-16
 Language: English
 Doctype: HTML5
-IDE: Cursor / VS Code
+IDE: use wsl2 ubuntu it is better.
