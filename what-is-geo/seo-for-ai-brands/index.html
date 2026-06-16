@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEO for AI-First Brands — Bridging Traditional Search and Generative Visibility | Mason Nguyen GEO</title>
+<meta name="description" content="The complete bridge guide for AI-native brands navigating both traditional SEO and generative engine optimization. Zero-click, AI Overviews, SGE — how to rank in search and get cited in AI answers.">
+<meta name="keywords" content="SEO strategy for AI-native brands, SEO 2025 AI overview optimization, how to rank in AI search results, zero-click SEO strategy, SGE content optimization">
+<link rel="canonical" href="https://masonnguyengeo.com/seo-for-ai-brands">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "name": "SEO for AI-First Brands",
+  "headline": "SEO for AI-First Brands: The Bridge Between Traditional Search and Generative Visibility",
+  "description": "A complete strategic guide for AI-native brands running SEO and GEO in parallel — covering zero-click strategy, AI Overviews optimization, SGE content architecture, and the signals that transfer between both disciplines.",
+  "author": {
+    "@type": "Person",
+    "name": "Mason Nguyen",
+    "url": "https://masonnguyengeo.com/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mason Nguyen GEO",
+    "url": "https://masonnguyengeo.com"
+  },
+  "mainEntityOfPage": "https://masonnguyengeo.com/seo-for-ai-brands",
+  "datePublished": "2025-06-01",
+  "dateModified": "2025-06-01",
+  "about": [
+    { "@type": "Thing", "name": "SEO strategy" },
+    { "@type": "Thing", "name": "Generative Engine Optimization" },
+    { "@type": "Thing", "name": "AI Overviews" },
+    { "@type": "Thing", "name": "Zero-click search" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should AI-first brands still invest in traditional SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, with a repositioned goal. Traditional SEO no longer delivers traffic the way it did before AI Overviews and zero-click results absorbed the top of the SERP. But the signals that traditional SEO builds — domain authority, topical coverage depth, crawlable content architecture, and backlink profiles — are exactly the signals that Google's AI Overview system uses to decide which sources to cite. Investing in SEO for AI-first brands means optimizing for citation eligibility, not just rank position."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is zero-click SEO and how does it change content strategy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zero-click SEO is the practice of optimizing content to appear in SERP features — featured snippets, AI Overviews, People Also Ask boxes — that answer queries directly on the search results page without the user clicking through to any site. For AI-first brands, zero-click is not a threat but a positioning opportunity: appearing in an AI Overview or featured snippet builds brand authority in the AI-indexed view of your domain, even when it does not drive direct traffic. The content strategy shift is toward answer-layer formatting — leading each section with a direct, quotable claim — rather than engagement-layer formatting that buries the answer to encourage time-on-page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do Google AI Overviews decide which sources to cite?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google AI Overviews draw on a combination of traditional Search ranking signals and additional structured data signals. Pages that already rank in the top 10 for a query have a higher baseline probability of being cited in an AI Overview for that query. Beyond rank, AI Overviews prioritize pages with complete structured data markup (particularly FAQPage, HowTo, and Article schema), strong E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness), direct-answer formatting in the first paragraph, and consistent entity attribution. A page can be cited in an AI Overview while ranking #6 organically if its schema and content structure outperform higher-ranking pages on these dimensions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What signals transfer from SEO to GEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The strongest transfer signals are topical authority (content depth and breadth in a defined domain), domain trust (crawlability, canonical consistency, and lack of spam signals), backlink quality (editorial citations from relevant, authoritative sources), and content freshness (regular dateModified updates paired with substantive revisions). The signals that do not transfer well — keyword density, meta description optimization, and internal anchor text ratios — matter primarily for rank position and have little direct effect on LLM citation frequency."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --ink:       #0D0D0D;
+  --ink-2:     #3A3A3A;
+  --ink-3:     #6B6B6B;
+  --paper:     #F7F5F0;
+  --paper-2:   #EDEAE3;
+  --white:     #FFFFFF;
+  --accent:    #C8522A;
+  --seo:       #1B4D6B;    /* traditional SEO register — same as signal blue in AI Visibility */
+  --geo:       #1A3A6B;    /* GEO register — same as authority navy in ARM */
+  --bridge:    #3B6D11;    /* bridge — forest green from ARM relevance */
+  --seo-lt:    #E6F1FB;
+  --geo-lt:    #EEEDFE;
+  --bridge-lt: #E1F5EE;
+  --border:    rgba(13,13,13,0.10);
+  --border-s:  rgba(13,13,13,0.20);
+
+  --f-display: 'Playfair Display', Georgia, serif;
+  --f-body:    'DM Sans', system-ui, sans-serif;
+  --f-mono:    'DM Mono', 'Courier New', monospace;
+  --max:       1100px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width .1s; }
+
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247,245,240,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0.875rem 0;
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--f-display); font-size: 15px; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+.nav-links a:hover, .nav-links a[aria-current] { color: var(--accent); }
+.nav-cta { font-size: 13px; font-weight: 500; padding: 0.5rem 1.125rem; background: var(--ink); color: var(--white); border-radius: 3px; text-decoration: none; transition: background .15s; }
+.nav-cta:hover { background: var(--accent); }
+
+.breadcrumb { padding: 0.875rem 0; font-size: 12px; color: var(--ink-3); border-bottom: 0.5px solid var(--border); font-family: var(--f-mono); }
+.breadcrumb a { color: var(--ink-3); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.5rem; }
+
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+.eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
+
+/* Hero */
+.hero { padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem); border-bottom: 0.5px solid var(--border); }
+.hero h1 { font-family: var(--f-display); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); max-width: 860px; margin-bottom: 1.5rem; }
+.hero h1 em { font-style: italic; color: var(--bridge); }
+.hero-sub { font-size: clamp(1rem, 2vw, 1.175rem); color: var(--ink-2); max-width: 620px; line-height: 1.65; margin-bottom: 2.5rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 2rem; font-size: 13px; color: var(--ink-3); }
+.hero-meta strong { color: var(--ink); font-weight: 500; }
+
+/* Bridge diagram — signature element */
+.bridge-diagram {
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  display: grid;
+  grid-template-columns: 1fr 56px 1fr;
+  gap: 0;
+  border: 0.5px solid var(--border-s);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.bridge-col { padding: clamp(1.25rem, 3vw, 2rem); }
+.bridge-col.seo-col { background: var(--seo-lt); border-right: none; }
+.bridge-col.geo-col { background: var(--geo-lt); border-left: none; }
+.bridge-center {
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.bridge-arrow { color: rgba(255,255,255,0.4); font-size: 20px; }
+.bridge-center-label { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); writing-mode: vertical-rl; text-orientation: mixed; }
+.bc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.875rem; }
+.seo-col .bc-label { color: var(--seo); }
+.geo-col .bc-label { color: var(--geo); }
+.bc-signals { display: flex; flex-direction: column; gap: 0.5rem; }
+.bc-signal { font-size: 13px; color: var(--ink-2); padding: 0.5rem 0.75rem; border-radius: 3px; display: flex; align-items: center; gap: 0.625rem; }
+.seo-col .bc-signal { background: rgba(27,77,107,0.07); }
+.geo-col .bc-signal { background: rgba(26,58,107,0.07); }
+.bc-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.seo-col .bc-dot { background: var(--seo); }
+.geo-col .bc-dot { background: var(--geo); }
+
+/* Section */
+section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+section + section { border-top: 0.5px solid var(--border); }
+.section-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.section-title { font-family: var(--f-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 1.25rem; max-width: 700px; }
+.section-body { font-size: 15px; color: var(--ink-2); max-width: 660px; line-height: 1.75; }
+.section-body p + p { margin-top: 1.125rem; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+
+/* Transfer matrix — what signals cross over */
+.matrix-table { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 1.5rem; border: 0.5px solid var(--border-s); border-radius: 4px; overflow: hidden; }
+.matrix-table th { text-align: left; padding: 0.625rem 1rem; font-size: 10px; font-family: var(--f-mono); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); border-bottom: 1px solid var(--border-s); background: var(--paper-2); }
+.matrix-table td { padding: 0.75rem 1rem; border-bottom: 0.5px solid var(--border); color: var(--ink-2); vertical-align: top; }
+.matrix-table tr:last-child td { border-bottom: none; }
+.matrix-table td:first-child { color: var(--ink); font-weight: 500; font-size: 13px; }
+.transfer-tag { display: inline-flex; align-items: center; gap: 0.375rem; font-size: 11px; padding: 2px 8px; border-radius: 2px; font-family: var(--f-mono); letter-spacing: 0.06em; white-space: nowrap; }
+.tag-strong { background: var(--bridge-lt); color: var(--bridge); }
+.tag-partial { background: #FAEEDA; color: #854F0B; }
+.tag-none { background: var(--paper-2); color: var(--ink-3); }
+
+/* Strategy cards */
+.strategy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.strategy-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; overflow: hidden; }
+.sc-head { padding: 1.125rem 1.125rem 0.875rem; border-bottom: 0.5px solid var(--border); }
+.sc-tag { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.sc-title { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.35; }
+.sc-body-wrap { padding: 1rem 1.125rem; }
+.sc-body { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+.sc-tactics { margin-top: 0.875rem; display: flex; flex-direction: column; gap: 0.375rem; }
+.sc-tactic { font-size: 12px; color: var(--ink-3); display: flex; align-items: flex-start; gap: 0.5rem; }
+.sc-tactic::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+
+/* Zero-click section */
+.zero-click-visual {
+  background: var(--white);
+  border: 0.5px solid var(--border-s);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+.zcv-bar {
+  background: var(--paper-2);
+  padding: 0.625rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  border-bottom: 0.5px solid var(--border);
+}
+.zcv-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border-s); }
+.zcv-url { font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
+.zcv-serp { padding: 1.25rem; }
+.zcv-ai-overview {
+  border: 1px solid #C2D9EA;
+  border-radius: 6px;
+  padding: 1rem 1.125rem;
+  background: #F0F7FC;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.zcv-ai-label {
+  display: flex; align-items: center; gap: 0.375rem;
+  font-size: 11px; font-weight: 600; color: #185FA5;
+  margin-bottom: 0.625rem;
+  font-family: var(--f-mono); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.zcv-ai-label::before { content: '✦'; font-size: 10px; }
+.zcv-ai-text { font-size: 12.5px; color: var(--ink-2); line-height: 1.6; }
+.zcv-ai-cite { margin-top: 0.625rem; display: flex; gap: 0.5rem; }
+.zcv-cite-chip { font-size: 10.5px; padding: 2px 8px; background: var(--white); border: 0.5px solid #C2D9EA; border-radius: 20px; color: #185FA5; font-family: var(--f-mono); }
+.zcv-organic { display: flex; flex-direction: column; gap: 0.625rem; }
+.zcv-result { padding: 0.625rem 0; border-bottom: 0.5px solid var(--border); }
+.zcv-result:last-child { border-bottom: none; }
+.zcv-result-url { font-size: 11px; color: var(--bridge); margin-bottom: 2px; font-family: var(--f-mono); }
+.zcv-result-title { font-size: 13px; font-weight: 500; color: #185FA5; margin-bottom: 2px; }
+.zcv-result-desc { font-size: 12px; color: var(--ink-3); line-height: 1.5; }
+.zcv-annotation {
+  display: flex; align-items: flex-start; gap: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  background: rgba(200,82,42,0.06);
+  border-top: 0.5px solid var(--border);
+  font-size: 12px; color: var(--ink-2);
+}
+.zcv-annotation strong { color: var(--accent); }
+
+/* Content format table */
+.format-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.format-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.25rem 1.125rem; }
+.fc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.fc-label.seo { color: var(--seo); }
+.fc-label.geo { color: var(--geo); }
+.fc-label.both { color: var(--bridge); }
+.fc-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
+.fc-body { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+
+/* Pullquote */
+.pullquote { border-left: 3px solid var(--accent); padding: 1.25rem 1.75rem; margin: 2.5rem 0; background: var(--white); }
+.pullquote p { font-family: var(--f-display); font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.5; color: var(--ink); }
+.pullquote cite { display: block; margin-top: 0.75rem; font-size: 12px; font-style: normal; font-family: var(--f-mono); letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; }
+
+/* Priority checklist */
+.priority-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.priority-item { border: 0.5px solid var(--border); border-bottom: none; background: var(--white); display: grid; grid-template-columns: 36px 1fr auto; align-items: start; }
+.priority-item:first-child { border-radius: 4px 4px 0 0; }
+.priority-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
+.pi-num { display: flex; align-items: center; justify-content: center; padding: 1rem 0; font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); border-right: 0.5px solid var(--border); height: 100%; }
+.pi-content { padding: 1rem 1.125rem; }
+.pi-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; }
+.pi-body { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+.pi-impact { padding: 1rem 1rem 1rem 0; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-start; gap: 0.25rem; }
+.impact-tag { font-family: var(--f-mono); font-size: 10px; padding: 2px 7px; border-radius: 2px; white-space: nowrap; }
+.impact-both { background: var(--bridge-lt); color: var(--bridge); }
+.impact-seo  { background: var(--seo-lt); color: var(--seo); }
+.impact-geo  { background: var(--geo-lt); color: var(--geo); }
+
+/* FAQ */
+.faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.faq-item { border: 0.5px solid var(--border); border-bottom: none; background: var(--white); }
+.faq-item:first-child { border-radius: 4px 4px 0 0; }
+.faq-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
+.faq-q { padding: 1.125rem 1.25rem; font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-q::after { content: '+'; font-size: 18px; font-weight: 300; flex-shrink: 0; color: var(--ink-3); transition: transform .2s; }
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 14px; color: var(--ink-2); line-height: 1.7; padding: 0 1.25rem; }
+.faq-item.open .faq-a { max-height: 500px; padding: 0 1.25rem 1.25rem; }
+
+/* CTA */
+.cta-block { background: var(--ink); color: var(--white); padding: clamp(3rem, 7vw, 5rem) 0; }
+.cta-block .section-label { color: var(--accent); }
+.cta-block .section-title { color: var(--white); max-width: 600px; }
+.cta-block .section-body { color: rgba(255,255,255,0.6); }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+.btn-primary { padding: 0.875rem 2rem; background: var(--accent); color: var(--white); border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity .15s; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost { padding: 0.875rem 2rem; background: transparent; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 3px; text-decoration: none; font-size: 14px; transition: border-color .15s, color .15s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+/* Related */
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.related-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.25rem; text-decoration: none; display: block; transition: border-color .15s; }
+.related-card:hover { border-color: var(--accent); }
+.rc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; }
+.rc-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 0.5rem; }
+.rc-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+
+footer { background: var(--paper-2); border-top: 0.5px solid var(--border); padding: 2.5rem 0; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.footer-copy { font-size: 13px; color: var(--ink-3); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+@media (max-width: 900px) {
+  .strategy-grid { grid-template-columns: 1fr; }
+  .related-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 760px) {
+  .bridge-diagram { grid-template-columns: 1fr; }
+  .bridge-center { flex-direction: row; padding: 0.75rem; }
+  .bridge-center-label { writing-mode: horizontal-tb; }
+  .two-col, .format-grid, .related-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+  .pi-impact { display: none; }
+  .priority-item { grid-template-columns: 36px 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav aria-label="Site navigation">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Mason Nguyen<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/what-is-geo">What is GEO</a></li>
+      <li><a href="/arm-framework">ARM Framework</a></li>
+      <li><a href="/ai-visibility-strategy">AI Visibility</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/contact" class="nav-cta">Work together</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    <a href="/what-is-geo">GEO</a><span>/</span>
+    SEO for AI Brands
+  </div>
+</div>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Bridge Guide</div>
+    <h1>SEO for AI-First Brands:<br><em>Running Both Disciplines in Parallel</em></h1>
+    <p class="hero-sub">
+      Traditional SEO and generative engine optimization are not competitors. They share infrastructure, diverge on objectives, and compound each other when run correctly. This guide maps exactly where they connect — and where they don't.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Updated <strong>June 2025</strong></span>
+      <span>20 min read</span>
+      <span>URL: <strong>/seo-for-ai-brands</strong></span>
+    </div>
+
+    <div class="bridge-diagram" aria-label="SEO and GEO signal bridge diagram">
+      <div class="bridge-col seo-col">
+        <div class="bc-label">Traditional SEO signals</div>
+        <div class="bc-signals">
+          <div class="bc-signal"><div class="bc-dot"></div>Organic rank position</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Backlink domain authority</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Core Web Vitals</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Keyword density & intent match</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Crawl budget & sitemap</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Meta description CTR</div>
+        </div>
+      </div>
+      <div class="bridge-center" aria-hidden="true">
+        <div class="bridge-arrow">↔</div>
+        <div class="bridge-center-label">Bridge</div>
+      </div>
+      <div class="bridge-col geo-col">
+        <div class="bc-label">GEO / AI visibility signals</div>
+        <div class="bc-signals">
+          <div class="bc-signal"><div class="bc-dot"></div>LLM citation frequency</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Structured editorial citation network</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Schema.org markup completeness</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Entity disambiguation clarity</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Knowledge graph registration</div>
+          <div class="bc-signal"><div class="bc-dot"></div>Answer-layer content formatting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Why both matter -->
+<section id="why-both">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-label">The strategic context</div>
+        <h2 class="section-title">The SERP changed. The infrastructure didn't.</h2>
+        <div class="section-body">
+          <p>In 2025, AI Overviews appear above the fold for the majority of informational queries on Google. Zero-click rates — queries that resolve without a user visiting any linked page — now exceed 60% across informational and navigational intent. For AI-first brands whose audiences ask process questions, definition questions, and comparison questions, this is not a future concern. It is the current state of the traffic they were counting on.</p>
+          <p>The obvious response — abandon SEO, go all-in on GEO — misunderstands the structure of the problem. The signals that Google uses to decide which sources to cite inside an AI Overview are substantially the same signals that determine organic rank: domain trust, topical authority, crawlable content, and E-E-A-T evidence. Dismantling the SEO foundation to rebuild a GEO-only strategy discards the infrastructure that feeds both.</p>
+          <p>The correct response is architectural. SEO and GEO share an infrastructure layer — content quality, domain health, citation networks, and structured data — and diverge on their objective layers. Running them in parallel means building the shared infrastructure once and orienting the objective layer toward both rank position and citation frequency simultaneously. That is what this guide is for.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pullquote">
+          <p>"Zero-click is not the death of SEO. It is the expansion of what SEO needs to accomplish. The goal was never traffic — it was presence. AI Overviews are presence."</p>
+          <cite>— Mason Nguyen</cite>
+        </div>
+
+        <table class="matrix-table" aria-label="Signal transfer: SEO to GEO">
+          <thead>
+            <tr>
+              <th>SEO Signal</th>
+              <th>Transfers to GEO?</th>
+              <th>Mechanism</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Domain authority / trust</td>
+              <td><span class="transfer-tag tag-strong">Strong transfer</span></td>
+              <td>LLM retrieval systems weight domain trust scores</td>
+            </tr>
+            <tr>
+              <td>Topical authority / depth</td>
+              <td><span class="transfer-tag tag-strong">Strong transfer</span></td>
+              <td>Concept coverage maps to LLM citation relevance</td>
+            </tr>
+            <tr>
+              <td>Editorial backlinks</td>
+              <td><span class="transfer-tag tag-strong">Strong transfer</span></td>
+              <td>Third-party citations are GEO's core signal</td>
+            </tr>
+            <tr>
+              <td>Content freshness (dateModified)</td>
+              <td><span class="transfer-tag tag-strong">Strong transfer</span></td>
+              <td>Retrieval systems weight recency directly</td>
+            </tr>
+            <tr>
+              <td>Core Web Vitals</td>
+              <td><span class="transfer-tag tag-partial">Partial transfer</span></td>
+              <td>Affects crawl eligibility; LLMs don't render JS</td>
+            </tr>
+            <tr>
+              <td>Keyword density</td>
+              <td><span class="transfer-tag tag-none">No transfer</span></td>
+              <td>LLMs use semantic matching, not keyword counting</td>
+            </tr>
+            <tr>
+              <td>Meta description</td>
+              <td><span class="transfer-tag tag-none">No transfer</span></td>
+              <td>Not read by LLM retrieval pipelines</td>
+            </tr>
+            <tr>
+              <td>Schema.org markup</td>
+              <td><span class="transfer-tag tag-strong">Strong transfer</span></td>
+              <td>Primary structured signal for both AI Overviews and GEO</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Zero-click strategy -->
+<section id="zero-click">
+  <div class="container">
+    <div class="section-label">Zero-click strategy</div>
+    <h2 class="section-title">Zero-click is a positioning strategy, not a traffic problem</h2>
+    <div class="two-col">
+      <div>
+        <div class="section-body">
+          <p>Zero-click SEO describes the practice of optimizing for SERP features — AI Overviews, featured snippets, People Also Ask boxes, knowledge panels — that answer queries directly on the results page. These features reduce click-through rates to individual pages. They also dramatically increase brand impression frequency among people who will never visit your site.</p>
+          <p>For an AI-first brand, the frame shift is critical. If your goal is traffic volume, zero-click features are adversarial — they intercept users before they reach you. If your goal is authority positioning, zero-click features are the most efficient brand presence tool available: your entity name appears in front of every person who searched the query, attributed to your domain, without requiring them to click anywhere.</p>
+          <p>The content strategy implication is direct. Pages optimized to capture zero-click features lead with direct answers. They do not bury the answer behind context paragraphs or save the conclusion for the end. The first 50 to 100 words of each section answer the question the section's heading posed. This is also — not coincidentally — the format that LLM retrieval systems extract most reliably. Zero-click optimization and GEO optimization require the same content structure.</p>
+        </div>
+      </div>
+      <div>
+        <div class="zero-click-visual" aria-label="SERP with AI Overview example">
+          <div class="zcv-bar">
+            <div class="zcv-dot"></div>
+            <div class="zcv-dot"></div>
+            <div class="zcv-dot"></div>
+            <div class="zcv-url">google.com/search?q=how+to+optimize+for+ai+search</div>
+          </div>
+          <div class="zcv-serp">
+            <div class="zcv-ai-overview">
+              <div class="zcv-ai-label">AI Overview</div>
+              <div class="zcv-ai-text">To optimize for AI search, brands need to build structured entity signals — Schema.org markup, Wikidata records, and machine-readable content — alongside traditional SEO signals. The key distinction is that AI systems cite sources based on entity clarity and semantic alignment, not keyword match...</div>
+              <div class="zcv-ai-cite">
+                <div class="zcv-cite-chip">masonnguyengeo.com</div>
+                <div class="zcv-cite-chip">Search Engine Journal</div>
+                <div class="zcv-cite-chip">Moz</div>
+              </div>
+            </div>
+            <div class="zcv-organic">
+              <div class="zcv-result">
+                <div class="zcv-result-url">masonnguyengeo.com › what-is-geo</div>
+                <div class="zcv-result-title">What is Generative Engine Optimization (GEO)?</div>
+                <div class="zcv-result-desc">GEO is the practice of optimizing content and entity signals for AI-generated answers...</div>
+              </div>
+              <div class="zcv-result">
+                <div class="zcv-result-url">searchenginejournal.com › ai-seo-2025</div>
+                <div class="zcv-result-title">AI SEO in 2025: What Actually Moves the Needle</div>
+                <div class="zcv-result-desc">A comprehensive breakdown of which SEO signals transfer to AI Overviews...</div>
+              </div>
+            </div>
+          </div>
+          <div class="zcv-annotation">
+            <strong>↑ Note:</strong>&nbsp;The brand appears twice — in the AI Overview citation and at #1 organic. Zero-click and rank compound each other when content architecture serves both.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Three-strategy model -->
+<section id="three-strategies">
+  <div class="container">
+    <div class="section-label">Content architecture</div>
+    <h2 class="section-title">Three content strategies for AI-first brands</h2>
+    <p class="section-body">AI-first brands need content that works across three distinct surfaces simultaneously: traditional search rankings, AI Overview citations, and standalone LLM answer citation. Each surface has slightly different format preferences, but all three draw from the same content infrastructure.</p>
+
+    <div class="strategy-grid" role="list" aria-label="Three content strategies">
+      <div class="strategy-card" role="listitem">
+        <div class="sc-head">
+          <div class="sc-tag" style="color: var(--seo)">Strategy A · Rank-first</div>
+          <div class="sc-title">Content that earns and holds organic positions</div>
+        </div>
+        <div class="sc-body-wrap">
+          <div class="sc-body">Pages built for comprehensive topical coverage, keyword intent satisfaction, and acquisition of editorial backlinks. These pages anchor your topical authority and feed the domain trust signals that flow downstream to GEO performance.</div>
+          <div class="sc-tactics">
+            <div class="sc-tactic">Pillar pages covering full concept clusters</div>
+            <div class="sc-tactic">Comparison and "versus" content with clear verdicts</div>
+            <div class="sc-tactic">Data-backed original research others will cite</div>
+            <div class="sc-tactic">Long-form how-to guides with HowTo schema</div>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-card" role="listitem">
+        <div class="sc-head">
+          <div class="sc-tag" style="color: var(--bridge)">Strategy B · Bridge</div>
+          <div class="sc-title">Content optimized for both rank and AI Overview citation</div>
+        </div>
+        <div class="sc-body-wrap">
+          <div class="sc-body">The highest-leverage content type for AI-first brands. Written with answer-layer leads, FAQPage schema, and direct-quotable section openings. Designed to rank organically and be cited in AI Overviews for the same queries simultaneously.</div>
+          <div class="sc-tactics">
+            <div class="sc-tactic">FAQ-driven guides with schema on every Q&A</div>
+            <div class="sc-tactic">Definition pages with structured entity markup</div>
+            <div class="sc-tactic">Process explainers with direct answer leads</div>
+            <div class="sc-tactic">Concept-level primers for owned terminology</div>
+          </div>
+        </div>
+      </div>
+      <div class="strategy-card" role="listitem">
+        <div class="sc-head">
+          <div class="sc-tag" style="color: var(--geo)">Strategy C · GEO-first</div>
+          <div class="sc-title">Content written for LLM extraction, not search ranking</div>
+        </div>
+        <div class="sc-body-wrap">
+          <div class="sc-body">Entity anchor pages, disambiguation documents, and schema-forward content that may not rank for competitive keywords but establishes the machine-readable entity record that GEO and AI Overview performance depends on.</div>
+          <div class="sc-tactics">
+            <div class="sc-tactic">About/entity anchor pages with full Person schema</div>
+            <div class="sc-tactic">GEO disambiguation files and geo.txt</div>
+            <div class="sc-tactic">Proprietary framework definition pages</div>
+            <div class="sc-tactic">Structured case studies with clear attribution</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SGE / AI Overviews format -->
+<section id="ai-overviews">
+  <div class="container">
+    <div class="section-label">AI Overviews optimization</div>
+    <h2 class="section-title">How to optimize content for Google AI Overviews</h2>
+    <div class="two-col">
+      <div>
+        <div class="section-body">
+          <p>Google AI Overviews operate on a hybrid retrieval model — they draw from Google's existing Search index, weighting pages that already rank for the query, and apply additional scoring for structured data completeness, E-E-A-T signals, and content formatting. Being cited in an AI Overview does not require ranking first; it requires meeting a structured data and content format threshold that the Overview system can extract from.</p>
+          <p>The content format that AI Overviews extract from most reliably is what GEO practitioners call the answer-layer format: a direct, quotable statement in the first sentence of the section, followed by elaboration, evidence, or nuance. The Overview system extracts the lead, not the elaboration. A section that buries its core claim in the third paragraph is rarely cited regardless of its ranking position.</p>
+          <p>E-E-A-T signals — Evidence of Experience, Expertise, Authoritativeness, and Trust — are the primary differentiator between pages at similar rank positions that do and do not appear in AI Overviews. First-person experience language, named authorship with schema attribution, dated publication, and explicit credentials are not decoration. They are the E-E-A-T signals the AI Overview system weights when deciding which source is most authoritative for a given extraction.</p>
+        </div>
+      </div>
+      <div>
+        <div class="format-grid" aria-label="Content format requirements for AI Overviews">
+          <div class="format-card">
+            <div class="fc-label both">Dual-purpose</div>
+            <div class="fc-title">Answer-layer section leads</div>
+            <div class="fc-body">Direct answer in the first sentence of every section. Write as if the section heading is the question and the first sentence is a standalone answer that will be read without any context. SEO benefit: featured snippet eligibility. GEO benefit: LLM extraction accuracy.</div>
+          </div>
+          <div class="format-card">
+            <div class="fc-label both">Dual-purpose</div>
+            <div class="fc-title">FAQPage schema with complete answers</div>
+            <div class="fc-body">Each FAQ entry should be a complete, standalone answer — 40 to 80 words, no pronouns requiring page context to resolve. Implemented with FAQPage schema. SEO benefit: People Also Ask eligibility. GEO benefit: Direct query-to-answer extraction.</div>
+          </div>
+          <div class="format-card">
+            <div class="fc-label geo">GEO-specific</div>
+            <div class="fc-title">Full entity naming in every section</div>
+            <div class="fc-body">Use the full entity name — not a pronoun, not "the company," not "we" — on first reference in every section. LLM retrievers process sections independently. An entity that is only named in the introduction is invisible in extracted sections.</div>
+          </div>
+          <div class="format-card">
+            <div class="fc-label seo">SEO-weighted</div>
+            <div class="fc-title">Explicit first-person experience signals</div>
+            <div class="fc-body">E-E-A-T Experience signals require language that demonstrates the author actually did the thing being described. "In our testing," "I implemented this for a client in 2024," and similar phrases are not filler — they are the trust signals that distinguish AI Overview citations from excluded sources.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation priority -->
+<section id="priority">
+  <div class="container">
+    <div class="section-label">Implementation order</div>
+    <h2 class="section-title">Priority order for AI-first brand SEO/GEO integration</h2>
+    <p class="section-body">Every implementation begins with the shared infrastructure. Trying to build GEO performance on a broken SEO foundation is building without a floor. The shared infrastructure comes first; the discipline-specific layers follow.</p>
+
+    <div class="priority-list" role="list" aria-label="Implementation priorities">
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">01</div>
+        <div class="pi-content">
+          <div class="pi-title">Canonical URL architecture — one stable, semantic URL per concept</div>
+          <div class="pi-body">Every content page lives at a persistent, descriptive URL with no parameter strings. The canonical tag points to itself. This is the base requirement for both Google's ranking algorithm and LLM retrieval systems, both of which dereference URLs when assessing source reliability.</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-both">SEO + GEO</span></div>
+      </div>
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">02</div>
+        <div class="pi-content">
+          <div class="pi-title">Entity anchor markup — Person or Organization schema on every page</div>
+          <div class="pi-body">Schema.org Person or Organization markup with a complete sameAs array, deployed on the homepage and About page as a minimum. This is the entity foundation that both Google Knowledge Graph and LLM knowledge bases reference when resolving your entity against a query.</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-both">SEO + GEO</span></div>
+      </div>
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">03</div>
+        <div class="pi-content">
+          <div class="pi-title">Article and author schema on all long-form content</div>
+          <div class="pi-body">Article schema with author, datePublished, dateModified, and mainEntityOfPage on every content page. The author field must reference the Person schema entity via @id, not a plain text name string. This establishes the E-E-A-T authorship chain that AI Overviews and LLM retrievers both use.</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-both">SEO + GEO</span></div>
+      </div>
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">04</div>
+        <div class="pi-content">
+          <div class="pi-title">FAQPage schema on all pillar and bridge content</div>
+          <div class="pi-body">Every pillar page and bridge content page should contain a minimum of four FAQ entries with complete standalone answers. FAQPage schema is among the most LLM-legible structured data formats and the primary enabler of People Also Ask and AI Overview extraction simultaneously.</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-both">SEO + GEO</span></div>
+      </div>
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">05</div>
+        <div class="pi-content">
+          <div class="pi-title">Wikidata entity registration</div>
+          <div class="pi-body">Create or claim a Wikidata entry for the brand and its principals. Include the canonical URL, external identifier references, and a structured description. Reference the Wikidata Q-number in the sameAs array of your schema markup. This is a pure GEO signal with no direct SEO effect, but it is the entry point for knowledge graph recognition across LLM retrieval systems.</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-geo">GEO</span></div>
+      </div>
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">06</div>
+        <div class="pi-content">
+          <div class="pi-title">Answer-layer content audit and reformatting</div>
+          <div class="pi-body">Audit the top 10 highest-traffic content pages. For each, ensure the first sentence of every section answers the section heading's implicit question directly. Rewrite any section that buries its answer. Update dateModified in schema. This single structural change is responsible for a measurable share of AI Overview citation lift in every implementation tested.</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-both">SEO + GEO</span></div>
+      </div>
+      <div class="priority-item" role="listitem">
+        <div class="pi-num">07</div>
+        <div class="pi-content">
+          <div class="pi-title">Structured editorial citation program</div>
+          <div class="pi-body">Secure four to six editorial placements per quarter in publications indexed by Perplexity and Google Search. Each placement must name the brand entity explicitly, link to the canonical URL, and include an entity description consistent with the schema markup. This feeds both domain authority (SEO) and citation network density (GEO).</div>
+        </div>
+        <div class="pi-impact"><span class="impact-tag impact-both">SEO + GEO</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">SEO for AI brands — frequently asked questions</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Should AI-first brands still invest in traditional SEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Yes, with a repositioned goal. Traditional SEO no longer delivers traffic the way it did before AI Overviews and zero-click results absorbed the top of the SERP. But the signals that traditional SEO builds — domain authority, topical coverage depth, crawlable content architecture, and backlink profiles — are exactly the signals that Google's AI Overview system uses to decide which sources to cite. Investing in SEO for AI-first brands means optimizing for citation eligibility, not just rank position.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What is zero-click SEO and how does it change content strategy?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Zero-click SEO is the practice of optimizing content to appear in SERP features — featured snippets, AI Overviews, People Also Ask boxes — that answer queries directly on the search results page without the user clicking through to any site. For AI-first brands, zero-click is not a threat but a positioning opportunity: appearing in an AI Overview or featured snippet builds brand authority in the AI-indexed view of your domain, even when it does not drive direct traffic. The content strategy shift is toward answer-layer formatting — leading each section with a direct, quotable claim — rather than engagement-layer formatting that buries the answer to encourage time-on-page.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How do Google AI Overviews decide which sources to cite?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Google AI Overviews draw on a combination of traditional Search ranking signals and additional structured data signals. Pages that already rank in the top 10 for a query have a higher baseline probability of being cited in an AI Overview for that query. Beyond rank, AI Overviews prioritize pages with complete structured data markup (particularly FAQPage, HowTo, and Article schema), strong E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness), direct-answer formatting in the first paragraph, and consistent entity attribution. A page can be cited in an AI Overview while ranking #6 organically if its schema and content structure outperform higher-ranking pages on these dimensions.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What signals transfer from SEO to GEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">The strongest transfer signals are topical authority (content depth and breadth in a defined domain), domain trust (crawlability, canonical consistency, and lack of spam signals), backlink quality (editorial citations from relevant, authoritative sources), and content freshness (regular dateModified updates paired with substantive revisions). The signals that do not transfer well — keyword density, meta description optimization, and internal anchor text ratios — matter primarily for rank position and have little direct effect on LLM citation frequency.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Is SGE the same as Google AI Overviews?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">SGE (Search Generative Experience) was Google's original internal name for the feature that launched publicly as AI Overviews in May 2024. The terms are used interchangeably in older documentation and industry writing. For content optimization purposes they are the same system, and all SGE optimization guidance applies directly to AI Overviews. The content architecture requirements — answer-layer formatting, complete schema markup, E-E-A-T signals, and topical authority — have not substantively changed between the SGE beta and the AI Overviews launch.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related -->
+<section id="related">
+  <div class="container">
+    <div class="section-label">Continue reading</div>
+    <h2 class="section-title">The full GEO series</h2>
+    <div class="related-grid">
+      <a href="/what-is-geo" class="related-card">
+        <div class="rc-label">Pillar guide</div>
+        <div class="rc-title">What is Generative Engine Optimization (GEO)?</div>
+        <div class="rc-desc">The foundational guide — what GEO is, how it differs from SEO, and why it matters.</div>
+      </a>
+      <a href="/arm-framework" class="related-card">
+        <div class="rc-label">Methodology</div>
+        <div class="rc-title">The ARM Framework — Authority, Relevance, Momentum</div>
+        <div class="rc-desc">The three-pillar system for measuring and building LLM citation frequency.</div>
+      </a>
+      <a href="/ai-visibility-strategy" class="related-card">
+        <div class="rc-label">Deep guide</div>
+        <div class="rc-title">AI Visibility Strategy: How LLMs Decide Which Brands to Cite</div>
+        <div class="rc-desc">The entity graph, machine-readable content signals, and structured data decisions behind AI citation.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-block">
+  <div class="container">
+    <div class="section-label">Run both disciplines</div>
+    <h2 class="section-title">Build the shared infrastructure that feeds SEO and GEO simultaneously</h2>
+    <p class="section-body">Every engagement starts with a diagnostic — which signals are already transferring, which are missing, and what the fastest path to AI Overview citation looks like for your specific content architecture and competitive set.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn-primary">Start with a diagnostic</a>
+      <a href="/geo-reputation-repair" class="btn-ghost">Read: GEO Reputation Repair →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Mason Nguyen GEO · masonnguyengeo.com</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('progress').style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('open');
+    i.querySelector('.faq-q').setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+    item.classList.add('open');
+    el.setAttribute('aria-expanded','true');
+  }
+}
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); }
+  });
+});
+</script>
+</body>
+</html>
