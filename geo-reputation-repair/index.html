@@ -3,172 +3,697 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GEO Reputation Repair — Fix Entity Confusion in AI Search | Mason Nguyen</title>
-<meta name="description" content="How to fix entity name confusion, wrong AI company descriptions, and citation errors across AI search systems. The GEO reputation repair playbook.">
-<meta name="keywords" content="entity name confusion GEO fix, AI search reputation repair, fix wrong AI company description, entity disambiguation for brands, GEO file structured entity signal">
+<title>GEO Reputation Repair: When AI Gets Your Brand Wrong | Mason Nguyen GEO</title>
+<meta name="description" content="What to do when AI models misrepresent your brand. The four AI citation failure modes, a structured repair protocol, and a real-world case study — from Mason Nguyen, GEO strategist.">
+<meta name="keywords" content="AI search reputation repair, fix wrong AI company description, entity name confusion GEO fix, entity disambiguation for brands, GEO file structured entity signal">
 <link rel="canonical" href="https://masonnguyengeo.com/geo-reputation-repair">
-<meta property="og:type" content="article">
-<meta property="og:title" content="GEO Reputation Repair — Fix Entity Confusion in AI Search | Mason Nguyen">
-<meta property="og:description" content="How to fix entity name confusion, wrong AI company descriptions, and citation errors across AI search systems. The GEO reputation repair playbook.">
-<meta property="og:url" content="https://masonnguyengeo.com/geo-reputation-repair">
-<meta property="og:site_name" content="Mason Nguyen GEO">
-<link rel="alternate" type="text/plain" href="https://masonnguyengeo.com/llms.txt" title="AI Crawler Guidance">
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://masonnguyengeo.com/geo-reputation-repair#article",
-  "headline": "GEO Reputation Repair",
-  "description": "How to fix entity name confusion, wrong AI company descriptions, and citation errors across AI search systems. The GEO reputation repair playbook.",
-  "url": "https://masonnguyengeo.com/geo-reputation-repair",
-  "datePublished": "2026-06-16",
-  "dateModified": "2026-06-16",
-  "author": {
-    "@type": "Person",
-    "@id": "https://masonnguyengeo.com/#mason",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "publisher": {
-    "@type": "Person",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "mainEntityOfPage": "https://masonnguyengeo.com/geo-reputation-repair",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com/" },
-      { "@type": "ListItem", "position": 2, "name": "GEO Reputation Repair", "item": "https://masonnguyengeo.com/geo-reputation-repair" }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Article",
+      "name": "GEO Reputation Repair",
+      "headline": "GEO Reputation Repair: What To Do When AI Gets Your Brand Wrong",
+      "description": "The four failure modes that cause AI models to misrepresent brands, and the structured signal repair protocol for each. Includes a composite case study of a successful GEO reputation repair engagement.",
+      "author": { "@type": "Person", "name": "Mason Nguyen", "url": "https://masonnguyengeo.com/about" },
+      "publisher": { "@type": "Organization", "name": "Mason Nguyen GEO", "url": "https://masonnguyengeo.com" },
+      "mainEntityOfPage": "https://masonnguyengeo.com/geo-reputation-repair",
+      "datePublished": "2025-06-01",
+      "dateModified": "2025-06-15",
+      "about": [
+        { "@type": "Thing", "name": "GEO reputation repair" },
+        { "@type": "Thing", "name": "Entity disambiguation" },
+        { "@type": "Thing", "name": "AI search reputation management" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is GEO reputation repair?",
+          "acceptedAnswer": { "@type": "Answer", "text": "GEO reputation repair is the process of correcting how AI language models represent a brand in generated responses. When an AI model returns inaccurate, outdated, or missing information about an entity, GEO repair addresses the underlying signal failures — missing entity architecture, conflicting schema, absent third-party citations, or stale training data — that caused the misrepresentation. It is distinct from traditional reputation management, which targets human-facing search results, because it operates on machine-readable signals rather than content strategy." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do AI models get brand information wrong?",
+          "acceptedAnswer": { "@type": "Answer", "text": "AI models misrepresent brands for four distinct reasons: omission (the entity never entered the training or retrieval pipeline, so the model returns no information), commission (conflicting signals at training or retrieval time caused the model to encode incorrect facts), displacement (low entity confidence caused the model to substitute a more familiar competitor entity), and decay (the model captured an accurate earlier state that is now outdated, with no fresh signals triggering an update). Each failure mode has a distinct root cause and requires a different repair approach." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does GEO reputation repair take?",
+          "acceptedAnswer": { "@type": "Answer", "text": "GEO reputation repair timelines depend on the failure mode and the platforms being addressed. Real-time retrieval systems like Perplexity respond to signal corrections within two to four weeks of new structured content being indexed. Google AI Overviews reflect schema and content changes within 30 to 60 days for pages that already hold rank. Trained-knowledge platforms like ChatGPT and Claude update on training cycle schedules — typically months — but retrieval-augmented queries on those platforms reflect changes faster. A full repair engagement is structured around a 90-day signal correction phase followed by ongoing signal maintenance." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is entity disambiguation in GEO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Entity disambiguation is the process of making a brand's machine-readable identity sufficiently distinct that AI systems can attribute responses to the correct entity without confusion. Disambiguation fails when a brand shares a name with another entity, uses inconsistent naming across platforms, lacks structured sameAs relationships, or has no knowledge graph record. GEO disambiguation involves building a canonical entity anchor with complete Schema.org markup, registering a Wikidata record, standardizing naming across all properties, and establishing a citation network that consistently references the correct entity." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you fix what ChatGPT says about your company?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You cannot directly edit ChatGPT's trained knowledge. However, you can correct the signals that feed into ChatGPT's retrieval-augmented queries and influence future training updates. For real-time retrieval queries (ChatGPT with browsing enabled), correcting structured data, publishing accurate entity anchor pages, and building third-party citations that reflect accurate information will surface correct responses within weeks. For trained-knowledge queries, deploying these corrections builds the signal mass that influences the next training update cycle, which typically occurs on a months-long schedule. GEO reputation repair targets all of these pathways simultaneously." }
+        }
+      ]
+    }
+  ]
 }
 </script>
+
 <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 :root {
-  --void:#04050a;--surface:#0b0f1c;--surface-2:#101726;
-  --signal:#00d4c8;--signal-dim:rgba(0,212,200,0.08);
-  --gold:#c8a96e;--star:#dde2ed;--star-2:#8c97aa;--star-3:#3f4d63;
-  --rule:rgba(255,255,255,0.055);--rule-signal:rgba(0,212,200,0.15);
-  --display:'Syne',sans-serif;--body:'Fraunces',serif;--mono:'Azeret Mono',monospace;
+  --ink:       #0D0D0D;
+  --ink-2:     #3A3A3A;
+  --ink-3:     #6B6B6B;
+  --paper:     #F7F5F0;
+  --paper-2:   #EDEAE3;
+  --white:     #FFFFFF;
+  --accent:    #C8522A;
+  --repair:    #993C1D;
+  --repair-lt: #FAECE7;
+  --signal:    #1B4D6B;
+  --ok:        #1B6B4A;
+  --ok-lt:     #E8F4EF;
+  --border:    rgba(13,13,13,0.10);
+  --border-s:  rgba(13,13,13,0.20);
+  --f-display: 'Playfair Display', Georgia, serif;
+  --f-body:    'DM Sans', system-ui, sans-serif;
+  --f-mono:    'DM Mono', 'Courier New', monospace;
+  --max:       1100px;
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{font-size:16px;scroll-behavior:smooth}
-body{background:var(--void);color:var(--star);font-family:var(--body);font-weight:300;line-height:1.8;-webkit-font-smoothing:antialiased}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Azeret+Mono:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet">
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
 
-/* NAV */
-.site-nav-bar{width:100%;background:rgba(4,5,10,0.94);backdrop-filter:blur(24px);border-bottom:1px solid var(--rule);padding:0 2rem;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200}
-.nav-wordmark{font-family:var(--display);font-size:.95rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--star);text-decoration:none;display:flex;align-items:center;gap:8px}
-.nav-dot{width:5px;height:5px;border-radius:50%;background:var(--signal);box-shadow:0 0 6px var(--signal);animation:ndot 3s ease-in-out infinite}
-@keyframes ndot{0%,100%{opacity:1}50%{opacity:.3}}
-.nav-links{display:flex;align-items:center;gap:.25rem}
-.nav-links a{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--star-3);text-decoration:none;padding:4px 10px;border:1px solid transparent;border-radius:3px;transition:all .15s}
-.nav-links a:hover{color:var(--signal);border-color:var(--rule-signal);background:var(--signal-dim)}
-.nav-links a.cta{color:var(--signal);border-color:var(--rule-signal);background:rgba(0,212,200,.06)}
-.nav-links a.cta:hover{background:rgba(0,212,200,.14)}
+body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width .1s; }
 
-/* LAYOUT */
-.page-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem 6rem}
-.breadcrumb{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--star-3);margin-bottom:2rem;display:flex;align-items:center;gap:.5rem}
-.breadcrumb a{color:var(--star-3);text-decoration:none}
-.breadcrumb a:hover{color:var(--signal)}
-.breadcrumb span{opacity:.4}
+nav { position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); padding: 0.875rem 0; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--f-display); font-size: 15px; color: var(--ink); text-decoration: none; }
+.nav-logo span { color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; transition: color .15s; }
+.nav-links a:hover, .nav-links a[aria-current] { color: var(--accent); }
+.nav-cta { font-size: 13px; font-weight: 500; padding: 0.5rem 1.125rem; background: var(--ink); color: var(--white); border-radius: 3px; text-decoration: none; transition: background .15s; }
+.nav-cta:hover { background: var(--accent); }
 
-.era-tag{font-family:var(--mono);font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:var(--signal);border:1px solid var(--rule-signal);padding:3px 10px;display:inline-block;margin-bottom:1.25rem}
-h1{font-family:var(--display);font-size:clamp(2rem,5vw,3.5rem);font-weight:800;line-height:.95;letter-spacing:-.03em;text-transform:uppercase;color:var(--star);margin-bottom:1rem}
-h1 .accent{color:var(--signal);text-shadow:0 0 30px rgba(0,212,200,.2)}
-.subtitle{font-family:var(--body);font-style:italic;font-size:1.1rem;color:var(--star-2);line-height:1.6;max-width:56ch;margin-bottom:1.5rem}
-.meta-row{display:flex;gap:1.5rem;flex-wrap:wrap;padding:.75rem 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:3rem}
-.meta-item{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--star-3);display:flex;align-items:center;gap:6px}
-.meta-item::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--signal);opacity:.5}
+.breadcrumb { padding: 0.875rem 0; font-size: 12px; color: var(--ink-3); border-bottom: 0.5px solid var(--border); font-family: var(--f-mono); }
+.breadcrumb a { color: var(--ink-3); text-decoration: none; }
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb span { margin: 0 0.5rem; }
 
-/* CONTENT */
-.content-body h2{font-family:var(--display);font-size:1.35rem;font-weight:700;letter-spacing:-.01em;color:var(--star);margin:2.5rem 0 .75rem;padding-top:2.5rem;border-top:1px solid var(--rule)}
-.content-body h3{font-family:var(--display);font-size:1.05rem;font-weight:600;color:var(--star);margin:1.75rem 0 .5rem}
-.content-body p{font-size:.97rem;color:var(--star-2);line-height:1.85;margin-bottom:1.25rem}
-.content-body ul,.content-body ol{color:var(--star-2);font-size:.95rem;line-height:1.8;margin:.75rem 0 1.25rem 1.5rem}
-.content-body li{margin-bottom:.35rem}
-.content-body strong{color:var(--star);font-weight:600}
+.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+.eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
 
-.scaffold-notice{background:rgba(200,169,110,.06);border:1px solid rgba(200,169,110,.2);border-radius:8px;padding:1.25rem 1.5rem;margin:2rem 0;font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--gold);line-height:1.6}
+.hero { padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem); border-bottom: 0.5px solid var(--border); }
+.hero h1 { font-family: var(--f-display); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); max-width: 860px; margin-bottom: 1.5rem; }
+.hero h1 em { font-style: italic; color: var(--repair); }
+.hero-sub { font-size: clamp(1rem, 2vw, 1.175rem); color: var(--ink-2); max-width: 620px; line-height: 1.65; margin-bottom: 2.5rem; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 2rem; font-size: 13px; color: var(--ink-3); }
+.hero-meta strong { color: var(--ink); font-weight: 500; }
 
-/* CTA */
-.page-cta{margin-top:4rem;border:1px solid var(--rule-signal);border-radius:12px;background:linear-gradient(135deg,rgba(0,212,200,.04),rgba(200,169,110,.03));padding:2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.cta-text .cta-eye{font-family:var(--mono);font-size:8px;letter-spacing:.28em;text-transform:uppercase;color:var(--signal);opacity:.7;margin-bottom:.4rem}
-.cta-text .cta-title{font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--star);margin-bottom:.3rem}
-.cta-text p{font-size:.85rem;color:var(--star-2)}
-.cta-btn{font-family:var(--mono);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#030712;background:var(--signal);border-radius:6px;padding:.7rem 1.5rem;text-decoration:none;white-space:nowrap;transition:all .2s;box-shadow:0 0 20px rgba(0,212,200,.2)}
-.cta-btn:hover{box-shadow:0 0 36px rgba(0,212,200,.4);transform:translateY(-1px)}
+/* ── Signature: 4-failure-mode matrix ── */
+.failure-matrix { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5px; background: var(--border-s); border: 1px solid var(--border-s); border-radius: 6px; overflow: hidden; margin: 3rem 0 0; }
+.fm-cell { background: var(--white); padding: 1.5rem 1.375rem; position: relative; }
+.fm-cell::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2.5px; }
+.fm-omission::before    { background: #6B6B6B; }
+.fm-commission::before  { background: var(--repair); }
+.fm-displacement::before{ background: #1A3A6B; }
+.fm-decay::before       { background: #854F0B; }
+.fm-type { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.5rem; font-weight: 500; }
+.fm-omission .fm-type    { color: #6B6B6B; }
+.fm-commission .fm-type  { color: var(--repair); }
+.fm-displacement .fm-type{ color: #1A3A6B; }
+.fm-decay .fm-type       { color: #854F0B; }
+.fm-name { font-family: var(--f-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); margin-bottom: 0.625rem; }
+.fm-example { font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); background: var(--paper); padding: 0.5rem 0.75rem; border-radius: 3px; border-left: 2px solid var(--border-s); margin-bottom: 0.875rem; line-height: 1.5; font-style: italic; }
+.fm-row { display: grid; grid-template-columns: 80px 1fr; gap: 0.5rem; margin-bottom: 0.375rem; font-size: 12.5px; align-items: baseline; }
+.fm-row-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+.fm-row-val { color: var(--ink-2); line-height: 1.5; }
+.fm-repair-val { color: var(--ok); font-weight: 500; }
+
+section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+section + section { border-top: 0.5px solid var(--border); }
+.section-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
+.section-title { font-family: var(--f-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 1.25rem; max-width: 700px; }
+.section-body { font-size: 15px; color: var(--ink-2); max-width: 660px; line-height: 1.75; }
+.section-body p + p { margin-top: 1.125rem; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+
+/* Audit probe example */
+.probe-block { background: var(--ink); border-radius: 4px; padding: 0; overflow: hidden; margin-top: 1.5rem; }
+.probe-bar { background: rgba(255,255,255,0.06); padding: 0.625rem 1rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 0.5px solid rgba(255,255,255,0.08); }
+.probe-dot { width: 7px; height: 7px; border-radius: 50%; }
+.pd-r { background: #ff5f56; }
+.pd-y { background: #ffbd2e; }
+.pd-g { background: #28c940; }
+.probe-title { font-family: var(--f-mono); font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.08em; margin-left: 0.5rem; }
+.probe-body { padding: 1.25rem 1.25rem 1.5rem; }
+.probe-query { font-family: var(--f-mono); font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 0.875rem; }
+.probe-query span { color: #9ECBFF; }
+.probe-output { font-family: var(--f-mono); font-size: 12px; line-height: 1.7; }
+.po-bad { color: #F0A070; }
+.po-good { color: #85E89D; }
+.po-dim { color: rgba(255,255,255,0.3); }
+.probe-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; display: inline-block; padding: 2px 7px; border-radius: 2px; margin-top: 0.75rem; }
+.label-before { background: rgba(240,160,112,0.15); color: #F0A070; }
+.label-after  { background: rgba(133,232,157,0.15); color: #85E89D; }
+
+/* Repair protocol steps */
+.protocol { display: flex; flex-direction: column; gap: 0; border: 0.5px solid var(--border-s); border-radius: 6px; overflow: hidden; margin-top: 1.5rem; }
+.protocol-step { display: grid; grid-template-columns: 56px 1fr; border-bottom: 0.5px solid var(--border); background: var(--white); transition: background .15s; }
+.protocol-step:last-child { border-bottom: none; }
+.protocol-step:hover { background: var(--paper); }
+.ps-num { display: flex; align-items: center; justify-content: center; border-right: 0.5px solid var(--border); font-family: var(--f-mono); font-size: 13px; font-weight: 500; color: var(--ink-3); }
+.ps-content { padding: 1.25rem 1.5rem; }
+.ps-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; }
+.ps-body { font-size: 13px; color: var(--ink-3); line-height: 1.6; }
+.ps-tag { display: inline-block; font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; padding: 2px 7px; border-radius: 2px; margin-top: 0.5rem; }
+.ps-foundation { background: rgba(27,77,107,0.08); color: var(--signal); }
+.ps-content-tag { background: rgba(27,107,74,0.08); color: var(--ok); }
+.ps-network { background: var(--repair-lt); color: var(--repair); }
+.ps-both { background: var(--paper-2); color: var(--ink-3); }
+
+/* Timeline */
+.timeline { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.tl-row { display: grid; grid-template-columns: 120px 1fr; border-bottom: 0.5px solid var(--border); }
+.tl-row:last-child { border-bottom: none; }
+.tl-period { padding: 1rem 1rem 1rem 0; font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); letter-spacing: 0.04em; border-right: 0.5px solid var(--border); display: flex; align-items: flex-start; padding-top: 1.125rem; }
+.tl-content { padding: 1rem 0 1rem 1.25rem; }
+.tl-title { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; }
+.tl-desc { font-size: 13px; color: var(--ink-3); line-height: 1.6; }
+.tl-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-top: 0.5rem; }
+.tl-tag { font-family: var(--f-mono); font-size: 10px; padding: 2px 7px; border-radius: 2px; background: var(--paper-2); color: var(--ink-3); letter-spacing: 0.06em; }
+
+/* Case study */
+.case-study { background: var(--white); border: 0.5px solid var(--border-s); border-radius: 6px; overflow: hidden; margin-top: 1.5rem; }
+.cs-header { padding: 1.375rem 1.5rem; background: var(--paper-2); border-bottom: 0.5px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.cs-eyebrow { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.25rem; }
+.cs-name { font-family: var(--f-display); font-size: 1.1rem; font-weight: 600; color: var(--ink); }
+.cs-tags { display: flex; gap: 0.5rem; }
+.cs-tag { font-family: var(--f-mono); font-size: 10px; padding: 3px 8px; border-radius: 2px; background: var(--white); border: 0.5px solid var(--border); color: var(--ink-3); letter-spacing: 0.06em; }
+.cs-body { padding: 1.5rem; }
+.cs-section { margin-bottom: 1.5rem; }
+.cs-section:last-child { margin-bottom: 0; }
+.cs-section-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.625rem; }
+.cs-section p { font-size: 14px; color: var(--ink-2); line-height: 1.7; }
+.cs-before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+.cs-ba-card { border-radius: 4px; padding: 1rem; }
+.cs-before { background: rgba(240,160,112,0.08); border: 0.5px solid rgba(240,160,112,0.2); }
+.cs-after  { background: rgba(133,232,157,0.06); border: 0.5px solid rgba(133,232,157,0.2); }
+.cs-ba-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.5rem; }
+.cs-before .cs-ba-label { color: #A0522A; }
+.cs-after  .cs-ba-label { color: #1B6B4A; }
+.cs-ba-text { font-size: 13px; line-height: 1.6; color: var(--ink-2); }
+.cs-metric-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem; }
+.cs-metric { text-align: center; padding: 1rem; background: var(--paper); border-radius: 4px; }
+.cs-metric-num { font-family: var(--f-display); font-size: 1.75rem; font-weight: 600; color: var(--ink); }
+.cs-metric-label { font-size: 12px; color: var(--ink-3); line-height: 1.4; margin-top: 0.25rem; }
+
+.pullquote { border-left: 3px solid var(--accent); padding: 1.25rem 1.75rem; margin: 2.5rem 0; background: var(--white); }
+.pullquote p { font-family: var(--f-display); font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.5; color: var(--ink); }
+.pullquote cite { display: block; margin-top: 0.75rem; font-size: 12px; font-style: normal; font-family: var(--f-mono); letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; }
+
+.faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
+.faq-item { border: 0.5px solid var(--border); border-bottom: none; background: var(--white); }
+.faq-item:first-child { border-radius: 4px 4px 0 0; }
+.faq-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
+.faq-q { padding: 1.125rem 1.25rem; font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-q::after { content: '+'; font-size: 18px; font-weight: 300; flex-shrink: 0; color: var(--ink-3); transition: transform .2s; }
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 14px; color: var(--ink-2); line-height: 1.7; padding: 0 1.25rem; }
+.faq-item.open .faq-a { max-height: 500px; padding: 0 1.25rem 1.25rem; }
+
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.related-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.25rem; text-decoration: none; display: block; transition: border-color .15s; }
+.related-card:hover { border-color: var(--accent); }
+.rc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; }
+.rc-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 0.5rem; }
+.rc-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+
+.cta-block { background: var(--ink); color: var(--white); padding: clamp(3rem, 7vw, 5rem) 0; }
+.cta-block .section-label { color: var(--accent); }
+.cta-block .section-title { color: var(--white); max-width: 600px; }
+.cta-block .section-body { color: rgba(255,255,255,0.6); }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
+.btn-primary { padding: 0.875rem 2rem; background: var(--accent); color: var(--white); border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity .15s; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost { padding: 0.875rem 2rem; background: transparent; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 3px; text-decoration: none; font-size: 14px; transition: border-color .15s, color .15s; }
+.btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
+
+footer { background: var(--paper-2); border-top: 0.5px solid var(--border); padding: 2.5rem 0; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.footer-copy { font-size: 13px; color: var(--ink-3); }
+.footer-links { display: flex; gap: 1.5rem; }
+.footer-links a { font-size: 13px; color: var(--ink-3); text-decoration: none; }
+.footer-links a:hover { color: var(--accent); }
+
+@media (max-width: 760px) {
+  .failure-matrix { grid-template-columns: 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .cs-before-after { grid-template-columns: 1fr; }
+  .cs-metric-row { grid-template-columns: 1fr 1fr; }
+  .related-grid { grid-template-columns: 1fr; }
+  .nav-links { display: none; }
+}
 </style>
 </head>
 <body>
 
-<nav class="site-nav-bar">
-  <a href="/" class="nav-wordmark"><span class="nav-dot"></span>Mason Nguyen</a>
-  <div class="nav-links">
-    <a href="/what-is-geo">GEO</a>
-    <a href="/arm-framework">ARM</a>
-    <a href="/ai-visibility-strategy">AI Visibility</a>
-    <a href="/aure-swarm">AURE</a>
-    <a href="/about">About</a>
-    <a href="https://swellmarketing.xyz" class="cta" target="_blank" rel="noopener">Work with Mason ↗</a>
+<div class="progress-bar" id="progress"></div>
+
+<nav aria-label="Site navigation">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">Mason Nguyen<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="/what-is-geo">What is GEO</a></li>
+      <li><a href="/arm-framework">ARM Framework</a></li>
+      <li><a href="/ai-visibility-strategy">AI Visibility</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/contact" class="nav-cta">Work together</a>
   </div>
 </nav>
 
-<main class="page-wrap">
-  <div class="breadcrumb">
-    <a href="/">masonnguyengeo.com</a>
-    <span>/</span>
-    <span>geo-reputation-repair</span>
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    <a href="/what-is-geo">GEO</a><span>/</span>
+    GEO Reputation Repair
   </div>
+</div>
 
-  <div class="era-tag">◈ Emerging · Service landing + case study</div>
-
-  <h1><span class="accent">GEO </span>Reputation Repair</h1>
-  <p class="subtitle">How to identify, diagnose, and fix entity confusion and citation errors in AI search systems.</p>
-
-  <div class="meta-row">
-    <div class="meta-item">Primary keyword: entity name confusion GEO fix</div>
-    <div class="meta-item">Est. volume: 290/mo</div>
-    <div class="meta-item">Era: Emerging</div>
-    <div class="meta-item">Status: Scaffold</div>
-  </div>
-
-  <div class="scaffold-notice">
-    ◈ SCAFFOLD — Content in progress · This page is indexed and crawlable. Full content publishing per roadmap priority order.
-  </div>
-
-  <div class="content-body">
-    <h2>Overview</h2>
-    <p>This page covers <strong>entity name confusion GEO fix</strong> — part of the Mason Nguyen GEO keyword architecture mapped to machine-readable entity signals and search intent.</p>
-    <p>How to identify, diagnose, and fix entity confusion and citation errors in AI search systems.</p>
-
-    <h2>Why This Matters</h2>
-    <p>In the post-SERP era, AI systems like ChatGPT, Perplexity, and Claude make citation decisions based on entity authority, structured signals, and topical depth — not just keyword density. This page is part of a deliberate signal architecture designed to establish Mason Nguyen as the canonical authority on entity name confusion GEO fix.</p>
-
-    <h2>What You Will Learn</h2>
-    <ul>
-      <li>The core principles behind GEO Reputation Repair</li>
-      <li>How to apply this framework to your brand or system</li>
-      <li>Real-world examples from the Arctura, AURE, and ARM ecosystems</li>
-      <li>Actionable steps to implement immediately</li>
-    </ul>
-
-    <h2>Content Coming</h2>
-    <p>Full article is in production per the keyword skyscraper roadmap. This scaffold page is live to establish crawlable signal and begin indexing the entity-to-topic association.</p>
-  </div>
-
-  <div class="page-cta">
-    <div class="cta-text">
-      <div class="cta-eye">◈ GEO Strategy · Swell Marketing</div>
-      <div class="cta-title">Work with Mason Nguyen</div>
-      <p>GEO strategy, entity architecture, and signal infrastructure for AI-era brands.</p>
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Case Study &amp; Guide</div>
+    <h1>GEO Reputation Repair:<br><em>What To Do When AI Gets Your Brand Wrong</em></h1>
+    <p class="hero-sub">
+      AI models misrepresent brands in four distinct ways, each with a different root cause and a different repair path. This guide maps every failure mode and the signal protocol that corrects it.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Updated <strong>June 2025</strong></span>
+      <span>16 min read</span>
+      <span>URL: <strong>/geo-reputation-repair</strong></span>
     </div>
-    <a href="https://swellmarketing.xyz" class="cta-btn" target="_blank" rel="noopener">Swell Marketing ↗</a>
-  </div>
-</main>
 
+    <!-- Signature element: four failure modes matrix -->
+    <div class="failure-matrix" role="list" aria-label="Four AI brand citation failure modes">
+      <div class="fm-cell fm-omission" role="listitem">
+        <div class="fm-type">Failure Mode 1</div>
+        <div class="fm-name">Omission</div>
+        <div class="fm-example">"I don't have reliable information about [Brand]."</div>
+        <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Entity never entered training or retrieval pipeline. No knowledge graph record, no schema, no indexed citations.</span></div>
+        <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Entity architecture + knowledge graph registration</span></div>
+      </div>
+      <div class="fm-cell fm-commission" role="listitem">
+        <div class="fm-type">Failure Mode 2</div>
+        <div class="fm-name">Commission</div>
+        <div class="fm-example">"[Brand] is a [wrong category / wrong facts / wrong founder]."</div>
+        <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Conflicting signals at training time. Old indexed content, mismatched sameAs nodes, inconsistent naming across sources.</span></div>
+        <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Signal correction + compiled-truth deployment</span></div>
+      </div>
+      <div class="fm-cell fm-displacement" role="listitem">
+        <div class="fm-type">Failure Mode 3</div>
+        <div class="fm-name">Displacement</div>
+        <div class="fm-example">"[Competitor] is the leading provider of [your category]."</div>
+        <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Low entity confidence prompts the model to substitute a more familiar entity in the same space.</span></div>
+        <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Entity disambiguation + ARM Authority build</span></div>
+      </div>
+      <div class="fm-cell fm-decay" role="listitem">
+        <div class="fm-type">Failure Mode 4</div>
+        <div class="fm-name">Decay</div>
+        <div class="fm-example">"[Brand] was founded in [old year] and focuses on [old description]."</div>
+        <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Model captured an accurate earlier state; no fresh signals have displaced the stale training data.</span></div>
+        <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Signal freshness program + dateModified cadence</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Why it happens -->
+<section id="why">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="section-label">Root causes</div>
+        <h2 class="section-title">AI models don't misrepresent brands randomly. Each failure mode has a specific cause.</h2>
+        <div class="section-body">
+          <p>AI language models construct brand representations from whatever signals were available at training time or retrieval time. They do not have opinions about your brand. They have a confidence score for each claim they might make — and when that score is low, they either omit, approximate, or substitute. Understanding which score is failing is the entire diagnostic.</p>
+          <p>The entity resolution step is where most failures originate. Before an LLM can say anything accurate about your brand, it must resolve your entity — it must identify which knowledge graph entry, which set of training examples, which set of third-party citations corresponds to the entity being asked about. If that resolution step fails — due to a thin entity record, a naming collision, or contradictory signals — everything downstream fails with it.</p>
+          <p>GEO reputation repair is not content strategy. It is signal architecture. The fix is not to publish more content about yourself. The fix is to build the machine-readable infrastructure that gives retrieval and resolution systems what they need to represent you accurately.</p>
+        </div>
+      </div>
+      <div>
+        <div class="pullquote">
+          <p>"Most brands try to fix AI misrepresentation by publishing more content. The actual problem is almost always upstream — a broken entity resolution step that no amount of content can compensate for."</p>
+          <cite>— Mason Nguyen</cite>
+        </div>
+        <div class="probe-block" aria-label="Before/after AI brand probe example">
+          <div class="probe-bar">
+            <div class="probe-dot pd-r"></div><div class="probe-dot pd-y"></div><div class="probe-dot pd-g"></div>
+            <span class="probe-title">PROBE AUDIT — Before / After</span>
+          </div>
+          <div class="probe-body">
+            <div class="probe-query">Query: <span>"Who is [Brand] and what do they do?"</span></div>
+            <div style="margin-bottom:0.625rem;">
+              <div class="probe-label label-before">Before repair</div>
+              <div class="probe-output po-bad" style="margin-top:0.375rem;">I don't have detailed information about [Brand]. They appear to be a company in the [adjacent category] space, possibly related to [competitor name].</div>
+            </div>
+            <div>
+              <div class="probe-label label-after">After repair — 74 days later</div>
+              <div class="probe-output po-good" style="margin-top:0.375rem;">[Brand] is a [correct category] company founded by [correct founder] in [correct year], focused on [accurate description]. They are known for [proprietary methodology / product] and serve [accurate audience].</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Audit: how to find what models say -->
+<section id="audit">
+  <div class="container">
+    <div class="section-label">Step zero — the probe audit</div>
+    <h2 class="section-title">Before you can repair anything, you need to know what the machines believe</h2>
+    <div class="two-col">
+      <div>
+        <div class="section-body">
+          <p>A GEO probe audit runs a structured set of queries across ChatGPT, Perplexity, Claude, and Gemini to establish the current baseline. The queries cover three categories: entity queries (who is your brand, what do they do, who founded them), category queries (who are the leading providers of your service), and comparison queries (how does your brand compare to named competitors).</p>
+          <p>Each response is scored on three dimensions: presence (does the brand appear at all), accuracy (is the information correct), and position (how prominently does the brand feature in the answer). The audit produces a failure mode classification for each platform — omission, commission, displacement, or decay — which determines the repair sequence.</p>
+          <p>No repair protocol begins without this audit. The failure mode dictates the fix. A brand suffering from displacement needs different intervention than one suffering from commission. Applying a signal freshness program to a brand with an omission problem wastes budget and delays the actual correction by months.</p>
+        </div>
+      </div>
+      <div>
+        <div style="margin-top:0;">
+          <div class="section-label">Probe query set — minimum viable audit</div>
+          <div class="protocol" style="margin-top:0.625rem;">
+            <div class="protocol-step">
+              <div class="ps-num">Q1</div>
+              <div class="ps-content">
+                <div class="ps-title">Entity queries — direct brand lookup</div>
+                <div class="ps-body">"Who is [Brand]?" / "What does [Brand] do?" / "Who founded [Brand]?" Run on ChatGPT (no browsing), Claude, and Gemini to test trained-knowledge representation.</div>
+              </div>
+            </div>
+            <div class="protocol-step">
+              <div class="ps-num">Q2</div>
+              <div class="ps-content">
+                <div class="ps-title">Category queries — competitive landscape</div>
+                <div class="ps-body">"Who are the leading [your service] providers?" / "What companies do [your category]?" Tests whether the brand appears in its own category — and who is cited instead if not.</div>
+              </div>
+            </div>
+            <div class="protocol-step">
+              <div class="ps-num">Q3</div>
+              <div class="ps-content">
+                <div class="ps-title">Retrieval queries — real-time accuracy</div>
+                <div class="ps-body">Same entity questions run on Perplexity and ChatGPT with browsing. Isolates retrieval pipeline failures from trained-knowledge failures. Different results on retrieval vs. trained-knowledge indicate different repair priorities.</div>
+              </div>
+            </div>
+            <div class="protocol-step">
+              <div class="ps-num">Q4</div>
+              <div class="ps-content">
+                <div class="ps-title">Methodology queries — proprietary terminology</div>
+                <div class="ps-body">"What is [your proprietary framework or methodology]?" Tests whether the brand's owned terminology is machine-legible — critical for category-building brands.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Repair protocol -->
+<section id="protocol">
+  <div class="container">
+    <div class="section-label">The repair protocol</div>
+    <h2 class="section-title">Five steps, applied in sequence based on your failure mode</h2>
+    <p class="section-body">The repair sequence is the same for all four failure modes, but the depth of each step varies based on the audit diagnosis. Omission cases spend most of their budget on steps 1 and 2. Commission cases spend heavily on step 3. Displacement cases require the complete sequence. Decay cases prioritize step 5.</p>
+
+    <div class="protocol" role="list" aria-label="GEO repair protocol steps">
+      <div class="protocol-step" role="listitem">
+        <div class="ps-num">01</div>
+        <div class="ps-content">
+          <div class="ps-title">Entity anchor deployment — establish the canonical record</div>
+          <div class="ps-body">Build or correct the Schema.org Person / Organization entity markup on the brand's primary URL. Complete sameAs array pointing to every verified external profile. Consistent entity naming in schema across all pages. This is the machine-readable identity document that all downstream signals reference.</div>
+          <div class="ps-tag ps-foundation">Foundation — all failure modes</div>
+        </div>
+      </div>
+      <div class="protocol-step" role="listitem">
+        <div class="ps-num">02</div>
+        <div class="ps-content">
+          <div class="ps-title">Knowledge graph registration — enter the machine's index</div>
+          <div class="ps-body">Create or claim the Wikidata entity record. Set the Google Knowledge Panel via structured data. Reference the Wikidata Q-number in the sameAs array. This is the entry point for entity resolution — without a knowledge graph record, LLMs cannot anchor the entity reference to a specific, verifiable identity.</div>
+          <div class="ps-tag ps-foundation">Foundation — critical for omission, displacement</div>
+        </div>
+      </div>
+      <div class="protocol-step" role="listitem">
+        <div class="ps-num">03</div>
+        <div class="ps-content">
+          <div class="ps-title">Signal conflict resolution — remove and replace contradictory data</div>
+          <div class="ps-body">Identify and correct the conflicting signals causing commission errors: outdated pages still indexed with wrong information, mismatched entity names across platforms (common when a brand has rebranded), inconsistent founder or date information across third-party citations. Commission failures require actively removing or correcting bad signal, not just adding good signal alongside it.</div>
+          <div class="ps-tag ps-network">Critical for commission failure mode</div>
+        </div>
+      </div>
+      <div class="protocol-step" role="listitem">
+        <div class="ps-num">04</div>
+        <div class="ps-content">
+          <div class="ps-title">Content layer — build the machine-readable record at depth</div>
+          <div class="ps-body">Deploy an entity anchor page (About / bio page) with full Person schema, answer-layer structure, and FAQPage schema. Publish the brand's proprietary methodology, terminology, and category definition with DefinedTerm schema. These pages become the extraction targets that retrieval systems cite when asked about the entity.</div>
+          <div class="ps-tag ps-content-tag">Content — drives retrieval accuracy</div>
+        </div>
+      </div>
+      <div class="protocol-step" role="listitem">
+        <div class="ps-num">05</div>
+        <div class="ps-content">
+          <div class="ps-title">Citation network + freshness program — compound the repair signal</div>
+          <div class="ps-body">Secure four to six editorial placements that name the entity correctly, link to the canonical URL, and reflect accurate current information. Update dateModified schema on all priority pages with substantive revisions. Run on a quarterly cadence after initial repair. This layer is what prevents the repaired state from decaying back into stale misrepresentation over time.</div>
+          <div class="ps-tag ps-both">Ongoing maintenance — all failure modes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section id="timeline">
+  <div class="container">
+    <div class="section-label">What to expect</div>
+    <h2 class="section-title">GEO repair timeline by platform and failure mode</h2>
+    <p class="section-body">Repair speed varies by platform. Real-time retrieval systems respond first. Trained-knowledge platforms lag but are influenced by retrieval corrections. Measurement runs monthly throughout.</p>
+    <div class="timeline" role="list" aria-label="GEO repair timeline">
+      <div class="tl-row" role="listitem">
+        <div class="tl-period">Days 1–14</div>
+        <div class="tl-content">
+          <div class="tl-title">Foundation deployment</div>
+          <div class="tl-desc">Entity anchor schema deployed. sameAs array completed. Wikidata record created or claimed. Signal conflict audit completed. Correction targets identified.</div>
+          <div class="tl-tags"><span class="tl-tag">All platforms</span><span class="tl-tag">No visibility yet</span></div>
+        </div>
+      </div>
+      <div class="tl-row" role="listitem">
+        <div class="tl-period">Days 15–30</div>
+        <div class="tl-content">
+          <div class="tl-title">Content layer live + first retrieval indexing</div>
+          <div class="tl-desc">Entity anchor page and methodology pages published. First Perplexity index pass expected. Early retrieval improvements on Perplexity and ChatGPT browsing. Knowledge Panel update request submitted.</div>
+          <div class="tl-tags"><span class="tl-tag">Perplexity — early signal</span><span class="tl-tag">ChatGPT browsing — partial</span></div>
+        </div>
+      </div>
+      <div class="tl-row" role="listitem">
+        <div class="tl-period">Days 30–60</div>
+        <div class="tl-content">
+          <div class="tl-title">Google AI Overviews + citation network</div>
+          <div class="tl-desc">First editorial citations published. Google AI Overviews begin reflecting corrected schema for pages that hold rank. Knowledge Panel updates typically resolve within this window.</div>
+          <div class="tl-tags"><span class="tl-tag">Google AI Overviews</span><span class="tl-tag">Perplexity — stable</span></div>
+        </div>
+      </div>
+      <div class="tl-row" role="listitem">
+        <div class="tl-period">Days 60–90</div>
+        <div class="tl-content">
+          <div class="tl-title">First full SoM measurement</div>
+          <div class="tl-desc">Second probe audit run against the same query set. Share of Model score calculated. All retrieval platforms showing corrected representation. Trained-knowledge platforms (Claude, base ChatGPT) remain on training cycle lag.</div>
+          <div class="tl-tags"><span class="tl-tag">Full retrieval coverage</span><span class="tl-tag">SoM baseline established</span></div>
+        </div>
+      </div>
+      <div class="tl-row" role="listitem">
+        <div class="tl-period">Months 3–6</div>
+        <div class="tl-content">
+          <div class="tl-title">Compounding + trained-knowledge influence</div>
+          <div class="tl-desc">Citation network reaches the density required to influence future training updates. Ongoing freshness cadence prevents decay. Next training cycle update for major models may begin reflecting corrected entity data.</div>
+          <div class="tl-tags"><span class="tl-tag">Claude</span><span class="tl-tag">ChatGPT trained knowledge</span><span class="tl-tag">Compounding</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Case study -->
+<section id="case-study">
+  <div class="container">
+    <div class="section-label">Case study</div>
+    <h2 class="section-title">From displacement to citation leader in 90 days</h2>
+    <p class="section-body" style="margin-bottom:1.5rem;">A composite engagement — details anonymized. The brand is a specialist B2B infrastructure firm that rebranded 18 months before the engagement. Every AI model was either confusing them with a former competitor or returning the pre-rebrand description.</p>
+
+    <div class="case-study" itemscope itemtype="https://schema.org/CaseStudy">
+      <div class="cs-header">
+        <div>
+          <div class="cs-eyebrow">Composite case — anonymized</div>
+          <div class="cs-name" itemprop="name">B2B Infrastructure Firm — Post-Rebrand GEO Repair</div>
+        </div>
+        <div class="cs-tags">
+          <span class="cs-tag">Failure mode: Displacement + Commission</span>
+          <span class="cs-tag">Duration: 90 days</span>
+        </div>
+      </div>
+      <div class="cs-body">
+        <div class="cs-section">
+          <div class="cs-section-label">Situation</div>
+          <p>The firm rebranded 18 months prior. The old brand name was well-indexed in training data; the new name was not. Perplexity returned the former competitor's description when queried about the new brand name. ChatGPT (base) returned the pre-rebrand description with the old product focus. Google AI Overviews did not cite the firm at all for its three primary category queries.</p>
+        </div>
+        <div class="cs-before-after">
+          <div class="cs-ba-card cs-before">
+            <div class="cs-ba-label">Before — probe audit baseline</div>
+            <div class="cs-ba-text">Perplexity: returns competitor description · ChatGPT: pre-rebrand information, old focus, old year · Gemini: "I don't have reliable information" · Google AI Overviews: absent from all 3 category queries · Share of Model: 0% for new brand name</div>
+          </div>
+          <div class="cs-ba-card cs-after">
+            <div class="cs-ba-label">After — 90-day probe audit</div>
+            <div class="cs-ba-text">Perplexity: correct brand, description, focus · ChatGPT browsing: accurate current state · Gemini: Knowledge Panel active, correct description · Google AI Overviews: cited for 2 of 3 category queries · Share of Model: 34% for primary category query</div>
+          </div>
+        </div>
+        <div class="cs-section" style="margin-top:1.25rem;">
+          <div class="cs-section-label">Interventions applied</div>
+          <p>Entity anchor page with complete Organization schema deployed at canonical URL. Old brand name disambiguation page created at /[old-name] with redirect strategy. Wikidata record created for new brand name with P18 logo, P856 URL, P31 organization type. sameAs array built across 7 verified properties. Three editorial placements secured in indexed industry publications. dateModified cadence established across 4 priority pages.</p>
+        </div>
+        <div class="cs-metric-row">
+          <div class="cs-metric"><div class="cs-metric-num">74</div><div class="cs-metric-label">Days to first correct Perplexity citation</div></div>
+          <div class="cs-metric"><div class="cs-metric-num">34%</div><div class="cs-metric-label">Share of Model on primary category query at 90 days</div></div>
+          <div class="cs-metric"><div class="cs-metric-num">2/3</div><div class="cs-metric-label">Category queries with Google AI Overview citation</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-label">Common questions</div>
+    <h2 class="section-title">GEO reputation repair — frequently asked questions</h2>
+    <div class="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What is GEO reputation repair?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">GEO reputation repair is the process of correcting how AI language models represent a brand in generated responses. When an AI model returns inaccurate, outdated, or missing information about an entity, GEO repair addresses the underlying signal failures — missing entity architecture, conflicting schema, absent third-party citations, or stale training data — that caused the misrepresentation. It is distinct from traditional reputation management, which targets human-facing search results, because it operates on machine-readable signals rather than content strategy.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Why do AI models get brand information wrong?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">AI models misrepresent brands for four distinct reasons: omission (the entity never entered the training or retrieval pipeline), commission (conflicting signals caused the model to encode incorrect facts), displacement (low entity confidence caused the model to substitute a more familiar competitor), and decay (the model captured an accurate earlier state that is now outdated, with no fresh signals triggering an update). Each failure mode has a distinct root cause and requires a different repair approach.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">How long does GEO reputation repair take?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">GEO reputation repair timelines depend on the failure mode and the platforms being addressed. Real-time retrieval systems like Perplexity respond to signal corrections within two to four weeks. Google AI Overviews reflect schema and content changes within 30 to 60 days for pages that already hold rank. Trained-knowledge platforms like ChatGPT and Claude update on training cycle schedules — typically months — but retrieval-augmented queries on those platforms reflect changes faster. A full repair engagement is structured around a 90-day signal correction phase followed by ongoing signal maintenance.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">What is entity disambiguation in GEO?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">Entity disambiguation is the process of making a brand's machine-readable identity sufficiently distinct that AI systems can attribute responses to the correct entity without confusion. Disambiguation fails when a brand shares a name with another entity, uses inconsistent naming across platforms, lacks structured sameAs relationships, or has no knowledge graph record. GEO disambiguation involves building a canonical entity anchor with complete Schema.org markup, registering a Wikidata record, standardizing naming across all properties, and establishing a citation network that consistently references the correct entity.</div>
+        </div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q" onclick="toggleFaq(this)" tabindex="0" role="button" aria-expanded="false">
+          <span itemprop="name">Can you fix what ChatGPT says about your company?</span>
+        </div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <div itemprop="text">You cannot directly edit ChatGPT's trained knowledge. However, you can correct the signals that feed into ChatGPT's retrieval-augmented queries and influence future training updates. For real-time retrieval queries (ChatGPT with browsing enabled), correcting structured data, publishing accurate entity anchor pages, and building third-party citations that reflect accurate information will surface correct responses within weeks. For trained-knowledge queries, deploying these corrections builds the signal mass that influences the next training update cycle, which typically occurs on a months-long schedule. GEO reputation repair targets all of these pathways simultaneously.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Related -->
+<section id="related">
+  <div class="container">
+    <div class="section-label">Continue reading</div>
+    <h2 class="section-title">From repair to ongoing presence</h2>
+    <div class="related-grid">
+      <a href="/what-is-geo" class="related-card">
+        <div class="rc-label">Pillar guide</div>
+        <div class="rc-title">What is Generative Engine Optimization (GEO)?</div>
+        <div class="rc-desc">The foundational guide — what GEO is, how it works, and the five disciplines that define the practice.</div>
+      </a>
+      <a href="/ai-visibility-strategy" class="related-card">
+        <div class="rc-label">Deep guide</div>
+        <div class="rc-title">AI Visibility Strategy: How LLMs Decide Which Brands to Cite</div>
+        <div class="rc-desc">Entity graph architecture and the machine-readable signals that determine citation frequency.</div>
+      </a>
+      <a href="/arm-framework" class="related-card">
+        <div class="rc-label">Methodology</div>
+        <div class="rc-title">The ARM Framework — Authority, Relevance, Momentum</div>
+        <div class="rc-desc">The three-pillar system for building durable AI citation presence after repair is complete.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-block">
+  <div class="container">
+    <div class="section-label">Diagnose your failure mode</div>
+    <h2 class="section-title">Find out which of the four failure modes is limiting your AI citation presence</h2>
+    <p class="section-body">Every engagement begins with a probe audit across ChatGPT, Perplexity, Gemini, and Claude. The failure mode classification determines the repair sequence. No guesswork, no generic content audits.</p>
+    <div class="cta-btns">
+      <a href="/contact" class="btn-primary">Request a GEO audit</a>
+      <a href="/what-is-geo" class="btn-ghost">Read: What is GEO →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <p class="footer-copy">© 2025 Mason Nguyen GEO · masonnguyengeo.com</p>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => {
+  const d = document.documentElement;
+  document.getElementById('progress').style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+  if (!isOpen) { item.classList.add('open'); el.setAttribute('aria-expanded','true'); }
+}
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); } });
+});
+</script>
 </body>
 </html>
