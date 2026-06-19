@@ -1,11 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { "src": "**/*.html", "use": "@vercel/static" }
+    { "src": "**/*.html", "use": "@vercel/static" },
+    { "src": "sitemap.xml", "use": "@vercel/static" },
+    { "src": "robots.txt", "use": "@vercel/static" }
   ],
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/what-is-geo", "destination": "/what-is-geo/index.html" },
     { "source": "/what-is-geo/arm-framework", "destination": "/what-is-geo/arm-framework/index.html" },
     { "source": "/what-is-geo/ai-visibility-strategy", "destination": "/what-is-geo/ai-visibility-strategy/index.html" },
