@@ -38,136 +38,98 @@
        SCHEMA.ORG — FULL ENTITY GRAPH
   ═══════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://masonnguyengeo.com/#person",
-        "name": "Mason Nguyen",
-        "givenName": "Mason",
-        "familyName": "Nguyen",
-        "url": "https://masonnguyengeo.com",
-        "jobTitle": "GEO Strategist & Agentic AI Architect",
-        "description": "Mason Nguyen is a Generative Engine Optimization (GEO) strategist and the founder of Coreweaver Labs. He is the architect of the ARM Framework — Agent Reasoning Model — a governance architecture for accountable agentic AI with five operational primitives: Perceive, Reason, Plan, Execute, and Reflect.",
-        "worksFor": {
-          "@type": "Organization",
-          "@id": "https://coreweaverlabs.com/#org",
-          "name": "Coreweaver Labs",
-          "url": "https://coreweaverlabs.com"
-        },
-        "homeLocation": { "@type": "Place", "name": "Vail, Colorado, United States" },
-        "knowsAbout": [
-          "Generative Engine Optimization","Agentic AI Infrastructure","ARM Framework",
-          "Agent Reasoning Model","AURE Multi-Agent Orchestration","GBrain Memory Architecture",
-          "AI Agent Governance","Structured Data","LLM Citation Strategy",
-          "Share of Model","llms.txt Specification","Bittensor","Digital Twin Architecture",
-          "Knowledge Graph Architecture","Schema.org","Entity Signal Engineering"
-        ],
-        "sameAs": [
-          "https://linkedin.com/in/mason-nguyen",
-          "https://twitter.com/masonnguyengeo",
-          "https://github.com/virtualmase",
-          "https://coreweaverlabs.com/about/mason-nguyen",
-          "https://au-re.org/author/mason",
-          "https://swellmarketing.xyz",
-          "https://arm-agency.com",
-          "https://arctura.org",
-          "https://autonomousresourcemanagement.com"
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://masonnguyengeo.com/#mason-nguyen",
+      "name": "Mason Nguyen",
+      "givenName": "Mason",
+      "familyName": "Nguyen",
+      "url": "https://masonnguyengeo.com",
+      "image": "https://masonnguyengeo.com/assets/mason-nguyen.jpg",
+      "jobTitle": "CEO and Lead Architect",
+      "description": "Generative Engine Optimization (GEO) strategist and AI infrastructure architect. Creator of the ARM Framework and SignalStack™. CEO of the AURE ecosystem.",
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "AI Visibility Strategy",
+        "ARM Framework",
+        "SignalStack",
+        "Intelligence Infrastructure",
+        "Knowledge Graph Authority",
+        "AI-Native Systems Design",
+        "AURE Multi-Agent Orchestration",
+        "llms.txt",
+        "Schema.org Structured Data"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://masonnguyengeo.com/#aure"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://masonnguyengeo.com/#website",
-        "name": "Mason Nguyen — GEO",
-        "url": "https://masonnguyengeo.com",
-        "author": { "@id": "https://masonnguyengeo.com/#person" },
-        "inLanguage": "en-US",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://masonnguyengeo.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "ProfilePage",
-        "@id": "https://masonnguyengeo.com/#profilepage",
-        "url": "https://masonnguyengeo.com",
-        "name": "Mason Nguyen — GEO Strategist & Agentic AI Architect",
-        "datePublished": "2026-05-01",
-        "dateModified": "2026-06-11",
-        "mainEntity": { "@id": "https://masonnguyengeo.com/#person" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://masonnguyengeo.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is Generative Engine Optimization (GEO)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Generative Engine Optimization (GEO) is the practice of structuring digital content, entity signals, and schema architecture so that AI models — including ChatGPT, Perplexity, Gemini, and Claude — can accurately identify, cite, and represent an entity in generated responses. GEO moves beyond traditional SEO click-optimization toward LLM citation authority."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What does Mason Nguyen specialize in?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Mason Nguyen specializes in Generative Engine Optimization (GEO), agentic AI infrastructure, and the ARM Framework — an Agent Reasoning Model governance architecture for deploying accountable AI agents at scale. He operates from Vail, Colorado as the founder of Coreweaver Labs."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the ARM Framework?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The ARM Framework (Agent Reasoning Model) is a governance architecture developed by Mason Nguyen and Coreweaver Labs. It defines five operational primitives for accountable agentic AI: Perceive, Reason, Plan, Execute, and Reflect. These primitives ensure every agent action is traceable, auditable, and sovereign."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does GEO differ from traditional SEO?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Traditional SEO optimizes for search engine crawlers and ranking algorithms, targeting clicks from a results page. GEO optimizes for LLM citation — ensuring AI models have enough structured, verifiable signal to accurately represent an entity in generated text, regardless of whether any click occurs. LLM clicks convert 4.4x better than Google clicks because they arrive closer to purchase."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is Share of Model (SoM)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Share of Model (SoM) is the percentage of AI-generated responses on a defined topic in which a given entity is accurately represented. It is tracked via structured probe queries across ChatGPT, Perplexity, Gemini, and Claude. SoM is the primary performance metric in a post-click information environment."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I work with Mason Nguyen on GEO strategy?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "You can reach Mason Nguyen through Coreweaver Labs at coreweaverlabs.com or via LinkedIn at linkedin.com/in/mason-nguyen. Coreweaver Labs offers GEO audit and deployment services for founders, operators, and enterprises."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "HowTo",
-        "@id": "https://masonnguyengeo.com/#howto-geo",
-        "name": "How to Build a GEO Entity Signal",
-        "description": "The ARM methodology for structuring entity signals so AI models accurately cite your brand.",
-        "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Perceive", "text": "Audit your current Share of Model across ChatGPT, Perplexity, Gemini, and Claude. Identify citation gaps and entity misrepresentation." },
-          { "@type": "HowToStep", "position": 2, "name": "Reason", "text": "Map your knowledge graph. Identify all sameAs entities, schema gaps, and content voids that prevent citation." },
-          { "@type": "HowToStep", "position": 3, "name": "Plan", "text": "Design a content and schema architecture targeting the specific queries your entity should appear in." },
-          { "@type": "HowToStep", "position": 4, "name": "Execute", "text": "Deploy structured content, JSON-LD schema, llms.txt, and cross-domain entity signals. Publish to authoritative surfaces." },
-          { "@type": "HowToStep", "position": 5, "name": "Reflect", "text": "Measure Signal Score improvement. Re-probe target LLMs. Iterate until citation becomes consistent and accurate." }
-        ]
+      "sameAs": [
+        "https://linkedin.com/in/masonnguyen",
+        "https://twitter.com/masonnguyengeo",
+        "https://github.com/virtualmase",
+        "https://arm-agency.xyz",
+        "https://arctura.org",
+        "https://coreweaverlabs.com"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Monument",
+        "addressRegion": "CO",
+        "addressCountry": "US"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://masonnguyengeo.com/#aure",
+      "name": "AURE Ecosystem",
+      "alternateName": ["AURE", "AURE Infrastructure"],
+      "url": "https://masonnguyengeo.com",
+      "description": "Multi-brand AI infrastructure ecosystem comprising masonnguyengeo.com, ARM Agency, Arctura Network, Coreweaver Labs, and Swell Marketing. Specializes in Generative Engine Optimization, AI visibility strategy, and intelligence infrastructure.",
+      "founder": {
+        "@id": "https://masonnguyengeo.com/#mason-nguyen"
+      },
+      "foundingDate": "2024",
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "AI Visibility",
+        "ARM Framework",
+        "SignalStack",
+        "Intelligence Infrastructure"
+      ],
+      "sameAs": [
+        "https://arm-agency.xyz",
+        "https://arctura.org",
+        "https://coreweaverlabs.com",
+        "https://swellmarketing.agency"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://masonnguyengeo.com/#website",
+      "url": "https://masonnguyengeo.com",
+      "name": "Mason Nguyen — GEO Strategist & AI Infrastructure Architect",
+      "description": "Generative Engine Optimization strategy, ARM Framework, SignalStack™, and AI visibility infrastructure by Mason Nguyen.",
+      "publisher": {
+        "@id": "https://masonnguyengeo.com/#mason-nguyen"
+      },
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://masonnguyengeo.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

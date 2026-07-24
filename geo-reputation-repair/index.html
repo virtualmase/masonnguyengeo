@@ -14,48 +14,23 @@
   "@graph": [
     {
       "@type": "Article",
-      "name": "GEO Reputation Repair",
-      "headline": "GEO Reputation Repair: What To Do When AI Gets Your Brand Wrong",
-      "description": "The four failure modes that cause AI models to misrepresent brands, and the structured signal repair protocol for each. Includes a composite case study of a successful GEO reputation repair engagement.",
-      "author": { "@type": "Person", "name": "Mason Nguyen", "url": "https://masonnguyengeo.com/about" },
-      "publisher": { "@type": "Organization", "name": "Mason Nguyen GEO", "url": "https://masonnguyengeo.com" },
-      "mainEntityOfPage": "https://masonnguyengeo.com/geo-reputation-repair",
-      "datePublished": "2025-06-01",
-      "dateModified": "2025-06-15",
-      "about": [
-        { "@type": "Thing", "name": "GEO reputation repair" },
-        { "@type": "Thing", "name": "Entity disambiguation" },
-        { "@type": "Thing", "name": "AI search reputation management" }
-      ]
+      "@id": "https://masonnguyengeo.com/[PAGE-SLUG]#article",
+      "headline": "[PAGE TITLE]",
+      "description": "[META DESCRIPTION — 150–160 chars]",
+      "url": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "datePublished": "[YYYY-MM-DD]",
+      "dateModified": "[YYYY-MM-DD]",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "image": "https://masonnguyengeo.com/assets/[PAGE-SLUG]-og.jpg",
+      "mainEntityOfPage": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "keywords": "[keyword1], [keyword2], [keyword3]"
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is GEO reputation repair?",
-          "acceptedAnswer": { "@type": "Answer", "text": "GEO reputation repair is the process of correcting how AI language models represent a brand in generated responses. When an AI model returns inaccurate, outdated, or missing information about an entity, GEO repair addresses the underlying signal failures — missing entity architecture, conflicting schema, absent third-party citations, or stale training data — that caused the misrepresentation. It is distinct from traditional reputation management, which targets human-facing search results, because it operates on machine-readable signals rather than content strategy." }
-        },
-        {
-          "@type": "Question",
-          "name": "Why do AI models get brand information wrong?",
-          "acceptedAnswer": { "@type": "Answer", "text": "AI models misrepresent brands for four distinct reasons: omission (the entity never entered the training or retrieval pipeline, so the model returns no information), commission (conflicting signals at training or retrieval time caused the model to encode incorrect facts), displacement (low entity confidence caused the model to substitute a more familiar competitor entity), and decay (the model captured an accurate earlier state that is now outdated, with no fresh signals triggering an update). Each failure mode has a distinct root cause and requires a different repair approach." }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does GEO reputation repair take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "GEO reputation repair timelines depend on the failure mode and the platforms being addressed. Real-time retrieval systems like Perplexity respond to signal corrections within two to four weeks of new structured content being indexed. Google AI Overviews reflect schema and content changes within 30 to 60 days for pages that already hold rank. Trained-knowledge platforms like ChatGPT and Claude update on training cycle schedules — typically months — but retrieval-augmented queries on those platforms reflect changes faster. A full repair engagement is structured around a 90-day signal correction phase followed by ongoing signal maintenance." }
-        },
-        {
-          "@type": "Question",
-          "name": "What is entity disambiguation in GEO?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Entity disambiguation is the process of making a brand's machine-readable identity sufficiently distinct that AI systems can attribute responses to the correct entity without confusion. Disambiguation fails when a brand shares a name with another entity, uses inconsistent naming across platforms, lacks structured sameAs relationships, or has no knowledge graph record. GEO disambiguation involves building a canonical entity anchor with complete Schema.org markup, registering a Wikidata record, standardizing naming across all properties, and establishing a citation network that consistently references the correct entity." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you fix what ChatGPT says about your company?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You cannot directly edit ChatGPT's trained knowledge. However, you can correct the signals that feed into ChatGPT's retrieval-augmented queries and influence future training updates. For real-time retrieval queries (ChatGPT with browsing enabled), correcting structured data, publishing accurate entity anchor pages, and building third-party citations that reflect accurate information will surface correct responses within weeks. For trained-knowledge queries, deploying these corrections builds the signal mass that influences the next training update cycle, which typically occurs on a months-long schedule. GEO reputation repair targets all of these pathways simultaneously." }
-        }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "[PAGE TITLE SHORT]", "item": "https://masonnguyengeo.com/[PAGE-SLUG]" }
       ]
     }
   ]

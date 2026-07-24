@@ -16,32 +16,29 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://masonnguyengeo.com/seo-for-ai-brands#article",
-  "headline": "SEO for AI-First Brands",
-  "description": "How AI-native brands should approach SEO in 2025 — optimizing for AI overviews, zero-click SERPs, and LLM citation instead of traditional blue links.",
-  "url": "https://masonnguyengeo.com/seo-for-ai-brands",
-  "datePublished": "2026-06-16",
-  "dateModified": "2026-06-16",
-  "author": {
-    "@type": "Person",
-    "@id": "https://masonnguyengeo.com/#mason",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "publisher": {
-    "@type": "Person",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "mainEntityOfPage": "https://masonnguyengeo.com/seo-for-ai-brands",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com/" },
-      { "@type": "ListItem", "position": 2, "name": "SEO for AI-First Brands", "item": "https://masonnguyengeo.com/seo-for-ai-brands" }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://masonnguyengeo.com/[PAGE-SLUG]#article",
+      "headline": "[PAGE TITLE]",
+      "description": "[META DESCRIPTION — 150–160 chars]",
+      "url": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "datePublished": "[YYYY-MM-DD]",
+      "dateModified": "[YYYY-MM-DD]",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "image": "https://masonnguyengeo.com/assets/[PAGE-SLUG]-og.jpg",
+      "mainEntityOfPage": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "keywords": "[keyword1], [keyword2], [keyword3]"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "[PAGE TITLE SHORT]", "item": "https://masonnguyengeo.com/[PAGE-SLUG]" }
+      ]
+    }
+  ]
 }
 </script>
 <style>

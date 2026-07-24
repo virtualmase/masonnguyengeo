@@ -16,32 +16,29 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://masonnguyengeo.com/about#article",
-  "headline": "Mason Nguyen",
-  "description": "Mason Nguyen is a GEO strategist, signal architect, and founder of Swell Marketing and AURE. The architect archetype — trusted infrastructure for AI-era brands.",
-  "url": "https://masonnguyengeo.com/about",
-  "datePublished": "2026-06-16",
-  "dateModified": "2026-06-16",
-  "author": {
-    "@type": "Person",
-    "@id": "https://masonnguyengeo.com/#mason",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "publisher": {
-    "@type": "Person",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "mainEntityOfPage": "https://masonnguyengeo.com/about",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Mason Nguyen", "item": "https://masonnguyengeo.com/about" }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://masonnguyengeo.com/[PAGE-SLUG]#article",
+      "headline": "[PAGE TITLE]",
+      "description": "[META DESCRIPTION — 150–160 chars]",
+      "url": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "datePublished": "[YYYY-MM-DD]",
+      "dateModified": "[YYYY-MM-DD]",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "image": "https://masonnguyengeo.com/assets/[PAGE-SLUG]-og.jpg",
+      "mainEntityOfPage": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "keywords": "[keyword1], [keyword2], [keyword3]"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "[PAGE TITLE SHORT]", "item": "https://masonnguyengeo.com/[PAGE-SLUG]" }
+      ]
+    }
+  ]
 }
 </script>
 <style>

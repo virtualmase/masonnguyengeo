@@ -1,210 +1,94 @@
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://masonnguyengeo.com/#person",
-    "name": "Mason Nguyen",
-    "alternateName": ["Mason Nguyen Geo", "Mason Nguyen GIS"],
-    "description": "Geospatial analyst and GIS consultant specializing in spatial data science, remote sensing, and location intelligence. Helps organizations turn geographic data into strategic decisions.",
-    "url": "https://masonnguyengeo.com",
-    "image": "https://masonnguyengeo.com/images/mason-nguyen.jpg",
-    "email": "mason@masonnguyengeo.com",
-    "telephone": "+19492888088",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "California",
-      "addressCountry": "US"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://masonnguyengeo.com/#mason-nguyen",
+      "name": "Mason Nguyen",
+      "givenName": "Mason",
+      "familyName": "Nguyen",
+      "url": "https://masonnguyengeo.com",
+      "image": "https://masonnguyengeo.com/assets/mason-nguyen.jpg",
+      "jobTitle": "CEO and Lead Architect",
+      "description": "Generative Engine Optimization (GEO) strategist and AI infrastructure architect. Creator of the ARM Framework and SignalStack\u2122. CEO of the AURE ecosystem.",
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "AI Visibility Strategy",
+        "ARM Framework",
+        "SignalStack",
+        "Intelligence Infrastructure",
+        "Knowledge Graph Authority",
+        "AI-Native Systems Design",
+        "AURE Multi-Agent Orchestration",
+        "llms.txt",
+        "Schema.org Structured Data"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://masonnguyengeo.com/#aure"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/masonnguyen",
+        "https://twitter.com/masonnguyengeo",
+        "https://github.com/virtualmase",
+        "https://arm-agency.xyz",
+        "https://arctura.org",
+        "https://coreweaverlabs.com"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Monument",
+        "addressRegion": "CO",
+        "addressCountry": "US"
+      }
     },
-    "sameAs": [
-      "https://linkedin.com/in/masonnguyengeo",
-      "https://github.com/MasonNguyenGeo",
-      "https://arm-agency.com",
-      "https://autonomousresourcemanagement.com"
-    ],
-    "jobTitle": "Geospatial Analyst & GIS Consultant",
-    "worksFor": {
+    {
       "@type": "Organization",
-      "name": "ARM Agency",
-      "url": "https://arm-agency.com"
-    },
-    "knowsAbout": [
-      "Geographic Information Systems",
-      "Geospatial Analysis",
-      "Spatial Data Science",
-      "Remote Sensing",
-      "Location Intelligence",
-      "ArcGIS Pro",
-      "QGIS",
-      "Google Earth Engine",
-      "Python for GIS",
-      "GeoPandas",
-      "Satellite Imagery Analysis",
-      "Land Cover Classification",
-      "GEO Optimization",
-      "Generative Engine Optimization"
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "@id": "https://masonnguyengeo.com/#service",
-    "name": "Mason Nguyen — Geospatial Consulting",
-    "url": "https://masonnguyengeo.com",
-    "description": "Independent geospatial consulting: GIS strategy, spatial data science, remote sensing analysis, and location intelligence for organizations globally.",
-    "provider": {
-      "@id": "https://masonnguyengeo.com/#person"
-    },
-    "areaServed": {
-      "@type": "Place",
-      "name": "Global"
-    },
-    "availableChannel": {
-      "@type": "ServiceChannel",
-      "serviceUrl": "https://masonnguyengeo.com/contact",
-      "servicePhone": "+19492888088",
-      "availableLanguage": "English"
-    },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Geospatial Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "GIS Consulting",
-            "description": "End-to-end geographic information system advisory, platform selection, data modeling, pipeline architecture, and team training.",
-            "url": "https://masonnguyengeo.com/services/gis-consulting"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Spatial Data Science",
-            "description": "Python-based spatial analytics, geostatistics, spatial modeling, and machine learning on geographic datasets.",
-            "url": "https://masonnguyengeo.com/services/spatial-data-science"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Remote Sensing",
-            "description": "Satellite and aerial imagery acquisition, preprocessing, classification, change detection, and time-series analysis.",
-            "url": "https://masonnguyengeo.com/services/remote-sensing"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Location Intelligence",
-            "description": "Business site analysis, market boundary mapping, customer spatial segmentation, and spatial decision support.",
-            "url": "https://masonnguyengeo.com/services/location-intelligence"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "GEO Optimization",
-            "description": "AI visibility strategy and Generative Engine Optimization for geospatial professionals.",
-            "url": "https://masonnguyengeo.com/services/geo-optimization"
-          }
-        }
+      "@id": "https://masonnguyengeo.com/#aure",
+      "name": "AURE Ecosystem",
+      "alternateName": [
+        "AURE",
+        "AURE Infrastructure"
+      ],
+      "url": "https://masonnguyengeo.com",
+      "description": "Multi-brand AI infrastructure ecosystem comprising masonnguyengeo.com, ARM Agency, Arctura Network, Coreweaver Labs, and Swell Marketing. Specializes in Generative Engine Optimization, AI visibility strategy, and intelligence infrastructure.",
+      "founder": {
+        "@id": "https://masonnguyengeo.com/#mason-nguyen"
+      },
+      "foundingDate": "2024",
+      "areaServed": "Worldwide",
+      "knowsAbout": [
+        "Generative Engine Optimization",
+        "AI Visibility",
+        "ARM Framework",
+        "SignalStack",
+        "Intelligence Infrastructure"
+      ],
+      "sameAs": [
+        "https://arm-agency.xyz",
+        "https://arctura.org",
+        "https://coreweaverlabs.com",
+        "https://swellmarketing.agency"
       ]
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https://masonnguyengeo.com/#website",
-    "url": "https://masonnguyengeo.com",
-    "name": "Mason Nguyen — Geospatial Analyst & GIS Consultant",
-    "description": "Geospatial consulting: GIS, spatial data science, remote sensing, and location intelligence. Available globally.",
-    "publisher": {
-      "@id": "https://masonnguyengeo.com/#person"
     },
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://masonnguyengeo.com/insights?q={search_term_string}"
+    {
+      "@type": "WebSite",
+      "@id": "https://masonnguyengeo.com/#website",
+      "url": "https://masonnguyengeo.com",
+      "name": "Mason Nguyen \u2014 GEO Strategist & AI Infrastructure Architect",
+      "description": "Generative Engine Optimization strategy, ARM Framework, SignalStack\u2122, and AI visibility infrastructure by Mason Nguyen.",
+      "publisher": {
+        "@id": "https://masonnguyengeo.com/#mason-nguyen"
       },
-      "query-input": "required name=search_term_string"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://masonnguyengeo.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "@id": "https://masonnguyengeo.com/#faq",
-    "url": "https://masonnguyengeo.com/about",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is Mason Nguyen's area of expertise?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mason Nguyen specializes in geospatial analysis, GIS consulting, spatial data science, and remote sensing. He helps organizations use geographic data to make better strategic decisions — from site selection to environmental monitoring to custom GIS pipeline development."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What GIS software does Mason Nguyen work with?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mason Nguyen works with ArcGIS Pro, ArcGIS Online, QGIS, Google Earth Engine, PostGIS, and Python geospatial libraries including GeoPandas, Shapely, Rasterio, and Fiona."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Where is Mason Nguyen based and does he work globally?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mason Nguyen is based in California and takes consulting engagements globally. He is available for project-based and long-term advisory arrangements."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What industries does Mason Nguyen serve?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Mason Nguyen serves clients in real estate, environmental consulting, urban planning, logistics, retail, agriculture, and the public sector."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How can I hire Mason Nguyen for a geospatial project?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Contact Mason Nguyen at mason@masonnguyengeo.com or visit https://masonnguyengeo.com/contact. He is available for project-based consulting engagements and longer-term advisory arrangements."
-        }
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://masonnguyengeo.com"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://masonnguyengeo.com/services"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Insights",
-        "item": "https://masonnguyengeo.com/insights"
-      }
-    ]
-  }
-]
+  ]
+}

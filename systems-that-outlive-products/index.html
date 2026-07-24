@@ -16,32 +16,29 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://masonnguyengeo.com/systems-that-outlive-products#article",
-  "headline": "Systems That Outlive Products",
-  "description": "How to build brand systems with permanence — the Stoic philosophy of anti-fragile infrastructure, long-game content strategy, and craft that compounds over time.",
-  "url": "https://masonnguyengeo.com/systems-that-outlive-products",
-  "datePublished": "2026-06-16",
-  "dateModified": "2026-06-16",
-  "author": {
-    "@type": "Person",
-    "@id": "https://masonnguyengeo.com/#mason",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "publisher": {
-    "@type": "Person",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com"
-  },
-  "mainEntityOfPage": "https://masonnguyengeo.com/systems-that-outlive-products",
-  "breadcrumb": {
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Systems That Outlive Products", "item": "https://masonnguyengeo.com/systems-that-outlive-products" }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://masonnguyengeo.com/[PAGE-SLUG]#article",
+      "headline": "[PAGE TITLE]",
+      "description": "[META DESCRIPTION — 150–160 chars]",
+      "url": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "datePublished": "[YYYY-MM-DD]",
+      "dateModified": "[YYYY-MM-DD]",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "image": "https://masonnguyengeo.com/assets/[PAGE-SLUG]-og.jpg",
+      "mainEntityOfPage": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "keywords": "[keyword1], [keyword2], [keyword3]"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "[PAGE TITLE SHORT]", "item": "https://masonnguyengeo.com/[PAGE-SLUG]" }
+      ]
+    }
+  ]
 }
 </script>
 <style>

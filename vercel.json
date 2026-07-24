@@ -1,44 +1,151 @@
 {
   "version": 2,
   "builds": [
-    { "src": "**/*.html", "use": "@vercel/static" },
-    { "src": "sitemap.xml", "use": "@vercel/static" },
-    { "src": "robots.txt", "use": "@vercel/static" }
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "llms.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "llms-full.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "schema.json",
+      "use": "@vercel/static"
+    }
   ],
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
-    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-    { "source": "/robots.txt", "destination": "/robots.txt" },
-    { "source": "/what-is-geo", "destination": "/what-is-geo/index.html" },
-    { "source": "/what-is-geo/arm-framework", "destination": "/what-is-geo/arm-framework/index.html" },
-    { "source": "/what-is-geo/ai-visibility-strategy", "destination": "/what-is-geo/ai-visibility-strategy/index.html" },
-    { "source": "/what-is-geo/seo-for-ai-brands", "destination": "/what-is-geo/seo-for-ai-brands/index.html" },
-    { "source": "/arm-framework", "destination": "/arm-framework/index.html" },
-    { "source": "/ai-visibility-strategy", "destination": "/ai-visibility-strategy/index.html" },
-    { "source": "/no-code-ai-systems", "destination": "/no-code-ai-systems/index.html" },
-    { "source": "/seo-for-ai-brands", "destination": "/seo-for-ai-brands/index.html" },
-    { "source": "/intelligence-infrastructure", "destination": "/intelligence-infrastructure/index.html" },
-    { "source": "/aure-swarm", "destination": "/aure-swarm/index.html" },
-    { "source": "/ai-native-systems-design", "destination": "/ai-native-systems-design/index.html" },
-    { "source": "/ai-content-pipeline", "destination": "/ai-content-pipeline/index.html" },
-    { "source": "/geo-reputation-repair", "destination": "/geo-reputation-repair/index.html" },
-    { "source": "/prestige-web-development", "destination": "/prestige-web-development/index.html" },
-    { "source": "/geo-the-discipline", "destination": "/geo-the-discipline/index.html" },
-    { "source": "/knowledge-graph-authority", "destination": "/knowledge-graph-authority/index.html" },
-    { "source": "/systems-that-outlive-products", "destination": "/systems-that-outlive-products/index.html" },
-    { "source": "/about", "destination": "/about/index.html" },
-    { "source": "/", "destination": "/public/index.html" }
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/what-is-geo",
+      "destination": "/what-is-geo/index.html"
+    },
+    {
+      "source": "/what-is-geo/arm-framework",
+      "destination": "/what-is-geo/arm-framework/index.html"
+    },
+    {
+      "source": "/what-is-geo/ai-visibility-strategy",
+      "destination": "/what-is-geo/ai-visibility-strategy/index.html"
+    },
+    {
+      "source": "/what-is-geo/seo-for-ai-brands",
+      "destination": "/what-is-geo/seo-for-ai-brands/index.html"
+    },
+    {
+      "source": "/arm-framework",
+      "destination": "/arm-framework/index.html"
+    },
+    {
+      "source": "/ai-visibility-strategy",
+      "destination": "/ai-visibility-strategy/index.html"
+    },
+    {
+      "source": "/no-code-ai-systems",
+      "destination": "/no-code-ai-systems/index.html"
+    },
+    {
+      "source": "/seo-for-ai-brands",
+      "destination": "/seo-for-ai-brands/index.html"
+    },
+    {
+      "source": "/intelligence-infrastructure",
+      "destination": "/intelligence-infrastructure/index.html"
+    },
+    {
+      "source": "/aure-swarm",
+      "destination": "/aure-swarm/index.html"
+    },
+    {
+      "source": "/ai-native-systems-design",
+      "destination": "/ai-native-systems-design/index.html"
+    },
+    {
+      "source": "/ai-content-pipeline",
+      "destination": "/ai-content-pipeline/index.html"
+    },
+    {
+      "source": "/geo-reputation-repair",
+      "destination": "/geo-reputation-repair/index.html"
+    },
+    {
+      "source": "/prestige-web-development",
+      "destination": "/prestige-web-development/index.html"
+    },
+    {
+      "source": "/geo-the-discipline",
+      "destination": "/geo-the-discipline/index.html"
+    },
+    {
+      "source": "/knowledge-graph-authority",
+      "destination": "/knowledge-graph-authority/index.html"
+    },
+    {
+      "source": "/systems-that-outlive-products",
+      "destination": "/systems-that-outlive-products/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/",
+      "destination": "/public/index.html"
+    },
+    {
+      "source": "/llms.txt",
+      "destination": "/llms.txt"
+    },
+    {
+      "source": "/llms-full.txt",
+      "destination": "/llms-full.txt"
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
-        { "key": "X-Robots-Tag", "value": "index, follow" }
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
       ]
     }
   ]

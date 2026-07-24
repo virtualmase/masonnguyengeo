@@ -11,72 +11,33 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "name": "SEO for AI-First Brands",
-  "headline": "SEO for AI-First Brands: The Bridge Between Traditional Search and Generative Visibility",
-  "description": "A complete strategic guide for AI-native brands running SEO and GEO in parallel — covering zero-click strategy, AI Overviews optimization, SGE content architecture, and the signals that transfer between both disciplines.",
-  "author": {
-    "@type": "Person",
-    "name": "Mason Nguyen",
-    "url": "https://masonnguyengeo.com/about"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Mason Nguyen GEO",
-    "url": "https://masonnguyengeo.com"
-  },
-  "mainEntityOfPage": "https://masonnguyengeo.com/seo-for-ai-brands",
-  "datePublished": "2025-06-01",
-  "dateModified": "2025-06-01",
-  "about": [
-    { "@type": "Thing", "name": "SEO strategy" },
-    { "@type": "Thing", "name": "Generative Engine Optimization" },
-    { "@type": "Thing", "name": "AI Overviews" },
-    { "@type": "Thing", "name": "Zero-click search" }
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  "@graph": [
     {
-      "@type": "Question",
-      "name": "Should AI-first brands still invest in traditional SEO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, with a repositioned goal. Traditional SEO no longer delivers traffic the way it did before AI Overviews and zero-click results absorbed the top of the SERP. But the signals that traditional SEO builds — domain authority, topical coverage depth, crawlable content architecture, and backlink profiles — are exactly the signals that Google's AI Overview system uses to decide which sources to cite. Investing in SEO for AI-first brands means optimizing for citation eligibility, not just rank position."
-      }
+      "@type": "Article",
+      "@id": "https://masonnguyengeo.com/[PAGE-SLUG]#article",
+      "headline": "[PAGE TITLE]",
+      "description": "[META DESCRIPTION — 150–160 chars]",
+      "url": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "datePublished": "[YYYY-MM-DD]",
+      "dateModified": "[YYYY-MM-DD]",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "image": "https://masonnguyengeo.com/assets/[PAGE-SLUG]-og.jpg",
+      "mainEntityOfPage": "https://masonnguyengeo.com/[PAGE-SLUG]",
+      "keywords": "[keyword1], [keyword2], [keyword3]"
     },
     {
-      "@type": "Question",
-      "name": "What is zero-click SEO and how does it change content strategy?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Zero-click SEO is the practice of optimizing content to appear in SERP features — featured snippets, AI Overviews, People Also Ask boxes — that answer queries directly on the search results page without the user clicking through to any site. For AI-first brands, zero-click is not a threat but a positioning opportunity: appearing in an AI Overview or featured snippet builds brand authority in the AI-indexed view of your domain, even when it does not drive direct traffic. The content strategy shift is toward answer-layer formatting — leading each section with a direct, quotable claim — rather than engagement-layer formatting that buries the answer to encourage time-on-page."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How do Google AI Overviews decide which sources to cite?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Google AI Overviews draw on a combination of traditional Search ranking signals and additional structured data signals. Pages that already rank in the top 10 for a query have a higher baseline probability of being cited in an AI Overview for that query. Beyond rank, AI Overviews prioritize pages with complete structured data markup (particularly FAQPage, HowTo, and Article schema), strong E-E-A-T signals (Experience, Expertise, Authoritativeness, Trustworthiness), direct-answer formatting in the first paragraph, and consistent entity attribution. A page can be cited in an AI Overview while ranking #6 organically if its schema and content structure outperform higher-ranking pages on these dimensions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What signals transfer from SEO to GEO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The strongest transfer signals are topical authority (content depth and breadth in a defined domain), domain trust (crawlability, canonical consistency, and lack of spam signals), backlink quality (editorial citations from relevant, authoritative sources), and content freshness (regular dateModified updates paired with substantive revisions). The signals that do not transfer well — keyword density, meta description optimization, and internal anchor text ratios — matter primarily for rank position and have little direct effect on LLM citation frequency."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "[PAGE TITLE SHORT]", "item": "https://masonnguyengeo.com/[PAGE-SLUG]" }
+      ]
     }
   ]
 }
 </script>
+
+
 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
