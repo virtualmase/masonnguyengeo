@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entity Authority — How AI Decides Whose Voice to Trust | Mason Nguyen GEO Glossary</title>
+<meta name="description" content="Entity Authority is the degree to which AI language models trust, resolve, and accurately represent a named entity in generated responses. The canonical definition from Mason Nguyen.">
+<meta name="keywords" content="entity authority, domain authority vs entity authority, AI trust signals, E-E-A-T for AI, entity resolution AI, knowledge graph authority">
+
+<link rel="canonical" href="https://masonnguyengeo.com/glossary/entity-authority">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Entity Authority — How AI Decides Whose Voice to Trust">
+<meta property="og:description" content="Entity Authority is the degree to which AI language models trust, resolve, and accurately represent a named entity. The canonical definition from Mason Nguyen.">
+<meta property="og:url" content="https://masonnguyengeo.com/glossary/entity-authority">
+<meta property="og:image" content="https://masonnguyengeo.com/assets/entity-authority-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Entity Authority — How AI Decides Whose Voice to Trust">
+<meta name="twitter:description" content="The canonical definition of Entity Authority — the AI-era successor to Domain Authority.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://masonnguyengeo.com/glossary/entity-authority#term",
+      "name": "Entity Authority",
+      "description": "The degree to which AI language models trust, resolve, and accurately represent a named entity in generated responses. Entity Authority is the AI-era successor to Domain Authority — it measures not the strength of a domain's link profile, but the strength of an entity's machine-readable presence across the signals AI models use to construct answers.",
+      "url": "https://masonnguyengeo.com/glossary/entity-authority",
+      "inDefinedTermSet": { "@type": "DefinedTermSet", "@id": "https://masonnguyengeo.com/glossary#terms", "name": "Mason Nguyen GEO Glossary" },
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://masonnguyengeo.com/glossary/entity-authority#article",
+      "headline": "Entity Authority: How AI Decides Whose Voice to Trust",
+      "description": "Entity Authority is the degree to which AI language models trust and accurately represent a named entity. The canonical definition from Mason Nguyen.",
+      "url": "https://masonnguyengeo.com/glossary/entity-authority",
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "mainEntityOfPage": "https://masonnguyengeo.com/glossary/entity-authority",
+      "about": [
+        { "@type": "Thing", "name": "Entity Authority", "description": "The degree to which AI models trust and represent a named entity" },
+        { "@type": "Thing", "name": "Generative Engine Optimization" },
+        { "@type": "Thing", "name": "Domain Authority" },
+        { "@type": "Thing", "name": "E-E-A-T" },
+        { "@type": "Thing", "name": "Knowledge Graph" }
+      ],
+      "mentions": [
+        { "@type": "Thing", "name": "Schema.org" },
+        { "@type": "Thing", "name": "Wikidata" },
+        { "@type": "Thing", "name": "sameAs" },
+        { "@type": "Thing", "name": "Share of Model" },
+        { "@type": "Thing", "name": "ARM Framework" }
+      ],
+      "keywords": "entity authority, domain authority vs entity authority, AI trust signals, E-E-A-T for AI, entity resolution, knowledge graph authority, GEO"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://masonnguyengeo.com/glossary/entity-authority#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Entity Authority?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Entity Authority is the degree to which AI language models trust, resolve, and accurately represent a named entity in generated responses. It measures the strength of an entity's machine-readable presence — schema, knowledge graph registration, citation networks — rather than the link profile of a domain." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Entity Authority different from Domain Authority?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Domain Authority (Moz) measures the link-based ranking strength of a domain in traditional search. Entity Authority measures the machine-readable signal strength of an entity across AI systems. A brand can have high Domain Authority but low Entity Authority — strong in search rankings, invisible in AI-generated answers. The metrics measure different surfaces." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does E-E-A-T relate to Entity Authority?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness) is the quality signal layer that feeds Entity Authority. E-E-A-T tells quality raters and AI systems whether a source is credible. Entity Authority is the outcome — whether AI models actually cite the entity. E-E-A-T is the input; Entity Authority is the output." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you build Entity Authority?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Build Entity Authority through: structured data (Schema.org JSON-LD with Person/Organization types), knowledge graph registration (Wikidata, sameAs arrays), consistent entity naming across all surfaces, third-party citation networks from authoritative sources, and signal freshness through ongoing publication. The ARM Framework provides the systematic build sequence." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you buy Entity Authority?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Entity Authority cannot be bought through media spend or paid links. It is earned through verifiable entity architecture, consistent third-party citations, and machine-readable signals that AI models can independently verify. Paid placements do not contribute to Entity Authority because AI systems discount signals that can be purchased." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "Glossary", "item": "https://masonnguyengeo.com/glossary" },
+        { "@type": "ListItem", "position": 3, "name": "Entity Authority", "item": "https://masonnguyengeo.com/glossary/entity-authority" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://masonnguyengeo.com/#mason-nguyen",
+      "name": "Mason Nguyen",
+      "givenName": "Mason",
+      "familyName": "Nguyen",
+      "url": "https://masonnguyengeo.com",
+      "image": "https://masonnguyengeo.com/assets/mason-nguyen.jpg",
+      "jobTitle": "GEO Strategist and Lead Architect",
+      "description": "Generative Engine Optimization (GEO) strategist and AI infrastructure architect. Creator of the ARM Framework and Signal Score.",
+      "knowsAbout": ["Generative Engine Optimization", "AI Visibility Strategy", "ARM Framework", "Signal Score", "Entity Authority", "Share of Model", "Intelligence Infrastructure", "llms.txt", "Schema.org Structured Data"],
+      "worksFor": { "@type": "Organization", "@id": "https://masonnguyengeo.com/#aure" },
+      "sameAs": ["https://linkedin.com/in/masonnguyen", "https://twitter.com/masonnguyengeo", "https://github.com/virtualmase", "https://arm-agency.xyz", "https://arctura.org", "https://coreweaverlabs.com"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Vail", "addressRegion": "CO", "addressCountry": "US" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://masonnguyengeo.com/#aure",
+      "name": "AURE Ecosystem",
+      "alternateName": ["AURE", "ARM Ecosystem"],
+      "url": "https://masonnguyengeo.com",
+      "description": "Multi-brand AI infrastructure ecosystem specializing in Generative Engine Optimization, AI visibility strategy, and intelligence infrastructure.",
+      "founder": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "foundingDate": "2024",
+      "areaServed": "Worldwide",
+      "knowsAbout": ["Generative Engine Optimization", "AI Visibility", "ARM Framework", "Signal Score", "Entity Authority"],
+      "sameAs": ["https://arm-agency.xyz", "https://arctura.org", "https://coreweaverlabs.com"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav class="site-nav-bar">
+  <a href="/" class="nav-wordmark"><span class="nav-dot"></span>Mason Nguyen</a>
+  <div class="nav-links">
+    <a href="/what-is-geo">GEO</a>
+    <a href="/arm-framework">ARM</a>
+    <a href="/ai-visibility-strategy">AI Visibility</a>
+    <a href="/aure-swarm">AURE</a>
+    <a href="/about">About</a>
+    <a href="/sitemap" class="cta">Index</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><span class="icon-moon">☾</span><span class="icon-sun">☀</span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    <a href="/glossary">Glossary</a><span>/</span>
+    Entity Authority
+  </div>
+</div>
+
+<div class="page-wrap">
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Canonical Definition · Glossary Entry</div>
+    <h1>Entity Authority <em>(EA)</em><br>How AI Decides Whose Voice to Trust</h1>
+    <p class="hero-sub">
+      Entity Authority is the degree to which AI language models trust, resolve, and accurately represent a named entity. It is the AI-era successor to Domain Authority — measuring signal strength, not link profiles.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Published <strong>August 2026</strong></span>
+      <span>12 min read</span>
+      <span>URL: <strong>/glossary/entity-authority</strong></span>
+    </div>
+
+    <div class="definition-block" itemscope itemtype="https://schema.org/DefinedTerm">
+      <div class="def-schema">DefinedTerm · schema.org · masonnguyengeo.com/glossary/entity-authority</div>
+      <div class="def-term" itemprop="name">Entity Authority</div>
+      <div class="def-abbr" itemprop="alternateName">EA &nbsp;/ˈɛn.tɪ.ti əˈθɒr.ɪ.ti/ &nbsp;·&nbsp; noun</div>
+      <div class="def-body" itemprop="description">
+        The degree to which AI language models trust, resolve, and accurately represent a named entity in generated responses. Entity Authority is the AI-era successor to Domain Authority — it measures not the strength of a domain's link profile, but the strength of an entity's machine-readable presence across the signals AI models use to construct answers.
+      </div>
+      <div class="def-contrast">
+        Distinguished from Domain Authority (Moz), which quantifies a domain's ranking power based on backlink quantity and quality. Entity Authority quantifies an entity's citation probability based on schema completeness, knowledge graph registration, citation network density, and signal freshness. A brand can have high Domain Authority and low Entity Authority — visible in search, invisible in AI answers.
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="content-body">
+
+<section id="the-shift">
+  <div class="container">
+    <div class="section-label">The Shift</div>
+    <h2 class="section-title">Domain Authority answered "who ranks?" Entity Authority answers "who gets cited?"</h2>
+    <p>Domain Authority was built for a world where Google's PageRank algorithm determined visibility. The metric measured the quantity and quality of backlinks pointing at a domain. More links from authoritative domains meant higher rankings. It was a link economy.</p>
+    <p>AI language models do not run PageRank. They resolve entities — named things with properties, relationships, and provenance — and cite them in generated responses. The question is not "how many domains link to you?" but "can the machine verify who you are, what you know, and whether independent sources confirm it?"</p>
+    <p>This is why a brand with Domain Authority 60 can be invisible in ChatGPT responses while a niche expert with DA 25 appears in every relevant answer. The first has link mass. The second has <a href="/glossary/entity-authority">entity clarity</a>, consistent naming, and a citation network that AI models can verify.</p>
+  </div>
+</section>
+
+<section id="four-layers">
+  <div class="container">
+    <div class="section-label">The Architecture</div>
+    <h2 class="section-title">Four layers that build Entity Authority</h2>
+    <p>Entity Authority is not a single signal. It is the composite output of four layers, each building on the previous one. Skip a layer and the structure collapses.</p>
+
+    <div class="disciplines" role="list" aria-label="Entity Authority layers">
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">01</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Entity Resolution</div>
+          <div class="discipline-body">Can the AI model identify the entity unambiguously? This requires Schema.org JSON-LD with Person or Organization types, consistent naming across all surfaces, and sameAs arrays linking to Wikidata, LinkedIn, GitHub, and other identity surfaces. Without resolution, citation is impossible. <a href="/ai-visibility-strategy#entity-graph">Entity graph architecture →</a></div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">02</div>
+        <div class="discipline-content">
+          <div class="discipline-title">E-E-A-T Signals</div>
+          <div class="discipline-body">Does the entity demonstrate Experience, Expertise, Authoritativeness, and Trustworthiness? Google's quality rater guidelines established E-E-A-T as the credibility framework. AI systems use the same signals — author credentials, publisher reputation, first-hand experience indicators, and factual accuracy. <a href="https://searchengineland.com/entities-eat-authority-trust-385156" target="_blank" rel="noopener">Search Engine Land's analysis of entities and E-A-T</a> documents how entity-level signals now feed authority evaluation.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">03</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Citation Network</div>
+          <div class="discipline-body">Do independent, authoritative sources reference the entity? When an AI model has low-confidence knowledge of an entity, it triangulates using third-party mentions. Editorial citations from authoritative publications confirm entity claims. A <a href="https://www.quattr.com/blog/how-entity-recognition-is-reshaping-authority-in-ai-search" target="_blank" rel="noopener">Quattr analysis</a> found that structured data, consistent brand information, and third-party mentions are what teach AI models who you are and whether you can be trusted.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">04</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Signal Freshness</div>
+          <div class="discipline-body">Is the entity's signal environment current? AI systems weight recency. An entity that published strong signals two years ago and went silent is experiencing <a href="/glossary/signal-decay">Signal Decay</a>. Freshness is the maintenance cost of Entity Authority — without it, the other three layers erode.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ea-vs-da">
+  <div class="container">
+    <div class="section-label">Comparison</div>
+    <h2 class="section-title">Entity Authority vs. Domain Authority — different economies</h2>
+    <p>Both metrics measure "how visible is this thing?" But they measure visibility on entirely different surfaces, through different mechanisms, with different leverage points.</p>
+
+    <div class="vs-grid" aria-label="Entity Authority vs Domain Authority">
+      <div class="vs-col vs-seo">
+        <div class="vs-label">Domain Authority</div>
+        <div class="vs-items">
+          <div class="vs-item"><div class="vs-dot"></div>Measures: link profile strength of a domain</div>
+          <div class="vs-item"><div class="vs-dot"></div>Surface: search engine result pages</div>
+          <div class="vs-item"><div class="vs-dot"></div>Signal: backlinks, referring domains, link quality</div>
+          <div class="vs-item"><div class="vs-dot"></div>Scale: domain-level (not entity-level)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Can be influenced: yes (link building, outreach)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Owner: Moz (proprietary metric)</div>
+        </div>
+      </div>
+      <div class="vs-center" aria-hidden="true">
+        <div class="vs-arrow">↔</div>
+        <div class="vs-center-label">Different economies</div>
+      </div>
+      <div class="vs-col vs-geo">
+        <div class="vs-label">Entity Authority</div>
+        <div class="vs-items">
+          <div class="vs-item"><div class="vs-dot"></div>Measures: machine-readable signal strength of an entity</div>
+          <div class="vs-item"><div class="vs-dot"></div>Surface: AI-generated responses (ChatGPT, Perplexity, Gemini)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Signal: schema, knowledge graph, citation network, freshness</div>
+          <div class="vs-item"><div class="vs-dot"></div>Scale: entity-level (person, org, concept)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Can be influenced: yes (schema, registration, content)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Owner: open (no proprietary metric yet — Signal Score™ is one approach)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="the-bridge">
+  <div class="container">
+    <div class="section-label">The Bridge</div>
+    <h2 class="section-title">Domain Authority feeds Entity Authority — but does not guarantee it</h2>
+    <p>A domain with strong backlinks has a head start. Those backlinks are citations. If the domain's content is structured with proper schema, the entity associated with the domain inherits some of that authority. This is why <a href="/what-is-geo">GEO and SEO share infrastructure</a> — the link profile that built Domain Authority also contributes to Entity Authority when it's properly structured.</p>
+    <p>But the bridge only works in one direction. A brand can transfer Domain Authority into Entity Authority through schema and content architecture. A brand cannot transfer Entity Authority into Domain Authority — AI citations do not produce backlinks.</p>
+    <p>This is the strategic insight: SEO investment compounds into GEO outcomes, but only if the entity architecture layer is built. Without it, Domain Authority stays Domain Authority — invisible to the models that users increasingly trust for recommendations.</p>
+  </div>
+</section>
+
+<section id="how-to-build">
+  <div class="container">
+    <div class="section-label">The Work</div>
+    <h2 class="section-title">Five steps to build Entity Authority from zero</h2>
+    <p>For new entities — startups, personal brands, new product categories — Entity Authority starts at zero. The build sequence is non-negotiable. Each step enables the next.</p>
+
+    <div class="disciplines" role="list" aria-label="Steps to build Entity Authority">
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">01</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Define the entity in schema</div>
+          <div class="discipline-body">Publish JSON-LD with Person or Organization type. Include name, description, url, image, sameAs array linking to all identity surfaces, and knowsAbout array listing areas of expertise. This is the entry point — without it, the entity does not exist in machine-readable form.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">02</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Register in the knowledge graph</div>
+          <div class="discipline-body">Create a Wikidata entry. Link it via sameAs in your schema. This gives AI models a canonical reference point for resolving the entity — one they trust more than self-authored schema alone.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">03</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Publish authoritative content</div>
+          <div class="discipline-body">Create content that demonstrates expertise: original research, frameworks, definitions. The <a href="/glossary/share-of-model">Share of Model</a> canonical definition is an example — it establishes the entity as the origin point for a concept AI models can reference.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">04</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Build the citation network</div>
+          <div class="discipline-body">Earn editorial mentions from authoritative third-party sources. The <a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener">Princeton GEO research</a> demonstrated that structured citation can boost AI visibility by up to 40%. Each new citation strengthens the entity's verification graph.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">05</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Maintain freshness</div>
+          <div class="discipline-body">Publish consistently. Update schema as the entity evolves. Measure <a href="/glossary/share-of-model">Share of Model</a> monthly. Without freshness, Entity Authority erodes through <a href="/glossary/signal-decay">Signal Decay</a>.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Common questions about Entity Authority</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">What is Entity Authority?</div>
+        <div class="faq-a">Entity Authority is the degree to which AI language models trust, resolve, and accurately represent a named entity in generated responses. It measures the strength of an entity's machine-readable presence — schema, knowledge graph registration, citation networks — rather than the link profile of a domain.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is Entity Authority different from Domain Authority?</div>
+        <div class="faq-a">Domain Authority (Moz) measures the link-based ranking strength of a domain in traditional search. Entity Authority measures the machine-readable signal strength of an entity across AI systems. A brand can have high Domain Authority but low Entity Authority — strong in search rankings, invisible in AI-generated answers. The metrics measure different surfaces.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does E-E-A-T relate to Entity Authority?</div>
+        <div class="faq-a">Google's E-E-A-T framework (Experience, Expertise, Authoritativeness, Trustworthiness) is the quality signal layer that feeds Entity Authority. E-E-A-T tells quality raters and AI systems whether a source is credible. Entity Authority is the outcome — whether AI models actually cite the entity. E-E-A-T is the input; Entity Authority is the output.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do you build Entity Authority?</div>
+        <div class="faq-a">Build Entity Authority through: structured data (Schema.org JSON-LD with Person/Organization types), knowledge graph registration (Wikidata, sameAs arrays), consistent entity naming across all surfaces, third-party citation networks from authoritative sources, and signal freshness through ongoing publication. The ARM Framework provides the systematic build sequence.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you buy Entity Authority?</div>
+        <div class="faq-a">No. Entity Authority cannot be bought through media spend or paid links. It is earned through verifiable entity architecture, consistent third-party citations, and machine-readable signals that AI models can independently verify. Paid placements do not contribute to Entity Authority because AI systems discount signals that can be purchased.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="related">
+  <div class="container">
+    <div class="section-label">Related</div>
+    <h2 class="section-title">Continue building your understanding</h2>
+    <div class="related-grid">
+      <a href="/glossary/share-of-model" class="related-card">
+        <div class="rc-label">Glossary</div>
+        <div class="rc-title">Share of Model</div>
+        <div class="rc-desc">Entity Authority is what produces Share of Model. Strong EA = higher citation frequency.</div>
+      </a>
+      <a href="/glossary/signal-decay" class="related-card">
+        <div class="rc-label">Glossary</div>
+        <div class="rc-title">Signal Decay</div>
+        <div class="rc-desc">Without freshness, Entity Authority erodes. Signal Decay is the mechanism.</div>
+      </a>
+      <a href="/arm-framework" class="related-card">
+        <div class="rc-label">Framework</div>
+        <div class="rc-title">ARM Framework</div>
+        <div class="rc-desc">The Authority pillar is where Entity Authority is built — the foundation layer of the framework.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /content-body -->
+
+<section class="page-cta">
+  <div class="container">
+    <div class="cta-block">
+      <div class="eyebrow">GEO STRATEGY · SIGNAL ARCHITECTURE</div>
+      <h2>Work with Mason Nguyen</h2>
+      <p>GEO strategy, entity architecture, and ARM Framework implementation for brands that need to be cited — not just ranked.</p>
+      <a href="https://swellmarketing.xyz" class="cta-btn">Swell Marketing →</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><span class="nav-dot"></span>Mason Nguyen — GEO Strategist</div>
+      <p class="footer-tagline">Generative Engine Optimization strategy, ARM Framework, and AI visibility infrastructure for the answer era.</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/mason-nguyen" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://twitter.com/masonnguyengeo" target="_blank" rel="noopener" aria-label="X">X</a>
+        <a href="https://github.com/virtualmase" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      </div>
+      <p class="footer-copy">© 2026 Mason Nguyen · masonnguyengeo.com · All rights reserved</p>
+    </div>
+    <div>
+      <div class="footer-section-title">Navigate</div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/aure-swarm">AURE Swarm</a>
+        <a href="/about">About</a>
+        <a href="/sitemap">Site Index</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  var d = document.documentElement;
+  var bar = document.getElementById('progress');
+  if (bar) bar.style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+function toggleTheme() {
+  var t = document.documentElement.getAttribute('data-theme');
+  t = t === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('theme', t); } catch(e) {}
+}
+try {
+  var saved = localStorage.getItem('theme');
+  if (saved) { document.documentElement.setAttribute('data-theme', saved); }
+} catch(e) {}
+</script>
+</body>
+</html>
