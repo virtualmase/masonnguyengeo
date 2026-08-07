@@ -1523,3 +1523,145 @@ section {
   h1, h2, h3 { color: black; }
   .accent, .gold { color: #666; }
 }
+
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s var(--ease);
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+.theme-toggle:hover {
+  background: var(--gold);
+  color: var(--void);
+}
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: inline; }
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  --void:        #F5F0E8;
+  --surface:     #EDEAE3;
+  --surface-2:   #E5E1D8;
+  --surface-3:   #DDD8CC;
+  --parchment:   #1A1A1A;
+  --text-muted:  #5A5550;
+  --text-dim:    #8A857F;
+  --gold:        #9a7d18;
+  --gold-dim:    #c8a96e;
+  --gold-glow:   rgba(154,125,24,0.08);
+  --gold-soft:   rgba(154,125,24,0.04);
+  --signal:      #9a7d18;
+  --conviction:  #8B2E2E;
+  --green:       #2d7d50;
+  --blue:        #3A5F95;
+  --rule:        1px solid rgba(154,125,24,0.15);
+  --rule-strong: 1px solid rgba(154,125,24,0.3);
+  --rule-faint:  1px solid rgba(0,0,0,0.06);
+  --shadow-sm:   0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:   0 4px 24px rgba(0,0,0,0.1);
+  --shadow-gold: 0 0 24px rgba(154,125,24,0.06);
+}
+
+[data-theme="light"] body {
+  background: var(--void);
+  color: var(--parchment);
+}
+
+[data-theme="light"] .site-nav-bar {
+  background: rgba(245,240,232,0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+[data-theme="light"] .nav-wordmark { color: var(--parchment); }
+[data-theme="light"] .nav-links a { color: var(--text-muted); }
+[data-theme="light"] .nav-links a:hover { color: var(--gold); }
+
+[data-theme="light"] .content-body a {
+  color: var(--gold);
+  text-decoration-color: var(--gold-dim);
+}
+
+[data-theme="light"] .definition-block,
+[data-theme="light"] .audience-card,
+[data-theme="light"] .discipline,
+[data-theme="light"] .probe-block,
+[data-theme="light"] .case-study,
+[data-theme="light"] .faq-item,
+[data-theme="light"] .related-card,
+[data-theme="light"] .series-card,
+[data-theme="light"] .platform-cell,
+[data-theme="light"] .timeline,
+[data-theme="light"] .failure-matrix {
+  background: var(--surface);
+  border-color: var(--rule);
+}
+
+[data-theme="light"] .vs-grid {
+  background: var(--surface);
+}
+
+[data-theme="light"] .vs-seo { background: var(--surface-2); }
+[data-theme="light"] .vs-geo { background: var(--surface); }
+
+[data-theme="light"] .code-block,
+[data-theme="light"] pre {
+  background: var(--surface-2);
+}
+
+[data-theme="light"] .pullquote { color: var(--parchment); }
+[data-theme="light"] .pullquote cite { color: var(--text-dim); }
+
+[data-theme="light"] .cta-block {
+  background: linear-gradient(135deg, var(--surface), var(--surface-2));
+}
+
+[data-theme="light"] .site-footer {
+  background: var(--surface);
+  border-color: var(--rule);
+}
+
+[data-theme="light"] .footer-social a {
+  border-color: var(--gold-dim);
+  color: var(--gold);
+}
+[data-theme="light"] .footer-social a:hover {
+  background: var(--gold);
+  color: var(--void);
+}
+
+[data-theme="light"] .scaffold-notice {
+  background: linear-gradient(135deg, var(--gold-soft), transparent);
+  border-color: var(--gold-dim);
+}
+
+[data-theme="light"] .meta-row {
+  background: var(--surface);
+  border-color: var(--rule);
+}
+
+[data-theme="light"] .cs-before { background: rgba(139,46,46,0.04); }
+[data-theme="light"] .cs-after { background: rgba(45,125,80,0.04); }
+
+[data-theme="light"] .progress-bar { background: var(--gold); }
+
+/* Theme toggle icon swap */
+[data-theme="light"] .theme-toggle .icon-sun { display: inline; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+
+/* Smooth theme transition */
+body, .site-nav-bar, .site-footer, .definition-block, .audience-card,
+.discipline, .probe-block, .case-study, .faq-item, .related-card,
+.meta-row, .scaffold-notice, .cta-block, .vs-grid, .vs-seo, .vs-geo,
+.footer-social a, .progress-bar {
+  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease), color 0.3s var(--ease);
+}
