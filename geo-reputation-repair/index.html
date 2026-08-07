@@ -487,5 +487,9 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggleFaq(btn); } });
 });
 </script>
+<script>
+function toggleTheme(){var t=document.documentElement.getAttribute("data-theme");t=t==="light"?"dark":"light";document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch(e){}}
+try{var saved=localStorage.getItem("theme");if(saved){document.documentElement.setAttribute("data-theme",saved)}}catch(e){}
+</script>
 </body>
 </html>
