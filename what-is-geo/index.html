@@ -110,188 +110,25 @@
 }
 </script>
 
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
 
-:root {
-  --ink:       #0D0D0D;
-  --ink-2:     #3A3A3A;
-  --ink-3:     #6B6B6B;
-  --paper:     #F7F5F0;
-  --paper-2:   #EDEAE3;
-  --white:     #FFFFFF;
-  --accent:    #C8522A;
-  --signal:    #1B4D6B;
-  --geo-green: #1B6B4A;
-  --border:    rgba(13,13,13,0.10);
-  --border-s:  rgba(13,13,13,0.20);
-  --f-display: 'Playfair Display', Georgia, serif;
-  --f-body:    'DM Sans', system-ui, sans-serif;
-  --f-mono:    'DM Mono', 'Courier New', monospace;
-  --max:       1100px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
-
-body { background: var(--paper); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
-.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 3rem); }
-.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--accent); width: 0%; z-index: 200; transition: width .1s; }
-
-nav { position: sticky; top: 0; z-index: 100; background: rgba(247,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); padding: 0.875rem 0; }
-.nav-inner { display: flex; align-items: center; justify-content: space-between; }
-.nav-logo { font-family: var(--f-display); font-size: 15px; color: var(--ink); text-decoration: none; }
-.nav-logo span { color: var(--accent); }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-size: 13px; color: var(--ink-2); text-decoration: none; transition: color .15s; }
-.nav-links a:hover, .nav-links a[aria-current] { color: var(--accent); }
-.nav-cta { font-size: 13px; font-weight: 500; padding: 0.5rem 1.125rem; background: var(--ink); color: var(--white); border-radius: 3px; text-decoration: none; transition: background .15s; }
-.nav-cta:hover { background: var(--accent); }
-
-.breadcrumb { padding: 0.875rem 0; font-size: 12px; color: var(--ink-3); border-bottom: 0.5px solid var(--border); font-family: var(--f-mono); }
-.breadcrumb a { color: var(--ink-3); text-decoration: none; }
-.breadcrumb a:hover { color: var(--accent); }
-.breadcrumb span { margin: 0 0.5rem; }
-
-.eyebrow { display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
-.eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
-
-.hero { padding: clamp(4rem, 10vw, 7rem) 0 clamp(3rem, 6vw, 5rem); border-bottom: 0.5px solid var(--border); }
-.hero h1 { font-family: var(--f-display); font-size: clamp(2.2rem, 5.5vw, 4rem); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--ink); max-width: 860px; margin-bottom: 1.5rem; }
-.hero h1 em { font-style: italic; color: var(--ink-3); }
-.hero-sub { font-size: clamp(1rem, 2vw, 1.175rem); color: var(--ink-2); max-width: 620px; line-height: 1.65; margin-bottom: 2.5rem; }
-.hero-meta { display: flex; flex-wrap: wrap; gap: 2rem; font-size: 13px; color: var(--ink-3); }
-.hero-meta strong { color: var(--ink); font-weight: 500; }
-
-/* Signature: GEO definition block */
-.definition-block { background: var(--white); border: 0.5px solid var(--border-s); border-left: 3px solid var(--signal); border-radius: 4px; padding: 1.75rem 2rem; margin: 3rem 0 0; }
-.def-schema { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.625rem; }
-.def-schema::after { content: ''; flex: 1; height: 0.5px; background: var(--border-s); }
-.def-term { font-family: var(--f-display); font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; color: var(--ink); margin-bottom: 0.25rem; }
-.def-abbr { font-family: var(--f-mono); font-size: 13px; color: var(--ink-3); margin-bottom: 1.25rem; }
-.def-body { font-size: 15px; color: var(--ink-2); line-height: 1.7; max-width: 680px; }
-.def-contrast { margin-top: 1.125rem; padding-top: 1.125rem; border-top: 0.5px solid var(--border); font-size: 14px; color: var(--ink-3); font-style: italic; }
-
-section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
-section + section { border-top: 0.5px solid var(--border); }
-.section-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 1rem; }
-.section-title { font-family: var(--f-display); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; line-height: 1.2; color: var(--ink); margin-bottom: 1.25rem; max-width: 700px; }
-.section-body { font-size: 15px; color: var(--ink-2); max-width: 660px; line-height: 1.75; }
-.section-body p + p { margin-top: 1.125rem; }
-.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
-
-/* GEO vs SEO comparison */
-.vs-grid { display: grid; grid-template-columns: 1fr 56px 1fr; gap: 0; border: 0.5px solid var(--border-s); border-radius: 6px; overflow: hidden; margin-top: 1.5rem; }
-.vs-col { padding: clamp(1.25rem, 3vw, 2rem); }
-.vs-seo { background: var(--paper-2); }
-.vs-geo { background: #E8F4EF; }
-.vs-center { background: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.25rem; }
-.vs-arrow { color: rgba(255,255,255,0.4); font-size: 18px; }
-.vs-center-label { font-family: var(--f-mono); font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.3); writing-mode: vertical-rl; }
-.vs-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.875rem; }
-.vs-seo .vs-label { color: var(--signal); }
-.vs-geo .vs-label { color: var(--geo-green); }
-.vs-items { display: flex; flex-direction: column; gap: 0.5rem; }
-.vs-item { font-size: 13px; color: var(--ink-2); padding: 0.5rem 0.75rem; border-radius: 3px; display: flex; align-items: flex-start; gap: 0.5rem; }
-.vs-seo .vs-item { background: rgba(27,77,107,0.06); }
-.vs-geo .vs-item { background: rgba(27,107,74,0.07); }
-.vs-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
-.vs-seo .vs-dot { background: var(--signal); }
-.vs-geo .vs-dot { background: var(--geo-green); }
-
-/* Five disciplines */
-.disciplines { display: flex; flex-direction: column; gap: 0; margin-top: 1.5rem; border: 0.5px solid var(--border-s); border-radius: 6px; overflow: hidden; }
-.discipline { display: grid; grid-template-columns: 56px 1fr; border-bottom: 0.5px solid var(--border); background: var(--white); transition: background .15s; }
-.discipline:last-child { border-bottom: none; }
-.discipline:hover { background: var(--paper); }
-.discipline-num { display: flex; align-items: center; justify-content: center; border-right: 0.5px solid var(--border); font-family: var(--f-mono); font-size: 13px; font-weight: 500; color: var(--ink-3); }
-.discipline-content { padding: 1.25rem 1.5rem; }
-.discipline-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.75rem; }
-.discipline-link { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; color: var(--accent); text-decoration: none; padding: 2px 7px; border: 0.5px solid rgba(200,82,42,0.3); border-radius: 2px; font-weight: 400; white-space: nowrap; }
-.discipline-link:hover { background: rgba(200,82,42,0.05); }
-.discipline-body { font-size: 13px; color: var(--ink-3); line-height: 1.6; }
-
-/* Platforms grid */
-.platform-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border-s); border: 1px solid var(--border-s); border-radius: 4px; overflow: hidden; margin-top: 1.5rem; }
-.platform-cell { background: var(--white); padding: 1.25rem 1.125rem; }
-.plat-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 0.25rem; }
-.plat-type { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.75rem; }
-.plat-bar-wrap { height: 4px; background: var(--paper-2); border-radius: 2px; margin-bottom: 0.5rem; }
-.plat-bar { height: 4px; border-radius: 2px; background: var(--signal); }
-.plat-desc { font-size: 12px; color: var(--ink-3); line-height: 1.5; }
-
-/* Who it's for */
-.audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; }
-.audience-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.375rem 1.25rem; border-top: 2px solid var(--border-s); transition: border-top-color .2s; }
-.audience-card:hover { border-top-color: var(--accent); }
-.audience-type { font-family: var(--f-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); margin-bottom: 0.625rem; }
-.audience-desc { font-size: 13.5px; color: var(--ink-2); line-height: 1.65; margin-bottom: 1rem; }
-.audience-signal { font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
-
-/* Series nav */
-.series-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
-.series-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 4px; padding: 1.25rem; text-decoration: none; display: block; transition: border-color .15s; }
-.series-card:hover { border-color: var(--accent); }
-.sc-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 0.5rem; }
-.sc-title { font-size: 14px; font-weight: 500; color: var(--ink); line-height: 1.4; margin-bottom: 0.5rem; }
-.sc-desc { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
-.sc-url { font-family: var(--f-mono); font-size: 11px; color: var(--accent); margin-top: 0.625rem; }
-
-.pullquote { border-left: 3px solid var(--accent); padding: 1.25rem 1.75rem; margin: 2.5rem 0; background: var(--white); }
-.pullquote p { font-family: var(--f-display); font-size: clamp(1.05rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.5; color: var(--ink); }
-.pullquote cite { display: block; margin-top: 0.75rem; font-size: 12px; font-style: normal; font-family: var(--f-mono); letter-spacing: 0.08em; color: var(--ink-3); text-transform: uppercase; }
-
-.faq-list { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0; }
-.faq-item { border: 0.5px solid var(--border); border-bottom: none; background: var(--white); }
-.faq-item:first-child { border-radius: 4px 4px 0 0; }
-.faq-item:last-child { border-bottom: 0.5px solid var(--border); border-radius: 0 0 4px 4px; }
-.faq-q { padding: 1.125rem 1.25rem; font-size: 14px; font-weight: 500; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-.faq-q::after { content: '+'; font-size: 18px; font-weight: 300; flex-shrink: 0; color: var(--ink-3); transition: transform .2s; }
-.faq-item.open .faq-q::after { transform: rotate(45deg); }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 14px; color: var(--ink-2); line-height: 1.7; padding: 0 1.25rem; }
-.faq-item.open .faq-a { max-height: 500px; padding: 0 1.25rem 1.25rem; }
-
-.cta-block { background: var(--ink); color: var(--white); padding: clamp(3rem, 7vw, 5rem) 0; }
-.cta-block .section-label { color: var(--accent); }
-.cta-block .section-title { color: var(--white); max-width: 600px; }
-.cta-block .section-body { color: rgba(255,255,255,0.6); }
-.cta-btns { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2.5rem; }
-.btn-primary { padding: 0.875rem 2rem; background: var(--accent); color: var(--white); border-radius: 3px; text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity .15s; }
-.btn-primary:hover { opacity: 0.88; }
-.btn-ghost { padding: 0.875rem 2rem; background: transparent; color: rgba(255,255,255,0.7); border: 0.5px solid rgba(255,255,255,0.25); border-radius: 3px; text-decoration: none; font-size: 14px; transition: border-color .15s, color .15s; }
-.btn-ghost:hover { border-color: rgba(255,255,255,0.6); color: var(--white); }
-
-footer { background: var(--paper-2); border-top: 0.5px solid var(--border); padding: 2.5rem 0; }
-.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
-.footer-copy { font-size: 13px; color: var(--ink-3); }
-.footer-links { display: flex; gap: 1.5rem; }
-.footer-links a { font-size: 13px; color: var(--ink-3); text-decoration: none; }
-.footer-links a:hover { color: var(--accent); }
-
-@media (max-width: 760px) {
-  .vs-grid { grid-template-columns: 1fr; }
-  .vs-center { flex-direction: row; padding: 0.75rem; }
-  .vs-center-label { writing-mode: horizontal-tb; }
-  .platform-grid, .audience-grid, .series-grid, .two-col { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
-}
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
 <div class="progress-bar" id="progress"></div>
 
-<nav aria-label="Site navigation">
-  <div class="container nav-inner">
-    <a href="/" class="nav-logo">Mason Nguyen<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="/what-is-geo" aria-current="page">What is GEO</a></li>
-      <li><a href="/arm-framework">ARM Framework</a></li>
-      <li><a href="/ai-visibility-strategy">AI Visibility</a></li>
-      <li><a href="/about">About</a></li>
-    </ul>
-    <a href="/contact" class="nav-cta">Work together</a>
+<nav class="site-nav-bar">
+  <a href="/" class="nav-wordmark"><span class="nav-dot"></span>Mason Nguyen</a>
+  <div class="nav-links">
+    <a href="/what-is-geo">GEO</a>
+    <a href="/arm-framework">ARM</a>
+    <a href="/ai-visibility-strategy">AI Visibility</a>
+    <a href="/aure-swarm">AURE</a>
+    <a href="/about">About</a>
+    <a href="/sitemap" class="cta">Index</a>
   </div>
 </nav>
 
@@ -641,16 +478,28 @@ footer { background: var(--paper-2); border-top: 0.5px solid var(--border); padd
   </div>
 </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-inner">
-      <p class="footer-copy">© 2025 Mason Nguyen GEO · masonnguyengeo.com</p>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><span class="nav-dot"></span>Mason Nguyen — GEO Strategist</div>
+      <p class="footer-tagline">Generative Engine Optimization strategy, ARM Framework, and AI visibility infrastructure for the answer era.</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/mason-nguyen" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://twitter.com/masonnguyengeo" target="_blank" rel="noopener" aria-label="X">X</a>
+        <a href="https://github.com/virtualmase" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      </div>
+      <p class="footer-copy">© 2026 Mason Nguyen · masonnguyengeo.com · All rights reserved</p>
+    </div>
+    <div>
+      <div class="footer-section-title">Navigate</div>
       <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
         <a href="/what-is-geo">What is GEO</a>
         <a href="/arm-framework">ARM Framework</a>
         <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/aure-swarm">AURE Swarm</a>
         <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/sitemap">Site Index</a>
       </nav>
     </div>
   </div>
