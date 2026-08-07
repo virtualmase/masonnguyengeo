@@ -24,6 +24,10 @@
     {
       "src": "schema.json",
       "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
     }
   ],
   "cleanUrls": true,
@@ -120,6 +124,10 @@
     {
       "source": "/llms-full.txt",
       "destination": "/llms-full.txt"
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap/index.html"
     }
   ],
   "headers": [
