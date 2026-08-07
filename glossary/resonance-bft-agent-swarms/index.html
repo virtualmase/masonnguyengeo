@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resonance BFT — Byzantine Fault Tolerance for Agent Swarms | Mason Nguyen GEO Glossary</title>
+<meta name="description" content="Resonance BFT applies Byzantine Fault Tolerance principles to AI agent swarms — ensuring consensus and trust across autonomous agents even when individual agents produce conflicting or faulty outputs. The canonical definition from Mason Nguyen.">
+<meta name="keywords" content="resonance BFT, byzantine fault tolerance AI agents, agent swarm consensus, AI agent trust verification, BFT multi-agent systems, autonomous agent coordination">
+
+<link rel="canonical" href="https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Resonance BFT — Byzantine Fault Tolerance for Agent Swarms">
+<meta property="og:description" content="Resonance BFT applies Byzantine Fault Tolerance principles to AI agent swarms. The canonical definition from Mason Nguyen.">
+<meta property="og:url" content="https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms">
+<meta property="og:image" content="https://masonnguyengeo.com/assets/resonance-bft-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Resonance BFT — Byzantine Fault Tolerance for Agent Swarms">
+<meta name="twitter:description" content="The canonical definition of Resonance BFT — consensus and trust for autonomous AI agent swarms.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms#term",
+      "name": "Resonance BFT",
+      "description": "The application of Byzantine Fault Tolerance principles to AI agent swarms — a consensus mechanism that enables autonomous agents to reach agreement on shared state even when individual agents produce conflicting, hallucinated, or faulty outputs. Resonance BFT adapts the fault-tolerance model from distributed systems (where nodes may crash or act maliciously) to multi-agent AI systems (where agents may hallucinate, misinterpret, or produce inconsistent results). The mechanism requires a supermajority of independent agents to converge on the same output before the output is accepted as valid.",
+      "url": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms",
+      "inDefinedTermSet": { "@type": "DefinedTermSet", "@id": "https://masonnguyengeo.com/glossary#terms", "name": "Mason Nguyen GEO Glossary" },
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms#article",
+      "headline": "Resonance BFT: Byzantine Fault Tolerance for Agent Swarms",
+      "description": "Resonance BFT applies Byzantine Fault Tolerance principles to AI agent swarms. The canonical definition from Mason Nguyen.",
+      "url": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms",
+      "datePublished": "2026-08-07",
+      "dateModified": "2026-08-07",
+      "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "mainEntityOfPage": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms",
+      "about": [
+        { "@type": "Thing", "name": "Resonance BFT", "description": "Byzantine Fault Tolerance for AI agent swarms" },
+        { "@type": "Thing", "name": "Byzantine Fault Tolerance" },
+        { "@type": "Thing", "name": "Multi-Agent Systems" },
+        { "@type": "Thing", "name": "Agent Swarms" }
+      ],
+      "mentions": [
+        { "@type": "Thing", "name": "Consensus Mechanism" },
+        { "@type": "Thing", "name": "Hallucination" },
+        { "@type": "Thing", "name": "Distributed Systems" },
+        { "@type": "Thing", "name": "PBFT" },
+        { "@type": "Thing", "name": "AURE Swarm" }
+      ],
+      "keywords": "resonance BFT, byzantine fault tolerance AI agents, agent swarm consensus, AI agent trust, BFT multi-agent systems, autonomous agent coordination"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Resonance BFT?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Resonance BFT is the application of Byzantine Fault Tolerance principles to AI agent swarms. It is a consensus mechanism that enables autonomous agents to reach agreement on shared state even when individual agents produce conflicting, hallucinated, or faulty outputs. The mechanism requires a supermajority of independent agents to converge on the same output before it is accepted as valid." }
+        },
+        {
+          "@type": "Question",
+          "name": "How is Resonance BFT different from traditional BFT?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Traditional BFT assumes nodes may crash or act maliciously — the fault model is adversarial. Resonance BFT assumes agents may hallucinate, misinterpret context, or produce inconsistent outputs — the fault model is probabilistic. In traditional BFT, faulty nodes are identified and excluded. In Resonance BFT, faulty outputs are identified and discarded, but the agent remains in the swarm (it may produce correct outputs on the next query)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do AI agent swarms need Byzantine Fault Tolerance?",
+          "acceptedAnswer": { "@type": "Answer", "text": "LLMs hallucinate. When multiple agents operate independently, they may produce conflicting outputs for the same query. Without a consensus mechanism, the system has no way to determine which output is correct. Resonance BFT provides that mechanism: if 3 of 5 agents produce the same answer and 2 produce different answers, the 3-agent majority is accepted and the 2 divergent outputs are flagged for review." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the fault tolerance threshold for Resonance BFT?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Resonance BFT follows the standard BFT threshold: the system tolerates up to f faulty agents in a swarm of 3f + 1 agents. A swarm of 4 agents tolerates 1 faulty output. A swarm of 7 agents tolerates 2. The threshold is the same as traditional BFT — the difference is the nature of the fault (hallucination vs. adversarial behavior)." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Resonance BFT relate to the AURE Swarm?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The AURE Swarm is the multi-agent ecosystem where Resonance BFT operates. The ARM, Signal, and Arctura agents each process queries independently. Resonance BFT provides the consensus layer that determines which outputs are accepted when the agents disagree. Without it, the swarm is a collection of independent agents. With it, the swarm is a fault-tolerant system." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
+        { "@type": "ListItem", "position": 2, "name": "Glossary", "item": "https://masonnguyengeo.com/glossary" },
+        { "@type": "ListItem", "position": 3, "name": "Resonance BFT", "item": "https://masonnguyengeo.com/glossary/resonance-bft-agent-swarms" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://masonnguyengeo.com/#mason-nguyen",
+      "name": "Mason Nguyen",
+      "givenName": "Mason",
+      "familyName": "Nguyen",
+      "url": "https://masonnguyengeo.com",
+      "image": "https://masonnguyengeo.com/assets/mason-nguyen.jpg",
+      "jobTitle": "GEO Strategist and Lead Architect",
+      "description": "Generative Engine Optimization (GEO) strategist and AI infrastructure architect. Creator of the ARM Framework, Signal Score, and Resonance BFT.",
+      "knowsAbout": ["Generative Engine Optimization", "AI Visibility Strategy", "ARM Framework", "ARM Primitives", "Resonance BFT", "Byzantine Fault Tolerance", "Multi-Agent Systems", "Signal Architecture", "Entity Authority"],
+      "worksFor": { "@type": "Organization", "@id": "https://masonnguyengeo.com/#aure" },
+      "sameAs": ["https://linkedin.com/in/masonnguyen", "https://twitter.com/masonnguyengeo", "https://github.com/virtualmase", "https://arm-agency.xyz", "https://arctura.org", "https://coreweaverlabs.com"],
+      "address": { "@type": "PostalAddress", "addressLocality": "Vail", "addressRegion": "CO", "addressCountry": "US" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://masonnguyengeo.com/#aure",
+      "name": "AURE Ecosystem",
+      "alternateName": ["AURE", "ARM Ecosystem"],
+      "url": "https://masonnguyengeo.com",
+      "description": "Multi-brand AI infrastructure ecosystem specializing in Generative Engine Optimization, AI visibility strategy, and intelligence infrastructure.",
+      "founder": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
+      "foundingDate": "2024",
+      "areaServed": "Worldwide",
+      "knowsAbout": ["Generative Engine Optimization", "AI Visibility", "ARM Framework", "Resonance BFT", "Multi-Agent Systems"],
+      "sameAs": ["https://arm-agency.xyz", "https://arctura.org", "https://coreweaverlabs.com"]
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav class="site-nav-bar">
+  <a href="/" class="nav-wordmark"><span class="nav-dot"></span>Mason Nguyen</a>
+  <div class="nav-links">
+    <a href="/what-is-geo">GEO</a>
+    <a href="/arm-framework">ARM</a>
+    <a href="/ai-visibility-strategy">AI Visibility</a>
+    <a href="/aure-swarm">AURE</a>
+    <a href="/about">About</a>
+    <a href="/sitemap" class="cta">Index</a>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><span class="icon-moon">☾</span><span class="icon-sun">☀</span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a><span>/</span>
+    <a href="/glossary">Glossary</a><span>/</span>
+    Resonance BFT
+  </div>
+</div>
+
+<div class="page-wrap">
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow">Canonical Definition · Glossary Entry</div>
+    <h1>Resonance BFT <em>(rBFT)</em><br>Byzantine Fault Tolerance for Agent Swarms</h1>
+    <p class="hero-sub">
+      Resonance BFT applies the fault-tolerance model from distributed systems to multi-agent AI. When agents disagree, the swarm converges on truth through consensus — not through a single agent's authority.
+    </p>
+    <div class="hero-meta">
+      <span>By <strong>Mason Nguyen</strong></span>
+      <span>Published <strong>August 2026</strong></span>
+      <span>10 min read</span>
+      <span>URL: <strong>/glossary/resonance-bft-agent-swarms</strong></span>
+    </div>
+
+    <div class="definition-block" itemscope itemtype="https://schema.org/DefinedTerm">
+      <div class="def-schema">DefinedTerm · schema.org · masonnguyengeo.com/glossary/resonance-bft-agent-swarms</div>
+      <div class="def-term" itemprop="name">Resonance BFT</div>
+      <div class="def-abbr" itemprop="alternateName">rBFT &nbsp;/ˈrez.ə.nəns biː.ɛf.tiː/ &nbsp;·&nbsp; noun</div>
+      <div class="def-body" itemprop="description">
+        The application of Byzantine Fault Tolerance principles to AI agent swarms — a consensus mechanism that enables autonomous agents to reach agreement on shared state even when individual agents produce conflicting, hallucinated, or faulty outputs. Resonance BFT adapts the fault-tolerance model from distributed systems (where nodes may crash or act maliciously) to multi-agent AI systems (where agents may hallucinate, misinterpret, or produce inconsistent results). The mechanism requires a supermajority of independent agents to converge on the same output before the output is accepted as valid.
+      </div>
+      <div class="def-contrast">
+        Distinguished from traditional Byzantine Fault Tolerance, which assumes adversarial nodes that may act maliciously. Resonance BFT assumes probabilistic faults — agents are not malicious, but they are fallible. The fault model changes from "this node is trying to deceive" to "this agent may have hallucinated." The consensus mechanism is similar. The trust model is different.
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="content-body">
+
+<section id="the-problem">
+  <div class="container">
+    <div class="section-label">The Problem</div>
+    <h2 class="section-title">LLMs hallucinate. Agent swarms without consensus amplify that.</h2>
+    <p>A single LLM producing a hallucinated answer is a known risk. Multiple LLMs producing independent answers for the same query — and disagreeing — is a systems problem. Without a consensus mechanism, the orchestrating system has no principled way to determine which output is correct.</p>
+    <p>This is the problem Resonance BFT solves. It borrows from <a href="https://en.wikipedia.org/wiki/Byzantine_fault" target="_blank" rel="noopener">Byzantine Fault Tolerance</a>, a concept from distributed systems research dating to the Lamport-Shostak-Pease paper (1982). In distributed systems, BFT ensures that a network of nodes can reach consensus even when some nodes fail or act maliciously. The same principle applies to agent swarms — with one critical difference in the fault model.</p>
+  </div>
+</section>
+
+<section id="fault-models">
+  <div class="container">
+    <div class="section-label">The Distinction</div>
+    <h2 class="section-title">Traditional BFT vs. Resonance BFT — same math, different trust model</h2>
+    <p>The consensus threshold is identical. The fault model is fundamentally different. Understanding this distinction is what makes Resonance BFT a new concept, not a rebrand of existing BFT.</p>
+
+    <div class="vs-grid" aria-label="Traditional BFT vs Resonance BFT">
+      <div class="vs-col vs-seo">
+        <div class="vs-label">Traditional BFT</div>
+        <div class="vs-items">
+          <div class="vs-item"><div class="vs-dot"></div>Fault model: adversarial (nodes may act maliciously)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Faulty nodes: identified and excluded from consensus</div>
+          <div class="vs-item"><div class="vs-dot"></div>System: distributed database or blockchain network</div>
+          <div class="vs-item"><div class="vs-dot"></div>Trust assumption: nodes are either correct or Byzantine</div>
+          <div class="vs-item"><div class="vs-dot"></div>Recovery: faulty nodes removed or restarted</div>
+          <div class="vs-item"><div class="vs-dot"></div>Threshold: tolerates f faults in 3f + 1 nodes</div>
+        </div>
+      </div>
+      <div class="vs-center" aria-hidden="true">
+        <div class="vs-arrow">↔</div>
+        <div class="vs-center-label">Same math</div>
+      </div>
+      <div class="vs-col vs-geo">
+        <div class="vs-label">Resonance BFT</div>
+        <div class="vs-items">
+          <div class="vs-item"><div class="vs-dot"></div>Fault model: probabilistic (agents may hallucinate)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Faulty outputs: identified and discarded; agent stays in swarm</div>
+          <div class="vs-item"><div class="vs-dot"></div>System: multi-agent AI swarm (LLM-based agents)</div>
+          <div class="vs-item"><div class="vs-dot"></div>Trust assumption: agents are correct on most queries, fallible on some</div>
+          <div class="vs-item"><div class="vs-dot"></div>Recovery: agent may produce correct output on next query</div>
+          <div class="vs-item"><div class="vs-dot"></div>Threshold: tolerates f faults in 3f + 1 agents (same)</div>
+        </div>
+      </div>
+    </div>
+
+    <p>The key insight: in traditional BFT, a faulty node is a <em>permanent</em> condition that requires removal. In Resonance BFT, a faulty output is a <em>transient</em> condition — the same agent may produce a correct answer on the next query. This is why agents are not excluded from the swarm when they produce a divergent output. They are flagged for review, and their output is discarded for that query, but they remain part of the consensus pool.</p>
+  </div>
+</section>
+
+<section id="the-mechanism">
+  <div class="container">
+    <div class="section-label">The Mechanism</div>
+    <h2 class="section-title">How Resonance BFT works in practice</h2>
+    <p>The consensus process has four steps. Each step mirrors traditional BFT but adapts to the probabilistic fault model of LLM-based agents.</p>
+
+    <div class="disciplines" role="list" aria-label="Resonance BFT process">
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">01</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Independent Execution</div>
+          <div class="discipline-body">Each agent in the swarm processes the query independently. No agent sees another agent's output before producing its own. This independence is critical — if agents can see each other's outputs, they may converge through imitation rather than independent reasoning, producing false consensus.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">02</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Output Collection</div>
+          <div class="discipline-body">All agent outputs are collected and compared. The comparison is semantic, not exact — outputs that convey the same information with different wording are treated as equivalent. This requires a comparison layer (typically an embedding-based similarity check or a designated judge agent).</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">03</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Convergence Check</div>
+          <div class="discipline-body">If a supermajority of agents (≥ 2f + 1 of 3f + 1) produce semantically equivalent outputs, the output is accepted as valid. Divergent outputs are flagged. If no supermajority converges, the query is retried with modified parameters or escalated to human review.</div>
+        </div>
+      </div>
+      <div class="discipline" role="listitem">
+        <div class="discipline-num">04</div>
+        <div class="discipline-content">
+          <div class="discipline-title">Fault Logging</div>
+          <div class="discipline-body">Divergent outputs are logged with agent ID, query, and output. Agents that consistently diverge are flagged for review — not removed. An agent that diverges on 30% of queries may need prompt revision or parameter adjustment. An agent that diverges on 5% may just have a higher base hallucination rate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aure-swarm">
+  <div class="container">
+    <div class="section-label">Application</div>
+    <h2 class="section-title">Resonance BFT in the AURE Swarm</h2>
+    <p>The <a href="/aure-swarm">AURE Swarm</a> is the multi-agent ecosystem where Resonance BFT operates. The ARM, Signal, and Arctura agents each process queries independently — research, data verification, and strategic analysis respectively.</p>
+    <p>Without Resonance BFT, the AURE Swarm is a collection of independent agents whose outputs may conflict. With it, the swarm is a fault-tolerant system: when the agents agree, confidence is high. When they disagree, the consensus mechanism determines which output to trust and which to flag.</p>
+    <p>The connection to <a href="/glossary/entity-authority">Entity Authority</a> is direct. An entity cited by a single agent is a claim. An entity cited by a supermajority of independent agents — each using different retrieval paths and reasoning chains — is a verified claim. Resonance BFT is the mechanism that converts independent agent agreement into verified <a href="/glossary/share-of-model">Share of Model</a> measurement.</p>
+  </div>
+</section>
+
+<section id="threshold">
+  <div class="container">
+    <div class="section-label">The Math</div>
+    <h2 class="section-title">The 3f + 1 threshold</h2>
+    <p>Resonance BFT follows the standard BFT threshold established by <a href="https://www.geeksforgeeks.org/system-design/byzantine-fault-tolerance-in-distributed-system/" target="_blank" rel="noopener">Practical Byzantine Fault Tolerance (PBFT)</a>: the system tolerates up to f faulty agents in a swarm of 3f + 1 agents.</p>
+
+    <div class="callout callout-info">
+      <div class="callout-title">Threshold Table</div>
+      Swarm of 4 agents → tolerates 1 faulty output (75% agreement required)<br>
+      Swarm of 7 agents → tolerates 2 faulty outputs (71% agreement required)<br>
+      Swarm of 10 agents → tolerates 3 faulty outputs (70% agreement required)<br>
+      Swarm of 13 agents → tolerates 4 faulty outputs (69% agreement required)
+    </div>
+
+    <p>As the swarm grows, the agreement threshold decreases slightly (from 75% to 69%), but the absolute number of tolerable faults increases. This is the scaling advantage of BFT — larger swarms are more fault-tolerant, not less.</p>
+    <p>The trade-off is latency. More agents means more independent execution time and more comparison overhead. The AURE Swarm uses 4 agents (tolerating 1 fault) for speed-critical queries and 7 agents (tolerating 2 faults) for high-stakes decisions.</p>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Common questions about Resonance BFT</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">What is Resonance BFT?</div>
+        <div class="faq-a">Resonance BFT is the application of Byzantine Fault Tolerance principles to AI agent swarms. It is a consensus mechanism that enables autonomous agents to reach agreement on shared state even when individual agents produce conflicting, hallucinated, or faulty outputs. The mechanism requires a supermajority of independent agents to converge on the same output before it is accepted as valid.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is Resonance BFT different from traditional BFT?</div>
+        <div class="faq-a">Traditional BFT assumes nodes may crash or act maliciously — the fault model is adversarial. Resonance BFT assumes agents may hallucinate, misinterpret context, or produce inconsistent outputs — the fault model is probabilistic. In traditional BFT, faulty nodes are identified and excluded. In Resonance BFT, faulty outputs are identified and discarded, but the agent remains in the swarm (it may produce correct outputs on the next query).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why do AI agent swarms need Byzantine Fault Tolerance?</div>
+        <div class="faq-a">LLMs hallucinate. When multiple agents operate independently, they may produce conflicting outputs for the same query. Without a consensus mechanism, the system has no way to determine which output is correct. Resonance BFT provides that mechanism: if 3 of 5 agents produce the same answer and 2 produce different answers, the 3-agent majority is accepted and the 2 divergent outputs are flagged for review.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the fault tolerance threshold for Resonance BFT?</div>
+        <div class="faq-a">Resonance BFT follows the standard BFT threshold: the system tolerates up to f faulty agents in a swarm of 3f + 1 agents. A swarm of 4 agents tolerates 1 faulty output. A swarm of 7 agents tolerates 2. The threshold is the same as traditional BFT — the difference is the nature of the fault (hallucination vs. adversarial behavior).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does Resonance BFT relate to the AURE Swarm?</div>
+        <div class="faq-a">The AURE Swarm is the multi-agent ecosystem where Resonance BFT operates. The ARM, Signal, and Arctura agents each process queries independently. Resonance BFT provides the consensus layer that determines which outputs are accepted when the agents disagree. Without it, the swarm is a collection of independent agents. With it, the swarm is a fault-tolerant system.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="related">
+  <div class="container">
+    <div class="section-label">Related</div>
+    <h2 class="section-title">Continue building your understanding</h2>
+    <div class="related-grid">
+      <a href="/aure-swarm" class="related-card">
+        <div class="rc-label">Ecosystem</div>
+        <div class="rc-title">AURE Swarm</div>
+        <div class="rc-desc">The multi-agent ecosystem where Resonance BFT operates — ARM, Signal, and Arctura agents in coordination.</div>
+      </a>
+      <a href="/glossary/arm-primitives" class="related-card">
+        <div class="rc-label">Glossary</div>
+        <div class="rc-title">ARM Primitives</div>
+        <div class="rc-desc">The five building blocks of sovereign AI — Resonance BFT provides the consensus layer for multi-agent deployment.</div>
+      </a>
+      <a href="/arm-framework" class="related-card">
+        <div class="rc-label">Framework</div>
+        <div class="rc-title">ARM Framework</div>
+        <div class="rc-desc">The methodology that the AURE Swarm implements, with Resonance BFT as its consensus mechanism.</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /content-body -->
+
+<section class="page-cta">
+  <div class="container">
+    <div class="cta-block">
+      <div class="eyebrow">GEO STRATEGY · SIGNAL ARCHITECTURE</div>
+      <h2>Work with Mason Nguyen</h2>
+      <p>GEO strategy, entity architecture, and ARM Framework implementation for brands that need to be cited — not just ranked.</p>
+      <a href="https://swellmarketing.xyz" class="cta-btn">Swell Marketing →</a>
+    </div>
+  </div>
+</section>
+
+</div><!-- /page-wrap -->
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand"><span class="nav-dot"></span>Mason Nguyen — GEO Strategist</div>
+      <p class="footer-tagline">Generative Engine Optimization strategy, ARM Framework, and AI visibility infrastructure for the answer era.</p>
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/mason-nguyen" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a href="https://twitter.com/masonnguyengeo" target="_blank" rel="noopener" aria-label="X">X</a>
+        <a href="https://github.com/virtualmase" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
+      </div>
+      <p class="footer-copy">© 2026 Mason Nguyen · masonnguyengeo.com · All rights reserved</p>
+    </div>
+    <div>
+      <div class="footer-section-title">Navigate</div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/what-is-geo">What is GEO</a>
+        <a href="/arm-framework">ARM Framework</a>
+        <a href="/ai-visibility-strategy">AI Visibility</a>
+        <a href="/aure-swarm">AURE Swarm</a>
+        <a href="/about">About</a>
+        <a href="/sitemap">Site Index</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', function() {
+  var d = document.documentElement;
+  var bar = document.getElementById('progress');
+  if (bar) bar.style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+});
+function toggleTheme() {
+  var t = document.documentElement.getAttribute('data-theme');
+  t = t === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+  try { localStorage.setItem('theme', t); } catch(e) {}
+}
+try {
+  var saved = localStorage.getItem('theme');
+  if (saved) { document.documentElement.setAttribute('data-theme', saved); }
+} catch(e) {}
+</script>
+</body>
+</html>
