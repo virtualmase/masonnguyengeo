@@ -10,12 +10,12 @@
 :root {
   /* Core palette */
   --void:        #0A0A0A;
-  --surface:     #111114;
-  --surface-2:   #16161A;
-  --surface-3:   #1C1C22;
+  --surface:     #1A1A22;
+  --surface-2:   #202028;
+  --surface-3:   #262630;
   --parchment:   #F5F0E8;
-  --text-muted:  #7A7570;
-  --text-dim:    #5A5550;
+  --text-muted:  #908A80;
+  --text-dim:    #6E6860;
   --gold:        #C9A84C;
   --gold-dim:    #9a7d38;
   --gold-glow:   rgba(201,168,76,0.08);
@@ -26,9 +26,9 @@
   --blue:        #4A6FA5;
 
   /* Borders & rules */
-  --rule:        1px solid rgba(201,168,76,0.12);
+  --rule:        1px solid rgba(201,168,76,0.22);
   --rule-strong: 1px solid rgba(201,168,76,0.28);
-  --rule-faint:  1px solid rgba(255,255,255,0.04);
+  --rule-faint:  1px solid rgba(255,255,255,0.08);
 
   /* Shadows */
   --shadow-sm:   0 2px 8px rgba(0,0,0,0.3);
@@ -243,12 +243,13 @@ h1 em, h1 .accent { color: var(--gold); font-style: italic; }
   margin-bottom: 1.5rem;
   padding: 1rem 1.25rem;
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   font-family: var(--mono);
   font-size: 0.72rem;
   color: var(--text-muted);
   letter-spacing: 0.02em;
+  box-shadow: var(--shadow-sm);
 }
 
 .meta-item {
@@ -406,11 +407,12 @@ section {
 /* ===== DEFINITION BLOCK ===== */
 .definition-block {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
+  border-left: 3px solid var(--gold);
   border-radius: var(--radius);
   padding: 1.75rem;
   margin: 2rem 0;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .def-term {
@@ -459,10 +461,11 @@ section {
   grid-template-columns: 1fr auto 1fr;
   gap: 0;
   margin: 2rem 0;
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--surface);
+  box-shadow: var(--shadow-md);
 }
 
 .vs-col {
@@ -554,10 +557,11 @@ section {
 
 .audience-card {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  box-shadow: var(--shadow-sm);
 }
 
 .audience-card:hover {
@@ -599,11 +603,12 @@ section {
 
 .discipline {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   padding: 1.5rem;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .discipline::before {
@@ -672,10 +677,11 @@ section {
 
 .faq-item {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius-sm);
   margin-bottom: 0.75rem;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 
 .faq-q {
@@ -735,10 +741,11 @@ section {
 /* ===== FAILURE MATRIX ===== */
 .failure-matrix {
   margin: 2rem 0;
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--surface);
+  box-shadow: var(--shadow-md);
 }
 
 .fm-row {
@@ -801,10 +808,12 @@ section {
 /* ===== PROBE BLOCK ===== */
 .probe-block {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
+  border-left: 3px solid var(--gold);
   border-radius: var(--radius);
   padding: 1.5rem;
   margin: 2rem 0;
+  box-shadow: var(--shadow-sm);
 }
 
 .probe-bar {
@@ -998,11 +1007,12 @@ section {
 /* ===== CASE STUDY ===== */
 .case-study {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   padding: 0;
   margin: 2rem 0;
   overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
 
 .cs-header {
@@ -1149,9 +1159,10 @@ section {
 
 .platform-cell {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius-sm);
   padding: 1rem;
+  box-shadow: var(--shadow-sm);
 }
 
 .plat-name {
@@ -1199,10 +1210,11 @@ section {
 
 .related-card {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   padding: 1.5rem;
   transition: border-color 0.3s var(--ease), transform 0.2s var(--ease);
+  box-shadow: var(--shadow-sm);
 }
 
 .related-card:hover {
@@ -1242,10 +1254,11 @@ section {
 
 .series-card {
   background: var(--surface);
-  border: var(--rule);
+  border: 1px solid var(--gold-dim);
   border-radius: var(--radius);
   padding: 1.5rem;
   position: relative;
+  box-shadow: var(--shadow-sm);
 }
 
 .series-card::after {
