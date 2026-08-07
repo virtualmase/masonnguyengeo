@@ -1487,5 +1487,9 @@
 
 <div class="progress-bar" id="progress"></div>
 <script>document.addEventListener("scroll",function(){var e=document.documentElement,s=e.scrollTop/(e.scrollHeight-e.clientHeight);var p=document.getElementById("progress");if(p)p.style.transform="scaleX("+s+")"})};</script>
+<script>
+function toggleTheme(){var t=document.documentElement.getAttribute("data-theme");t=t==="light"?"dark":"light";document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch(e){}}
+try{var saved=localStorage.getItem("theme");if(saved){document.documentElement.setAttribute("data-theme",saved)}}catch(e){}
+</script>
 </body>
 </html>
