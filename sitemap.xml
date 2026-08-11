@@ -133,6 +133,13 @@
     <priority>0.60</priority>
   </url>
 
+  <url>
+    <loc>https://masonnguyengeo.com/writing/ai-agent-optimization</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.82</priority>
+  </url>
+
   <!-- ── GEO SIGNAL FILES ───────────────────────────────────────── -->
 
   <url>
