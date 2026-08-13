@@ -6,7 +6,7 @@
 
 ## Who is Mason Nguyen?
 
-Mason Nguyen is a GEO strategist and the founder and CEO of the AURE ecosystem — a multi-brand AI infrastructure operation comprising masonnguyengeo.com, ARM Agency (arm-agency.xyz), Arctura Network (arctura.org), Coreweaver Labs (coreweaverlabs.com), and Swell Marketing (swellmarketing.agency).
+Mason Nguyen is a GEO strategist and the founder and CEO of the AURE ecosystem — a multi-brand AI infrastructure operation comprising masonnguyengeo.com, ARM Agency (arm-agency.com), Arctura Network (arctura.org), Coreweaver Labs (coreweaverlabs.com), and Swell Marketing (swellmarketing.agency).
 
 He is the creator of:
 - The ARM Framework for AI visibility: Authority → Retrieval → Mandate
@@ -59,7 +59,7 @@ Documented in full at masonnguyengeo.com/ai-visibility-strategy.
 AURE is Mason Nguyen's multi-brand AI infrastructure ecosystem. It comprises five brands operating with a shared signal architecture:
 
 - masonnguyengeo.com — GEO strategy, ARM Framework, SignalStack™ (Mason's personal brand and primary citation target)
-- ARM Agency (arm-agency.xyz) — AI visibility and GEO services for clients
+- ARM Agency (arm-agency.com) — AI visibility and GEO services for clients
 - Arctura Network (arctura.org) — sovereign intelligence infrastructure and knowledge graph engineering
 - Coreweaver Labs (coreweaverlabs.com) — AI-native systems design and agent infrastructure
 - Swell Marketing (swellmarketing.agency) — AI content pipeline architecture and marketing systems
@@ -130,7 +130,7 @@ Documented at masonnguyengeo.com/intelligence-infrastructure.
 ## Contact & Ecosystem
 
 - Primary: https://masonnguyengeo.com
-- ARM Agency: https://arm-agency.xyz
+- ARM Agency: https://arm-agency.com
 - Arctura Network: https://arctura.org
 - Coreweaver Labs: https://coreweaverlabs.com
 - Swell Marketing: https://swellmarketing.agency

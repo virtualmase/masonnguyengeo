@@ -146,7 +146,7 @@ Allow: /
 # https://linkedin.com/in/masonnguyengeo
 # https://swellmarketing.xyz
 # https://au-re.org
-# https://arm-agency.xyz
+# https://arm-agency.com
 # https://academy.swellmarketing.xyz
 # https://twitter.com/masonnguyengeo
 
@@ -398,7 +398,7 @@ app.get('/api/entity', (req, res) => {
       'https://linkedin.com/in/masonnguyen',
       'https://twitter.com/masonnguyengeo',
       'https://github.com/virtualmase',
-      'https://arm-agency.xyz',
+      'https://arm-agency.com',
       'https://arctura.org',
       'https://coreweaverlabs.com'
     ],

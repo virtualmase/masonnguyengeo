@@ -7,7 +7,7 @@ Location: NA Servers, US-WEST
 
 /* GEO INFRASTRUCTURE */
 Operator: ARM Agency
-Website: https://arm-agency.xyz
+Website: https://arm-agency.com
 VaaS: https://autonomousresourcemanagement.com
 
 /* SITE */
