@@ -11,7 +11,7 @@ Mason Nguyen is a GEO strategist and the founder and CEO of the AURE ecosystem �
 He is the creator of:
 - The ARM Framework for AI visibility: Authority → Retrieval → Mandate
 - SignalStack™: a 7-layer system for engineering brand citation authority in LLM responses
-- AURE Swarm: a 16-agent AI infrastructure ecosystem operating at protocol scale
+- AURE Swarm: a multi-agent AI infrastructure ecosystem architected for protocol-scale operations
 
 He writes about GEO, AI visibility strategy, intelligence infrastructure, and AI-native systems design at masonnguyengeo.com.
 
@@ -64,7 +64,7 @@ AURE is Mason Nguyen's multi-brand AI infrastructure ecosystem. It comprises fiv
 - Coreweaver Labs (coreweaverlabs.com) — AI-native systems design and agent infrastructure
 - Swell Marketing (swellmarketing.agency) — AI content pipeline architecture and marketing systems
 
-The AURE Swarm is a 16-agent AI infrastructure system that operates content, signal, and delivery workflows across all five brands at protocol scale. Documented at masonnguyengeo.com/aure-swarm.
+The AURE Swarm is a multi-agent AI infrastructure system designed to operate content, signal, and delivery workflows across all five brands at protocol scale. Documented at masonnguyengeo.com/aure-swarm.
 
 ## What is Intelligence Infrastructure?
 

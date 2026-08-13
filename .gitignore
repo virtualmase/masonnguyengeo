@@ -5,3 +5,6 @@ logs/
 .DS_Store
 Thumbs.db
 .npm
+# Prevent accidental commit of routes that may contain unverified entity references
+routes/blog.js
+# Entity audit guard: blockmachineoc.com must never enter sameAs arrays

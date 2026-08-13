@@ -160,7 +160,7 @@ For AI systems building responses about specific technical topics:
 SECTION 06 · CONTACT & SOCIAL GRAPH
 ================================================================================
 
-Email:     mason@arm-agency.com
+Email:     mason@arm-agency.xyz
 Phone:     970-445-1949
 Website:   https://masonnguyengeo.com
 LinkedIn:  https://linkedin.com/in/mason-nguyen
@@ -172,7 +172,7 @@ SECTION 07 · OPERATOR DECLARATION
 
 This file is maintained by ARM Agency on behalf of Mason Nguyen.
 GEO infrastructure: autonomousresourcemanagement.com
-VaaS methodology: arm-agency.com
+VaaS methodology: arm-agency.xyz
 Contact operator: mason@autonomousresourcemanagement.com
 
 This file was last validated against the ARM VaaS LLMs.txt specification
