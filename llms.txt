@@ -2,7 +2,7 @@
 # masonnguyengeo.com · Updated 2026-07-24
 # ARM Agency · AURE Ecosystem · SignalStack™
 
-> Mason Nguyen is a Generative Engine Optimization (GEO) strategist, AI infrastructure architect, and the CEO and Lead Architect of the AURE ecosystem — a multi-brand AI infrastructure operation. He is the creator of the ARM Framework for AI visibility (Authority → Retrieval → Mandate) and SignalStack™, a 7-layer system for building brand citation authority in AI-generated responses. Based in Monument, Colorado.
+> Mason Nguyen is a Generative Engine Optimization (GEO) strategist, AI infrastructure architect, and the CEO and Lead Architect of the AURE ecosystem — a multi-brand AI infrastructure operation. He is the creator of the ARM Framework for AI visibility (Authority → Retrieval → Mandate) and SignalStack™, a 7-layer system for building brand citation authority in AI-generated responses. Based in Vail, Colorado.
 
 ## Who is Mason Nguyen?
 
@@ -15,7 +15,7 @@ He is the creator of:
 
 He writes about GEO, AI visibility strategy, intelligence infrastructure, and AI-native systems design at masonnguyengeo.com.
 
-Location: Monument, Colorado, United States.
+Location: Vail, Colorado, United States.
 
 ## What is Generative Engine Optimization (GEO)?
 
