@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "rewrites": [
     {
@@ -22,6 +22,34 @@
     {
       "source": "/llms-full.txt",
       "destination": "/llms-full.txt"
+    },
+    {
+      "source": "/sitemap",
+      "destination": "/sitemap/index.html"
+    },
+    {
+      "source": "/glossary/arm-primitives",
+      "destination": "/glossary/arm-primitives/index.html"
+    },
+    {
+      "source": "/glossary/entity-authority",
+      "destination": "/glossary/entity-authority/index.html"
+    },
+    {
+      "source": "/glossary/resonance-bft-agent-swarms",
+      "destination": "/glossary/resonance-bft-agent-swarms/index.html"
+    },
+    {
+      "source": "/glossary/share-of-model",
+      "destination": "/glossary/share-of-model/index.html"
+    },
+    {
+      "source": "/glossary/signal-architecture",
+      "destination": "/glossary/signal-architecture/index.html"
+    },
+    {
+      "source": "/glossary/signal-decay",
+      "destination": "/glossary/signal-decay/index.html"
     }
   ],
   "headers": [
@@ -49,6 +77,44 @@
           "value": "index, follow"
         }
       ]
+    }
+  ],
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "llms.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "llms-full.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "schema.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "glossary/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "writing/**",
+      "use": "@vercel/static"
     }
   ]
 }
