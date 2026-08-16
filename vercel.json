@@ -1,38 +1,12 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "sitemap.xml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "robots.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "llms.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "llms-full.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "schema.json",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "assets/**",
-      "use": "@vercel/static"
-    }
-  ],
   "cleanUrls": true,
   "trailingSlash": false,
   "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
     {
       "source": "/sitemap.xml",
       "destination": "/sitemap.xml"
@@ -112,10 +86,6 @@
     {
       "source": "/about",
       "destination": "/about/index.html"
-    },
-    {
-      "source": "/",
-      "destination": "/public/index.html"
     },
     {
       "source": "/llms.txt",
