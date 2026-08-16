@@ -50,6 +50,10 @@
     {
       "source": "/glossary/signal-decay",
       "destination": "/glossary/signal-decay/index.html"
+    },
+    {
+      "source": "/multi-agent-hardware",
+      "destination": "/multi-agent-hardware/index.html"
     }
   ],
   "headers": [
