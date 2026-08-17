@@ -9,7 +9,8 @@
     "pm2:start": "pm2 start ecosystem.config.js --env production",
     "pm2:stop": "pm2 stop masonnguyengeo",
     "pm2:restart": "pm2 restart masonnguyengeo",
-    "pm2:logs": "pm2 logs masonnguyengeo"
+    "pm2:logs": "pm2 logs masonnguyengeo",
+    "validate:author": "node scripts/validate-author-page.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
