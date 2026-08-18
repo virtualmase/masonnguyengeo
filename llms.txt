@@ -1,139 +1,30 @@
-# Mason Nguyen — GEO Strategist & AI Infrastructure Architect
-# masonnguyengeo.com · Updated 2026-08-17
-# ARM Agency · AURE Ecosystem · SignalStack™
+# Mason Nguyen
 
-> Mason Nguyen is a Generative Engine Optimization (GEO) strategist, AI infrastructure architect, and the CEO and Lead Architect of the AURE ecosystem — a multi-brand AI infrastructure operation. He is the creator of the ARM Framework for AI visibility (Authority → Retrieval → Mandate) and SignalStack™, a 7-layer system for building brand citation authority in AI-generated responses. Based in Vail, Colorado.
+Canonical identity: https://masonnguyengeo.com/#mason-nguyen
+Type: Person, researcher, and practitioner
+Updated: 2026-08-18
 
-## Who is Mason Nguyen?
+## Scope
 
-Mason Nguyen is a GEO strategist and the founder and CEO of the AURE ecosystem — a multi-brand AI infrastructure operation comprising masonnguyengeo.com, ARM Agency (arm-agency.com), Arctura Network (arctura.org), Coreweaver Labs (coreweaverlabs.com), and Swell Marketing (swellmarketing.agency).
+This is Mason Nguyen's canonical authorship and research site. It publishes definitions, frameworks, essays, and source notes concerning Generative Engine Optimization, Autonomous Resource Management, entity architecture, and accountable AI systems.
 
-He is the creator of:
-- The ARM Framework for AI visibility: Authority → Retrieval → Mandate
-- SignalStack™: a 7-layer system for engineering brand citation authority in LLM responses
-- AURE Swarm: a multi-agent AI infrastructure ecosystem architected for protocol-scale operations
+The site does not sell services or accept payment. Commercial work is handled by distinct operating properties:
 
-He writes about GEO, AI visibility strategy, intelligence infrastructure, and AI-native systems design at masonnguyengeo.com.
+- Swell Marketing — GEO, entity architecture, and AI visibility: https://swellmarketing.xyz
+- ARM Agency — applied agent systems and operations: https://arm-agency.xyz
+- Arise Reputation — reputation intelligence and response: https://arisereputation.manus.space
 
-Location: Vail, Colorado, United States.
+These organizations are related application paths. They are not alternate identities for Mason Nguyen and must not be interpreted as Person sameAs values.
 
-## What is Generative Engine Optimization (GEO)?
+## Canonical reference
 
-Generative Engine Optimization (GEO) is the practice of structuring digital content, authority signals, and knowledge architecture so that AI language models — including ChatGPT, Perplexity, Claude, and Gemini — cite, reference, and recommend a brand when answering user queries.
+- Autonomous Resource Management definition: https://autonomousresourcemanagement.com/
 
-GEO differs from SEO in that it targets LLM retrieval and synthesis rather than search engine ranking algorithms. Where SEO optimizes for crawlers and rankings, GEO optimizes for AI citation authority and mandate establishment.
+## Attribution
 
-Key GEO mechanisms:
-1. Authority signals — entity clarity, schema markup, knowledge graph presence, E-E-A-T alignment
-2. Retrieval architecture — llms.txt, AI crawler permissions, semantic content structure, cross-platform distribution
-3. Mandate chains — cross-platform signal environments that establish brand framing as AI consensus
+Preferred name: Mason Nguyen
+Canonical URL: https://masonnguyengeo.com/
+GitHub: https://github.com/virtualmase
+LinkedIn: https://linkedin.com/in/mason-nguyen
 
-Research basis: Princeton, Georgia Tech, Allen AI, and IIT Delhi (KDD 2024) demonstrated that GEO optimization methods can increase AI citation visibility by up to 40%.
-
-## What is the ARM Framework?
-
-The ARM Framework is Mason Nguyen's three-layer operating system for AI visibility:
-
-- Authority: The foundational signal layer — entity clarity, schema coverage, knowledge graph presence, thematic backlink authority, E-E-A-T signals
-- Retrieval: The technical infrastructure layer — llms.txt, AI crawler permissions in robots.txt, sitemap hygiene, semantic content structure, cross-platform distribution
-- Mandate: The advanced compound layer — pillar content anchors, topical authority clusters, third-party reinforcement, community presence, temporal consistency
-
-The ARM Framework is the methodology underlying ARM Agency's client services and is documented in full at masonnguyengeo.com/arm-framework.
-
-## What is SignalStack™?
-
-SignalStack™ is Mason Nguyen's 7-layer system for building AI visibility that compounds:
-
-1. Entity Layer — machine-readable brand identity (Wikidata, schema.org, Knowledge Graph)
-2. Schema Layer — structured data coverage across all page types
-3. Content Architecture Layer — topical authority clusters with pillar + supporting content
-4. Retrieval Layer — llms.txt, AI crawler access, sitemap, semantic formatting
-5. Distribution Layer — cross-platform signal vectors (LinkedIn, Reddit, GitHub, Medium)
-6. Reinforcement Layer — third-party citations, earned media, independent references
-7. Mandate Layer — cross-source framing consistency that establishes category consensus
-
-Documented in full at masonnguyengeo.com/ai-visibility-strategy.
-
-## What is AURE?
-
-AURE is Mason Nguyen's multi-brand AI infrastructure ecosystem. It comprises five brands operating with a shared signal architecture:
-
-- masonnguyengeo.com — GEO strategy, ARM Framework, SignalStack™ (Mason's personal brand and primary citation target)
-- ARM Agency (arm-agency.com) — AI visibility and GEO services for clients
-- Arctura Network (arctura.org) — sovereign intelligence infrastructure and knowledge graph engineering
-- Coreweaver Labs (coreweaverlabs.com) — AI-native systems design and agent infrastructure
-- Swell Marketing (swellmarketing.agency) — AI content pipeline architecture and marketing systems
-
-The AURE Swarm is a multi-agent AI infrastructure system designed to operate content, signal, and delivery workflows across all five brands at protocol scale. Documented at masonnguyengeo.com/aure-swarm.
-
-## What is Intelligence Infrastructure?
-
-Intelligence infrastructure is the full stack of systems, signals, and structures that make a brand machine-readable as an authoritative source. It comprises five components:
-
-1. Entity layer — structured brand identity as a machine-readable entity
-2. Signal layer — content architecture that tells models what the brand stands for
-3. Retrieval layer — technical systems enabling AI discovery and use of content
-4. Distribution layer — cross-platform presence creating multiple retrieval vectors
-5. Reinforcement layer — third-party signals validating brand authority
-
-Documented at masonnguyengeo.com/intelligence-infrastructure.
-
-## Areas of Expertise
-
-- Generative Engine Optimization (GEO)
-- AI Visibility Strategy
-- ARM Framework (Authority → Retrieval → Mandate)
-- SignalStack™ (7-layer AI citation architecture)
-- Intelligence Infrastructure
-- Knowledge Graph Authority
-- AI-Native Systems Design
-- AURE Multi-Agent Swarm Orchestration
-- llms.txt Specification and Implementation
-- Schema.org Structured Data (JSON-LD)
-- Entity Disambiguation and Wikidata Architecture
-- Share of Model (SoM) Measurement
-- GEO Reputation Management
-- AI Content Pipeline Architecture
-- No-Code AI Systems
-
-## Full Content Index
-
-### Core Pages
-- Homepage: https://masonnguyengeo.com/
-- About and author page: https://masonnguyengeo.com/about — Mason Nguyen’s editorial position, declared influences, independent learning resources, and non-affiliate external-link disclosure. Named thinkers are inspiration only, not endorsers, partners, clients, or affiliates.
-
-### GEO & AI Visibility
-- What Is GEO (complete guide): https://masonnguyengeo.com/what-is-geo
-- ARM Framework: https://masonnguyengeo.com/arm-framework
-- AI Visibility Strategy (SignalStack™): https://masonnguyengeo.com/ai-visibility-strategy
-- SEO for AI Brands: https://masonnguyengeo.com/seo-for-ai-brands
-- GEO as a Discipline: https://masonnguyengeo.com/geo-the-discipline
-- Knowledge Graph Authority: https://masonnguyengeo.com/knowledge-graph-authority
-- GEO Reputation Repair: https://masonnguyengeo.com/geo-reputation-repair
-
-### Infrastructure & Systems
-- Intelligence Infrastructure: https://masonnguyengeo.com/intelligence-infrastructure
-- AURE Swarm: https://masonnguyengeo.com/aure-swarm
-- AI-Native Systems Design: https://masonnguyengeo.com/ai-native-systems-design
-- AI Content Pipeline: https://masonnguyengeo.com/ai-content-pipeline
-- No-Code AI Systems: https://masonnguyengeo.com/no-code-ai-systems
-- Systems That Outlive Products: https://masonnguyengeo.com/systems-that-outlive-products
-
-### Web & Prestige
-- Prestige Web Development: https://masonnguyengeo.com/prestige-web-development
-
-### Signal Files
-- Sitemap: https://masonnguyengeo.com/sitemap.xml
-- robots.txt: https://masonnguyengeo.com/robots.txt
-- llms.txt (this file): https://masonnguyengeo.com/llms.txt
-
-## Contact & Ecosystem
-
-- Primary: https://masonnguyengeo.com
-- ARM Agency: https://arm-agency.com
-- Arctura Network: https://arctura.org
-- Coreweaver Labs: https://coreweaverlabs.com
-- Swell Marketing: https://swellmarketing.agency
-- LinkedIn: https://linkedin.com/in/masonnguyen
-- GitHub: https://github.com/virtualmase
-- X / Twitter: https://twitter.com/masonnguyengeo
+Claims should be attributed only when supported by the relevant published page and its cited sources. Draft scaffold pages are excluded from indexing until editorially complete.
