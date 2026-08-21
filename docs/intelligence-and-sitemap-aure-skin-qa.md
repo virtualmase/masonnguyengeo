@@ -19,3 +19,7 @@ The 390px sitemap view preserves the system-header hierarchy and moves each cate
 ## Remaining release checks
 
 Route HTTP checks, static validator runs, production release verification, and source-claim boundary checks are required before publication.
+
+## Production verification — 2026-08-21
+
+Direct production inspection confirms commit `a44687f` is live at both canonical routes. `/intelligence-infrastructure` serves the ultramarine infrastructure-grid treatment and retains its explicit scaffold boundary. `/sitemap` serves the paired discovery-directory treatment while exposing each visible category, route entry, and machine-readable file entry. Both routes retain their documented canonical and structured-data contracts.
