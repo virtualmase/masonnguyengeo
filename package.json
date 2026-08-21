@@ -16,7 +16,8 @@
     "validate:arm-framework": "node scripts/validate-arm-framework.mjs",
     "validate:ai-visibility": "node scripts/validate-ai-visibility.mjs",
     "validate:reputation-integrity": "node scripts/validate-reputation-integrity.mjs",
-    "validate:placeholder-schema": "node scripts/validate-placeholder-schema.mjs"
+    "validate:placeholder-schema": "node scripts/validate-placeholder-schema.mjs",
+    "validate:about-skin": "node scripts/validate-about-skin.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
