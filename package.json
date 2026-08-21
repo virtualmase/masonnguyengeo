@@ -17,7 +17,9 @@
     "validate:ai-visibility": "node scripts/validate-ai-visibility.mjs",
     "validate:reputation-integrity": "node scripts/validate-reputation-integrity.mjs",
     "validate:placeholder-schema": "node scripts/validate-placeholder-schema.mjs",
-    "validate:about-skin": "node scripts/validate-about-skin.mjs"
+    "validate:about-skin": "node scripts/validate-about-skin.mjs",
+    "validate:intelligence-infrastructure": "node scripts/validate-intelligence-infrastructure.mjs",
+    "validate:sitemap-skin": "node scripts/validate-sitemap-skin.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
