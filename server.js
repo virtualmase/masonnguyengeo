@@ -412,6 +412,10 @@ app.get('/api/entity', (req, res) => {
 
 // ─── STATIC FILES ─────────────────────────────────────────────────────────────
 // Serve root-level content directories (what-is-geo/, arm-framework/, etc.)
+app.get(['/what-is-geo/ai-visibility-strategy', '/what-is-geo/ai-visibility-strategy/'], (req, res) => {
+  res.redirect(301, '/ai-visibility-strategy');
+});
+
 const staticOpts = {
   maxAge: ENV === 'production' ? '7d' : 0,
   etag: true,
