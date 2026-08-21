@@ -329,7 +329,7 @@ app.get('/sitemap.xml', (req, res) => {
     <changefreq>monthly</changefreq>
     <priority>0.50</priority>
   </url>
-;
+</urlset>`);
 });
 
 /**
