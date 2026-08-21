@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GEO Reputation Repair: When AI Gets Your Brand Wrong | Mason Nguyen GEO</title>
-<meta name="description" content="What to do when AI models misrepresent your brand. The four AI citation failure modes, a structured repair protocol, and a real-world case study — from Mason Nguyen, GEO strategist.">
+<meta name="description" content="What to do when AI models misrepresent a brand: four citation failure modes, a structured repair protocol, and evidence requirements for any public case record.">
 <meta name="keywords" content="AI search reputation repair, fix wrong AI company description, entity name confusion GEO fix, entity disambiguation for brands, GEO file structured entity signal">
 <link rel="canonical" href="https://masonnguyengeo.com/geo-reputation-repair">
 
@@ -14,23 +14,20 @@
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://masonnguyengeo.com/[PAGE-SLUG]#article",
-      "headline": "[PAGE TITLE]",
-      "description": "[META DESCRIPTION — 150–160 chars]",
-      "url": "https://masonnguyengeo.com/[PAGE-SLUG]",
-      "datePublished": "[YYYY-MM-DD]",
-      "dateModified": "[YYYY-MM-DD]",
+      "@id": "https://masonnguyengeo.com/geo-reputation-repair#article",
+      "headline": "GEO Reputation Repair: When AI Gets Your Brand Wrong",
+      "description": "A conceptual guide to entity-resolution failure modes and evidence-first repair planning when AI-mediated systems misrepresent a brand.",
+      "url": "https://masonnguyengeo.com/geo-reputation-repair",
       "author": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
       "publisher": { "@id": "https://masonnguyengeo.com/#mason-nguyen" },
-      "image": "https://masonnguyengeo.com/assets/[PAGE-SLUG]-og.jpg",
-      "mainEntityOfPage": "https://masonnguyengeo.com/[PAGE-SLUG]",
-      "keywords": "[keyword1], [keyword2], [keyword3]"
+      "mainEntityOfPage": "https://masonnguyengeo.com/geo-reputation-repair",
+      "keywords": "GEO reputation repair, entity resolution, AI representation, evidence-first remediation"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://masonnguyengeo.com" },
-        { "@type": "ListItem", "position": 2, "name": "[PAGE TITLE SHORT]", "item": "https://masonnguyengeo.com/[PAGE-SLUG]" }
+        { "@type": "ListItem", "position": 2, "name": "GEO Reputation Repair", "item": "https://masonnguyengeo.com/geo-reputation-repair" }
       ]
     }
   ]
@@ -70,7 +67,7 @@
 
 <header class="hero">
   <div class="container">
-    <div class="eyebrow">Case Study &amp; Guide</div>
+    <div class="eyebrow">Methodology Guide · Evidence Boundary</div>
     <h1>GEO Reputation Repair:<br><em>What To Do When AI Gets Your Brand Wrong</em></h1>
     <p class="hero-sub">
       AI models misrepresent brands in four distinct ways, each with a different root cause and a different repair path. This guide maps every failure mode and the signal protocol that corrects it.
@@ -87,28 +84,28 @@
       <div class="fm-cell fm-omission" role="listitem">
         <div class="fm-type">Failure Mode 1</div>
         <div class="fm-name">Omission</div>
-        <div class="fm-example">"I don't have reliable information about [Brand]."</div>
+        <div class="fm-example">Observed symptom: the entity is absent or cannot be resolved with enough confidence.</div>
         <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Entity never entered training or retrieval pipeline. No knowledge graph record, no schema, no indexed citations.</span></div>
         <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Entity architecture + knowledge graph registration</span></div>
       </div>
       <div class="fm-cell fm-commission" role="listitem">
         <div class="fm-type">Failure Mode 2</div>
         <div class="fm-name">Commission</div>
-        <div class="fm-example">"[Brand] is a [wrong category / wrong facts / wrong founder]."</div>
+        <div class="fm-example">Observed symptom: a response attaches unsupported category, factual, or identity information.</div>
         <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Conflicting signals at training time. Old indexed content, mismatched sameAs nodes, inconsistent naming across sources.</span></div>
         <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Signal correction + compiled-truth deployment</span></div>
       </div>
       <div class="fm-cell fm-displacement" role="listitem">
         <div class="fm-type">Failure Mode 3</div>
         <div class="fm-name">Displacement</div>
-        <div class="fm-example">"[Competitor] is the leading provider of [your category]."</div>
+        <div class="fm-example">Observed symptom: a more familiar entity is surfaced in place of the intended one.</div>
         <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Low entity confidence prompts the model to substitute a more familiar entity in the same space.</span></div>
         <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Entity disambiguation + ARM Authority build</span></div>
       </div>
       <div class="fm-cell fm-decay" role="listitem">
         <div class="fm-type">Failure Mode 4</div>
         <div class="fm-name">Decay</div>
-        <div class="fm-example">"[Brand] was founded in [old year] and focuses on [old description]."</div>
+        <div class="fm-example">Observed symptom: an earlier entity state persists after underlying facts have changed.</div>
         <div class="fm-row"><span class="fm-row-label">Root cause</span><span class="fm-row-val">Model captured an accurate earlier state; no fresh signals have displaced the stale training data.</span></div>
         <div class="fm-row"><span class="fm-row-label">Repair</span><span class="fm-row-val fm-repair-val">Signal freshness program + dateModified cadence</span></div>
       </div>
@@ -134,22 +131,9 @@
           <p>"Most brands try to fix AI misrepresentation by publishing more content. The actual problem is almost always upstream — a broken entity resolution step that no amount of content can compensate for."</p>
           <cite>— Mason Nguyen</cite>
         </div>
-        <div class="probe-block" aria-label="Before/after AI brand probe example">
-          <div class="probe-bar">
-            <div class="probe-dot pd-r"></div><div class="probe-dot pd-y"></div><div class="probe-dot pd-g"></div>
-            <span class="probe-title">PROBE AUDIT — Before / After</span>
-          </div>
-          <div class="probe-body">
-            <div class="probe-query">Query: <span>"Who is [Brand] and what do they do?"</span></div>
-            <div style="margin-bottom:0.625rem;">
-              <div class="probe-label label-before">Before repair</div>
-              <div class="probe-output po-bad" style="margin-top:0.375rem;">I don't have detailed information about [Brand]. They appear to be a company in the [adjacent category] space, possibly related to [competitor name].</div>
-            </div>
-            <div>
-              <div class="probe-label label-after">After repair — 74 days later</div>
-              <div class="probe-output po-good" style="margin-top:0.375rem;">[Brand] is a [correct category] company founded by [correct founder] in [correct year], focused on [accurate description]. They are known for [proprietary methodology / product] and serve [accurate audience].</div>
-            </div>
-          </div>
+        <div class="callout callout-info">
+          <div class="callout-title">Observation boundary</div>
+          This guide does not present synthetic model answers, simulated before-and-after output, or a representative customer result. A real review requires retained prompts, dated captures, source context, review criteria, and an accountable decision record.
         </div>
       </div>
     </div>
@@ -176,8 +160,8 @@
             <div class="protocol-step">
               <div class="ps-num">Q1</div>
               <div class="ps-content">
-                <div class="ps-title">Entity queries — direct brand lookup</div>
-                <div class="ps-body">"Who is [Brand]?" / "What does [Brand] do?" / "Who founded [Brand]?" Run on ChatGPT (no browsing), Claude, and Gemini to test trained-knowledge representation.</div>
+              <div class="ps-title">Entity queries — direct brand lookup</div>
+              <div class="ps-body">Use controlled questions covering identity, activity, ownership, and chronology. Retain the exact wording, system context, timestamp, and response for review rather than treating an illustrative query as evidence.</div>
               </div>
             </div>
             <div class="protocol-step">
@@ -311,49 +295,15 @@
   </div>
 </section>
 
-<!-- Case study -->
+<!-- Evidence boundary -->
 <section id="case-study">
   <div class="container">
-    <div class="section-label">Case study</div>
-    <h2 class="section-title">From displacement to citation leader in 90 days</h2>
-    <p class="section-body" style="margin-bottom:1.5rem;">A composite engagement — details anonymized. The brand is a specialist B2B infrastructure firm that rebranded 18 months before the engagement. Every AI model was either confusing them with a former competitor or returning the pre-rebrand description.</p>
-
-    <div class="case-study" itemscope itemtype="https://schema.org/CaseStudy">
-      <div class="cs-header">
-        <div>
-          <div class="cs-eyebrow">Composite case — anonymized</div>
-          <div class="cs-name" itemprop="name">B2B Infrastructure Firm — Post-Rebrand GEO Repair</div>
-        </div>
-        <div class="cs-tags">
-          <span class="cs-tag">Failure mode: Displacement + Commission</span>
-          <span class="cs-tag">Duration: 90 days</span>
-        </div>
-      </div>
-      <div class="cs-body">
-        <div class="cs-section">
-          <div class="cs-section-label">Situation</div>
-          <p>The firm rebranded 18 months prior. The old brand name was well-indexed in training data; the new name was not. Perplexity returned the former competitor's description when queried about the new brand name. ChatGPT (base) returned the pre-rebrand description with the old product focus. Google AI Overviews did not cite the firm at all for its three primary category queries.</p>
-        </div>
-        <div class="cs-before-after">
-          <div class="cs-ba-card cs-before">
-            <div class="cs-ba-label">Before — probe audit baseline</div>
-            <div class="cs-ba-text">Perplexity: returns competitor description · ChatGPT: pre-rebrand information, old focus, old year · Gemini: "I don't have reliable information" · Google AI Overviews: absent from all 3 category queries · Share of Model: 0% for new brand name</div>
-          </div>
-          <div class="cs-ba-card cs-after">
-            <div class="cs-ba-label">After — 90-day probe audit</div>
-            <div class="cs-ba-text">Perplexity: correct brand, description, focus · ChatGPT browsing: accurate current state · Gemini: Knowledge Panel active, correct description · Google AI Overviews: cited for 2 of 3 category queries · Share of Model: 34% for primary category query</div>
-          </div>
-        </div>
-        <div class="cs-section" style="margin-top:1.25rem;">
-          <div class="cs-section-label">Interventions applied</div>
-          <p>Entity anchor page with complete Organization schema deployed at canonical URL. Old brand name disambiguation page created at /[old-name] with redirect strategy. Wikidata record created for new brand name with P18 logo, P856 URL, P31 organization type. sameAs array built across 7 verified properties. Three editorial placements secured in indexed industry publications. dateModified cadence established across 4 priority pages.</p>
-        </div>
-        <div class="cs-metric-row">
-          <div class="cs-metric"><div class="cs-metric-num">74</div><div class="cs-metric-label">Days to first correct Perplexity citation</div></div>
-          <div class="cs-metric"><div class="cs-metric-num">34%</div><div class="cs-metric-label">Share of Model on primary category query at 90 days</div></div>
-          <div class="cs-metric"><div class="cs-metric-num">2/3</div><div class="cs-metric-label">Category queries with Google AI Overview citation</div></div>
-        </div>
-      </div>
+    <div class="section-label">Evidence boundary</div>
+    <h2 class="section-title">A repair narrative needs a source record before it becomes a public case study</h2>
+    <p class="section-body" style="margin-bottom:1.5rem;">This page does not publish an anonymized composite as if it were an observed engagement. Before-and-after representation claims, platform comparisons, timing, and outcome metrics require permission-cleared source material, retained captures, defined prompts, review criteria, and a decision owner.</p>
+    <div class="callout callout-info">
+      <div class="callout-title">Publication condition</div>
+      A future case record should identify the permitted evidence set, observation window, model and retrieval conditions, claim scope, reviewer, and any exclusions. Without those fields, the appropriate public state is methodology—not proof.
     </div>
   </div>
 </section>

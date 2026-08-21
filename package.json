@@ -14,7 +14,9 @@
     "validate:author": "node scripts/validate-author-page.mjs",
     "validate:what-is-geo": "node scripts/validate-what-is-geo.mjs",
     "validate:arm-framework": "node scripts/validate-arm-framework.mjs",
-    "validate:ai-visibility": "node scripts/validate-ai-visibility.mjs"
+    "validate:ai-visibility": "node scripts/validate-ai-visibility.mjs",
+    "validate:reputation-integrity": "node scripts/validate-reputation-integrity.mjs",
+    "validate:placeholder-schema": "node scripts/validate-placeholder-schema.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
