@@ -11,7 +11,8 @@
     "pm2:stop": "pm2 stop masonnguyengeo",
     "pm2:restart": "pm2 restart masonnguyengeo",
     "pm2:logs": "pm2 logs masonnguyengeo",
-    "validate:author": "node scripts/validate-author-page.mjs"
+    "validate:author": "node scripts/validate-author-page.mjs",
+    "validate:what-is-geo": "node scripts/validate-what-is-geo.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
