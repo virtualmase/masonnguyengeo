@@ -13,7 +13,8 @@
     "pm2:logs": "pm2 logs masonnguyengeo",
     "validate:author": "node scripts/validate-author-page.mjs",
     "validate:what-is-geo": "node scripts/validate-what-is-geo.mjs",
-    "validate:arm-framework": "node scripts/validate-arm-framework.mjs"
+    "validate:arm-framework": "node scripts/validate-arm-framework.mjs",
+    "validate:ai-visibility": "node scripts/validate-ai-visibility.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
