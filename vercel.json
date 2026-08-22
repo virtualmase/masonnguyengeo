@@ -2,6 +2,23 @@
   "version": 2,
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/what-is-geo/ai-visibility-strategy",
+      "destination": "/ai-visibility-strategy",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-geo/arm-framework",
+      "destination": "/arm-framework",
+      "permanent": true
+    },
+    {
+      "source": "/what-is-geo/seo-for-ai-brands",
+      "destination": "/seo-for-ai-brands",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
@@ -26,6 +43,10 @@
     {
       "source": "/sitemap",
       "destination": "/sitemap/index.html"
+    },
+    {
+      "source": "/glossary",
+      "destination": "/glossary/index.html"
     },
     {
       "source": "/glossary/arm-primitives",
@@ -86,6 +107,10 @@
     },
     {
       "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "site.webmanifest",
       "use": "@vercel/static"
     },
     {

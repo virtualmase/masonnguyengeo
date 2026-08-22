@@ -1,0 +1,21 @@
+{
+  "name": "Mason Nguyen GEO Research",
+  "short_name": "MN GEO",
+  "description": "Generative Engine Optimization research, the ARM Framework, and AI visibility infrastructure.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0c1322",
+  "theme_color": "#0c1322",
+  "icons": [
+    {
+      "src": "/assets/brand/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/brand/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

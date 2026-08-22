@@ -20,7 +20,9 @@
     "validate:about-skin": "node scripts/validate-about-skin.mjs",
     "validate:intelligence-infrastructure": "node scripts/validate-intelligence-infrastructure.mjs",
     "validate:sitemap-skin": "node scripts/validate-sitemap-skin.mjs",
-    "validate:ai-mastery": "node scripts/validate-ai-mastery.mjs"
+    "validate:ai-mastery": "node scripts/validate-ai-mastery.mjs",
+    "validate:indexability": "node scripts/validate-indexability.mjs",
+    "validate:seo": "node scripts/seo-audit.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
