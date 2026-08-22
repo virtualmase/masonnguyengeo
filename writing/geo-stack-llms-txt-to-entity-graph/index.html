@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/what-is-geo.css">
 <link rel="stylesheet" href="/assets/ai-visibility.css">
+<link rel="stylesheet" href="/assets/geo-stack.css">
 <link rel="stylesheet" href="/assets/research-shell.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
@@ -37,7 +38,7 @@
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 </head>
-<body class="geo-pillar ai-visibility-page" data-shell="research">
+<body class="geo-pillar ai-visibility-page geo-stack-page" data-shell="research">
 <div class="progress-bar" id="progress"></div>
 <script>document.addEventListener("scroll",function(){var e=document.documentElement,s=e.scrollTop/(e.scrollHeight-e.clientHeight);document.getElementById("progress").style.transform="scaleX("+s+")")});</script>
 <a class="skip" href="#main">Skip to main content</a>
@@ -49,14 +50,20 @@
   </nav>
 </header>
 <main id="main" class="page-wrap">
-  <header class="signal-hero"><div class="container">
-    <div class="breadcrumb"><a href="/">masonnguyengeo.com</a><span>/</span><a href="/sitemap">writing</a><span>/</span><span>geo-stack-llms-txt-to-entity-graph</span></div>
-    <div class="era-tag">Silo I · Signal Architecture · Updated August 2026</div>
-    <h1>The <span class="accent">GEO</span> Stack</h1>
-    <p class="subtitle">From public source pages and technical access to structured identity, optional inventories, and maintained evidence.</p>
-    <div class="meta-row"><div class="meta-item">Form: working map</div><div class="meta-item">Scope: public source systems</div><div class="meta-item">Method: declared layers</div><div class="meta-item">Status: complete</div></div>
-    <div class="scaffold-notice"><strong>Working boundary.</strong> The GEO Stack is Mason Nguyen’s working map for maintaining a legible public source system. It is not an industry standard, a required protocol, or a claim that a particular layer makes a model retrieve, cite, or represent a source.</div>
-  </div></header>
+  <header class="signal-hero">
+    <figure class="hero-art" aria-labelledby="geo-stack-art-caption"><img src="/assets/images/posts/geo-stack-editorial.png" alt="Six translucent blue strata rising from a documented source plane toward a field of connected identity references."><figcaption id="geo-stack-art-caption">Editorial system study · source to review</figcaption></figure>
+    <div class="container hero-layout">
+      <div class="breadcrumb"><a href="/">masonnguyengeo.com</a><span>/</span><a href="/sitemap">writing</a><span>/</span><span>geo-stack-llms-txt-to-entity-graph</span></div>
+      <div class="era-tag">Research record / Silo I · Signal architecture</div>
+      <h1>The <span class="accent">GEO</span> Stack</h1>
+      <p class="subtitle">A working map from public source material and technical access to structured identity, optional inventories, and a maintained record.</p>
+      <div class="hero-footer">
+        <div class="meta-row"><div class="meta-item">Form: working map</div><div class="meta-item">Scope: public source systems</div><div class="meta-item">Method: declared layers</div><div class="meta-item">Status: maintained</div></div>
+        <div class="hero-record"><span>Record 01 / scope</span><dl><div><dt>Source</dt><dd>Public record</dd></div><div><dt>Boundary</dt><dd>No guarantee</dd></div><div><dt>Review</dt><dd>August 2026</dd></div></dl></div>
+      </div>
+      <div class="scaffold-notice"><strong>Working boundary.</strong> The GEO Stack is Mason Nguyen’s working map for maintaining a legible public source system. It is not an industry standard, a required protocol, or a claim that a particular layer makes a model retrieve, cite, or represent a source.</div>
+    </div>
+  </header>
 
   <div class="signal-content"><div class="container">
     <article class="content-body">
@@ -67,14 +74,18 @@
       </div></section>
 
       <section id="six-layers"><div class="era-tag">02 / The six layers</div><h2>Build from the source outward.</h2>
-        <div class="visibility-grid">
-          <div class="visibility-card"><div class="card-num">01 / Source</div><h3>Public source material</h3><p>The substantive answer, named owner, primary evidence, scope, date, and method live in the page’s main content.</p></div>
-          <div class="visibility-card"><div class="card-num">02 / Access</div><h3>Technical access</h3><p>Canonical URLs, crawl controls, internal links, readable HTML, a sitemap, and a usable page experience create a maintainable route to the source.</p></div>
-          <div class="visibility-card"><div class="card-num">03 / Structure</div><h3>Structured data</h3><p>Accurate JSON-LD can provide explicit clues about visible page content. It should clarify the record already on the page.</p></div>
-          <div class="visibility-card"><div class="card-num">04 / Identity</div><h3>Entity references</h3><p>Truthful, relevant references can help a reader distinguish a person or organization from similarly named entities.</p></div>
-          <div class="visibility-card"><div class="card-num">05 / Inventory</div><h3>Supplemental inventory</h3><p>An llms.txt file or similar document can orient people or systems that elect to use it. Its function must be named honestly.</p></div>
-          <div class="visibility-card"><div class="card-num">06 / Review</div><h3>Maintenance record</h3><p>Source ownership, revisions, observations, and corrections keep the record useful after publication day.</p></div>
-        </div>
+        <figure class="stack-specimen" aria-labelledby="stack-specimen-caption">
+          <div class="specimen-head"><span>System specimen / 01</span><strong>Dependency runs upward</strong></div>
+          <ol class="stack-layers">
+            <li><span class="layer-num">01</span><strong>Source</strong><small>Answer, owner, evidence, scope.</small></li>
+            <li><span class="layer-num">02</span><strong>Access</strong><small>Routes, crawlability, internal paths.</small></li>
+            <li><span class="layer-num">03</span><strong>Structure</strong><small>Visible record, accurately described.</small></li>
+            <li><span class="layer-num">04</span><strong>Identity</strong><small>Truthful, unambiguous references.</small></li>
+            <li><span class="layer-num">05</span><strong>Inventory</strong><small>Optional orientation for real audiences.</small></li>
+            <li><span class="layer-num">06</span><strong>Review</strong><small>Ownership, revisions, correction record.</small></li>
+          </ol>
+          <figcaption id="stack-specimen-caption" class="stack-caption">The layers are a maintenance order, not a claim that a machine uses each layer or produces a particular outcome.</figcaption>
+        </figure>
       </section>
 
       <section id="source-and-access"><div class="era-tag">03 / Source and access</div><h2>The page has to carry the claim before the graph can clarify it.</h2><div class="section-body">
@@ -101,14 +112,14 @@
       </div></section>
 
       <section id="review-table"><div class="era-tag">07 / Review table</div><h2>Each layer has a real job—and a boundary.</h2><div class="section-body">
-        <table class="guide-table"><thead><tr><th>Layer</th><th>Useful practice</th><th>What it does not establish</th></tr></thead><tbody>
+        <div class="guide-table-wrap"><table class="guide-table"><thead><tr><th>Layer</th><th>Useful practice</th><th>What it does not establish</th></tr></thead><tbody>
           <tr><td>Public source</td><td>Publish a direct answer with author, evidence, date, scope, and related context.</td><td>That every system will view the claim as correct or authoritative.</td></tr>
           <tr><td>Technical access</td><td>Maintain crawlability, canonicals, internal links, stable URLs, and sitemap coverage.</td><td>That a source will be crawled, indexed, retrieved, or cited.</td></tr>
           <tr><td>Structured data</td><td>Use accurate markup aligned to the page’s visible content and validate it.</td><td>That a rich result, answer link, or citation will appear.</td></tr>
           <tr><td>Entity references</td><td>Link equivalent or official identifiers where the relationship is unambiguous and supported.</td><td>That a third-party profile transfers authority or resolves all ambiguity.</td></tr>
           <tr><td>llms.txt</td><td>Maintain a useful optional inventory for consumers that elect to use it.</td><td>That Google AI features will use it for ranking or citations.</td></tr>
           <tr><td>Maintenance</td><td>Record sources, revisions, review ownership, and observed results.</td><td>That a single observation proves causality or future performance.</td></tr>
-        </tbody></table>
+        </tbody></table></div>
       </div></section>
 
       <section id="working-order"><div class="era-tag">08 / Working order</div><h2>Do the durable work in the order it depends on.</h2><div class="method-steps">
