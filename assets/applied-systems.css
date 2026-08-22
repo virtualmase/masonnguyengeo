@@ -1,0 +1,107 @@
+body[data-shell='research'] .applied-systems-page.page-wrap { width: 100vw; max-width: 100vw !important; margin: 0 !important; padding: 0 !important; overflow: visible; }
+
+.applied-systems-page .systems-hero {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  min-height: clamp(39rem, 62vw, 53rem);
+  padding: clamp(2rem, 5vw, 4.25rem) 0 clamp(3.5rem, 7vw, 6rem);
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(6, 11, 23, .99) 0%, rgba(8, 15, 30, .96) 42%, rgba(10, 18, 36, .48) 100%), #0c1322;
+}
+.applied-systems-page .systems-hero::before { content: ''; position: absolute; inset: 0; z-index: -1; opacity: .56; background: linear-gradient(rgba(154,165,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(154,165,255,.08) 1px, transparent 1px); background-size: 100% 5.25rem, min(16vw, 190px) 100%; }
+.applied-systems-page .hero-art { position: absolute; inset: 0 0 0 39%; z-index: -2; margin: 0; overflow: hidden; }
+.applied-systems-page .hero-art::before, .applied-systems-page .hero-art::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.applied-systems-page .hero-art::before { background: linear-gradient(90deg, #0c1322 0%, rgba(12,19,34,.82) 20%, rgba(12,19,34,.06) 72%); }
+.applied-systems-page .hero-art::after { background: linear-gradient(0deg, rgba(12,19,34,.8), transparent 44%); }
+.applied-systems-page .hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 71% center; filter: saturate(.84) contrast(1.07); }
+.applied-systems-page .hero-art figcaption { position: absolute; right: clamp(1.25rem,4vw,4rem); bottom: 1.25rem; z-index: 2; color: rgba(243,239,230,.55); font: 500 .6rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.applied-systems-page .hero-layout { position: relative; max-width: 1180px; }
+.applied-systems-page .systems-hero .breadcrumb { max-width: 100%; margin: 0 0 clamp(2.4rem,5vw,4rem); color: rgba(243,239,230,.68); }
+.applied-systems-page .systems-hero h1 { max-width: 740px; margin: 0 0 1.25rem; font-size: clamp(3.8rem,8.2vw,7.4rem); font-weight: 800; letter-spacing: -.088em; line-height: .87; }
+.applied-systems-page .systems-hero .subtitle { max-width: 625px; margin: 0; font-size: clamp(1.02rem,1.7vw,1.22rem); line-height: 1.7; }
+.applied-systems-page .hero-footer { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 2.5rem; align-items: end; max-width: 845px; margin-top: clamp(2.6rem,6vw,5rem); }
+.applied-systems-page .meta-row { display: grid; grid-template-columns: repeat(2, max-content); gap: .65rem 1.25rem; margin: 0; }
+.applied-systems-page .hero-record { padding: 1rem 1.05rem; border: 1px solid rgba(154,165,255,.34); background: rgba(8,15,29,.58); backdrop-filter: blur(10px); }
+.applied-systems-page .hero-record > span { display: block; margin-bottom: .8rem; color: var(--geo-peri); font: 600 .61rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
+.applied-systems-page .hero-record dl { display: grid; grid-template-columns: 1fr; gap: .5rem; margin: 0; }
+.applied-systems-page .hero-record div { display: flex; justify-content: space-between; gap: .5rem; padding-top: .45rem; border-top: 1px solid rgba(154,165,255,.16); }
+.applied-systems-page .hero-record dt { color: #aeb8d0; font: 500 .59rem var(--mono); letter-spacing: .05em; text-transform: uppercase; }
+.applied-systems-page .hero-record dd { margin: 0; color: var(--geo-ivory); font: 600 .6rem var(--mono); text-align: right; }
+.applied-systems-page .scaffold-notice { max-width: 660px; margin-top: 1.8rem; padding: .95rem 1rem; border-color: rgba(154,165,255,.4); background: rgba(8,15,29,.65); font-size: .72rem; }
+
+.applied-systems-page .systems-field { width: 100vw; margin-left: calc(50% - 50vw); padding: clamp(4rem,8vw,7.5rem) 0; background: var(--geo-ivory); }
+.applied-systems-page .systems-field > .container { display: grid; grid-template-columns: minmax(0, 790px) minmax(210px,282px); align-items: start; gap: clamp(2.5rem,7vw,8rem); }
+.applied-systems-page .content-body { max-width: none; }
+.applied-systems-page .content-body > section { display: grid; grid-template-columns: minmax(92px,.22fr) minmax(0,1fr); column-gap: clamp(1.25rem,3vw,2.75rem); margin: 0; padding: clamp(3.2rem,7vw,6.2rem) 0; border-top: 1px solid var(--geo-line); }
+.applied-systems-page .content-body > section:first-child { padding-top: 0; border-top: 0; }
+.applied-systems-page .content-body > section > .era-tag { grid-column: 1; grid-row: 1 / span 4; padding-top: .32rem; color: var(--geo-ultra); font-size: .61rem; line-height: 1.55; }
+.applied-systems-page .content-body > section > h2, .applied-systems-page .content-body > section > .section-body, .applied-systems-page .content-body > section > .record-grid, .applied-systems-page .content-body > section > .record-standard, .applied-systems-page .content-body > section > .method-steps { grid-column: 2; }
+.applied-systems-page .content-body h2 { max-width: 665px; margin: 0 0 1.5rem; font-size: clamp(2rem,4.1vw,3.75rem); font-weight: 800; letter-spacing: -.072em; line-height: .98; }
+.applied-systems-page .content-body .section-body { max-width: 660px; color: var(--geo-slate); font-size: 1rem; line-height: 1.86; }
+.applied-systems-page .guide-lede { max-width: 660px; margin: 0 0 1.55rem; padding: 1.2rem 1.35rem; border-left-width: 2px; background: #e9e7ff; font-size: 1.03rem; }
+
+.applied-systems-page .record-grid { display: grid; gap: 1px; margin-top: .4rem; background: #263754; border: 1px solid #263754; }
+.applied-systems-page .record-card { position: relative; min-height: 285px; padding: clamp(1.3rem,3vw,2.2rem); overflow: hidden; color: var(--geo-ivory); background: #111c30; }
+.applied-systems-page .record-card::after { content: ''; position: absolute; right: -3rem; bottom: -4rem; width: 12rem; height: 12rem; border: 1px solid rgba(154,165,255,.22); border-radius: 50%; box-shadow: 0 0 0 2rem rgba(75,93,255,.05), 0 0 0 4rem rgba(75,93,255,.035); pointer-events: none; }
+.applied-systems-page .record-card:nth-child(2) { background: #141e31; }
+.applied-systems-page .record-card:nth-child(3) { background: #111a2a; }
+.applied-systems-page .record-card > * { position: relative; z-index: 1; }
+.applied-systems-page .record-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--geo-peri); font: 600 .6rem var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.applied-systems-page .phase-badge { padding: .32rem .45rem; border: 1px solid rgba(154,165,255,.42); color: #d9ddff; font-size: .56rem; }
+.applied-systems-page .record-card h3 { max-width: 15ch; margin: clamp(2.4rem,5vw,4.5rem) 0 .75rem; font-size: clamp(1.65rem,3.1vw,2.55rem); letter-spacing: -.065em; line-height: .98; }
+.applied-systems-page .record-card p { max-width: 48ch; margin: 0; color: #c1c9dc; font-size: .9rem; line-height: 1.62; }
+.applied-systems-page .record-card a { display: inline-flex; align-items: center; margin-top: 1.65rem; padding-bottom: .2rem; border-bottom: 1px solid var(--geo-peri); color: var(--geo-ivory); font: 600 .65rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+.applied-systems-page .record-card a:hover { color: var(--geo-peri); }
+.applied-systems-page .record-boundary { display: block; margin-top: 1.2rem; color: #94a1be; font: 500 .62rem var(--mono); line-height: 1.55; }
+
+.applied-systems-page .record-standard { position: relative; margin: 0; padding: clamp(1.3rem,3vw,2.15rem); overflow: hidden; border: 1px solid #263754; background: #111c30; color: var(--geo-ivory); }
+.applied-systems-page .record-standard::before { content: ''; position: absolute; inset: 0; opacity: .45; background: linear-gradient(rgba(154,165,255,.12) 1px, transparent 1px), linear-gradient(90deg,rgba(154,165,255,.09) 1px,transparent 1px), radial-gradient(circle at 88% 16%, rgba(75,93,255,.52), transparent 31%); background-size: 100% 3.25rem, 5.7rem 100%, auto; }
+.applied-systems-page .standard-head, .applied-systems-page .standard-list, .applied-systems-page .standard-caption { position: relative; z-index: 1; }
+.applied-systems-page .standard-head { display: flex; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(154,165,255,.26); }
+.applied-systems-page .standard-head span, .applied-systems-page .standard-caption { color: var(--geo-peri); font: 600 .61rem var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+.applied-systems-page .standard-head strong { color: var(--geo-ivory); font: 600 .77rem var(--mono); }
+.applied-systems-page .standard-list { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .55rem; margin: 1.4rem 0 1.25rem; padding: 0; list-style: none; }
+.applied-systems-page .standard-list li { min-height: 8rem; padding: .75rem; border: 1px solid rgba(154,165,255,.3); background: rgba(18,31,54,.58); }
+.applied-systems-page .standard-list b { display: block; color: var(--geo-peri); font: 600 .58rem var(--mono); }
+.applied-systems-page .standard-list strong { display: block; margin-top: .58rem; color: var(--geo-ivory); font: 700 .95rem var(--sans); letter-spacing: -.04em; }
+.applied-systems-page .standard-list small { display: block; margin-top: .4rem; color: #c6cde2; font-size: .68rem; line-height: 1.4; }
+.applied-systems-page .standard-caption { margin: 0; padding-top: 1rem; border-top: 1px solid rgba(154,165,255,.26); color: #b9c2d8; font-weight: 400; letter-spacing: .03em; line-height: 1.65; text-transform: none; }
+
+.applied-systems-page .method-steps { max-width: 680px; margin-top: 0; border-top: 1px solid var(--geo-line); }
+.applied-systems-page .method-step { display: grid; grid-template-columns: 3.35rem 1fr; gap: 1.1rem; margin: 0; padding: 1.45rem 0; border-bottom: 1px solid var(--geo-line); }
+.applied-systems-page .method-step > span { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border: 1px solid var(--geo-ultra); color: var(--geo-ultra); font: 600 .7rem var(--mono); }
+.applied-systems-page .method-step h3 { margin: 0 0 .4rem; color: var(--geo-ink); font-size: 1.12rem; letter-spacing: -.04em; }
+.applied-systems-page .method-step p { margin: 0; color: var(--geo-slate); line-height: 1.72; }
+.applied-systems-page .guide-links { position: sticky; top: 7rem; display: grid; gap: 0; padding: 0; border-top: 1px solid var(--geo-line); }
+.applied-systems-page .guide-links::before { content: 'Related research'; margin: 0; padding: 1rem 0 .85rem; color: var(--geo-ultra); font: 600 .61rem var(--mono); letter-spacing: .11em; text-transform: uppercase; }
+.applied-systems-page .guide-links a { display: block; padding: 1.15rem 0; border: 0; border-bottom: 1px solid var(--geo-line); background: transparent; text-decoration: none; transition: padding-left 160ms ease, color 160ms ease; }
+.applied-systems-page .guide-links a:hover { padding-left: .5rem; border-color: var(--geo-line); transform: none; }
+.applied-systems-page .guide-links span { color: var(--geo-ultra); font: 600 .58rem var(--mono); letter-spacing: .09em; text-transform: uppercase; }
+.applied-systems-page .guide-links strong { display: block; margin: .4rem 0; color: var(--geo-ink); font: 700 1rem var(--sans); letter-spacing: -.04em; line-height: 1.1; }
+.applied-systems-page .guide-links p { margin: 0; color: var(--geo-slate); font-size: .82rem; line-height: 1.55; }
+.applied-systems-page .page-cta { max-width: 1180px; margin: 0 auto clamp(4rem,8vw,7rem); border-color: #aeb8ff; box-shadow: 0 16px 32px rgba(75,93,255,.09); }
+
+@media (max-width: 880px) {
+  .applied-systems-page .systems-hero { min-height: auto; }
+  .applied-systems-page .hero-art { inset: 0; opacity: .38; }
+  .applied-systems-page .hero-art::before { background: rgba(12,19,34,.78); }
+  .applied-systems-page .hero-footer { grid-template-columns: minmax(0,1fr); max-width: 650px; gap: 1.3rem; }
+  .applied-systems-page .hero-record { max-width: 310px; }
+  .applied-systems-page .systems-field > .container { grid-template-columns: 1fr; }
+  .applied-systems-page .guide-links { position: static; max-width: 680px; grid-template-columns: repeat(2,minmax(0,1fr)); column-gap: 1.2rem; }
+  .applied-systems-page .guide-links::before { grid-column: 1 / -1; }
+}
+@media (max-width: 680px) {
+  .applied-systems-page .systems-hero { padding-bottom: 3.4rem; }
+  .applied-systems-page .systems-hero h1 { font-size: clamp(3.25rem,17vw,4.8rem); }
+  .applied-systems-page .hero-art { opacity: .26; }
+  .applied-systems-page .meta-row { grid-template-columns: 1fr; gap: .5rem; }
+  .applied-systems-page .hero-record { max-width: none; }
+  .applied-systems-page .content-body > section { display: block; padding: 3.2rem 0; }
+  .applied-systems-page .content-body > section > .era-tag { margin-bottom: 1rem; padding: 0; }
+  .applied-systems-page .content-body h2 { font-size: clamp(2rem,10.5vw,3.05rem); }
+  .applied-systems-page .standard-list { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .applied-systems-page .guide-links { grid-template-columns: 1fr; }
+}

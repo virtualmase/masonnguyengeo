@@ -24,7 +24,8 @@
     "validate:indexability": "node scripts/validate-indexability.mjs",
     "validate:seo": "node scripts/seo-audit.mjs",
     "validate:how-to-become-source": "node scripts/validate-how-to-become-source.mjs",
-    "validate:geo-stack": "node scripts/validate-geo-stack.mjs"
+    "validate:geo-stack": "node scripts/validate-geo-stack.mjs",
+    "validate:applied-systems": "node scripts/validate-applied-systems.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
