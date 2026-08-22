@@ -15,3 +15,11 @@ The page includes descriptive image alternative text, declared image dimensions,
 ## Remaining checks
 
 Run narrow-mobile visual inspection once the generated image has resolved, then commit only the route markup, the reusable style if changed, and this QA record. Production release must record the commit and deployment verification before the route is marked complete.
+
+## Production verification
+
+GitHub commit `2d037db4232f3567a190ae0e8c2425c86926bc84` triggered Vercel production deployment `dpl_AdD4B6gFVniHWJDcHiyh2HPmm9ku`, which reported `READY`. The canonical public route resolves through the `www` redirect and serves the editorial caption and unchanged claim boundary. The narrow-mobile visual capture was then completed and recorded below.
+
+## Narrow-mobile verification
+
+At a 390px viewport, the research navigation collapses to a compact menu, the breadcrumb and metadata wrap inside the masthead, and the editorial figure remains within the reading column with no observed horizontal overflow. The generated visual resolved successfully: its midnight and ivory source-record fields are visible beneath the metadata and maintain a clear separation from the article’s title and claim-boundary notice. The caption follows the image in the normal reading order.
