@@ -1,0 +1,9 @@
+{
+  "page_id": "3b1db2c4-244c-8153-8ec2-ec072c0250ca",
+  "command": "update_properties",
+  "properties": {
+    "Status": "Drafted",
+    "Algorithm Notes": "Drafted 2026-08-21: evidence-first stack map; llms.txt boundary explicit; no retrieval or citation guarantees."
+  },
+  "allow_async": true
+}

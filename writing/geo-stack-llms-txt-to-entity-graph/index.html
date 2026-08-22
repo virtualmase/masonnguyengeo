@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The GEO Stack: From llms.txt to Entity Graph | Mason Nguyen</title>
+<meta name="description" content="A working map of public source pages, technical access, structured data, entity references, optional llms.txt inventories, and maintained evidence.">
+<link rel="canonical" href="https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The GEO Stack: From llms.txt to Entity Graph | Mason Nguyen">
+<meta property="og:description" content="A working map for maintaining a legible public source system without treating any layer as a citation guarantee.">
+<meta property="og:url" content="https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph">
+<meta property="og:site_name" content="Mason Nguyen GEO">
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="text/plain" href="https://masonnguyengeo.com/llms.txt" title="AI Crawler Guidance">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/what-is-geo.css">
+<link rel="stylesheet" href="/assets/ai-visibility.css">
+<link rel="stylesheet" href="/assets/research-shell.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","@id":"https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph#article","headline":"The GEO Stack: From llms.txt to Entity Graph","description":"A working map of public source pages, technical access, structured data, entity references, optional llms.txt inventories, and maintained evidence.","url":"https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph","datePublished":"2026-08-21","dateModified":"2026-08-21","author":{"@id":"https://masonnguyengeo.com/#mason-nguyen"},"publisher":{"@id":"https://masonnguyengeo.com/#mason-nguyen"},"mainEntityOfPage":"https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph","keywords":"GEO technical stack, llms.txt, entity graph, structured data, sameAs, AI search"},
+  {"@type":"FAQPage","@id":"https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph#faq","mainEntity":[
+    {"@type":"Question","name":"Is the GEO Stack an industry standard?","acceptedAnswer":{"@type":"Answer","text":"No. The GEO Stack is Mason Nguyen’s working map for reviewing a public source system. It is not a standard, certification, required protocol, or a claim that any particular platform uses each layer in the same way."}},
+    {"@type":"Question","name":"Does llms.txt improve Google AI visibility?","acceptedAnswer":{"@type":"Answer","text":"Google says that it does not use llms.txt or other special AI text files for its generative Search features. An llms.txt file may still be maintained for people or systems that choose to use it, but it should not be represented as a Google ranking or citation requirement."}},
+    {"@type":"Question","name":"Should every organization create a Wikidata item?","acceptedAnswer":{"@type":"Answer","text":"No. Wikidata is a collaborative structured-data ecosystem, not an automatic credential. An entity reference should be truthful, relevant, independently supportable, and maintained; a project should not claim identity through a reference that does not unambiguously describe it."}},
+    {"@type":"Question","name":"What should a team build first?","acceptedAnswer":{"@type":"Answer","text":"Start with the substantive public source page: a direct answer, named owner, primary evidence, scope, date, and internal research path. Technical and entity layers should clarify a sound record, not compensate for its absence."}}
+  ]},
+  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://masonnguyengeo.com"},{"@type":"ListItem","position":2,"name":"Writing","item":"https://masonnguyengeo.com/sitemap"},{"@type":"ListItem","position":3,"name":"The GEO Stack","item":"https://masonnguyengeo.com/writing/geo-stack-llms-txt-to-entity-graph"}]}
+]}
+</script>
+<link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="geo-pillar ai-visibility-page" data-shell="research">
+<div class="progress-bar" id="progress"></div>
+<script>document.addEventListener("scroll",function(){var e=document.documentElement,s=e.scrollTop/(e.scrollHeight-e.clientHeight);document.getElementById("progress").style.transform="scaleX("+s+")")});</script>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="shell nav" aria-label="Primary navigation">
+    <a class="wordmark" href="/" aria-label="Mason Nguyen home"><b>MN</b><span>Mason Nguyen</span><small>/ research</small></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <ul class="nav-links" id="site-nav"><li><a href="/#research">Research</a></li><li><a href="/#reading">Guides</a></li><li><a href="/#index">Index</a></li><li><a href="/#method">Method</a></li><li><a href="/#reference">Reference</a></li><li><a class="nav-cta" href="tel:+19705798489" aria-label="Call Mason's agent Dominic at 970 579 8489">Call Dominic</a></li></ul>
+  </nav>
+</header>
+<main id="main" class="page-wrap">
+  <header class="signal-hero"><div class="container">
+    <div class="breadcrumb"><a href="/">masonnguyengeo.com</a><span>/</span><a href="/sitemap">writing</a><span>/</span><span>geo-stack-llms-txt-to-entity-graph</span></div>
+    <div class="era-tag">Silo I · Signal Architecture · Updated August 2026</div>
+    <h1>The <span class="accent">GEO</span> Stack</h1>
+    <p class="subtitle">From public source pages and technical access to structured identity, optional inventories, and maintained evidence.</p>
+    <div class="meta-row"><div class="meta-item">Form: working map</div><div class="meta-item">Scope: public source systems</div><div class="meta-item">Method: declared layers</div><div class="meta-item">Status: complete</div></div>
+    <div class="scaffold-notice"><strong>Working boundary.</strong> The GEO Stack is Mason Nguyen’s working map for maintaining a legible public source system. It is not an industry standard, a required protocol, or a claim that a particular layer makes a model retrieve, cite, or represent a source.</div>
+  </div></header>
+
+  <div class="signal-content"><div class="container">
+    <article class="content-body">
+      <section id="what-the-stack-is"><div class="era-tag">01 / What the stack is</div><h2>A maintenance map, not a visibility recipe.</h2><div class="section-body">
+        <p class="guide-lede"><strong>The stack begins with the source itself, not with a machine-readable file.</strong> It organizes the material a person or system may need to identify, interpret, retrieve, and revisit a public claim: the page, access path, structured description, identity references, optional inventories, and maintenance record.</p>
+        <p>Google says the foundational practices for Search also apply to its AI features. A page needs to be indexed and eligible for a Search snippet to be eligible as a supporting link; Google also says that meeting requirements does not guarantee crawling, indexing, or serving.<sup><a href="#source-ai-features">[1]</a></sup> The useful work is therefore preparation and maintenance—not a promise that a stack will produce a given answer-engine outcome.</p>
+        <p>Each layer should make the public record more understandable to a human reader. If it does not, it is probably a label in search of a purpose.</p>
+      </div></section>
+
+      <section id="six-layers"><div class="era-tag">02 / The six layers</div><h2>Build from the source outward.</h2>
+        <div class="visibility-grid">
+          <div class="visibility-card"><div class="card-num">01 / Source</div><h3>Public source material</h3><p>The substantive answer, named owner, primary evidence, scope, date, and method live in the page’s main content.</p></div>
+          <div class="visibility-card"><div class="card-num">02 / Access</div><h3>Technical access</h3><p>Canonical URLs, crawl controls, internal links, readable HTML, a sitemap, and a usable page experience create a maintainable route to the source.</p></div>
+          <div class="visibility-card"><div class="card-num">03 / Structure</div><h3>Structured data</h3><p>Accurate JSON-LD can provide explicit clues about visible page content. It should clarify the record already on the page.</p></div>
+          <div class="visibility-card"><div class="card-num">04 / Identity</div><h3>Entity references</h3><p>Truthful, relevant references can help a reader distinguish a person or organization from similarly named entities.</p></div>
+          <div class="visibility-card"><div class="card-num">05 / Inventory</div><h3>Supplemental inventory</h3><p>An llms.txt file or similar document can orient people or systems that elect to use it. Its function must be named honestly.</p></div>
+          <div class="visibility-card"><div class="card-num">06 / Review</div><h3>Maintenance record</h3><p>Source ownership, revisions, observations, and corrections keep the record useful after publication day.</p></div>
+        </div>
+      </section>
+
+      <section id="source-and-access"><div class="era-tag">03 / Source and access</div><h2>The page has to carry the claim before the graph can clarify it.</h2><div class="section-body">
+        <p>A public page should answer a real question in readable text and make its provenance clear. It should show who is speaking, where the support comes from, whether a statement is a definition or interpretation, when the record was last reviewed, and what uncertainty remains. This is the first layer because every other layer refers back to it.</p>
+        <p>The access layer makes that source reachable. Google’s AI-features documentation points to familiar foundations: allow crawling, make content discoverable through internal links, provide important content in text, maintain a good page experience, and keep structured data aligned with what visitors can see.<sup><a href="#source-ai-features">[1]</a></sup> These practices establish technical readiness; they do not establish authority by themselves.</p>
+        <p>On this site, the practical route is a stable canonical URL connected to related guides, the <a href="/sitemap">human Site Index</a>, and the XML sitemap. The <a href="/writing/how-to-become-source-llms-trust">source-record guide</a> explains the evidence and authorship layer in more detail.</p>
+      </div></section>
+
+      <section id="structured-data"><div class="era-tag">04 / Structure and identity</div><h2>Use markup and entity references as precise descriptions, not performative signals.</h2><div class="section-body">
+        <p>Google says structured data can provide explicit clues about a page’s meaning and may enable eligible rich results. It also says the markup should describe the page on which it appears, should not describe invisible content, and should favor complete, accurate properties over extensive but unreliable markup.<sup><a href="#source-structured-data">[2]</a></sup> A good implementation is a faithful summary of the visible record.</p>
+        <p>Schema.org defines <code>sameAs</code> as a reference URL that unambiguously indicates an item’s identity.<sup><a href="#source-sameas">[3]</a></sup> That makes it a precise relationship: it is appropriate for a true equivalent or official reference, not for a neighboring interest, an aspirational association, or a page that merely uses the same name.</p>
+        <p>Google’s Organization documentation says that relevant organization markup can help it understand administrative details and disambiguate organizations. It recommends using properties that apply to the organization and can be useful to visitors, such as name, URL, logo, and applicable external profile references.<sup><a href="#source-organization">[4]</a></sup> For the related site concept, see <a href="/knowledge-graph-authority">Knowledge Graph Authority</a> and the <a href="/glossary/entity-authority">Entity Authority</a> glossary entry.</p>
+      </div></section>
+
+      <section id="external-graphs"><div class="era-tag">05 / External graphs</div><h2>Reference ecosystems are not credentials.</h2><div class="section-body">
+        <p>Wikidata describes itself as a free, collaborative, multilingual secondary knowledge base that collects structured data, supports source-backed statements, and links information to other databases.<sup><a href="#source-wikidata">[5]</a></sup> It can be a relevant external identity reference when a maintained, independently supported record belongs there.</p>
+        <p>It is not an automatic next step for every person, project, or organization. A Wikidata item has its own editorial rules, sources, community review, and maintenance burden. Creating a thin or weakly supported record simply to obtain a graph reference makes identity harder to evaluate, not easier. The same caution applies to every third-party profile: use it when it truthfully reinforces an existing public record.</p>
+      </div></section>
+
+      <section id="llms-txt"><div class="era-tag">06 / llms.txt</div><h2>Inventory is useful only when its audience is real.</h2><div class="section-body">
+        <p>An <code>llms.txt</code> file can be a concise orientation document: a maintained list of important pages, terms, and boundaries for people or systems that choose to read it. It can improve the site owner’s own discipline by making its public research inventory explicit.</p>
+        <p>For Google generative Search, though, the boundary is clear. Google says it does not use <code>llms.txt</code> or other special AI text files for its generative Search features, and that such files neither help nor harm visibility or rankings in Google Search.<sup><a href="#source-ai-optimization">[6]</a></sup> A supplemental file should never be sold as a Google citation mechanism.</p>
+        <p>This site keeps <a href="/writing/llms-txt-not-for-search">a scope note on llms.txt</a> for that reason: an inventory can be maintained for the systems and people who use it, while the public HTML source, technical accessibility, and truthful entity record remain the primary work.</p>
+      </div></section>
+
+      <section id="review-table"><div class="era-tag">07 / Review table</div><h2>Each layer has a real job—and a boundary.</h2><div class="section-body">
+        <table class="guide-table"><thead><tr><th>Layer</th><th>Useful practice</th><th>What it does not establish</th></tr></thead><tbody>
+          <tr><td>Public source</td><td>Publish a direct answer with author, evidence, date, scope, and related context.</td><td>That every system will view the claim as correct or authoritative.</td></tr>
+          <tr><td>Technical access</td><td>Maintain crawlability, canonicals, internal links, stable URLs, and sitemap coverage.</td><td>That a source will be crawled, indexed, retrieved, or cited.</td></tr>
+          <tr><td>Structured data</td><td>Use accurate markup aligned to the page’s visible content and validate it.</td><td>That a rich result, answer link, or citation will appear.</td></tr>
+          <tr><td>Entity references</td><td>Link equivalent or official identifiers where the relationship is unambiguous and supported.</td><td>That a third-party profile transfers authority or resolves all ambiguity.</td></tr>
+          <tr><td>llms.txt</td><td>Maintain a useful optional inventory for consumers that elect to use it.</td><td>That Google AI features will use it for ranking or citations.</td></tr>
+          <tr><td>Maintenance</td><td>Record sources, revisions, review ownership, and observed results.</td><td>That a single observation proves causality or future performance.</td></tr>
+        </tbody></table>
+      </div></section>
+
+      <section id="working-order"><div class="era-tag">08 / Working order</div><h2>Do the durable work in the order it depends on.</h2><div class="method-steps">
+        <div class="method-step"><span>1</span><div><h3>Build the source page.</h3><p>Start with a consequential question, an answer, primary evidence, a named owner, and an honest claim boundary.</p></div></div>
+        <div class="method-step"><span>2</span><div><h3>Make the route accessible.</h3><p>Use a canonical URL, meaningful internal links, readable main content, and sitemap coverage. Test the actual delivered page.</p></div></div>
+        <div class="method-step"><span>3</span><div><h3>Describe what is visible.</h3><p>Add structured data that accurately reflects the page or organization. Validate syntax and correct mismatches.</p></div></div>
+        <div class="method-step"><span>4</span><div><h3>Maintain identity references carefully.</h3><p>Use only truthful, unambiguous official or equivalent references. Do not confuse a profile list with a knowledge graph.</p></div></div>
+        <div class="method-step"><span>5</span><div><h3>Add optional inventories deliberately.</h3><p>Publish llms.txt or similar files only when they serve an identified audience, and state their boundaries plainly.</p></div></div>
+        <div class="method-step"><span>6</span><div><h3>Review the whole record.</h3><p>Update sources, repair links, record observations, and separate observed platform behavior from causal claims.</p></div></div>
+      </div></section>
+
+      <section id="faq"><div class="era-tag">09 / FAQ</div><h2>Questions that keep the stack proportional.</h2><div class="faq-list">
+        <details><summary>Is the GEO Stack an industry standard?</summary><p>No. It is a working map for this research site, built to keep the public source system inspectable. It does not describe a required protocol or a universal platform behavior.</p></details>
+        <details><summary>Does llms.txt improve Google AI visibility?</summary><p>No. Google says it does not use llms.txt or similar AI text files for its generative Search features. The file may be useful for a service or person that elects to use it, but it should not be represented as a Google requirement.<sup><a href="#source-ai-optimization">[6]</a></sup></p></details>
+        <details><summary>Should every organization create a Wikidata item?</summary><p>No. A Wikidata record should be truthful, independently supported, relevant, and maintained. It is not an automatic authority credential or a substitute for the organization’s own public evidence.</p></details>
+        <details><summary>What should a team build first?</summary><p>Start with the substantive source page. Structured data, entity references, and inventories should clarify an existing, maintained record—not compensate for an absent one.</p></details>
+      </div></section>
+
+      <section id="sources"><div class="era-tag">Sources / primary documentation</div><h2>External context for the stack.</h2><div class="section-body"><p>These materials describe their respective systems and practices. They do not endorse this working model or establish a particular AI visibility outcome.</p></div>
+        <ol class="source-list">
+          <li id="source-ai-features"><span>[1] Official search guidance</span><a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google Search Central: AI features and your website</a><p>Search eligibility, foundational SEO practices, and the absence of special AI-feature requirements.</p></li>
+          <li id="source-structured-data"><span>[2] Official search documentation</span><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener">Google Search Central: Introduction to structured data markup</a><p>Visible-content alignment, accurate implementation, JSON-LD, and validation guidance.</p></li>
+          <li id="source-sameas"><span>[3] Vocabulary documentation</span><a href="https://schema.org/sameAs" target="_blank" rel="noopener">Schema.org: sameAs</a><p>The property definition for a reference URL that unambiguously indicates an item’s identity.</p></li>
+          <li id="source-organization"><span>[4] Official search documentation</span><a href="https://developers.google.com/search/docs/appearance/structured-data/organization" target="_blank" rel="noopener">Google Search Central: Organization structured data</a><p>Guidance on describing and disambiguating an organization with relevant, applicable structured data.</p></li>
+          <li id="source-wikidata"><span>[5] Project documentation</span><a href="https://www.wikidata.org/wiki/Wikidata:Introduction" target="_blank" rel="noopener">Wikidata: Introduction</a><p>Wikidata’s account of its collaborative, source-linked, structured-data repository.</p></li>
+          <li id="source-ai-optimization"><span>[6] Official search guidance</span><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">Google Search Central: Optimizing your website for generative AI features</a><p>Guidance on non-commodity content, technical structure, llms.txt, and unsupported generative-search tactics.</p></li>
+        </ol>
+      </section>
+    </article>
+
+    <aside class="guide-links" aria-label="Related research">
+      <a href="/writing/how-to-become-source-llms-trust"><span>Source record</span><strong>Become a Source LLMs Trust</strong><p>Build authorship, evidence, access, and maintenance into a usable public record.</p></a>
+      <a href="/ai-visibility-strategy"><span>Practice</span><strong>AI Visibility Strategy</strong><p>Prepare useful content without confusing readiness with a promised platform outcome.</p></a>
+      <a href="/knowledge-graph-authority"><span>Entity layer</span><strong>Knowledge Graph Authority</strong><p>How identity, references, and maintenance shape a coherent public source system.</p></a>
+      <a href="/glossary/entity-authority"><span>Definition</span><strong>Entity Authority</strong><p>The working definition for identity and evidence in this research map.</p></a>
+    </aside>
+  </div></div>
+  <div class="container"><div class="page-cta"><div class="cta-text"><div class="cta-eye">◈ Research inquiries · Mason's agent</div><div class="cta-title">Talk with Dominic, Mason's agent</div><p>For a research, collaboration, or commercial-routing inquiry, call (970) 579-8489. Dominic is Mason's agent and will route your question.</p></div><a href="tel:+19705798489" class="cta-btn" aria-label="Call Dominic at 970 579 8489">Call (970) 579-8489</a></div></div>
+</main>
+<footer class="site-footer"><div class="footer-inner"><div><div class="footer-brand"><span class="nav-dot"></span>Mason Nguyen — GEO Strategist</div><p class="footer-tagline">Generative Engine Optimization strategy, ARM Framework, and AI visibility infrastructure for the answer era.</p><div class="footer-social"><a href="https://linkedin.com/in/mason-nguyen" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://twitter.com/masonnguyengeo" target="_blank" rel="noopener" aria-label="X">X</a><a href="https://github.com/virtualmase" target="_blank" rel="noopener" aria-label="GitHub">gh</a></div></div><div><div class="footer-section-title">Navigate</div><nav class="footer-links" aria-label="Footer navigation"><a href="/">Home</a><a href="/what-is-geo">What is GEO</a><a href="/arm-framework">ARM Framework</a><a href="/ai-visibility-strategy">AI Visibility</a><a href="/aure-swarm">AURE Constellation</a><a href="/about">About</a><a href="/sitemap">Site Index</a></nav></div></div></footer>
+<script src="/assets/research-shell.js" defer></script>
+</body>
+</html>
