@@ -25,7 +25,8 @@
     "validate:seo": "node scripts/seo-audit.mjs",
     "validate:how-to-become-source": "node scripts/validate-how-to-become-source.mjs",
     "validate:geo-stack": "node scripts/validate-geo-stack.mjs",
-    "validate:applied-systems": "node scripts/validate-applied-systems.mjs"
+    "validate:applied-systems": "node scripts/validate-applied-systems.mjs",
+    "validate:aeo-vs-geo": "node scripts/validate-aeo-vs-geo.mjs"
   },
   "dependencies": {
     "compression": "^1.7.4",
