@@ -74,3 +74,35 @@
   .ai-visibility-page .meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
   .ai-visibility-page .page-cta { align-items: flex-start; }
 }
+
+
+/* Completed AI visibility guide components */
+.ai-visibility-page .guide-lede { margin: 0 0 1.25rem; padding: 1.15rem 1.25rem; border-left: 3px solid var(--geo-ultra); background: var(--geo-lilac); color: var(--geo-ink); font-size: 1.02rem; line-height: 1.72; }
+.ai-visibility-page .visibility-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.8rem; margin: 1.5rem 0; }
+.ai-visibility-page .visibility-card { padding: 1.25rem; border: 1px solid var(--geo-line); background: var(--geo-paper); }
+.ai-visibility-page .visibility-card .card-index, .ai-visibility-page .source-kicker, .ai-visibility-page .guide-table th { color: var(--geo-ultra); font-family: var(--mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.ai-visibility-page .visibility-card h3 { margin: 0.55rem 0 0.7rem; color: var(--geo-ink); font-family: var(--sans); font-size: 1.14rem; letter-spacing: -0.04em; }
+.ai-visibility-page .visibility-card p { margin: 0; color: var(--geo-slate); line-height: 1.7; }
+.ai-visibility-page .guide-table-wrap { margin: 1.45rem 0; overflow-x: auto; border: 1px solid var(--geo-line); }
+.ai-visibility-page .guide-table { width: 100%; border-collapse: collapse; background: var(--geo-paper); font-size: 0.92rem; }
+.ai-visibility-page .guide-table th, .ai-visibility-page .guide-table td { padding: 0.9rem 1rem; text-align: left; vertical-align: top; border-bottom: 1px solid var(--geo-line); }
+.ai-visibility-page .guide-table th { background: var(--geo-lilac); }
+.ai-visibility-page .guide-table td { color: var(--geo-slate); line-height: 1.62; }
+.ai-visibility-page .guide-table tr:last-child td { border-bottom: 0; }
+.ai-visibility-page .guide-steps { counter-reset: visibility; list-style: none; margin: 1.35rem 0 0; padding: 0; }
+.ai-visibility-page .guide-steps li { position: relative; min-height: 3rem; margin: 0; padding: 0.2rem 0 1.25rem 3.35rem; }
+.ai-visibility-page .guide-steps li::before { counter-increment: visibility; content: counter(visibility, decimal-leading-zero); position: absolute; top: 0; left: 0; color: var(--geo-ultra); font: 600 0.75rem var(--mono); }
+.ai-visibility-page .guide-steps li::after { content: ''; position: absolute; top: 1.45rem; bottom: 0.1rem; left: 0.65rem; border-left: 1px solid var(--geo-line); }
+.ai-visibility-page .guide-steps li:last-child::after { display: none; }
+.ai-visibility-page .guide-steps strong { display: block; margin-bottom: 0.22rem; color: var(--geo-ink); }
+.ai-visibility-page .myth-check { margin: 1.3rem 0 0; padding: 1rem 1.15rem; border: 1px solid #b8c0ff; background: var(--geo-lilac); color: var(--geo-ink); }
+.ai-visibility-page .source-list { margin: 1.3rem 0 0; padding: 0; list-style: none; }
+.ai-visibility-page .source-list li { margin-bottom: 0; padding: 1rem 0; border-top: 1px solid var(--geo-line); }
+.ai-visibility-page .source-list a { color: #3447e8; font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+.ai-visibility-page .source-list p { margin: 0.35rem 0 0; color: var(--geo-slate); font-size: 0.9rem; }
+
+@media (max-width: 760px) {
+  .ai-visibility-page .visibility-grid { grid-template-columns: 1fr; }
+  .ai-visibility-page .guide-table { min-width: 640px; }
+  .ai-visibility-page .guide-table th, .ai-visibility-page .guide-table td { padding: 0.75rem; }
+}
