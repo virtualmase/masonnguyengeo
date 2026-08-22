@@ -11,11 +11,13 @@ const requiredPageFragments = [
   '<link rel="stylesheet" href="/assets/aure.css">',
   '<meta name="robots" content="noindex, follow">',
   '<link rel="canonical" href="https://masonnguyengeo.com/aure-swarm">',
-  'AURE is not a swarm',
-  'forensic review',
-  'in-house review method',
-  'https://swellmarketing.xyz/about/',
-  'Skip to AURE research',
+  "AURE is Swell Marketing's forensic agent review method",
+  "AI Agent Evaluation and Forensic Review",
+  "AURE is not a swarm",
+  "testing failure modes",
+  "in-house review method",
+  "https://swellmarketing.xyz/contact/",
+  "Skip to AURE review method",
   'aria-label="Primary navigation"'
 ];
 
@@ -23,8 +25,10 @@ for (const fragment of requiredPageFragments) {
   assert.ok(page.includes(fragment), `Missing required AURE fragment: ${fragment}`);
 }
 
-assert.ok(!page.includes("AURE Swarm"), "The AURE route still uses the deprecated AURE Swarm name.");
-assert.ok(!page.includes("16-agent"), "The AURE route still claims a fixed agent count.");
+for (const deprecated of ["AURE Swarm", "sibling research context", "sibling intelligence-architecture context", "sibling organization", "first constraint", "16-agent", "—"]) {
+  assert.ok(!page.includes(deprecated), `Deprecated AURE language remains: ${deprecated}`);
+}
+
 assert.ok(css.includes("body.aure-page"), "AURE must retain route-scoped styling.");
 assert.ok(css.includes(".aure-page .site-header { position: sticky"), "AURE must retain the sticky header contract.");
 assert.ok(css.includes("@media (prefers-reduced-motion: reduce)"), "AURE must preserve a reduced-motion path.");
