@@ -1,0 +1,146 @@
+/* AURE Constellation — page-specific presentation */
+.aure-constellation-page {
+  background:
+    radial-gradient(circle at 78% 11%, rgba(201, 168, 76, 0.08), transparent 23rem),
+    radial-gradient(circle at 18% 38%, rgba(74, 111, 165, 0.10), transparent 24rem),
+    var(--void);
+}
+
+.aure-constellation-page .page-wrap { padding-bottom: 2.5rem; }
+.aure-constellation-page .subtitle { max-width: 760px; }
+.aure-constellation-page .constellation-meta { margin-bottom: 2rem; }
+.aure-constellation-page .content-body.constellation-body { max-width: 960px; }
+.aure-constellation-page .section-body { max-width: 760px; }
+
+.constellation-opening {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1.2rem;
+  max-width: 860px;
+  margin: 0 0 3.5rem;
+  padding: 1.55rem 1.7rem;
+  border: var(--rule);
+  border-left: 2px solid var(--gold);
+  border-radius: var(--radius);
+  background: linear-gradient(120deg, rgba(201, 168, 76, 0.10), rgba(74, 111, 165, 0.05));
+  box-shadow: var(--shadow-gold);
+}
+
+.constellation-opening-mark {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+  font-size: 1.15rem;
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.14);
+}
+
+.constellation-kicker,
+.constellation-principles-label {
+  font-family: var(--mono);
+  color: var(--gold);
+  font-size: 0.69rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.constellation-opening p { margin: 0; color: var(--text-muted); }
+.constellation-opening strong { color: var(--parchment); }
+
+.constellation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin: 1.4rem 0 0;
+}
+
+.constellation-card {
+  position: relative;
+  min-height: 12rem;
+  padding: 1.35rem 1.4rem;
+  border: var(--rule);
+  border-radius: var(--radius);
+  background: linear-gradient(150deg, rgba(255,255,255,0.025), rgba(255,255,255,0));
+  overflow: hidden;
+}
+
+.constellation-card::after {
+  content: '';
+  position: absolute;
+  top: 1.35rem;
+  right: 1.35rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.7;
+  box-shadow: 0 0 12px var(--gold);
+}
+
+.constellation-card-index {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold-dim);
+}
+
+.constellation-card h3 {
+  margin-top: 0.7rem;
+  color: var(--parchment);
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+
+.constellation-card p { color: var(--text-muted); font-size: 0.93rem; line-height: 1.65; }
+
+.constellation-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 1.8rem 0 0;
+  padding: 1.1rem 1.2rem;
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+  color: var(--text-muted);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.constellation-flow div { display: flex; align-items: center; gap: 0.75rem; }
+.constellation-flow span { color: var(--gold); font-size: 0.9rem; }
+
+.constellation-principles {
+  max-width: 960px;
+  margin: 4rem 0 1rem;
+  padding: 1.75rem;
+  border: var(--rule-strong);
+  border-radius: var(--radius);
+  background: linear-gradient(130deg, rgba(201,168,76,0.08), rgba(74,111,165,0.07));
+}
+
+.constellation-principles-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.constellation-principles-list div { padding-top: 0.75rem; border-top: 1px solid rgba(201, 168, 76, 0.26); }
+.constellation-principles-list span { display: block; color: var(--parchment); font-family: var(--serif); font-size: 1.3rem; font-weight: 600; }
+.constellation-principles-list p { margin: 0; color: var(--text-muted); font-size: 0.85rem; }
+
+.constellation-related { margin-top: 2.5rem; }
+
+@media (max-width: 720px) {
+  .constellation-grid,
+  .constellation-principles-list { grid-template-columns: 1fr; }
+  .constellation-card { min-height: 0; }
+  .constellation-opening { padding: 1.25rem; }
+  .constellation-flow { gap: 0.4rem 0.6rem; }
+}
