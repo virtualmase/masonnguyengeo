@@ -33,3 +33,7 @@ The first image-system slice adds one original, text-free conceptual figure imme
 At desktop width, the figure sits inside the same fixed-width research reading column and preserves the title-to-lead sequence. At narrow mobile width, the frame and caption stay inside the viewport with no observed horizontal overflow; the caption wraps below the image and the research header remains readable. The figure uses a descriptive alternative text, declared dimensions, asynchronous decode behavior, and a fixed aspect ratio to protect the reading flow from image-layout shift.
 
 The route contract, indexability validation, and SEO audit were re-run after the image integration and passed: 32 canonical routes, 32 sitemap URLs, and zero critical SEO errors.
+
+## Production verification — 2026-08-22
+
+GitHub commit `8675ecfcdf8f9c934d94da157d4549399338fa7e` triggered Vercel production deployment `dpl_5Gpya9WyLAZ2U4s5Lp48tFuiiTNf`, which reported `READY`. The canonical public route resolved through the `www` redirect and served the editorial figure, explicit caption, published research-note label, and existing source-bounded copy. The release-control record was updated with this commit, deployment time, and live-route evidence.
