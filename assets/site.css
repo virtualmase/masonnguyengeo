@@ -1,39 +1,45 @@
 /* ============================================================
    masonnguyengeo.com — Enhanced Site Stylesheet v2.0
-   Design system: void/parchment/gold (dark premium editorial)
+   Design system: ultramarine/ivory (dark research editorial)
    Fonts: Cormorant Garamond (serif), Inter (sans), JetBrains Mono (mono)
-   Updated: 2026-08-07 — Added editorial layers, component styles, visual depth
+   Updated: 2026-08-21 — Original ultramarine-and-ivory foundation migration
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
   /* Core palette */
-  --void:        #0A0A0A;
-  --surface:     #111114;
-  --surface-2:   #16161A;
-  --surface-3:   #1C1C22;
-  --parchment:   #F5F0E8;
-  --text-muted:  #7A7570;
-  --text-dim:    #5A5550;
-  --gold:        #C9A84C;
-  --gold-dim:    #9a7d38;
-  --gold-glow:   rgba(201,168,76,0.08);
-  --gold-soft:   rgba(201,168,76,0.04);
-  --signal:      #C9A84C;
-  --conviction:  #8B2E2E;
-  --green:       #3d9970;
-  --blue:        #4A6FA5;
+  --void:        #060A14;
+  --surface:     #0F1930;
+  --surface-2:   #14213B;
+  --surface-3:   #1A2A49;
+  --parchment:   #F7F1E3;
+  --text-muted:  #A4B0C6;
+  --text-dim:    #7C8AA5;
+  --ultra:       #4B5DFF;
+  --ultra-action:#1F46C8;
+  --peri:        #9AA5FF;
+  --signal:      var(--ultra);
+  --conviction:  #D8604A;
+  --green:       #57B987;
+  --blue:        var(--peri);
+
+  /* Semantic compatibility aliases: retain component contracts while rendering ultramarine, never gold. */
+  --gold:        var(--peri);
+  --gold-dim:    #8293E8;
+  --gold-glow:   rgba(75,93,255,0.16);
+  --gold-soft:   rgba(75,93,255,0.08);
 
   /* Borders & rules */
-  --rule:        1px solid rgba(201,168,76,0.12);
-  --rule-strong: 1px solid rgba(201,168,76,0.28);
-  --rule-faint:  1px solid rgba(255,255,255,0.04);
+  --rule:        1px solid rgba(154,165,255,0.20);
+  --rule-strong: 1px solid rgba(154,165,255,0.42);
+  --rule-faint:  1px solid rgba(255,255,255,0.08);
 
   /* Shadows */
   --shadow-sm:   0 2px 8px rgba(0,0,0,0.3);
   --shadow-md:   0 4px 24px rgba(0,0,0,0.4);
-  --shadow-gold: 0 0 24px rgba(201,168,76,0.06);
+  --shadow-ultra: 0 0 28px rgba(75,93,255,0.12);
+  --shadow-gold: var(--shadow-ultra);
 
   /* Typography */
   --serif:  'Cormorant Garamond', Georgia, serif;
@@ -64,8 +70,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a { color: var(--gold); text-decoration: none; transition: color 0.2s var(--ease); }
+a { color: var(--peri); text-decoration: none; transition: color 0.2s var(--ease); }
 a:hover { color: var(--parchment); }
+
+:focus-visible {
+  outline: 3px solid var(--peri);
+  outline-offset: 4px;
+}
 
 /* ===== READING PROGRESS BAR ===== */
 .progress-bar {
@@ -82,7 +93,7 @@ a:hover { color: var(--parchment); }
   position: sticky; top: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 0.75rem clamp(1rem, 5vw, 3rem);
-  background: rgba(10,10,10,0.85);
+  background: rgba(6,10,20,0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: var(--rule);
@@ -1548,27 +1559,31 @@ section {
 
 /* ===== LIGHT THEME ===== */
 [data-theme="light"] {
-  --void:        #F5F0E8;
-  --surface:     #EDEAE3;
-  --surface-2:   #E5E1D8;
-  --surface-3:   #DDD8CC;
-  --parchment:   #1A1A1A;
-  --text-muted:  #5A5550;
-  --text-dim:    #8A857F;
-  --gold:        #9a7d18;
-  --gold-dim:    #c8a96e;
-  --gold-glow:   rgba(154,125,24,0.08);
-  --gold-soft:   rgba(154,125,24,0.04);
-  --signal:      #9a7d18;
-  --conviction:  #8B2E2E;
-  --green:       #2d7d50;
-  --blue:        #3A5F95;
-  --rule:        1px solid rgba(154,125,24,0.15);
-  --rule-strong: 1px solid rgba(154,125,24,0.3);
+  --void:        #F7F1E3;
+  --surface:     #FFFDF8;
+  --surface-2:   #EEF2FF;
+  --surface-3:   #DEE5FA;
+  --parchment:   #071A4A;
+  --text-muted:  #4C5A76;
+  --text-dim:    #63718C;
+  --ultra:       #4B5DFF;
+  --ultra-action:#1F46C8;
+  --peri:        #1F46C8;
+  --gold:        var(--ultra-action);
+  --gold-dim:    var(--ultra-action);
+  --gold-glow:   rgba(31,70,200,0.10);
+  --gold-soft:   rgba(31,70,200,0.06);
+  --signal:      var(--ultra-action);
+  --conviction:  #A13F31;
+  --green:       #276D51;
+  --blue:        var(--ultra-action);
+  --rule:        1px solid rgba(31,70,200,0.16);
+  --rule-strong: 1px solid rgba(31,70,200,0.32);
   --rule-faint:  1px solid rgba(0,0,0,0.06);
   --shadow-sm:   0 2px 8px rgba(0,0,0,0.08);
   --shadow-md:   0 4px 24px rgba(0,0,0,0.1);
-  --shadow-gold: 0 0 24px rgba(154,125,24,0.06);
+  --shadow-ultra: 0 0 28px rgba(31,70,200,0.10);
+  --shadow-gold: var(--shadow-ultra);
 }
 
 [data-theme="light"] body {
@@ -1577,7 +1592,7 @@ section {
 }
 
 [data-theme="light"] .site-nav-bar {
-  background: rgba(245,240,232,0.88);
+  background: rgba(247,241,227,0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
