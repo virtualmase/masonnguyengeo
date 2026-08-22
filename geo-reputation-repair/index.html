@@ -39,23 +39,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="/assets/research-shell.css">
 </head>
-<body>
+<body data-shell="research">
 
 <div class="progress-bar" id="progress"></div>
 
-<nav class="site-nav-bar">
-  <a href="/" class="nav-wordmark"><span class="nav-dot"></span>Mason Nguyen</a>
-  <div class="nav-links">
-    <a href="/what-is-geo">GEO</a>
-    <a href="/arm-framework">ARM</a>
-    <a href="/ai-visibility-strategy">AI Visibility</a>
-    <a href="/aure-swarm">AURE</a>
-    <a href="/about">About</a>
-    <a href="/sitemap" class="cta">Index</a>
-  
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><span class="icon-moon">☾</span><span class="icon-sun">☀</span></button></div>
-</nav>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="shell nav" aria-label="Primary navigation">
+    <a class="wordmark" href="/" aria-label="Mason Nguyen home"><b>MN</b><span>Mason Nguyen</span><small>/ research</small></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="/#research">Research</a></li>
+      <li><a href="/#reading">Guides</a></li>
+      <li><a href="/#index">Index</a></li>
+      <li><a href="/#method">Method</a></li>
+      <li><a href="/#reference">Reference</a></li>
+      <li><a class="nav-cta" href="tel:+19705798489" aria-label="Call Mason's agent Dominic at 970 579 8489">Call Dominic</a></li>
+    </ul>
+  </nav>
+</header>
 
 <div class="breadcrumb">
   <div class="container">
@@ -441,5 +445,6 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 function toggleTheme(){var t=document.documentElement.getAttribute("data-theme");t=t==="light"?"dark":"light";document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch(e){}}
 try{var saved=localStorage.getItem("theme");if(saved){document.documentElement.setAttribute("data-theme",saved)}}catch(e){}
 </script>
+  <script src="/assets/research-shell.js" defer></script>
 </body>
 </html>

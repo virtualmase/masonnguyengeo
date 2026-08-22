@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const html = readFileSync(resolve(root, "ai-visibility-strategy/index.html"), "utf8");
+assert.match(html, /<body\s+class="geo-pillar ai-visibility-page"(?:\s+[^>]*)?>/, "Missing required body class: geo-pillar ai-visibility-page.");
 const css = readFileSync(resolve(root, "assets/ai-visibility.css"), "utf8");
 
 for (const token of [
@@ -13,7 +14,6 @@ for (const token of [
   '<link rel="stylesheet" href="/assets/site.css">',
   '<link rel="stylesheet" href="/assets/what-is-geo.css">',
   '<link rel="stylesheet" href="/assets/ai-visibility.css">',
-  '<body class="geo-pillar ai-visibility-page">',
   '<header class="signal-hero">',
   'SCAFFOLD — Content in progress.',
   '"@type": "Article"',
@@ -21,7 +21,7 @@ for (const token of [
   'href="/what-is-geo"',
   'href="/arm-framework"',
   'href="/knowledge-graph-authority"',
-  'href="https://swellmarketing.xyz"',
+  'href="tel:+19705798489"',
 ]) {
   assert.ok(html.includes(token), `Missing required AI Visibility markup: ${token}`);
 }

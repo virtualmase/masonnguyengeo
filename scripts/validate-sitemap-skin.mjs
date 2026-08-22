@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const html = readFileSync(resolve(root, "sitemap/index.html"), "utf8");
+assert.match(html, /<body\s+class="geo-pillar sitemap-directory"(?:\s+[^>]*)?>/, "Missing required body class: geo-pillar sitemap-directory.");
 const css = readFileSync(resolve(root, "assets/sitemap.css"), "utf8");
 
 for (const token of [
@@ -12,7 +13,6 @@ for (const token of [
   '"@type": "WebPage"',
   '<link rel="stylesheet" href="/assets/what-is-geo.css">',
   '<link rel="stylesheet" href="/assets/sitemap.css">',
-  '<body class="geo-pillar sitemap-directory">',
   'href="/intelligence-infrastructure"',
   'href="/llms.txt"',
   'href="/robots.txt"',

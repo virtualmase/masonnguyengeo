@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const html = readFileSync(resolve(root, "about/index.html"), "utf8");
+assert.match(html, /<body\s+class="geo-pillar about-page"(?:\s+[^>]*)?>/, "Missing required body class: geo-pillar about-page.");
 const css = readFileSync(resolve(root, "assets/about.css"), "utf8");
 
 for (const token of [
@@ -13,7 +14,6 @@ for (const token of [
   '<link rel="stylesheet" href="/assets/site.css">',
   '<link rel="stylesheet" href="/assets/what-is-geo.css">',
   '<link rel="stylesheet" href="/assets/about.css">',
-  '<body class="geo-pillar about-page">',
   'Every resource on this page is a non-affiliate external link.',
   'influences, not endorsers, partners, clients, or affiliates',
   'https://sparktoro.com/team/rand',

@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const html = readFileSync(resolve(root, "intelligence-infrastructure/index.html"), "utf8");
+assert.match(html, /<body\s+class="geo-pillar intelligence-infrastructure-page"(?:\s+[^>]*)?>/, "Missing required body class: geo-pillar intelligence-infrastructure-page.");
 const css = readFileSync(resolve(root, "assets/intelligence-infrastructure.css"), "utf8");
 
 for (const token of [
@@ -14,7 +15,6 @@ for (const token of [
   '"@type": "BreadcrumbList"',
   '<link rel="stylesheet" href="/assets/what-is-geo.css">',
   '<link rel="stylesheet" href="/assets/intelligence-infrastructure.css">',
-  '<body class="geo-pillar intelligence-infrastructure-page">',
   '<header class="infrastructure-hero">',
   'SCAFFOLD — Content in progress.',
   'href="/aure-swarm"',

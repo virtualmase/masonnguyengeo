@@ -11,14 +11,13 @@ const requiredMarkup = [
   '<link rel="canonical" href="https://masonnguyengeo.com/what-is-geo">',
   '<link rel="stylesheet" href="/assets/site.css">',
   '<link rel="stylesheet" href="/assets/what-is-geo.css">',
-  '<body class="geo-pillar">',
   '"@type": "Article"',
   '"@type": "FAQPage"',
   'What is Generative Engine Optimization?',
   'href="/arm-framework"',
   'href="/ai-visibility-strategy"',
   'href="/seo-for-ai-brands"',
-  'href="https://swellmarketing.xyz"',
+  'href="tel:+19705798489"',
   '<meta name="base:app_id" content="6a1834c7660a3f727dea7030">',
   '<meta name="base:app_id" content="6a0ada777abfff0aca7b16f5">',
 ];
@@ -26,6 +25,8 @@ const requiredMarkup = [
 for (const token of requiredMarkup) {
   assert.ok(html.includes(token), `Missing required What Is GEO markup: ${token}`);
 }
+
+assert.match(html, /<body\s+class="geo-pillar"(?:\s+[^>]*)?>/, "Missing required What Is GEO body class.");
 
 for (const token of [".geo-pillar", ":focus-visible", "prefers-reduced-motion", ".hero h1", ".definition-block"]) {
   assert.ok(css.includes(token), `Missing route-scoped visual safeguard: ${token}`);

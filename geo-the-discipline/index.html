@@ -17,23 +17,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="/assets/research-shell.css">
 </head>
-<body>
+<body data-shell="research">
 <div class="progress-bar" id="progress"></div>
 <script>document.addEventListener("scroll",function(){var e=document.documentElement,s=e.scrollTop/(e.scrollHeight-e.clientHeight);document.getElementById("progress").style.transform="scaleX("+s+")")});</script>
-<nav class="site-nav-bar">
-  <a href="/" class="nav-wordmark"><span class="nav-dot"></span>Mason Nguyen</a>
-  <div class="nav-links">
-    <a href="/what-is-geo">GEO</a>
-    <a href="/arm-framework">ARM</a>
-    <a href="/ai-visibility-strategy">AI Visibility</a>
-    <a href="/aure-swarm">AURE</a>
-    <a href="/about">About</a>
-    <a href="/sitemap" class="cta">Index</a>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme"><span class="icon-moon">☾</span><span class="icon-sun">☀</span></button>
-  </div>
-</nav>
-<main class="page-wrap">
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="shell nav" aria-label="Primary navigation">
+    <a class="wordmark" href="/" aria-label="Mason Nguyen home"><b>MN</b><span>Mason Nguyen</span><small>/ research</small></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <ul class="nav-links" id="site-nav">
+      <li><a href="/#research">Research</a></li>
+      <li><a href="/#reading">Guides</a></li>
+      <li><a href="/#index">Index</a></li>
+      <li><a href="/#method">Method</a></li>
+      <li><a href="/#reference">Reference</a></li>
+      <li><a class="nav-cta" href="tel:+19705798489" aria-label="Call Mason's agent Dominic at 970 579 8489">Call Dominic</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="main" class="page-wrap">
 <div class="breadcrumb"><a href="/">masonnguyengeo.com</a><span>/</span><span>geo-the-discipline</span></div>
 <div class="era-tag">◈ Future · Manifesto · 4,000+ words</div>
 <h1><span class="accent">GEO </span>as a Discipline</h1>
@@ -88,11 +92,11 @@
 </div>
 <div class="page-cta">
   <div class="cta-text">
-    <div class="cta-eye">◈ GEO Strategy · Swell Marketing</div>
-    <div class="cta-title">Work with Mason Nguyen</div>
-    <p>GEO strategy, entity architecture, and signal infrastructure for AI-era brands.</p>
+    <div class="cta-eye">◈ Research inquiries · Mason's agent</div>
+    <div class="cta-title">Talk with Dominic, Mason's agent</div>
+    <p>For a research, collaboration, or commercial-routing inquiry, call (970) 579-8489. Dominic is Mason's agent and will route your question.</p>
   </div>
-  <a href="https://swellmarketing.xyz" class="cta-btn" target="_blank" rel="noopener">Swell Marketing ↗</a>
+  <a href="tel:+19705798489" class="cta-btn" aria-label="Call Dominic at 970 579 8489">Call (970) 579-8489</a>
 </div>
 </main>
 <footer class="site-footer">
@@ -125,5 +129,6 @@
 function toggleTheme(){var t=document.documentElement.getAttribute("data-theme");t=t==="light"?"dark":"light";document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch(e){}}
 try{var saved=localStorage.getItem("theme");if(saved){document.documentElement.setAttribute("data-theme",saved)}}catch(e){}
 </script>
+  <script src="/assets/research-shell.js" defer></script>
 </body>
 </html>
