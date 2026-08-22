@@ -1,5 +1,5 @@
 /* GEO Stack — editorial research record */
-body[data-shell='research'] .geo-stack-page.page-wrap { width: 100vw; max-width: 100vw !important; margin: 0 !important; padding: 0 !important; overflow: visible; }
+body.geo-stack-page[data-shell='research'] .page-wrap { width: 100vw; max-width: 100vw !important; margin: 0 !important; padding: 0 !important; overflow: visible; }
 .geo-stack-page .signal-hero {
   position: relative;
   width: 100vw;

@@ -1,52 +1,67 @@
-/* Intelligence Infrastructure override — isolated to /intelligence-infrastructure. */
+body.intelligence-infrastructure-page[data-shell='research'] .page-wrap { width: 100vw; max-width: 100vw !important; margin: 0 !important; padding: 0 !important; overflow: visible; }
+.intelligence-infrastructure-page .infrastructure-hero { position: relative; width: 100vw; margin-left: calc(50% - 50vw); min-height: clamp(39rem,62vw,53rem); padding: clamp(2rem,5vw,4.25rem) 0 clamp(3.5rem,7vw,6rem); isolation: isolate; overflow: hidden; background: linear-gradient(90deg,rgba(6,11,23,.99) 0%,rgba(8,15,30,.96) 42%,rgba(10,18,36,.48) 100%),#0c1322; }
+.intelligence-infrastructure-page .infrastructure-hero::before { content:''; position:absolute; inset:0; z-index:-1; opacity:.56; background:linear-gradient(rgba(154,165,255,.1) 1px,transparent 1px),linear-gradient(90deg,rgba(154,165,255,.08) 1px,transparent 1px); background-size:100% 5.25rem,min(16vw,190px) 100%; }
+.intelligence-infrastructure-page .hero-art { position:absolute; inset:0 0 0 39%; z-index:-2; margin:0; overflow:hidden; }
+.intelligence-infrastructure-page .hero-art::before,.intelligence-infrastructure-page .hero-art::after { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; }
+.intelligence-infrastructure-page .hero-art::before { background:linear-gradient(90deg,#0c1322 0%,rgba(12,19,34,.82) 20%,rgba(12,19,34,.06) 72%); }
+.intelligence-infrastructure-page .hero-art::after { background:linear-gradient(0deg,rgba(12,19,34,.8),transparent 44%); }
+.intelligence-infrastructure-page .hero-art img { width:100%; height:100%; object-fit:cover; object-position:72% center; filter:saturate(.82) contrast(1.07); }
+.intelligence-infrastructure-page .hero-art figcaption { position:absolute; right:clamp(1.25rem,4vw,4rem); bottom:1.25rem; z-index:2; color:rgba(243,239,230,.55); font:500 .6rem var(--mono); letter-spacing:.1em; text-transform:uppercase; }
+.intelligence-infrastructure-page .hero-layout { position:relative; max-width:1180px; }
+.intelligence-infrastructure-page .infrastructure-hero .breadcrumb { max-width:100%; margin:0 0 clamp(2.4rem,5vw,4rem); color:rgba(243,239,230,.68); }
+.intelligence-infrastructure-page .infrastructure-hero h1 { max-width:760px; margin:0 0 1.25rem; font-size:clamp(3.65rem,8vw,7.25rem); font-weight:800; letter-spacing:-.088em; line-height:.87; }
+.intelligence-infrastructure-page .infrastructure-hero .subtitle { max-width:625px; margin:0; font-size:clamp(1.02rem,1.7vw,1.22rem); line-height:1.7; }
+.intelligence-infrastructure-page .hero-footer { display:grid; grid-template-columns:minmax(0,1fr) 220px; gap:2.5rem; align-items:end; max-width:845px; margin-top:clamp(2.6rem,6vw,5rem); }
+.intelligence-infrastructure-page .meta-row { display:grid; grid-template-columns:repeat(2,max-content); gap:.65rem 1.25rem; margin:0; }
+.intelligence-infrastructure-page .hero-record { padding:1rem 1.05rem; border:1px solid rgba(154,165,255,.34); background:rgba(8,15,29,.58); backdrop-filter:blur(10px); }
+.intelligence-infrastructure-page .hero-record > span { display:block; margin-bottom:.8rem; color:var(--geo-peri); font:600 .61rem var(--mono); letter-spacing:.12em; text-transform:uppercase; }
+.intelligence-infrastructure-page .hero-record dl { display:grid; gap:.5rem; margin:0; }
+.intelligence-infrastructure-page .hero-record div { display:flex; justify-content:space-between; gap:.5rem; padding-top:.45rem; border-top:1px solid rgba(154,165,255,.16); }
+.intelligence-infrastructure-page .hero-record dt { color:#aeb8d0; font:500 .59rem var(--mono); letter-spacing:.05em; text-transform:uppercase; }
+.intelligence-infrastructure-page .hero-record dd { margin:0; color:var(--geo-ivory); font:600 .6rem var(--mono); text-align:right; }
+.intelligence-infrastructure-page .working-notice { max-width:660px; margin-top:1.8rem; padding:.95rem 1rem; border-color:rgba(154,165,255,.4); background:rgba(8,15,29,.65); font-size:.72rem; }
 
-.intelligence-infrastructure-page .page-wrap { max-width: none; margin: 0; padding: 0; }
-.intelligence-infrastructure-page .infrastructure-hero {
-  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3.5rem, 8vw, 6rem);
-  color: var(--geo-ivory);
-  background:
-    radial-gradient(circle at 84% 20%, rgba(75, 93, 255, 0.36), transparent 24rem),
-    linear-gradient(90deg, rgba(154, 165, 255, 0.11) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(154, 165, 255, 0.08) 1px, transparent 1px),
-    var(--geo-ink);
-  background-size: auto, min(20vw, 240px) 100%, 100% 6rem, auto;
-}
-.intelligence-infrastructure-page .infrastructure-hero .container,
-.intelligence-infrastructure-page .infrastructure-content .container { max-width: 1180px; }
-.intelligence-infrastructure-page .infrastructure-hero .breadcrumb { margin: 0 0 2.4rem; padding: 0 0 1rem; background: transparent; border-bottom: 1px solid rgba(154, 165, 255, 0.2); }
-.intelligence-infrastructure-page .era-tag { color: var(--geo-peri); font-family: var(--mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.11em; }
-.intelligence-infrastructure-page h1 { max-width: 900px; margin-bottom: 1.15rem; color: var(--geo-ivory); font-family: var(--sans); font-size: clamp(3rem, 7vw, 5.8rem); font-weight: 800; letter-spacing: -0.075em; line-height: 0.94; text-wrap: balance; }
-.intelligence-infrastructure-page h1 .accent { color: var(--geo-peri); font-style: normal; }
-.intelligence-infrastructure-page .subtitle { max-width: 720px; margin-bottom: 2rem; color: #d5ddef; font-family: var(--sans); font-size: clamp(1.05rem, 2vw, 1.25rem); font-style: normal; line-height: 1.65; }
-.intelligence-infrastructure-page .meta-row { max-width: 930px; margin: 0 0 1rem; padding: 0; background: transparent; border: 0; border-radius: 0; color: #c0cadd; }
-.intelligence-infrastructure-page .meta-item { gap: 0.5rem; }
-.intelligence-infrastructure-page .meta-item::before { content: ""; width: 5px; height: 5px; background: var(--geo-peri); border-radius: 0; }
-.intelligence-infrastructure-page .scaffold-notice { max-width: 930px; margin: 0; padding: 1rem 1.1rem; color: #d3daff; background: rgba(18, 28, 48, 0.78); border: 1px solid rgba(154, 165, 255, 0.42); border-left: 3px solid var(--geo-ultra); border-radius: 0; font-size: 0.72rem; line-height: 1.65; }
-.intelligence-infrastructure-page .infrastructure-content { padding: clamp(3.5rem, 7vw, 6rem) 0; background: var(--geo-ivory); }
-.intelligence-infrastructure-page .content-body { max-width: 780px; }
-.intelligence-infrastructure-page .content-body section { margin: 0; padding: clamp(2.1rem, 4vw, 3.5rem) 0; border-top: 1px solid var(--geo-line); }
-.intelligence-infrastructure-page .content-body section:first-child { padding-top: 0; border-top: 0; }
-.intelligence-infrastructure-page .content-body h2 { color: var(--geo-ink); font-family: var(--sans); font-size: clamp(1.7rem, 3.5vw, 2.8rem); font-weight: 800; letter-spacing: -0.055em; line-height: 1.05; text-wrap: balance; }
-.intelligence-infrastructure-page .content-body h2::before { display: none; }
-.intelligence-infrastructure-page .content-body .section-body { color: var(--geo-slate); line-height: 1.82; }
-.intelligence-infrastructure-page .content-body .section-body strong { color: var(--geo-ink); }
-.intelligence-infrastructure-page .content-body li { margin-bottom: 0.75rem; }
-.intelligence-infrastructure-page .content-body li::marker { color: var(--geo-ultra); }
-.intelligence-infrastructure-page .related-grid { max-width: 1180px; margin: clamp(3rem, 6vw, 5rem) 0 0; padding-top: 1.3rem; border-top: 1px solid var(--geo-line); }
-.intelligence-infrastructure-page .related-card { border: 1px solid var(--geo-line); border-radius: 0; background: var(--geo-paper); box-shadow: none; }
-.intelligence-infrastructure-page .related-card:hover { border-color: var(--geo-ultra); transform: translateY(-2px); }
-.intelligence-infrastructure-page .related-card .rc-label { color: var(--geo-ultra); }
-.intelligence-infrastructure-page .related-card .rc-title { color: var(--geo-ink); font-family: var(--sans); }
-.intelligence-infrastructure-page .related-card .rc-desc { color: var(--geo-slate); }
-.intelligence-infrastructure-page .page-cta { max-width: 1180px; margin: clamp(3rem, 6vw, 5rem) 0 0; padding: clamp(1.5rem, 4vw, 2.5rem); border: 1px solid #b8c0ff; border-radius: 0; background: var(--geo-lilac); }
-.intelligence-infrastructure-page .cta-eye { color: var(--geo-ultra); }
-.intelligence-infrastructure-page .cta-title { color: var(--geo-ink); font-family: var(--sans); font-size: clamp(1.3rem, 2.5vw, 1.8rem); letter-spacing: -0.04em; }
-.intelligence-infrastructure-page .cta-text p { color: var(--geo-slate); }
-.intelligence-infrastructure-page .cta-btn { border-radius: 0; background: var(--geo-ultra); color: white; }
-@media (max-width: 768px) {
-  .intelligence-infrastructure-page .infrastructure-hero { background-size: auto, 132px 100%, 100% 6rem, auto; }
-  .intelligence-infrastructure-page .infrastructure-hero .breadcrumb { margin-bottom: 2rem; }
-  .intelligence-infrastructure-page h1 { letter-spacing: -0.08em; }
-  .intelligence-infrastructure-page .meta-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-  .intelligence-infrastructure-page .page-cta { align-items: flex-start; }
-}
+.intelligence-infrastructure-page .infrastructure-content { width:100vw; margin-left:calc(50% - 50vw); padding:clamp(4rem,8vw,7.5rem) 0; background:var(--geo-ivory); }
+.intelligence-infrastructure-page .infrastructure-content > .container { display:grid; grid-template-columns:minmax(0,790px) minmax(210px,282px); align-items:start; gap:clamp(2.5rem,7vw,8rem); }
+.intelligence-infrastructure-page .content-body { max-width:none; }
+.intelligence-infrastructure-page .content-body > section { display:grid; grid-template-columns:minmax(92px,.22fr) minmax(0,1fr); column-gap:clamp(1.25rem,3vw,2.75rem); margin:0; padding:clamp(3.2rem,7vw,6.2rem) 0; border-top:1px solid var(--geo-line); }
+.intelligence-infrastructure-page .content-body > section:first-child { padding-top:0; border-top:0; }
+.intelligence-infrastructure-page .content-body > section > .era-tag { grid-column:1; grid-row:1 / span 4; padding-top:.32rem; color:var(--geo-ultra); font-size:.61rem; line-height:1.55; }
+.intelligence-infrastructure-page .content-body > section > h2,.intelligence-infrastructure-page .content-body > section > .section-body,.intelligence-infrastructure-page .content-body > section > .infrastructure-specimen,.intelligence-infrastructure-page .content-body > section > .method-steps,.intelligence-infrastructure-page .content-body > section > .guide-table-wrap,.intelligence-infrastructure-page .content-body > section > .source-list { grid-column:2; }
+.intelligence-infrastructure-page .content-body h2 { max-width:665px; margin:0 0 1.5rem; font-size:clamp(2rem,4.1vw,3.75rem); font-weight:800; letter-spacing:-.072em; line-height:.98; }
+.intelligence-infrastructure-page .content-body .section-body { max-width:660px; color:var(--geo-slate); font-size:1rem; line-height:1.86; }
+.intelligence-infrastructure-page .guide-lede { max-width:660px; margin:0 0 1.55rem; padding:1.2rem 1.35rem; border-left-width:2px; background:#e9e7ff; font-size:1.03rem; }
+
+.intelligence-infrastructure-page .infrastructure-specimen { position:relative; margin:0; padding:clamp(1.3rem,3vw,2.2rem); overflow:hidden; border:1px solid #263754; background:#111c30; color:var(--geo-ivory); }
+.intelligence-infrastructure-page .infrastructure-specimen::before { content:''; position:absolute; inset:0; opacity:.44; background:linear-gradient(rgba(154,165,255,.14) 1px,transparent 1px),linear-gradient(90deg,rgba(154,165,255,.1) 1px,transparent 1px),radial-gradient(circle at 88% 16%,rgba(75,93,255,.55),transparent 32%); background-size:100% 3.5rem,6rem 100%,auto; }
+.intelligence-infrastructure-page .specimen-head,.intelligence-infrastructure-page .infrastructure-layers,.intelligence-infrastructure-page .specimen-caption { position:relative; z-index:1; }
+.intelligence-infrastructure-page .specimen-head { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-bottom:1rem; border-bottom:1px solid rgba(154,165,255,.26); }
+.intelligence-infrastructure-page .specimen-head span,.intelligence-infrastructure-page .specimen-caption { color:var(--geo-peri); font:600 .61rem var(--mono); letter-spacing:.11em; text-transform:uppercase; }
+.intelligence-infrastructure-page .specimen-head strong { color:var(--geo-ivory); font:600 .77rem var(--mono); }
+.intelligence-infrastructure-page .infrastructure-layers { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.55rem; margin:1.4rem 0 1.25rem; padding:0; list-style:none; }
+.intelligence-infrastructure-page .infrastructure-layers li { min-height:8.5rem; padding:.8rem; border:1px solid rgba(154,165,255,.3); background:rgba(18,31,54,.58); }
+.intelligence-infrastructure-page .infrastructure-layers li:nth-child(2) { transform:translateY(-.45rem); }
+.intelligence-infrastructure-page .infrastructure-layers li:nth-child(3) { transform:translateY(-.9rem); }
+.intelligence-infrastructure-page .infrastructure-layers li:nth-child(4) { transform:translateY(-1.35rem); background:rgba(75,93,255,.22); }
+.intelligence-infrastructure-page .infrastructure-layers b { display:block; color:#b7c0ff; font:600 .58rem var(--mono); }
+.intelligence-infrastructure-page .infrastructure-layers strong { display:block; margin-top:.58rem; color:var(--geo-ivory); font:700 clamp(.75rem,1.3vw,.98rem) var(--sans); letter-spacing:-.04em; }
+.intelligence-infrastructure-page .infrastructure-layers small { display:block; margin-top:.4rem; color:#c6cde2; font-size:.69rem; line-height:1.38; }
+.intelligence-infrastructure-page .specimen-caption { margin:0; padding-top:1rem; border-top:1px solid rgba(154,165,255,.26); color:#b9c2d8; font-weight:400; letter-spacing:.03em; line-height:1.65; text-transform:none; }
+
+.intelligence-infrastructure-page .method-steps { max-width:680px; margin-top:0; border-top:1px solid var(--geo-line); }
+.intelligence-infrastructure-page .method-step { display:grid; grid-template-columns:3.35rem 1fr; gap:1.1rem; margin:0; padding:1.45rem 0; border-bottom:1px solid var(--geo-line); }
+.intelligence-infrastructure-page .method-step > span { display:grid; place-items:center; width:2.25rem; height:2.25rem; border:1px solid var(--geo-ultra); color:var(--geo-ultra); font:600 .7rem var(--mono); }
+.intelligence-infrastructure-page .method-step h3 { margin:0 0 .4rem; color:var(--geo-ink); font-size:1.12rem; letter-spacing:-.04em; }
+.intelligence-infrastructure-page .method-step p { margin:0; color:var(--geo-slate); line-height:1.72; }
+.intelligence-infrastructure-page .guide-table { border:1px solid var(--geo-line); box-shadow:0 14px 32px rgba(12,19,34,.06); }
+.intelligence-infrastructure-page .guide-links { position:sticky; top:7rem; display:grid; gap:0; padding:0; border-top:1px solid var(--geo-line); }
+.intelligence-infrastructure-page .guide-links::before { content:'Research paths'; margin:0; padding:1rem 0 .85rem; color:var(--geo-ultra); font:600 .61rem var(--mono); letter-spacing:.11em; text-transform:uppercase; }
+.intelligence-infrastructure-page .guide-links a { display:block; padding:1.15rem 0; border:0; border-bottom:1px solid var(--geo-line); background:transparent; text-decoration:none; transition:padding-left 160ms ease; }
+.intelligence-infrastructure-page .guide-links a:hover { padding-left:.5rem; border-color:var(--geo-line); transform:none; }
+.intelligence-infrastructure-page .guide-links span { color:var(--geo-ultra); font:600 .58rem var(--mono); letter-spacing:.09em; text-transform:uppercase; }
+.intelligence-infrastructure-page .guide-links strong { display:block; margin:.4rem 0; color:var(--geo-ink); font:700 1rem var(--sans); letter-spacing:-.04em; line-height:1.1; }
+.intelligence-infrastructure-page .guide-links p { margin:0; color:var(--geo-slate); font-size:.82rem; line-height:1.55; }
+.intelligence-infrastructure-page .page-cta { max-width:1180px; margin:0 auto clamp(4rem,8vw,7rem); border-color:#aeb8ff; box-shadow:0 16px 32px rgba(75,93,255,.09); }
+
+@media (max-width:880px) { .intelligence-infrastructure-page .infrastructure-hero { min-height:auto; } .intelligence-infrastructure-page .hero-art { inset:0; opacity:.38; } .intelligence-infrastructure-page .hero-art::before { background:rgba(12,19,34,.78); } .intelligence-infrastructure-page .hero-footer { grid-template-columns:minmax(0,1fr); max-width:650px; gap:1.3rem; } .intelligence-infrastructure-page .hero-record { max-width:310px; } .intelligence-infrastructure-page .infrastructure-content > .container { grid-template-columns:1fr; } .intelligence-infrastructure-page .guide-links { position:static; max-width:680px; grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:1.2rem; } .intelligence-infrastructure-page .guide-links::before { grid-column:1 / -1; } }
+@media (max-width:680px) { .intelligence-infrastructure-page .infrastructure-hero { padding-bottom:3.4rem; } .intelligence-infrastructure-page .infrastructure-hero h1 { font-size:clamp(3.25rem,17vw,4.8rem); } .intelligence-infrastructure-page .hero-art { opacity:.26; } .intelligence-infrastructure-page .meta-row { grid-template-columns:1fr; gap:.5rem; } .intelligence-infrastructure-page .hero-record { max-width:none; } .intelligence-infrastructure-page .content-body > section { display:block; padding:3.2rem 0; } .intelligence-infrastructure-page .content-body > section > .era-tag { margin-bottom:1rem; padding:0; } .intelligence-infrastructure-page .content-body h2 { font-size:clamp(2rem,10.5vw,3.05rem); } .intelligence-infrastructure-page .infrastructure-layers { grid-template-columns:repeat(2,minmax(0,1fr)); } .intelligence-infrastructure-page .infrastructure-layers li:nth-child(n) { min-height:6.5rem; transform:none; } .intelligence-infrastructure-page .guide-links { grid-template-columns:1fr; } }

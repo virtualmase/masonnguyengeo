@@ -1,4 +1,4 @@
-body[data-shell='research'] .applied-systems-page.page-wrap { width: 100vw; max-width: 100vw !important; margin: 0 !important; padding: 0 !important; overflow: visible; }
+body.applied-systems-page[data-shell='research'] .page-wrap { width: 100vw; max-width: 100vw !important; margin: 0 !important; padding: 0 !important; overflow: visible; }
 
 .applied-systems-page .systems-hero {
   position: relative;

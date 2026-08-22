@@ -1,186 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intelligence Infrastructure Design for AI Systems — Mason Nguyen GEO</title>
-<meta name="description" content="How to design intelligence infrastructure for AI-native brands and agent systems. Protocol-level thinking for signal architecture, knowledge layers, and LLM-ready content.">
+<title>Intelligence Infrastructure: Public Records, Retrieval &amp; Review | Mason Nguyen</title>
+<meta name="description" content="A working model for maintaining public sources, retrieval paths, decision boundaries, and review records in AI-assisted systems.">
 <link rel="canonical" href="https://masonnguyengeo.com/intelligence-infrastructure">
-<meta name="base:app_id" content="6a1834c7660a3f727dea7030">
-<meta name="base:app_id" content="6a0ada777abfff0aca7b16f5">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Intelligence Infrastructure Design for AI Systems — Mason Nguyen GEO">
-<meta property="og:description" content="How to design intelligence infrastructure for AI-native brands and agent systems. Protocol-level thinking for signal architecture, knowledge layers, and LLM-ready content.">
+<meta property="og:title" content="Intelligence Infrastructure: Public Records, Retrieval &amp; Review | Mason Nguyen">
+<meta property="og:description" content="A working model for source records, retrieval paths, decision boundaries, and maintenance in AI-assisted systems.">
 <meta property="og:url" content="https://masonnguyengeo.com/intelligence-infrastructure">
 <meta property="og:site_name" content="Mason Nguyen GEO">
+<meta property="og:image" content="https://masonnguyengeo.com/assets/images/posts/intelligence-infrastructure-editorial.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Intelligence Infrastructure: Public Records, Retrieval &amp; Review | Mason Nguyen">
+<meta name="twitter:description" content="A working model for source records, retrieval paths, decision boundaries, and maintenance in AI-assisted systems.">
 <link rel="alternate" type="text/plain" href="https://masonnguyengeo.com/llms.txt" title="AI Crawler Guidance">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/what-is-geo.css">
+<link rel="stylesheet" href="/assets/ai-visibility.css">
 <link rel="stylesheet" href="/assets/intelligence-infrastructure.css">
+<link rel="stylesheet" href="/assets/research-shell.css">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Article",
-      "@id": "https://masonnguyengeo.com/intelligence-infrastructure#article",
-      "headline": "Intelligence Infrastructure: Why Your Brand Needs a Signal Architecture, Not Just Content",
-      "description": "Intelligence infrastructure is the full stack of systems, signals, and structures that make a brand machine-readable as an authoritative source. Covers the 5 components: entity layer, signal layer, retrieval layer, distribution layer, reinforcement layer.",
-      "url": "https://masonnguyengeo.com/intelligence-infrastructure",
-      "datePublished": "2026-07-07",
-      "dateModified": "2026-07-07",
-      "author": {
-        "@id": "https://masonnguyengeo.com/#mason-nguyen"
-      },
-      "publisher": {
-        "@id": "https://masonnguyengeo.com/#mason-nguyen"
-      },
-      "keywords": "intelligence infrastructure, signal architecture, GEO content strategy, AI brand authority, signal score, AURE ecosystem"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://masonnguyengeo.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Intelligence Infrastructure",
-          "item": "https://masonnguyengeo.com/intelligence-infrastructure"
-        }
-      ]
-    }
-  ]
-}
+{"@context":"https://schema.org","@graph":[
+  {"@type":"Article","@id":"https://masonnguyengeo.com/intelligence-infrastructure#article","headline":"Intelligence Infrastructure: Public Records, Retrieval, and Review","description":"A working model for maintaining public sources, retrieval paths, decision boundaries, and review records in AI-assisted systems.","url":"https://masonnguyengeo.com/intelligence-infrastructure","datePublished":"2026-08-21","dateModified":"2026-08-21","author":{"@id":"https://masonnguyengeo.com/#mason-nguyen"},"publisher":{"@id":"https://masonnguyengeo.com/#mason-nguyen"},"mainEntityOfPage":"https://masonnguyengeo.com/intelligence-infrastructure","keywords":"intelligence infrastructure, AI systems, retrieval paths, source records, AI governance, review systems"},
+  {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://masonnguyengeo.com"},{"@type":"ListItem","position":2,"name":"Intelligence Infrastructure","item":"https://masonnguyengeo.com/intelligence-infrastructure"}]}
+]}
 </script>
-  <link rel="stylesheet" href="/assets/research-shell.css">
-  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/assets/brand/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
-<body class="geo-pillar intelligence-infrastructure-page" data-shell="research">
+<body class="geo-pillar ai-visibility-page intelligence-infrastructure-page" data-shell="research">
 <div class="progress-bar" id="progress"></div>
 <script>document.addEventListener("scroll",function(){var e=document.documentElement,s=e.scrollTop/(e.scrollHeight-e.clientHeight);document.getElementById("progress").style.transform="scaleX("+s+")")});</script>
 <a class="skip" href="#main">Skip to main content</a>
-<header class="site-header">
-  <nav class="shell nav" aria-label="Primary navigation">
-    <a class="wordmark" href="/" aria-label="Mason Nguyen home"><b>MN</b><span>Mason Nguyen</span><small>/ research</small></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <ul class="nav-links" id="site-nav">
-      <li><a href="/#research">Research</a></li>
-      <li><a href="/#reading">Guides</a></li>
-      <li><a href="/#index">Index</a></li>
-      <li><a href="/#method">Method</a></li>
-      <li><a href="/#reference">Reference</a></li>
-      <li><a class="nav-cta" href="tel:+19705798489" aria-label="Connect with Mason's agent Dominic at 970 579 8489">Connect</a></li>
-    </ul>
-  </nav>
-</header>
+<header class="site-header"><nav class="shell nav" aria-label="Primary navigation"><a class="wordmark" href="/" aria-label="Mason Nguyen home"><b>MN</b><span>Mason Nguyen</span><small>/ research</small></a><button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><ul class="nav-links" id="site-nav"><li><a href="/#research">Research</a></li><li><a href="/#reading">Guides</a></li><li><a href="/#index">Index</a></li><li><a href="/#method">Method</a></li><li><a href="/#reference">Reference</a></li><li><a class="nav-cta" href="tel:+19705798489" aria-label="Connect with Mason's agent Dominic at 970 579 8489">Connect</a></li></ul></nav></header>
 <main id="main" class="page-wrap">
-<header class="infrastructure-hero">
-  <div class="container">
-    <div class="breadcrumb"><a href="/">masonnguyengeo.com</a><span>/</span><span>intelligence-infrastructure</span></div>
-    <div class="era-tag">Emerging · Pillar · 3,500+ words</div>
-    <h1><span class="accent">Intelligence </span>Infrastructure Design</h1>
-    <p class="subtitle">Protocol-level architecture for brands and agent systems operating in the AI era.</p>
-    <div class="meta-row"><div class="meta-item">Primary keyword: AI intelligence infrastructure</div><div class="meta-item">Est. volume: 920/mo</div><div class="meta-item">Era: Emerging</div><div class="meta-item">Status: Scaffold</div></div>
-    <div class="scaffold-notice">SCAFFOLD — Content in progress. This route remains explicitly incomplete and subject to its current robots directive.</div>
-  </div>
-</header>
-<div class="infrastructure-content"><div class="container"><div class="content-body">
+  <header class="infrastructure-hero">
+    <figure class="hero-art" aria-labelledby="infrastructure-art-caption"><img src="/assets/images/posts/intelligence-infrastructure-editorial.png" alt="Luminous blue source paths moving from an ivory evidence plane through a central review chamber into connected public records."><figcaption id="infrastructure-art-caption">Editorial system study · source to review</figcaption></figure>
+    <div class="container hero-layout">
+      <div class="breadcrumb"><a href="/">masonnguyengeo.com</a><span>/</span><span>intelligence-infrastructure</span></div>
+      <div class="era-tag">Research pillar / infrastructure · working model</div>
+      <h1>Intelligence <span class="accent">Infrastructure</span></h1>
+      <p class="subtitle">A working model for keeping public sources, retrieval paths, decision boundaries, and review records coherent as AI-assisted systems encounter them.</p>
+      <div class="hero-footer"><div class="meta-row"><div class="meta-item">Form: working model</div><div class="meta-item">Scope: public source systems</div><div class="meta-item">Method: traceable paths</div><div class="meta-item">Status: maintained</div></div><div class="hero-record"><span>Record 01 / scope</span><dl><div><dt>Source</dt><dd>Public record</dd></div><div><dt>Decision</dt><dd>Bounded</dd></div><div><dt>Review</dt><dd>Named owner</dd></div></dl></div></div>
+      <div class="working-notice"><strong>Working boundary.</strong> Intelligence Infrastructure is Mason Nguyen’s model for reviewing the public and operational layers around an AI-assisted system. It is not an industry standard, a compliance program, or a claim that a model, search engine, or agent will retrieve a given source or take a particular action.</div>
+    </div>
+  </header>
 
-<section>
+  <div class="infrastructure-content"><div class="container">
+    <article class="content-body">
+      <section id="definition"><div class="era-tag">01 / Definition</div><h2>Infrastructure is what lets a claim survive contact with a system.</h2><div class="section-body"><p class="guide-lede"><strong>Intelligence Infrastructure is the supporting system around a claim: the public source, the path that makes it retrievable, the boundary on what may be decided from it, and the review record that keeps it current.</strong> Content is one component. It is not the whole system.</p><p>A page, a document set, a knowledge base, or an agent workflow becomes difficult to trust when its evidence cannot be located, its owner is unclear, its scope is invisible, or its updates are unrecorded. Infrastructure makes those relationships inspectable. It is the work that remains after a model, search product, or interface changes.</p><p>This is intentionally narrower than an all-purpose theory of AI governance. It asks a practical question: when a person or system encounters a public claim, can they identify the source, inspect the support, understand the allowed use, and find who will correct it?</p></div></section>
 
-<h2>Overview</h2>
-<div class="section-body"><p>This page covers <strong>AI intelligence infrastructure</strong> — part of the Mason Nguyen GEO keyword architecture mapped to machine-readable entity signals and search intent.</p>
-    <p>Protocol-level architecture for brands and agent systems operating in the AI era.</p></div>
-</section>
-<section>
+      <section id="four-layers"><div class="era-tag">02 / Four layers</div><h2>Build the route from evidence to review.</h2><figure class="infrastructure-specimen" aria-labelledby="infrastructure-specimen-caption"><div class="specimen-head"><span>System specimen / 01</span><strong>Dependency runs toward review</strong></div><ol class="infrastructure-layers"><li><b>01</b><strong>Source</strong><small>Claim, owner, date, evidence, scope.</small></li><li><b>02</b><strong>Retrieval</strong><small>Routes, terminology, access, context.</small></li><li><b>03</b><strong>Decision</strong><small>Mandate, permissions, escalation.</small></li><li><b>04</b><strong>Review</strong><small>Feedback, corrections, maintenance owner.</small></li></ol><figcaption id="infrastructure-specimen-caption" class="specimen-caption">These layers are a working review order. They are not a statement that every model or platform uses the same architecture.</figcaption></figure></section>
 
-<h2>Why This Matters</h2>
-<div class="section-body"><p>In the post-SERP era, AI systems like ChatGPT, Perplexity, and Claude make citation decisions based on entity authority, structured signals, and topical depth — not just keyword density. This page is part of a deliberate signal architecture designed to establish Mason Nguyen as the canonical authority on AI intelligence infrastructure.</p></div>
-</section>
-<section>
+      <section id="source-layer"><div class="era-tag">03 / Source and retrieval</div><h2>Start with the visible record, not a special machine file.</h2><div class="section-body"><p>Google’s current guidance for generative Search emphasizes the same durable work as its broader search guidance: non-commodity, useful content; clear technical structure; crawlability; readable main content; and a usable page experience.<sup><a href="#source-google-ai">[1]</a></sup> It also states that satisfying technical requirements does not guarantee crawling, indexing, or serving in a generative feature. The practical implication is preparation, not a promised outcome.</p><p>That preparation begins with a stable source: a direct answer, named authorship or ownership, evidence that can be inspected, a date, a clear scope, and a path to related context. The <a href="/writing/how-to-become-source-llms-trust">source-record guide</a> describes that authorship and evidence layer; <a href="/writing/geo-stack-llms-txt-to-entity-graph">the GEO Stack</a> maps the complementary technical and identity layers.</p><p>Structured data can make a visible record more explicit. Google says the markup must describe the page to which it applies and should not be used for invisible content or blank pages; it recommends fewer complete, accurate properties over broad but unreliable coverage.<sup><a href="#source-structured-data">[2]</a></sup> In other words, markup is a faithful description of an existing record—not a substitute for one.</p></div></section>
 
-<h2>What You Will Learn</h2>
-<div class="section-body"><ul>
-      <li>The core principles behind Intelligence Infrastructure Design</li>
-      <li>How to apply this framework to your brand or system</li>
-      <li>Real-world examples from the Arctura, AURE, and ARM ecosystems</li>
-      <li>Actionable steps to implement immediately</li>
-    </ul></div>
-</section>
-<section>
+      <section id="retrieval-and-decision"><div class="era-tag">04 / Retrieval and decision</div><h2>A source path is not permission to act.</h2><div class="section-body"><p>Retrieval makes evidence available; it does not decide what should happen next. In a public system, retrieval may mean a canonical route, internal links, consistent terminology, citations, and a maintained sitemap. In an agent workflow, it may also include approved source sets, permissions, output constraints, and a way to disclose what was used.</p><p>The original RAG research describes combining a generative model with retrievable non-parametric memory and identifies provenance for decisions and updating world knowledge as open problems.<sup><a href="#source-rag">[3]</a></sup> A retrieved fragment can be relevant without being sufficient, current, authorized, or correctly interpreted. That is why a decision boundary belongs beside the retrieval path.</p><p><a href="/arm-framework">The ARM Framework</a> calls this mandate: name the task, constraints, evidence boundary, decision owner, and escalation point. The requirement is not bureaucratic overhead. It is what stops an available answer from being mistaken for permission.</p></div></section>
 
-<h2>Content Coming</h2>
-<div class="section-body"><p>Full article is in production per the keyword skyscraper roadmap. This scaffold page is live to establish crawlable signal and begin indexing the entity-to-topic association.</p></div>
-</section>
-<div class="related-grid">
-<a href="/aure-swarm" class="related-card">
-  <div class="rc-label">System</div>
-  <div class="rc-title">AURE Constellation</div>
-  <div class="rc-desc">Multi-agent AI infrastructure.</div>
-</a>
-<a href="/ai-native-systems-design" class="related-card">
-  <div class="rc-label">Design</div>
-  <div class="rc-title">AI-Native Systems Design</div>
-  <div class="rc-desc">Building for the agentic era.</div>
-</a>
-<a href="/systems-that-outlive-products" class="related-card">
-  <div class="rc-label">Philosophy</div>
-  <div class="rc-title">Systems That Outlive Products</div>
-  <div class="rc-desc">Permanent infrastructure thinking.</div>
-</a>
-</div>
-</div>
-<div class="page-cta">
-  <div class="cta-text">
-    <div class="cta-eye">◈ Research inquiries · Mason's agent</div>
-    <div class="cta-title">Talk with Dominic, Mason's agent</div>
-    <p>For a research, collaboration, or commercial-routing inquiry, call (970) 579-8489. Dominic is Mason's agent and will route your question.</p>
-  </div>
-  <a href="tel:+19705798489" class="cta-btn" aria-label="Call Dominic at 970 579 8489">Call (970) 579-8489</a>
-</div>
-</div></div></div>
+      <section id="review-loop"><div class="era-tag">05 / Review and maintenance</div><h2>What is not maintained eventually becomes an unsupported claim.</h2><div class="section-body"><p>NIST describes the AI Risk Management Framework as voluntary guidance for incorporating trustworthiness considerations into AI design, development, use, and evaluation. Its core functions—Govern, Map, Measure, and Manage—frame risk work as ongoing rather than a one-time launch event.<sup><a href="#source-nist">[4]</a></sup> This research model does not replace NIST guidance. It applies the same operational discipline to public and agent-facing source systems: name the owner, record the context, measure what was observed, and revise when the evidence changes.</p><p>For a research site, review can be as concrete as checking canonical delivery, correcting sources, maintaining an index, recording a publishing date, and distinguishing a definition from an observation. For a product or agent workflow, it may also include permissions, access logs, test cases, incident paths, and a human escalation owner. The appropriate detail depends on risk and use—not on a universal checklist.</p><p>The <a href="/applied-systems">Applied Systems Build Record</a> turns this principle into public practice. Each selected artifact names a phase, a visible evidence path, and the outcome claims it does not make.</p></div></section>
+
+      <section id="operating-order"><div class="era-tag">06 / Working order</div><h2>Make the infrastructure useful in the order it depends on.</h2><div class="method-steps"><div class="method-step"><span>1</span><div><h3>State the claim and owner.</h3><p>Write what the source is saying, who is responsible for it, what evidence supports it, and when it was last reviewed.</p></div></div><div class="method-step"><span>2</span><div><h3>Design the retrieval path.</h3><p>Use stable URLs, usable language, internal links, visible sources, and technical access that make the record understandable and reachable.</p></div></div><div class="method-step"><span>3</span><div><h3>Describe the visible record accurately.</h3><p>Add structured data or inventories only where they faithfully describe the public content and serve an identified reader or system.</p></div></div><div class="method-step"><span>4</span><div><h3>Set the mandate.</h3><p>Name what a person, process, or agent is allowed to decide from the material, and when uncertainty requires escalation.</p></div></div><div class="method-step"><span>5</span><div><h3>Review, correct, and preserve the observation.</h3><p>Record what changed, what was measured, and what remains uncertain. Keep observation separate from explanation and outcome from intention.</p></div></div></div></section>
+
+      <section id="layer-table"><div class="era-tag">07 / Layer table</div><h2>Each layer has a job—and a limit.</h2><div class="section-body"><div class="guide-table-wrap"><table class="guide-table"><thead><tr><th>Layer</th><th>Useful practice</th><th>What it does not establish</th></tr></thead><tbody><tr><td>Source</td><td>Publish the claim, owner, evidence, date, scope, and related context.</td><td>That every reader or system will consider the claim correct or authoritative.</td></tr><tr><td>Retrieval</td><td>Maintain crawlable, linked, readable paths to the evidence.</td><td>That a search engine, model, or agent will retrieve or use the source.</td></tr><tr><td>Structure</td><td>Use accurate markup and identifiers that match visible content.</td><td>That a rich result, citation, or resolved entity representation will occur.</td></tr><tr><td>Mandate</td><td>Name allowed actions, constraints, owner, and escalation.</td><td>That a system’s output is safe, complete, or appropriate in every context.</td></tr><tr><td>Review</td><td>Record observations, corrections, ownership, and maintenance dates.</td><td>That one review or observation proves causality or future performance.</td></tr></tbody></table></div></div></section>
+
+      <section id="sources"><div class="era-tag">Sources / primary documentation</div><h2>External context for the model.</h2><div class="section-body"><p>These sources describe their own systems and guidance. They inform the surrounding practices discussed here; they do not endorse this model or establish a particular AI visibility result.</p></div><ol class="source-list"><li id="source-google-ai"><span>[1] Official search guidance</span><a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">Google Search Central: Optimizing your website for generative AI features</a><p>Foundational SEO, non-commodity content, technical readiness, unsupported AI-search tactics, and non-guaranteed indexing or serving.</p></li><li id="source-structured-data"><span>[2] Official search documentation</span><a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data" target="_blank" rel="noopener">Google Search Central: Introduction to structured data markup</a><p>Accurate visible-content alignment, JSON-LD, validation, and guidance to prefer complete properties over unreliable coverage.</p></li><li id="source-rag"><span>[3] Research paper</span><a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener">Lewis et al. (2020): Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a><p>RAG architecture, retrievable non-parametric memory, and open problems around provenance and knowledge updates.</p></li><li id="source-nist"><span>[4] Government guidance</span><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener">NIST AI Risk Management Framework</a><p>Voluntary guidance for incorporating trustworthiness considerations across AI design, development, use, and evaluation.</p></li></ol></section>
+    </article>
+    <aside class="guide-links" aria-label="Related research"><a href="/writing/geo-stack-llms-txt-to-entity-graph"><span>Systems map</span><strong>The GEO Stack</strong><p>A public-source working map from evidence and access through identity and review.</p></a><a href="/arm-framework"><span>Method</span><strong>ARM Framework</strong><p>Authority, Retrieval, and Mandate as a bounded operational method.</p></a><a href="/applied-systems"><span>Build record</span><strong>Applied Systems</strong><p>Selected artifacts with a public link, current phase, and claim boundary.</p></a><a href="/ai-visibility-strategy"><span>Practice</span><strong>AI Visibility Strategy</strong><p>Technical readiness and source quality without platform-outcome promises.</p></a></aside>
+  </div></div>
+  <div class="container"><div class="page-cta"><div class="cta-text"><div class="cta-eye">◈ Research inquiries · Mason's agent</div><div class="cta-title">Connect through Dominic</div><p>For a research, collaboration, or commercial-routing inquiry, Dominic is Mason's agent and will route your question.</p></div><a href="tel:+19705798489" class="cta-btn" aria-label="Connect with Mason's agent Dominic at 970 579 8489">Connect</a></div></div>
 </main>
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand"><span class="nav-dot"></span>Mason Nguyen — GEO Strategist</div>
-      <p class="footer-tagline">Generative Engine Optimization strategy, ARM Framework, and AI visibility infrastructure for the answer era.</p>
-      <div class="footer-social">
-        <a href="https://linkedin.com/in/mason-nguyen" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
-        <a href="https://twitter.com/masonnguyengeo" target="_blank" rel="noopener" aria-label="X">X</a>
-        <a href="https://github.com/virtualmase" target="_blank" rel="noopener" aria-label="GitHub">gh</a>
-      </div>
-      <p class="footer-copy">© 2026 Mason Nguyen · masonnguyengeo.com · All rights reserved</p>
-    </div>
-    <div>
-      <div class="footer-section-title">Navigate</div>
-      <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/">Home</a>
-        <a href="/what-is-geo">What is GEO</a>
-        <a href="/arm-framework">ARM Framework</a>
-        <a href="/ai-visibility-strategy">AI Visibility</a>
-        <a href="/aure-swarm">AURE Constellation</a>
-        <a href="/about">About</a>
-        <a href="/sitemap">Site Index</a>
-      </nav>
-    </div>
-  </div>
-</footer>
-<script>
-function toggleTheme(){var t=document.documentElement.getAttribute("data-theme");t=t==="light"?"dark":"light";document.documentElement.setAttribute("data-theme",t);try{localStorage.setItem("theme",t)}catch(e){}}
-try{var saved=localStorage.getItem("theme");if(saved){document.documentElement.setAttribute("data-theme",saved)}}catch(e){}
-</script>
-  <script src="/assets/research-shell.js" defer></script>
+<footer class="site-footer"><div class="footer-inner"><div><div class="footer-brand"><span class="nav-dot"></span>Mason Nguyen — GEO Strategist</div><p class="footer-tagline">Generative Engine Optimization strategy, ARM Framework, and AI visibility infrastructure for the answer era.</p><div class="footer-social"><a href="https://linkedin.com/in/mason-nguyen" target="_blank" rel="noopener" aria-label="LinkedIn">in</a><a href="https://twitter.com/masonnguyengeo" target="_blank" rel="noopener" aria-label="X">X</a><a href="https://github.com/virtualmase" target="_blank" rel="noopener" aria-label="GitHub">gh</a></div></div><div><div class="footer-section-title">Navigate</div><nav class="footer-links" aria-label="Footer navigation"><a href="/">Home</a><a href="/what-is-geo">What is GEO</a><a href="/arm-framework">ARM Framework</a><a href="/ai-visibility-strategy">AI Visibility</a><a href="/applied-systems">Applied Systems</a><a href="/aure-swarm">AURE Constellation</a><a href="/about">About</a><a href="/sitemap">Site Index</a></nav></div></div></footer>
+<script src="/assets/research-shell.js" defer></script>
 </body>
 </html>
