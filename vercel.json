@@ -4,6 +4,16 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/aure-swarm",
+      "destination": "/aure",
+      "permanent": true
+    },
+    {
+      "source": "/aure-swarm/",
+      "destination": "/aure",
+      "permanent": true
+    },
+    {
       "source": "/what-is-geo/ai-visibility-strategy",
       "destination": "/ai-visibility-strategy",
       "permanent": true
@@ -15,6 +25,16 @@
     }
   ],
   "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "^aure\\.swellmarketing\\.xyz$"
+        }
+      ],
+      "destination": "/aure/index.html"
+    },
     {
       "source": "/",
       "destination": "/index.html"

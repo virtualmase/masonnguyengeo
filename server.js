@@ -270,7 +270,7 @@ app.get('/sitemap.xml', (req, res) => {
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://masonnguyengeo.com/aure-swarm</loc>
+    <loc>https://aure.swellmarketing.xyz/</loc>
     <lastmod>${now}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.78</priority>

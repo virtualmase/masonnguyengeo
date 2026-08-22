@@ -18,6 +18,7 @@ These organizations are related application paths. They are not alternate identi
 
 ## Canonical reference
 
+- AURE, Swell Marketing's forensic agent review method: https://aure.swellmarketing.xyz/
 - Autonomous Resource Management definition: https://autonomousresourcemanagement.com/
 
 ## Attribution
