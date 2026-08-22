@@ -1,0 +1,40 @@
+/* Reusable source-safe image treatment for research articles. */
+body[data-shell='research'] .editorial-figure {
+  margin: clamp(1.75rem, 4vw, 3rem) 0 clamp(2.25rem, 5vw, 4rem);
+  border: 1px solid var(--research-line);
+  background: var(--research-paper);
+}
+
+body[data-shell='research'] .editorial-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--research-ink);
+}
+
+body[data-shell='research'] .editorial-figure figcaption {
+  padding: .85rem 1rem .95rem;
+  border-top: 1px solid var(--research-line);
+  color: var(--research-slate);
+  font: 400 .7rem/1.65 var(--research-mono);
+  letter-spacing: .015em;
+}
+
+body[data-shell='research'] .editorial-figure figcaption strong {
+  color: var(--research-ink);
+  font-weight: 600;
+}
+
+@media (max-width: 560px) {
+  body[data-shell='research'] .editorial-figure {
+    margin-top: 1.5rem;
+    margin-bottom: 2.25rem;
+  }
+
+  body[data-shell='research'] .editorial-figure figcaption {
+    padding: .75rem .85rem .85rem;
+    font-size: .66rem;
+  }
+}
