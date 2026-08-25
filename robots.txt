@@ -144,4 +144,4 @@ User-agent: ImagesiftBot
 Disallow: /
 
 # ── SITEMAP ──
-Sitemap: https://masonnguyengeo.com/sitemap.xml
+Sitemap: https://www.masonnguyengeo.com/sitemap.xml

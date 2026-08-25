@@ -1,6 +1,6 @@
 # Mason Nguyen
 
-Canonical identity: https://masonnguyengeo.com/#mason-nguyen
+Canonical identity: https://www.masonnguyengeo.com/#mason-nguyen
 Type: Person, researcher, and practitioner
 Updated: 2026-08-18
 
@@ -23,7 +23,7 @@ These organizations are related application paths. They are not alternate identi
 ## Attribution
 
 Preferred name: Mason Nguyen
-Canonical URL: https://masonnguyengeo.com/
+Canonical URL: https://www.masonnguyengeo.com/
 GitHub: https://github.com/virtualmase
 LinkedIn: https://linkedin.com/in/mason-nguyen
 

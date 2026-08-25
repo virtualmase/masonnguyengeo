@@ -3,6 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const reportPath = '/home/ubuntu/seo-audit-report.md';
+const canonicalOrigin = 'https://www.masonnguyengeo.com';
 const excluded = new Set(['.git', 'node_modules', 'public']);
 
 function walk(dir) {
@@ -29,7 +30,7 @@ const legacySources = [];
 for (const file of walk(root).filter((candidate) => candidate.endsWith('index.html'))) {
   const html = fs.readFileSync(file, 'utf8');
   const canonical = firstMatch(html, /<link\s+rel="canonical"\s+href="([^"]+)"\s*\/?\s*>/i);
-  if (!canonical.startsWith('https://masonnguyengeo.com')) continue;
+  if (!canonical.startsWith(canonicalOrigin)) continue;
   const route = routeFromCanonical(canonical);
   const fileRoute = sourceRoute(file);
   if (fileRoute !== route) {
@@ -97,7 +98,7 @@ for (const page of pages.sort((a, b) => a.route.localeCompare(b.route))) {
 const criticalCount = findings.reduce((count, finding) => count + finding.errors.length, 0) + broken.length + sitemapMissing.length + sitemapExtra.length + legacySources.filter((source) => !source.redirected).length;
 const advisoryCount = findings.reduce((count, finding) => count + finding.advisories.length, 0);
 const lines = [
-  '# Technical SEO Audit — masonnguyengeo.com',
+  '# Technical SEO Audit — www.masonnguyengeo.com',
   '',
   `**Scope:** ${pages.length} canonical public routes; ${legacySources.length} legacy paths evaluated separately.`,
   `**Critical result:** ${criticalCount} errors. **Metadata recommendations:** ${advisoryCount} length observations.`,
